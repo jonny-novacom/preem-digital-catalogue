@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[354],{1622:function(e,t,a){a.r(t),a.d(t,{default:function(){return l}});var n=a(7294);function l(){return n.createElement(n.Fragment,null,n.createElement("p",null,"Glossary Page"))}}}]);
+//# sourceMappingURL=component---src-pages-glossary-js-fd546524c0add3eb04d6.js.map

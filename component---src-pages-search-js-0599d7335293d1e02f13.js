@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[996],{5068:function(e,t,a){a.r(t),a.d(t,{default:function(){return u}});var n=a(7294),l=a(6388);function u(){return n.createElement(n.Fragment,null,n.createElement("div",{className:"mt-24"},n.createElement(l.Z,null)))}}}]);
+//# sourceMappingURL=component---src-pages-search-js-0599d7335293d1e02f13.js.map

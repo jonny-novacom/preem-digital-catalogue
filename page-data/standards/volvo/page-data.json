@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-templates-standards-js",
+    "path": "/standards/volvo",
+    "result": {"data":{"newstandards":{"title":"Volvo","id":"-5832054a-a80b-50e4-bc7e-988fdb7352b5","slug":{"current":"volvo"},"standard":[]}},"pageContext":{"slug":"volvo"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "11853a97-4246-4554-8247-65f0f9739693-2022-01-17T14-09-27.000Z"}

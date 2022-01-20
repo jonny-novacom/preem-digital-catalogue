@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-templates-standards-js",
+    "path": "/standards/mercedes-benz",
+    "result": {"data":{"newstandards":{"title":"Mercedes-Benz","id":"-278a4744-da70-59e7-b16b-bba88a235bd5","slug":{"current":"mercedes-benz"},"standard":[]}},"pageContext":{"slug":"mercedes-benz"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "8af035f1-c8fc-4a4b-82c1-b63cf64f1066-2022-01-17T14-08-59.000Z"}

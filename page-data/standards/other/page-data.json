@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-templates-standards-js",
+    "path": "/standards/other",
+    "result": {"data":{"newstandards":{"title":"Other","id":"-b49e2956-8502-5fb4-946b-95822c3b4f76","slug":{"current":"other"},"standard":[]}},"pageContext":{"slug":"other"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "1b160a93-ecf9-40cc-8fdf-09dd50f6e639-2022-01-17T14-07-34.000Z"}

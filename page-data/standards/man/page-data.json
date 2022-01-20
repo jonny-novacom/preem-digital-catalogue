@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-templates-standards-js",
+    "path": "/standards/man",
+    "result": {"data":{"newstandards":{"title":"MAN","id":"-ece1dd9d-8d3c-5971-a190-7778d27f3c06","slug":{"current":"man"},"standard":[]}},"pageContext":{"slug":"man"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "18d44f64-d521-401a-a5b3-c3640b64cb1f-2022-01-17T14-08-50.000Z"}

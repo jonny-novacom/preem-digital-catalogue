@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[250],{1659:function(e,n,t){t.r(n),t.d(n,{default:function(){return l}});var a=t(7294);function l(){return a.createElement(a.Fragment,null,a.createElement("p",null,"Technical Information Page"))}}}]);
+//# sourceMappingURL=component---src-pages-technical-information-js-57ad2d6878dde73e5ba2.js.map

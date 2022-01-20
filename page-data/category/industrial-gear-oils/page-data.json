@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-templates-category-js",
+    "path": "/category/industrial-gear-oils",
+    "result": {"data":{"categories":{"title":"Industrial gear oils","id":"-45d1f852-506d-5d1e-acb8-da215b657231","slug":{"current":"industrial-gear-oils"},"product":[{"id":"-3a497efd-2c2b-5096-a3ae-5b6d37f36b1d","produkt":"Meropa","_rawApplikationer":[{"_key":"24fa34a97bbc","_type":"block","children":[{"_key":"1ad3da8c9458","_type":"span","marks":[],"text":"Mineraloljebaserad EP växellådsoljaDIN 51517/3 CLP. ISO 12925-1 CKD."}],"markDefs":[],"style":"normal"}],"sae":null,"farg":null,"isovg":"68 | 100 | 150 | 220 | 320 | 460 | 680 | 1000","viskositet40":"68 | 100 | 150 | 220 | 320 | 460 | 680 | 1000","viskositet100":"8,6 | 11,2 | 14,5 | 18,8 | 24,0 | 31,6 | 37,5 | 47,4","vi":"98 | 94 | 95 | 96 | 97 | 100 | 90 | 90","flampunkt":"225 | 228 | 230 | 240 | 242 | 246 | 250 | 254","lagstaflyttemp":"-30 | -27 | -24 | -21 | -21 | -15 | -15 | -15","pds":null,"sds":null,"newProduct":null}]}},"pageContext":{"slug":"industrial-gear-oils"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "8b7bf9ff-9f22-4cd6-8193-fdb9c3802dbb-2022-01-14T14-59-38.000Z"}

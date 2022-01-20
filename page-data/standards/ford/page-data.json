@@ -1,0 +1,6 @@
+{
+    "componentChunkName": "component---src-templates-standards-js",
+    "path": "/standards/ford",
+    "result": {"data":{"newstandards":{"title":"Ford","id":"-11fd6099-9f25-5acb-b03e-df82b6d44175","slug":{"current":"ford"},"standard":[]}},"pageContext":{"slug":"ford"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "520bbf1a-1dbe-4787-b428-6a2f286f80be-2022-01-17T14-08-12.000Z"}
