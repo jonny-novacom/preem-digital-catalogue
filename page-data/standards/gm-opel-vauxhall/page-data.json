@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-standards-js",
     "path": "/standards/gm-opel-vauxhall",
     "result": {"data":{"newstandards":{"title":"GM/Opel/Vauxhall","id":"-0a9d4a8a-9f05-5058-918b-c9ea00fc23f8","slug":{"current":"gm-opel-vauxhall"},"standard":[]}},"pageContext":{"slug":"gm-opel-vauxhall"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "d7ae1857-1ce7-434a-81db-9d0370c580c1-2022-01-17T14-08-41.000Z"}
+    "staticQueryHashes": ["3000541721"]}

@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/stationary-gas-engines",
     "result": {"data":{"categories":{"title":"Stationary gas engines","id":"-26fc3b98-1136-5141-a071-1c9bb182d103","slug":{"current":"stationary-gas-engines"},"product":[]}},"pageContext":{"slug":"stationary-gas-engines"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "f2c316d6-a527-415b-ba0b-a236af5e8e53-2022-01-07T13-53-06.000Z"}
+    "staticQueryHashes": ["3000541721"]}

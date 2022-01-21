@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/fuel-for-diesel-engines",
     "result": {"data":{"categories":{"title":"Fuel for diesel engines","id":"-ea7bf0b5-90f1-59ad-961f-c450177bda5c","slug":{"current":"fuel-for-diesel-engines"},"product":[]}},"pageContext":{"slug":"fuel-for-diesel-engines"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "70743a8b-a3e2-483a-b059-9b23e487a91c-2022-01-07T13-56-32.000Z"}
+    "staticQueryHashes": ["3000541721"]}

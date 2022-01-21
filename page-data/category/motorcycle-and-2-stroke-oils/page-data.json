@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/motorcycle-and-2-stroke-oils",
     "result": {"data":{"categories":{"title":"Motorcycle and 2-stroke oils","id":"-4f99a700-1a26-5645-8f80-3c2ff0b8504f","slug":{"current":"motorcycle-and-2-stroke-oils"},"product":[{"id":"-cf581cdb-d291-55ab-b53e-23131d9f5174","produkt":"Havoline Super 2T-SX","_rawApplikationer":[{"_key":"3bd134de83a2","_type":"block","children":[{"_key":"9131dc38be10","_type":"span","marks":[],"text":"Syntetisk 2-taktsolja med låg askhalt. För MC, snöskotrar, motorsågar, go-kart m m.API TC, JASO FD, ISO EGD, Husqvarna HVA 346/372 (test för motorsågar)."}],"markDefs":[],"style":"normal"}],"sae":"Färg: Grön","farg":null,"isovg":null,"viskositet40":"51","viskositet100":"8,6","vi":"146","flampunkt":"80","lagstaflyttemp":"-42","pds":null,"sds":null,"newProduct":false}]}},"pageContext":{"slug":"motorcycle-and-2-stroke-oils"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "f28acbce-3942-4d8a-ac3b-bedbc1ff155e-2022-01-19T11-49-06.000Z"}
+    "staticQueryHashes": ["3000541721"]}

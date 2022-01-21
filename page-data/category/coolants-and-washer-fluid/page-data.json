@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/coolants-and-washer-fluid",
     "result": {"data":{"categories":{"title":"Coolants and washer fluid","id":"-7faa68d1-e663-526b-b828-113350349489","slug":{"current":"coolants-and-washer-fluid"},"product":[]}},"pageContext":{"slug":"coolants-and-washer-fluid"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "73b5b1a9-940a-4f53-b657-c786e5732210-2022-01-14T12-45-17.000Z"}
+    "staticQueryHashes": ["3000541721"]}

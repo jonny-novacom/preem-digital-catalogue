@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-standards-js",
     "path": "/standards/bmw",
     "result": {"data":{"newstandards":{"title":"BMW","id":"-bd41558b-c209-512b-854b-f410ef07399d","slug":{"current":"bmw"},"standard":[]}},"pageContext":{"slug":"bmw"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "fec98ac3-67c0-4d4c-87ea-b5f76666458f-2022-01-17T14-07-48.000Z"}
+    "staticQueryHashes": ["3000541721"]}

@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-standards-js",
     "path": "/standards/cat",
     "result": {"data":{"newstandards":{"title":"CAT","id":"-7f70ef2f-d07d-588c-841c-9115b8c6cb3e","slug":{"current":"cat"},"standard":[]}},"pageContext":{"slug":"cat"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "bceab195-d8d6-45e4-b2c7-07000c4df383-2022-01-17T14-08-03.000Z"}
+    "staticQueryHashes": ["3000541721"]}

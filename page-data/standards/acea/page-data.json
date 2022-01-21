@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-standards-js",
     "path": "/standards/acea",
     "result": {"data":{"newstandards":{"title":"ACEA","id":"-309acb57-a37a-5608-a17b-685be50b9b13","slug":{"current":"acea"},"standard":[{"title":"B3","id":"-c913e404-1b8c-58d4-b55d-7beab9bbcdc2","product":[]},{"title":"B4","id":"-0ae8f3f3-e1ba-58c9-927d-f2487b8fdc54","product":[]}]}},"pageContext":{"slug":"acea"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "ca1cff71-29d6-468f-a838-0822e90b8480-2022-01-17T12-13-44.000Z"}
+    "staticQueryHashes": ["3000541721"]}

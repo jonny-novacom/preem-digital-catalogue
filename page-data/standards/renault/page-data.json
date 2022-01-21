@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-standards-js",
     "path": "/standards/renault",
     "result": {"data":{"newstandards":{"title":"Renault","id":"-4505f362-21a4-508e-a5dd-32a4b8cac8c4","slug":{"current":"renault"},"standard":[]}},"pageContext":{"slug":"renault"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "a3bab4bb-5d4b-4093-9ce0-084bd442795c-2022-01-17T14-09-18.000Z"}
+    "staticQueryHashes": ["3000541721"]}

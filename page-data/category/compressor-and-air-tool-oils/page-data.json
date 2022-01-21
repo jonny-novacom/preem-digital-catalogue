@@ -2,5 +2,4 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/compressor-and-air-tool-oils",
     "result": {"data":{"categories":{"title":"Compressor and air tool oils","id":"-5c39ae88-e97b-5b19-88f5-47be16ad7f59","slug":{"current":"compressor-and-air-tool-oils"},"product":[]}},"pageContext":{"slug":"compressor-and-air-tool-oils"}},
-    "staticQueryHashes": ["3000541721"],
-    "manifestId": "c44f7fbf-d5a0-443d-8cb2-1a39c50c8959-2022-01-07T13-54-11.000Z"}
+    "staticQueryHashes": ["3000541721"]}
