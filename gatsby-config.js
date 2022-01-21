@@ -59,7 +59,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-local-search",
       options: {
-        name: "page",
+        name: "products",
+        engine: "lunr",
         query: `
                 {
                   allSanityProduct(sort: {fields: produkt, order: ASC}) {
@@ -70,11 +71,18 @@ module.exports = {
                       featured
                       saps
                       sae
+                      farg
                       lagstaflyttemp
                       vi
+                      isovg
                       viskositet100
                       viskositet40
                       _rawApplikationer
+                      applikationer {
+                        children {
+                          text
+                        }
+                      }
                       flampunkt
                       slug {
                         current
@@ -83,28 +91,37 @@ module.exports = {
                   }
                 }
             `,
-        engine: "flexsearch",
         engineOptions: "speed",
         ref: "id",
-        index: [
+        index: ["produkt", "body"],
+        store: [
+          "id",
           "produkt",
-          "shortDescription",
-          "saps",
+          "path",
+          "body",
           "sae",
-          "lagstaflyttemp",
-          "vi",
-          "viskositet100",
+          "farg",
+          "isovg",
           "viskositet40",
-          "_rawApplikationer",
+          "viskositet100",
+          "vi",
           "flampunkt",
+          "lagstaflyttemp",
         ],
-        store: ["id", "produkt", "slug", "_rawApplikationer"],
         normalizer: ({ data }) =>
           data.allSanityProduct.nodes.map((node) => ({
             id: node.id,
             path: node.slug.current,
-            title: node.produkt,
-            body: node._rawApplikationer,
+            produkt: node.produkt,
+            body: node.applikationer[0].children[0].text,
+            sae: node.sae,
+            farg: node.farg,
+            isovg: node.isovg,
+            viskositet40: node.viskositet40,
+            viskositet100: node.viskositet100,
+            vi: node.vi,
+            flampunkt: node.flampunkt,
+            lagstaflyttemp: node.lagstaflyttemp,
           })),
       },
     },
