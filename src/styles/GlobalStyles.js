@@ -124,6 +124,15 @@ const GlobalStyles = createGlobalStyle`
     padding-left: 2.5rem !important;
 }
 
+.accordion-item:last-of-type {
+    border-bottom-right-radius: 0rem !important;
+    border-bottom-left-radius: 0rem !important;
+}
+.accordion-item:first-of-type {
+    border-top-left-radius: 0rem !important;
+    border-top-right-radius: 0rem !important;
+}
+
 // .innersearch .accordion-item:nth-child(odd) .accordion-button {
 //     background: #efefef;
 // }

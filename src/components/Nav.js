@@ -43,7 +43,7 @@ export default function Nav() {
           </div>
 
           <div className="mb-2">
-            <Link to="/search">
+            <Link to="/local-search">
               <IoSearchOutline className="text-4xl -mt-12 block text-preemGreen" />
             </Link>
           </div>
