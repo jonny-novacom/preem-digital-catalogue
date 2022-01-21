@@ -19,8 +19,8 @@ export default function Nav() {
 
   return (
     <>
-      <div className="">
-        <nav className="font-sans flex text-center flex-row justify-between py-4 px-12 bg-white items-baseline fixed top-0 z-50 w-screen">
+      <div className="max-w-screen-lg mx-auto">
+        <nav className="font-sans flex text-center flex-row justify-between py-4 px-12 bg-white items-baseline fixed top-0 z-50 w-screen max-w-screen-lg">
           <div className="mb-2">
             <button
               onClick={setNavBar}

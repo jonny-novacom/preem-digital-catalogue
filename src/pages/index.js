@@ -19,36 +19,37 @@ export default function IndexPage({ data: { homePageBanner } }) {
         image={seoImage}
         description=""
       />
+      <div className="max-w-screen-lg mx-auto">
+        <BackgroundImage
+          Tag="section"
+          // Spread bgImage into BackgroundImage:
+          {...bgImage}
+          preserveStackingContext
+          className="bg-img-height h-screen"
+        >
+          <div className="grid grid-cols-1 gap-4 w-screen p-8 max-w-screen-lg">
+            <div className="flex justify-end">
+              <StaticImage
+                src="../images/texaco-logo.png"
+                quality={95}
+                formats={["AUTO", "WEBP", "AVIF"]}
+                alt="Texaco"
+                className="object-contain w-12 h-16 p-4 mt-32"
+              />
+            </div>
 
-      <BackgroundImage
-        Tag="section"
-        // Spread bgImage into BackgroundImage:
-        {...bgImage}
-        preserveStackingContext
-        className="bg-img-height h-screen"
-      >
-        <div className="grid grid-cols-1 gap-4 w-screen p-8">
-          <div className="flex justify-end">
-            <StaticImage
-              src="../images/texaco-logo.png"
-              quality={95}
-              formats={["AUTO", "WEBP", "AVIF"]}
-              alt="Texaco"
-              className="object-contain w-12 h-16 p-4 mt-32"
-            />
+            <div className="justify-start mt-4">
+              <h1 className="font-gothamNarrow text-7xl font-bold text-white text-shadow-md block mb-4 mt-4">
+                Smörjmedel
+              </h1>
+              <h2 className="font-gothamNarrow text-3xl font-bold text-white text-shadow-md block">
+                Texaco smörjmedel säljs i Sverige av Preem, på Preems stationer
+                och av Preems återförsäljare
+              </h2>
+            </div>
           </div>
-
-          <div className="justify-start mt-4">
-            <h1 className="font-gothamNarrow text-7xl font-bold text-white text-shadow-md block mb-4 mt-4">
-              Smörjmedel
-            </h1>
-            <h2 className="font-gothamNarrow text-3xl font-bold text-white text-shadow-md block">
-              Texaco smörjmedel säljs i Sverige av Preem, på Preems stationer
-              och av Preems återförsäljare
-            </h2>
-          </div>
-        </div>
-      </BackgroundImage>
+        </BackgroundImage>
+      </div>
     </>
   );
 }

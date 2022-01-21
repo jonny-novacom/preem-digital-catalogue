@@ -5,7 +5,9 @@ import APIStandardPage from "./api";
 export default function MarinePage() {
   return (
     <>
-      <div className="mt-40"></div>
+      <div className="max-w-screen-lg mx-auto">
+        <div className="mt-40"></div>
+      </div>
     </>
   );
 }
