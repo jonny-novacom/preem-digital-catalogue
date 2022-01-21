@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[717],{4815:function(t,e,a){a.d(e,{tOB:function(){return u}});var l=a(1046);function u(t){return(0,l.w_)({tag:"svg",attr:{viewBox:"0 0 8 16"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M7.5 8l-5 5L1 11.5 4.75 8 1 4.5 2.5 3l5 5z"}}]})(t)}}}]);
-//# sourceMappingURL=bb751e1a4b656f5a092cca80ab0f9790269cc0e4-a39eb9f227eb82d0fedb.js.map

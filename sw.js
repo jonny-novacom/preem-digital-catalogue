@@ -27,13 +27,13 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ac518d01097b2869ef44.js"
+    "url": "webpack-runtime-0b1f26ff13c97345b8a2.js"
   },
   {
     "url": "framework-f5bce0c9e5b9b63c8bb1.js"
   },
   {
-    "url": "styles.3763d4d4f1c8c26d4e78.css"
+    "url": "styles.a82d91528a6babd0ee6d.css"
   },
   {
     "url": "252f366e-19160097d45a2abf2e95.js"
@@ -42,11 +42,11 @@ self.__precacheManifest = [
     "url": "ae51ba48-3e831325eb0622ddaeed.js"
   },
   {
-    "url": "app-e105a2dd2f6633acba66.js"
+    "url": "app-615bdf10e83525ab50c7.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "824b53122134002ab5f3f2367c7909a3"
+    "revision": "9cfea789757674dc9fb27ecfb73dd5d4"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-4bf1e3a7e92708f4d2ee.js"
@@ -61,7 +61,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a7c5a3da14ba619e6ca7632d39001356"
+    "revision": "9effe3e39dd2258681079227677d272f"
   },
   {
     "url": "polyfill-f2ac07aab07b6762212e.js"
@@ -73,7 +73,7 @@ self.__precacheManifest = [
     "url": "0c428ae2-6032cccf858006343bd4.js"
   },
   {
-    "url": "bb751e1a4b656f5a092cca80ab0f9790269cc0e4-a39eb9f227eb82d0fedb.js"
+    "url": "a775ca443152cc24e803927c9ad030cac873a4c4-c93dc49871b2cfaf995b.js"
   },
   {
     "url": "053f738754685b826731600c383d5f9bd7dfb129-0d50f884a7936e24c092.js"
@@ -108,10 +108,10 @@ self.__precacheManifest = [
     "revision": "0e54e2ab2d987da649be1c09e297b8ff"
   },
   {
-    "url": "a09b44f2acf661a3d39275f7ccdba52e74c7f1fb-b2df80adf7a5aa7a4b6e.js"
+    "url": "d397023546ea20606e01667d7a13f1e8cf3a1067-5967f8c13b3f5624fe03.js"
   },
   {
-    "url": "9fe4188ab52207a8a5f39cbe4194bbcada6e668c-22f467e0e11f1c4afcb2.js"
+    "url": "6536bf35b22aadf7e649b018c8710db5cd2e2a33-b176b2c1c355817f9388.js"
   },
   {
     "url": "component---src-templates-category-js-bb5bb5e741fb4ec027ba.js"
@@ -348,7 +348,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/preem-digital-catalogue/app-e105a2dd2f6633acba66.js`))) {
+  if (!resources || !(await caches.match(`/preem-digital-catalogue/app-615bdf10e83525ab50c7.js`))) {
     return await fetch(event.request)
   }
 
