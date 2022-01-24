@@ -38,7 +38,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="object-contain w-12 h-16 p-4 mt-4 block mx-auto"
+                className="object-contain w-12 h-16 p-4 mt-4"
               />
             </div>
 

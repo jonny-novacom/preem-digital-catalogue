@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
  a {
     color: inherit !important;
     text-decoration: none !important;
+    font-family: "Gotham Narrow", "Franklin Gothic Medium", "Tahoma", sans-serif;
 }
 
 .accordion-header {

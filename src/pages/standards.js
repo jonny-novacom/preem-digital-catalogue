@@ -1,15 +1,15 @@
 import * as React from "react";
-import StandardsAccordion from "../components/Standards";
-import StandardsV2 from "../components/Standards-v2";
+import ACEAStandard from "../components/standards/ACEA";
 import APIStandard from "../components/standards/API";
 
 export default function StandardsPage() {
   return (
     <>
-      <div className="mt-40">
-        {/* <StandardsAccordion /> */}
-        {/* <StandardsV2 /> */}
-        <APIStandard />
+      <div className="max-w-screen-lg mx-auto">
+        <div className="mt-40">
+          <ACEAStandard />
+          <APIStandard />
+        </div>
       </div>
     </>
   );
