@@ -69,7 +69,7 @@ const ConsumerAccordion = () => {
                           >
                             <AiFillStar />
                           </span>
-                          {pub.produkt} {pub.sae}{" "}
+                          {pub.produkt} SAE {pub.sae}{" "}
                           <span
                             className={
                               pub.newProduct === true
@@ -128,7 +128,7 @@ const ConsumerAccordion = () => {
                                 {pub.lagstaflyttemp}
                               </div>
                             </div>
-                            <div className="grid grid-flow-col auto-cols-min mt-4">
+                            <div className="grid grid-flow-col auto-cols-max mt-4">
                               <div className="mr-4">
                                 <p className="items-center md:flex-initial md:w-max bg-preemYellow">
                                   <a

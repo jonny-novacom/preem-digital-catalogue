@@ -15,7 +15,7 @@ const CommercialAccordion = () => {
             elemMatch: { title: { eq: "Engine oils heavy vehicles" } }
           }
         }
-        sort: { fields: saps, order: DESC }
+        sort: { fields: produkt, order: ASC }
       ) {
         nodes {
           produkt
@@ -64,7 +64,7 @@ const CommercialAccordion = () => {
                           >
                             <AiFillStar />
                           </span>
-                          {pub.produkt}{" "}
+                          {pub.produkt} SAE {pub.sae}{" "}
                           <span
                             className={
                               pub.newProduct === true
@@ -123,7 +123,7 @@ const CommercialAccordion = () => {
                                 {pub.lagstaflyttemp}
                               </div>
                             </div>
-                            <div className="grid grid-flow-col auto-cols-min mt-4">
+                            <div className="grid grid-flow-col auto-cols-max mt-4">
                               <div className="mr-4">
                                 <p className="items-center md:flex-initial md:w-max bg-preemYellow">
                                   <a
