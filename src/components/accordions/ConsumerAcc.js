@@ -20,7 +20,7 @@ const ConsumerAccordion = () => {
             }
           }
         }
-        sort: { fields: saps, order: DESC }
+        sort: { fields: produkt, order: ASC }
       ) {
         nodes {
           produkt
@@ -69,7 +69,7 @@ const ConsumerAccordion = () => {
                           >
                             <AiFillStar />
                           </span>
-                          {pub.produkt}{" "}
+                          {pub.produkt} {pub.sae}{" "}
                           <span
                             className={
                               pub.newProduct === true
