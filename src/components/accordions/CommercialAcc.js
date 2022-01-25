@@ -3,7 +3,7 @@ import React from "react";
 
 import Accordion from "react-bootstrap/Accordion";
 import SanityBlockContent from "@sanity/block-content-to-react";
-import { AiFillStar, AiOutlineRight } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { GoChevronRight } from "react-icons/go";
 
 const CommercialAccordion = () => {

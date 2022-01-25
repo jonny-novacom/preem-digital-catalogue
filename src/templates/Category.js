@@ -41,7 +41,7 @@ export default function SingleProductPage({ data: { categories } }) {
                     <div
                       className={
                         product.sae !== null
-                          ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                          ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                           : `hidden`
                       }
                     >
@@ -50,7 +50,7 @@ export default function SingleProductPage({ data: { categories } }) {
                     <div
                       className={
                         product.sae !== null
-                          ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                          ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                           : `hidden`
                       }
                     >
@@ -59,7 +59,7 @@ export default function SingleProductPage({ data: { categories } }) {
                     <div
                       className={
                         product.farg !== null
-                          ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                          ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                           : `hidden`
                       }
                     >
@@ -68,7 +68,7 @@ export default function SingleProductPage({ data: { categories } }) {
                     <div
                       className={
                         product.farg !== null
-                          ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                          ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                           : `hidden`
                       }
                     >
@@ -77,7 +77,7 @@ export default function SingleProductPage({ data: { categories } }) {
                     <div
                       className={
                         product.isovg !== null
-                          ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                          ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                           : `hidden`
                       }
                     >
@@ -86,44 +86,44 @@ export default function SingleProductPage({ data: { categories } }) {
                     <div
                       className={
                         product.isovg !== null
-                          ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                          ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                           : `hidden`
                       }
                     >
                       {product.isovg}
                     </div>
-                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
                       Viskositet cSt, mm2/s 40°C
                     </div>
-                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
                       {product.viskositet40}
                     </div>
-                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
                       Viskositet cSt, mm2/s 100°C
                     </div>
-                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
                       {product.viskositet100}
                     </div>
-                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
                       VI
                     </div>
-                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
                       {product.vi}
                     </div>
-                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
                       Flampunkt °C
                     </div>
-                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
                       {product.flampunkt}
                     </div>
-                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+                    <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
                       Lägstaflyttemp °C
                     </div>
-                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
                       {product.lagstaflyttemp}
                     </div>
                   </div>
-                  <div className="grid grid-flow-col auto-cols-min mt-4">
+                  <div className="grid grid-flow-col auto-cols-max mt-4">
                     <div className="mr-4">
                       <p className="items-center md:flex-initial md:w-max bg-preemYellow">
                         <a

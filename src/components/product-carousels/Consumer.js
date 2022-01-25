@@ -7,7 +7,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import { AiOutlineRight } from "react-icons/ai";
 import { GoChevronRight } from "react-icons/go";
 
 export default function ConsumerCarousel() {
@@ -138,8 +137,9 @@ export default function ConsumerCarousel() {
                   className="block mx-auto"
                   imgStyle={{ objectFit: "contain" }}
                 />
-                <h3 className="text-center text-preemGreen text-lg font-bold font-gothamNarrow mt-2 h-14 leading-snug">
-                  {consumerproductcarousel.produkt}{" "}
+                <h3 className="text-center text-preemGreen text-lg font-bold font-gothamNarrow mt-2 h-12 leading-snug text-clip overflow-hidden">
+                  {consumerproductcarousel.produkt}
+                  <br />
                   {consumerproductcarousel.sae}
                 </h3>
               </Link>

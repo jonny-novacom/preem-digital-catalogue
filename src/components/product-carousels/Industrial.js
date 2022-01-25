@@ -7,7 +7,6 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import { AiOutlineRight } from "react-icons/ai";
 import { GoChevronRight } from "react-icons/go";
 
 export default function IndustrialCarousel() {

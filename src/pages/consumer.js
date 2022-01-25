@@ -6,8 +6,8 @@ import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
-import { AiOutlineRight } from "react-icons/ai";
 import ConsumerCarousel from "../components/product-carousels/Consumer";
+import { GoChevronRight } from "react-icons/go";
 
 // markup
 export default function ConsumerPage({ data: { consumerPageBanner } }) {
@@ -29,7 +29,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
           // Spread bgImage into BackgroundImage:
           {...bgImage}
           preserveStackingContext
-          className="flex items-center justify-center bg-img-height h-2/3 bg-cover mt-24"
+          className="flex items-center justify-center bg-img-height h-3/4 bg-cover mt-24"
         >
           <div className="grid grid-cols-1 gap-4 w-screen p-8">
             <div className="flex justify-end">
@@ -38,14 +38,30 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="object-contain w-12 h-16 p-4 mt-4"
+                transformOptions={"cover"}
+                className="mt-4"
               />
             </div>
 
-            <div className="justify-start">
-              <h1 className="font-gothamNarrow text-4xl md:text-6xl font-bold text-white text-shadow-md block mb-4 mt-32">
-                Motoroljor personbilar och lätta transportfordon
-              </h1>
+            <div className="grid grid-cols-8 gap-1 mt-12">
+              <div className="md:col-span-6 col-span-8">
+                <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 mt-24 leading-none">
+                  Motoroljor
+                  <br />
+                  personbilar och
+                  <br />
+                  lätta transportfordon
+                </h1>
+              </div>
+              <div className="md:col-span-2 col-span-8">
+                <StaticImage
+                  src="../images/havoline-prods-mg-sae-0w-20.png"
+                  quality={95}
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  alt="Havoline ProDS MG SAE 0W-20"
+                  className="object-contain w-56 p-4 mt-12 block mx-auto"
+                />
+              </div>
             </div>
           </div>
         </BackgroundImage>
@@ -54,7 +70,8 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
             src="../images/icons/consumer.svg"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
-            alt="Services"
+            alt="Consumer"
+            transformOptions={"cover"}
             className="block mx-auto w-20 mb-4"
           />
           <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
@@ -75,7 +92,10 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                 View all products
               </span>
               <span className="bg-preemGreen w-5 h-5 rounded-full inline-block ml-4">
-                <AiOutlineRight className="text-white inline-block -mt-2" />
+                <GoChevronRight
+                  className="text-white text-lg text-center block mx-auto"
+                  style={{ paddingTop: "1px", paddingLeft: "1px" }}
+                />
               </span>
             </Link>
           </div>

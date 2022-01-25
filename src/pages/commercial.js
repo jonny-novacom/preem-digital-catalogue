@@ -6,9 +6,9 @@ import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
-import { AiOutlineRight } from "react-icons/ai";
 import CommercialCarousel from "../components/product-carousels/Commercial";
 import CommercialCategories from "../components/CommercialCategories";
+import { GoChevronRight } from "react-icons/go";
 
 // markup
 export default function CommercialPage({ data: { commercialPageBanner } }) {
@@ -38,7 +38,8 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="object-contain w-12 h-16 p-4 mt-4"
+                transformOptions={"cover"}
+                className="mt-4"
               />
             </div>
           </div>
@@ -89,7 +90,10 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
               View all products
             </span>
             <span className="bg-preemGreen w-5 h-5 rounded-full inline-block ml-4">
-              <AiOutlineRight className="text-white inline-block -mt-2" />
+              <GoChevronRight
+                className="text-white text-lg text-center block mx-auto"
+                style={{ paddingTop: "1px", paddingLeft: "1px" }}
+              />
             </span>
           </div>
         </div>

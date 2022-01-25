@@ -991,7 +991,7 @@ const ACEAStandard = () => {
                     <Accordion.Header>E7</Accordion.Header>
                     <Accordion.Body>
                       <div className="py-2">
-                        {standardE2.map((E7, r) => (
+                        {standardE7.map((E7, r) => (
                           <div
                             className="flex justify-start py-2 pl-10"
                             key={r}
