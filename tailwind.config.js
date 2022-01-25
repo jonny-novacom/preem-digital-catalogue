@@ -3,17 +3,23 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      gothamNarrow: ['"Gotham Narrow"', '"Franklin Gothic Medium"', "Tahoma", "sans-serif"],
+      gothamNarrow: [
+        '"Gotham Narrow"',
+        '"Franklin Gothic Medium"',
+        "Tahoma",
+        "sans-serif",
+      ],
     },
     extend: {
       colors: {
         preemGreen: "#006341",
         preemYellow: "#ffac3a",
       },
+      fontSize: {
+        "55xl": "3.5rem",
+      },
     },
   },
   variants: {},
-  plugins: [
-    require('tailwindcss-textshadow'),
-  ],
-}
+  plugins: [require("tailwindcss-textshadow")],
+};

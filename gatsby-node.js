@@ -60,34 +60,4 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { slug: edge.node.slug.current },
     });
   });
-
-  const standardsResult = await graphql(`
-    {
-      allSanityProductStandard(filter: { slug: { current: { ne: null } } }) {
-        edges {
-          node {
-            title
-            id
-            slug {
-              current
-            }
-          }
-        }
-        totalCount
-      }
-    }
-  `);
-  if (standardsResult.errors) {
-    throw standardsResult.errors;
-  }
-
-  const api = standardsResult.data.allSanityProductStandard.edges || [];
-  api.forEach((edge, id) => {
-    const path = `/standards/${edge.node.slug.current}`;
-    createPage({
-      path,
-      component: require.resolve("./src/templates/Standards.js"),
-      context: { slug: edge.node.slug.current },
-    });
-  });
 };

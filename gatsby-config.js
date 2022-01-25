@@ -2,8 +2,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const queries = require("./src/constants/algolia");
-
 module.exports = {
   // pathPrefix: "/preem",
   pathPrefix: "/preem-digital-catalogue",
@@ -44,16 +42,6 @@ module.exports = {
         ErrorDocument: `
           ErrorDocument 404 /404.html
         `,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-        queries: require("./src/constants/algolia"),
-        chunkSize: 10000,
       },
     },
     {
