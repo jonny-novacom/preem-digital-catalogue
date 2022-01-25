@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-standards-js",
-    "path": "/standards/api",
-    "result": {"data":{"newstandards":{"title":"API","id":"-5df63a9b-e42b-5252-b154-6b629b3b661b","slug":{"current":"api"},"standard":[{"title":"SN","id":"-6600c508-3b4c-5099-94a0-53f8de5a55e6","product":[{"produkt":"Delo 400 XSP-FA","id":"-3ab7c969-55f7-5898-bac1-cbd9a9a54f37"}]},{"title":"GL-4","id":"-ee044e6b-e72f-52a3-803d-361dca703988","product":[{"produkt":"Delo 400 XSP-FA","id":"-3ab7c969-55f7-5898-bac1-cbd9a9a54f37"},{"produkt":"Delo 400 XLE HD  ","id":"-49e73b2d-85d5-59d7-9698-ebf8b206094b"}]}]}},"pageContext":{"slug":"api"}},
-    "staticQueryHashes": ["3000541721"]}

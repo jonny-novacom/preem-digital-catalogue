@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-standards-js",
-    "path": "/standards/cat",
-    "result": {"data":{"newstandards":{"title":"CAT","id":"-7f70ef2f-d07d-588c-841c-9115b8c6cb3e","slug":{"current":"cat"},"standard":[]}},"pageContext":{"slug":"cat"}},
-    "staticQueryHashes": ["3000541721"]}

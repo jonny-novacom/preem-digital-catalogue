@@ -27,13 +27,13 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0b1f26ff13c97345b8a2.js"
+    "url": "webpack-runtime-186a7ce52d3de3bfcefd.js"
   },
   {
     "url": "framework-f5bce0c9e5b9b63c8bb1.js"
   },
   {
-    "url": "styles.a82d91528a6babd0ee6d.css"
+    "url": "styles.90a0f9d5f9a3123dd032.css"
   },
   {
     "url": "252f366e-19160097d45a2abf2e95.js"
@@ -42,11 +42,11 @@ self.__precacheManifest = [
     "url": "ae51ba48-3e831325eb0622ddaeed.js"
   },
   {
-    "url": "app-615bdf10e83525ab50c7.js"
+    "url": "app-467dcd252f34842006cb.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "9cfea789757674dc9fb27ecfb73dd5d4"
+    "revision": "d4f9767f97fa342aa0713c3656a1506d"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-4bf1e3a7e92708f4d2ee.js"
@@ -61,13 +61,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "9effe3e39dd2258681079227677d272f"
+    "revision": "80c112ed35108ea5fbd913e43102d91a"
   },
   {
     "url": "polyfill-f2ac07aab07b6762212e.js"
-  },
-  {
-    "url": "d7eeaac4-440b62a13dbfd76a8836.js"
   },
   {
     "url": "0c428ae2-6032cccf858006343bd4.js"
@@ -76,13 +73,13 @@ self.__precacheManifest = [
     "url": "a775ca443152cc24e803927c9ad030cac873a4c4-c93dc49871b2cfaf995b.js"
   },
   {
-    "url": "053f738754685b826731600c383d5f9bd7dfb129-0d50f884a7936e24c092.js"
+    "url": "053f738754685b826731600c383d5f9bd7dfb129-a8aa47a00bbf1ae15259.js"
   },
   {
     "url": "77e6c32096bcc50573703661e098ceb7f3a4ffb7-6a56a2bd69fdcfc02212.js"
   },
   {
-    "url": "component---src-pages-consumer-js-a62690c38c96598daaf1.js"
+    "url": "component---src-pages-consumer-js-6cf783af7096f1bc7368.js"
   },
   {
     "url": "page-data/consumer/page-data.json",
@@ -90,10 +87,13 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/4054939390.json",
-    "revision": "b544936cfa7ed4602baf7446ceabc40f"
+    "revision": "7c2e58940a0c55a038c491925519df63"
   },
   {
-    "url": "component---src-pages-industrial-js-edae182c607e2e851cd2.js"
+    "url": "d7eeaac4-440b62a13dbfd76a8836.js"
+  },
+  {
+    "url": "component---src-pages-industrial-js-e92a3581ddb5250c014e.js"
   },
   {
     "url": "page-data/industrial/page-data.json",
@@ -108,13 +108,13 @@ self.__precacheManifest = [
     "revision": "0e54e2ab2d987da649be1c09e297b8ff"
   },
   {
-    "url": "d397023546ea20606e01667d7a13f1e8cf3a1067-5967f8c13b3f5624fe03.js"
+    "url": "4b0a839c64f2dc68708e2a5d6e7ca2d245461743-354f324b10593791af63.js"
   },
   {
-    "url": "6536bf35b22aadf7e649b018c8710db5cd2e2a33-b176b2c1c355817f9388.js"
+    "url": "ed035bd0ba543f9766a7403545162a7fc1faff2c-5d0d1de788854f2e7cb2.js"
   },
   {
-    "url": "component---src-templates-category-js-bb5bb5e741fb4ec027ba.js"
+    "url": "component---src-templates-category-js-ee74e71f8be6af26b10e.js"
   },
   {
     "url": "page-data/category/adblue/page-data.json",
@@ -348,7 +348,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/preem-digital-catalogue/app-615bdf10e83525ab50c7.js`))) {
+  if (!resources || !(await caches.match(`/preem-digital-catalogue/app-467dcd252f34842006cb.js`))) {
     return await fetch(event.request)
   }
 

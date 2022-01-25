@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[981],{8734:function(e,t,a){a.r(t),a.d(t,{default:function(){return u}});var n=a(7294);function u(){return n.createElement(n.Fragment,null,n.createElement("p",null,"Packaging Page"))}}}]);
+//# sourceMappingURL=component---src-pages-packaging-js-1c7f48281ca23c900bdd.js.map

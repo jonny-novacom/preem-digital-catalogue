@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[489],{6305:function(e,t,a){a.r(t),a.d(t,{default:function(){return l}});var n=a(7294);function l(){return n.createElement(n.Fragment,null,n.createElement("div",{className:"max-w-screen-lg mx-auto"},n.createElement("div",{className:"mt-40"})))}}}]);
+//# sourceMappingURL=component---src-pages-marine-js-a550f026cbae8004d822.js.map
