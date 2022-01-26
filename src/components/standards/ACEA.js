@@ -34,6 +34,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -50,6 +51,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -66,6 +68,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -82,6 +85,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -98,6 +102,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -114,6 +119,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -130,6 +136,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -146,6 +153,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -162,6 +170,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -178,6 +187,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -194,6 +204,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -210,6 +221,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -226,6 +238,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -242,6 +255,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -258,6 +272,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -274,6 +289,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -290,6 +306,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -306,6 +323,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -322,6 +340,7 @@ const ACEAStandard = () => {
           id
           newProduct
           featured
+          sae
           standardACEA {
             title
           }
@@ -380,8 +399,27 @@ const ACEAStandard = () => {
                           {A1.produkt}{" "}
                           <span
                             className={
+                              A1.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              A1.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {A1.sae}
+                          </span>
+                          <span
+                            className={
                               A1.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
+                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5`
                                 : `hidden`
                             }
                           >
@@ -417,8 +455,27 @@ const ACEAStandard = () => {
                           {A3.produkt}{" "}
                           <span
                             className={
+                              A3.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              A3.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {A3.sae}
+                          </span>
+                          <span
+                            className={
                               A3.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
+                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5`
                                 : `hidden`
                             }
                           >
@@ -452,6 +509,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {A4.produkt}{" "}
+                          <span
+                            className={
+                              A4.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              A4.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {A4.sae}
+                          </span>
                           <span
                             className={
                               A4.newProduct === true
@@ -491,6 +567,25 @@ const ACEAStandard = () => {
                           {A5.produkt}{" "}
                           <span
                             className={
+                              A5.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              A5.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {A5.sae}
+                          </span>
+                          <span
+                            className={
                               A5.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -528,6 +623,25 @@ const ACEAStandard = () => {
                           {B1.produkt}{" "}
                           <span
                             className={
+                              B1.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              B1.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {B1.sae}
+                          </span>
+                          <span
+                            className={
                               B1.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -562,6 +676,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {B2.produkt}{" "}
+                          <span
+                            className={
+                              B2.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              B2.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {B2.sae}
+                          </span>
                           <span
                             className={
                               B2.newProduct === true
@@ -601,6 +734,25 @@ const ACEAStandard = () => {
                           {B3.produkt}{" "}
                           <span
                             className={
+                              B3.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              B3.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {B3.sae}
+                          </span>
+                          <span
+                            className={
                               B3.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -636,6 +788,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {B4.produkt}{" "}
+                          <span
+                            className={
+                              B4.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              B4.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {B4.sae}
+                          </span>
                           <span
                             className={
                               B4.newProduct === true
@@ -675,6 +846,25 @@ const ACEAStandard = () => {
                           {B5.produkt}{" "}
                           <span
                             className={
+                              B5.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              B5.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {B5.sae}
+                          </span>
+                          <span
+                            className={
                               B5.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -710,6 +900,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {C1.produkt}{" "}
+                          <span
+                            className={
+                              C1.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              C1.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {C1.sae}
+                          </span>
                           <span
                             className={
                               C1.newProduct === true
@@ -749,6 +958,25 @@ const ACEAStandard = () => {
                           {C2.produkt}{" "}
                           <span
                             className={
+                              C2.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              C2.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {C2.sae}
+                          </span>
+                          <span
+                            className={
                               C2.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -784,6 +1012,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {C3.produkt}{" "}
+                          <span
+                            className={
+                              C3.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              C3.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {C3.sae}
+                          </span>
                           <span
                             className={
                               C3.newProduct === true
@@ -823,6 +1070,25 @@ const ACEAStandard = () => {
                           {C4.produkt}{" "}
                           <span
                             className={
+                              C4.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              C4.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {C4.sae}
+                          </span>
+                          <span
+                            className={
                               C4.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -858,6 +1124,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {C5.produkt}{" "}
+                          <span
+                            className={
+                              C5.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              C5.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {C5.sae}
+                          </span>
                           <span
                             className={
                               C5.newProduct === true
@@ -897,6 +1182,25 @@ const ACEAStandard = () => {
                           {E2.produkt}{" "}
                           <span
                             className={
+                              E2.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              E2.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {E2.sae}
+                          </span>
+                          <span
+                            className={
                               E2.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -934,6 +1238,25 @@ const ACEAStandard = () => {
                           {E4.produkt}{" "}
                           <span
                             className={
+                              E4.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              E4.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {E4.sae}
+                          </span>
+                          <span
+                            className={
                               E4.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
@@ -969,6 +1292,25 @@ const ACEAStandard = () => {
                             <AiFillStar />
                           </span>
                           {E6.produkt}{" "}
+                          <span
+                            className={
+                              E6.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              E6.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {E6.sae}
+                          </span>
                           <span
                             className={
                               E6.newProduct === true
@@ -1009,6 +1351,25 @@ const ACEAStandard = () => {
                               {E7.produkt}{" "}
                               <span
                                 className={
+                                  E7.sae !== null
+                                    ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                    : `hidden`
+                                }
+                              >
+                                {" "}
+                                SAE
+                              </span>
+                              <span
+                                className={
+                                  E7.sae !== null
+                                    ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                    : `hidden`
+                                }
+                              >
+                                {E7.sae}
+                              </span>
+                              <span
+                                className={
                                   E7.newProduct === true
                                     ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                     : `hidden`
@@ -1047,6 +1408,25 @@ const ACEAStandard = () => {
                                 <AiFillStar />
                               </span>
                               {E9.produkt}{" "}
+                              <span
+                                className={
+                                  E9.sae !== null
+                                    ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                    : `hidden`
+                                }
+                              >
+                                {" "}
+                                SAE
+                              </span>
+                              <span
+                                className={
+                                  E9.sae !== null
+                                    ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                    : `hidden`
+                                }
+                              >
+                                {E9.sae}
+                              </span>
                               <span
                                 className={
                                   E9.newProduct === true
