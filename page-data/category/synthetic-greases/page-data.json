@@ -2,4 +2,5 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/synthetic-greases",
     "result": {"data":{"categories":{"title":"Synthetic greases","id":"-fed4e788-8f15-5607-a053-e8309051d040","slug":{"current":"synthetic-greases"},"product":[]}},"pageContext":{"slug":"synthetic-greases"}},
-    "staticQueryHashes": ["3000541721"]}
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "474c7d06-e94e-496a-b841-05474d808ab9-2022-01-14T12-52-38.000Z"}

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkpreem_digital_catalogue=self.webpackChunkpreem_digital_catalogue||[]).push([[392],{5474:function(e,t,a){a.r(t),a.d(t,{default:function(){return l}});var n=a(7294);function l(){return n.createElement(n.Fragment,null,n.createElement("div",{className:"max-w-screen-lg mx-auto"},n.createElement("p",null,"Power Generation Page")))}}}]);
-//# sourceMappingURL=component---src-pages-power-generation-js-0162b951ac70a203518d.js.map

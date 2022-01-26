@@ -1,5 +1,6 @@
 {
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/stationary-gas-engines",
-    "result": {"data":{"categories":{"title":"Stationary gas engines","id":"-26fc3b98-1136-5141-a071-1c9bb182d103","slug":{"current":"stationary-gas-engines"},"product":[]}},"pageContext":{"slug":"stationary-gas-engines"}},
-    "staticQueryHashes": ["3000541721"]}
+    "result": {"data":{"categories":{"title":"Stationary gas engines","id":"-26fc3b98-1136-5141-a071-1c9bb182d103","slug":{"current":"stationary-gas-engines"},"product":[{"id":"-2ba053e9-8e66-5089-9cf4-bbbebd71d62a","produkt":"HDAX 5200 Low Ash","_rawApplikationer":[{"_key":"f7479f5b0877","_type":"block","children":[{"_key":"a3b565109b64","_type":"span","marks":[],"text":"Natur- eller syntetgas med l g svavel och CFC-halt. L mplig f r NSCR-katalysator."}],"markDefs":[],"style":"normal"}],"sae":"40","farg":null,"isovg":null,"densitet":null,"kokpunkt":null,"brytningsindex":null,"viskositet40":"124","viskositet100":"13,5","vi":null,"flampunkt":"260","lagstaflyttemp":"-33","pds":"https://cglapps.chevron.com/sdspds/PDSDetailPage.aspx?docDataId=459765&docFormat=PDF","sds":"https://cglapps.chevron.com/sdspds/SDSDetailPage.aspx?docDataId=532539&docFormat=PDF","newProduct":false,"nlgi":null,"tval":null,"basolja40":null,"tempomrade":null,"tbnbastal":"4,2"}]}},"pageContext":{"slug":"stationary-gas-engines"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "f2c316d6-a527-415b-ba0b-a236af5e8e53-2022-01-26T13-48-48.000Z"}

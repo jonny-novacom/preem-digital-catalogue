@@ -1,5 +1,6 @@
 {
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/marine-engine-oils",
-    "result": {"data":{"categories":{"title":"Marine engine oils","id":"-150e2c69-17e5-57a5-a710-d59d912a01a1","slug":{"current":"marine-engine-oils"},"product":[]}},"pageContext":{"slug":"marine-engine-oils"}},
-    "staticQueryHashes": ["3000541721"]}
+    "result": {"data":{"categories":{"title":"Marine engine oils","id":"-150e2c69-17e5-57a5-a710-d59d912a01a1","slug":{"current":"marine-engine-oils"},"product":[{"id":"-9bfa8354-03bf-50ed-8796-d848ff33bcad","produkt":"Delo 1000 Marine","_rawApplikationer":[{"_key":"d02db6195791","_type":"block","children":[{"_key":"4b046100f5a1","_type":"span","marks":[],"text":"Högpresterande medelalkalisk dieselmotorolja för medelvarviga trunkmotorer."}],"markDefs":[],"style":"normal"}],"sae":"30","farg":null,"isovg":null,"densitet":null,"kokpunkt":null,"brytningsindex":null,"viskositet40":"102","viskositet100":"11,6","vi":"100","flampunkt":null,"lagstaflyttemp":"-18","pds":null,"sds":null,"newProduct":false,"nlgi":null,"tval":null,"basolja40":null,"tempomrade":null,"tbnbastal":"12"}]}},"pageContext":{"slug":"marine-engine-oils"}},
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "47fbf471-f4c0-4888-882b-b14dbfef5d83-2022-01-26T13-06-45.000Z"}

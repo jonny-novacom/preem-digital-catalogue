@@ -2,4 +2,5 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/guide-oils-saw-chain-oils",
     "result": {"data":{"categories":{"title":"Guide oils, saw chain oils","id":"-fe8f1946-5dee-53e0-a823-85008453c689","slug":{"current":"guide-oils-saw-chain-oils"},"product":[]}},"pageContext":{"slug":"guide-oils-saw-chain-oils"}},
-    "staticQueryHashes": ["3000541721"]}
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "c0a08aa2-40a3-4e92-9312-6c17ea117268-2022-01-07T13-54-37.000Z"}

@@ -27,13 +27,13 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-186a7ce52d3de3bfcefd.js"
+    "url": "webpack-runtime-17f366088afe7e241316.js"
   },
   {
     "url": "framework-f5bce0c9e5b9b63c8bb1.js"
   },
   {
-    "url": "styles.90a0f9d5f9a3123dd032.css"
+    "url": "styles.162768573ae37ca6c0fe.css"
   },
   {
     "url": "252f366e-19160097d45a2abf2e95.js"
@@ -42,11 +42,11 @@ self.__precacheManifest = [
     "url": "ae51ba48-3e831325eb0622ddaeed.js"
   },
   {
-    "url": "app-467dcd252f34842006cb.js"
+    "url": "app-283ffa6edb9f86efd0e4.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "d4f9767f97fa342aa0713c3656a1506d"
+    "revision": "4bf9ab218757882e34dc2f41e1640941"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-4bf1e3a7e92708f4d2ee.js"
@@ -61,16 +61,16 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "80c112ed35108ea5fbd913e43102d91a"
+    "revision": "ec1962e4df0608d49fd24ba91eca9e28"
   },
   {
     "url": "polyfill-f2ac07aab07b6762212e.js"
   },
   {
-    "url": "0c428ae2-6032cccf858006343bd4.js"
+    "url": "0c428ae2-1be645c8b08fa8c070e4.js"
   },
   {
-    "url": "a775ca443152cc24e803927c9ad030cac873a4c4-c93dc49871b2cfaf995b.js"
+    "url": "c94b9b9acf951c734d0009c5b898dd8f2b203135-c5708ce8a42bce3a11d4.js"
   },
   {
     "url": "053f738754685b826731600c383d5f9bd7dfb129-a8aa47a00bbf1ae15259.js"
@@ -79,15 +79,15 @@ self.__precacheManifest = [
     "url": "77e6c32096bcc50573703661e098ceb7f3a4ffb7-6a56a2bd69fdcfc02212.js"
   },
   {
-    "url": "component---src-pages-consumer-js-6cf783af7096f1bc7368.js"
+    "url": "component---src-pages-consumer-js-119d0b37d66bc6a8df6e.js"
   },
   {
     "url": "page-data/consumer/page-data.json",
-    "revision": "325d787009eb3b993aef9d3e6d2cd293"
+    "revision": "c5d9ee9c647a0c275df02f22debf1c0a"
   },
   {
     "url": "page-data/sq/d/4054939390.json",
-    "revision": "7c2e58940a0c55a038c491925519df63"
+    "revision": "fd056e27a047fcd3aeb7e18d28bcd102"
   },
   {
     "url": "d7eeaac4-440b62a13dbfd76a8836.js"
@@ -97,7 +97,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/industrial/page-data.json",
-    "revision": "35f198f70d9f14c6391201bcee753225"
+    "revision": "1578e75502888e2acd4d18e681ecc664"
   },
   {
     "url": "page-data/sq/d/1044611109.json",
@@ -114,35 +114,35 @@ self.__precacheManifest = [
     "url": "ed035bd0ba543f9766a7403545162a7fc1faff2c-5d0d1de788854f2e7cb2.js"
   },
   {
-    "url": "component---src-templates-category-js-ee74e71f8be6af26b10e.js"
+    "url": "component---src-templates-category-js-b4e9a8696a661e3d82aa.js"
   },
   {
     "url": "page-data/category/adblue/page-data.json",
-    "revision": "0e135d454e6defedb0e5e9fb32442456"
+    "revision": "984ef2f48caf247a9e70c763d72aaef6"
   },
   {
     "url": "page-data/category/bearing-greases/page-data.json",
-    "revision": "b351cab6f4b506d9277b889abfad5216"
+    "revision": "98c6387b133193a9c30d2e14da9ad074"
   },
   {
     "url": "page-data/category/brake-fluid/page-data.json",
-    "revision": "cf1ea650667bf93ccba4b659a7e3cb23"
+    "revision": "36b068e27a4c518ca3a77d55f750d57c"
   },
   {
     "url": "page-data/category/cold-degreasers-and-solvents/page-data.json",
-    "revision": "1721b93bde5bf44afabc2a8cb60f3e64"
+    "revision": "08945f494cc556f1cb91de75b1f8942a"
   },
   {
     "url": "page-data/category/compressor-and-air-tool-oils/page-data.json",
-    "revision": "c261caa7e8d1b39ce0071f4d97684b60"
+    "revision": "3991d2a9ee26d2d322bd28571953f2d3"
   },
   {
     "url": "page-data/category/coolants-and-washer-fluid/page-data.json",
-    "revision": "fd44cd484038cd0fe0c4ac5f07126763"
+    "revision": "dbb9d08e4a858fe1ccb00af027545467"
   },
   {
     "url": "page-data/category/engine-oils-heavy-vehicles/page-data.json",
-    "revision": "d156cec40a5a9f1131249dbf75a36b4d"
+    "revision": "91f0b5c9ad53f6364c7beed45ff4308e"
   },
   {
     "url": "page-data/category/engine-oils-passenger-cars-and-light-transport-vehicles/page-data.json",
@@ -150,39 +150,39 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/category/food-grade-nsf-h1-greases/page-data.json",
-    "revision": "e158d6c76aab631df78e71e308d3ded1"
+    "revision": "b2a0395be9954f6ba65e4da9010598b8"
   },
   {
     "url": "page-data/category/form-oils/page-data.json",
-    "revision": "32273ee7299196aaecf635fbfc252522"
+    "revision": "e1f34ffa88053cbefad5830c01dfadb7"
   },
   {
     "url": "page-data/category/fuel-additive/page-data.json",
-    "revision": "13728d0bb58ea67971006c33a342a27d"
+    "revision": "3b491956f465c4b0239aa367657a359e"
   },
   {
     "url": "page-data/category/fuel-for-diesel-engines/page-data.json",
-    "revision": "5db7c229f1d4a7c2af9afcbd65d3fb2c"
+    "revision": "62d2d50df434d638e2b3b7982b9fc2d2"
   },
   {
     "url": "page-data/category/fuel-for-petrol-engines/page-data.json",
-    "revision": "1539d08fc95caa85fcd64f686937d899"
+    "revision": "1fd0280634c79e4ef1469fb030f6d854"
   },
   {
     "url": "page-data/category/fuel-oil/page-data.json",
-    "revision": "e887046a42f978058ba06aa54a24505c"
+    "revision": "e3a2adbab5fa8c637fbe8833b4d9bfcf"
   },
   {
     "url": "page-data/category/grease-food-industry-nsf-h1/page-data.json",
-    "revision": "1c6bfcf028be7892ba539083df4a8b2d"
+    "revision": "84df2469fbcf1f603f033e951973652f"
   },
   {
     "url": "page-data/category/grease-with-synthetic-base-oil/page-data.json",
-    "revision": "b465d5d909eb95e462a97f353769bfa1"
+    "revision": "c9c2c831dc6fd2460005795559e5f1f9"
   },
   {
     "url": "page-data/category/guide-oils-saw-chain-oils/page-data.json",
-    "revision": "3e616cbc111935bef1e8fab963d6d052"
+    "revision": "62347bceb68f6fdd29a7b952e501689b"
   },
   {
     "url": "page-data/category/hydraulic-oils/page-data.json",
@@ -190,43 +190,43 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/category/industrial-gear-oils/page-data.json",
-    "revision": "a5696d86b866eae839cd26e97a83bd5a"
+    "revision": "e19e75a6683678147937a559deeeab18"
   },
   {
     "url": "page-data/category/marine-engine-oils/page-data.json",
-    "revision": "0138f24de92e64335af57071a8b575fe"
+    "revision": "aa16ea6f776af3c0b3588ba2a96e4901"
   },
   {
     "url": "page-data/category/metalworking-rust-protection/page-data.json",
-    "revision": "71896e9c6259b676a170eafb2a8a23e3"
+    "revision": "50c3c188533852f668c3e4c141d5c8d4"
   },
   {
     "url": "page-data/category/motorcycle-and-2-stroke-oils/page-data.json",
-    "revision": "9a8ddd5e24293439dd0e999a63f633bf"
+    "revision": "810e08bdc9e8e55c9b764fa7fb92ef4d"
   },
   {
     "url": "page-data/category/process-white-transformer-and-heat-transfer-oils/page-data.json",
-    "revision": "d213b14dcf99688d45d9535928699a0a"
+    "revision": "edfafde5b411331cfb6d0417da513373"
   },
   {
     "url": "page-data/category/refrigeration-compressor-oils/page-data.json",
-    "revision": "704abd3261bb189209fec1296aa465c2"
+    "revision": "73807721ec1b2dabb4abeeb7858e406e"
   },
   {
     "url": "page-data/category/ship-fuel/page-data.json",
-    "revision": "8f57afe02be2d70f1a9055a9a3bb61b5"
+    "revision": "65c533604533c017e55580f4148be75f"
   },
   {
     "url": "page-data/category/sliding-surfaces-chassis-and-teeth-greases/page-data.json",
-    "revision": "4a3606ea9ba63d7a9c4db867d8956dd5"
+    "revision": "de3df9453321fd38fae1620d67cd1578"
   },
   {
     "url": "page-data/category/stationary-gas-engines/page-data.json",
-    "revision": "43e258ae5adff580ae045183b95ac630"
+    "revision": "072e80daca163caad84495f5f681dc63"
   },
   {
     "url": "page-data/category/synthetic-greases/page-data.json",
-    "revision": "8c25ecf29d418f2b49f43e9d09578666"
+    "revision": "9206c713e5435fc54077d99368508a4f"
   },
   {
     "url": "page-data/category/transmission-oils/page-data.json",
@@ -234,7 +234,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/category/turbine-and-circulation-oils/page-data.json",
-    "revision": "95b63e13eb86b8ca36f6d993c71117bb"
+    "revision": "bbb3c99263676303ca165a8493db77fd"
   },
   {
     "url": "manifest.webmanifest",
@@ -348,7 +348,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/preem-digital-catalogue/app-467dcd252f34842006cb.js`))) {
+  if (!resources || !(await caches.match(`/preem-digital-catalogue/app-283ffa6edb9f86efd0e4.js`))) {
     return await fetch(event.request)
   }
 

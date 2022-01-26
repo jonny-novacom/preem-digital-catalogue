@@ -2,4 +2,5 @@
     "componentChunkName": "component---src-templates-category-js",
     "path": "/category/bearing-greases",
     "result": {"data":{"categories":{"title":"Bearing greases","id":"-26f203cf-8859-5110-82a3-fe9e3a5b9a26","slug":{"current":"bearing-greases"},"product":[]}},"pageContext":{"slug":"bearing-greases"}},
-    "staticQueryHashes": ["3000541721"]}
+    "staticQueryHashes": ["3000541721"],
+    "manifestId": "6dc006d8-f38e-449f-a104-e87b5369a25e-2022-01-07T13-55-11.000Z"}
