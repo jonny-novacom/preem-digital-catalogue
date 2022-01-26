@@ -21,7 +21,7 @@ export default function EngineOilsHeavyVehicles() {
             Produkt, applikationer, specifikationer
           </h4>
         </div>
-        <div className="pt-4">
+        <div className="pt-4 mb-20">
           <ConsumerAccordion />
         </div>
       </div>

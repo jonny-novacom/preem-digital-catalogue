@@ -29,9 +29,9 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
           // Spread bgImage into BackgroundImage:
           {...bgImage}
           preserveStackingContext
-          className="flex items-center justify-center bg-img-height h-3/4 bg-cover mt-24"
+          className="bg-img-height h-2/3 bg-cover mt-24"
         >
-          <div className="grid grid-cols-1 gap-4 w-screen p-8">
+          <div className="p-8">
             <div className="flex justify-end">
               <StaticImage
                 src="../images/texaco-logo.png"
@@ -42,7 +42,8 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                 className="mt-4"
               />
             </div>
-
+          </div>
+          <div className="p-8 pt-16">
             <div className="grid grid-cols-8 gap-1 mt-12">
               <div className="md:col-span-6 col-span-8">
                 <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 mt-24 leading-none">

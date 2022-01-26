@@ -31,7 +31,7 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
           preserveStackingContext
           className="bg-img-height h-2/3 bg-cover mt-24"
         >
-          <div className="w-screen p-8">
+          <div className="p-8">
             <div className="flex justify-end">
               <StaticImage
                 src="../images/texaco-logo.png"
