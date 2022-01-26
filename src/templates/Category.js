@@ -11,7 +11,7 @@ export default function SingleProductPage({ data: { categories } }) {
       <div className="max-w-screen-lg mx-auto">
         <div className="mt-36">
           <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
-            {categories.title}
+            {categories.titleSwedish}
           </h1>
 
           {categories.product.map((product) => (
@@ -421,6 +421,7 @@ export const query = graphql`
     categories: sanityProductCategory(slug: { current: { eq: $slug } }) {
       title
       id
+      titleSwedish
       slug {
         current
       }

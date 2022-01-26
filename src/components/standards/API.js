@@ -4,9 +4,10 @@ import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
 const APIStandard = () => {
-  const { GL4, SN, CD } = useStaticQuery(graphql`
+  const { GL4, SN, CD, CF } = useStaticQuery(graphql`
     query {
       CD: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardAPI: { elemMatch: { title: { eq: "CD" } } } }
       ) {
         nodes {
@@ -14,6 +15,25 @@ const APIStandard = () => {
           id
           newProduct
           featured
+          sae
+          standardAPI {
+            title
+          }
+          slug {
+            current
+          }
+        }
+      }
+      CF: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
+        filter: { standardAPI: { elemMatch: { title: { eq: "CF" } } } }
+      ) {
+        nodes {
+          produkt
+          id
+          newProduct
+          featured
+          sae
           standardAPI {
             title
           }
@@ -23,6 +43,7 @@ const APIStandard = () => {
         }
       }
       GL4: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardAPI: { elemMatch: { title: { eq: "GL-4" } } } }
       ) {
         nodes {
@@ -30,6 +51,7 @@ const APIStandard = () => {
           id
           newProduct
           featured
+          sae
           standardAPI {
             title
           }
@@ -39,6 +61,7 @@ const APIStandard = () => {
         }
       }
       SN: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardAPI: { elemMatch: { title: { eq: "SN" } } } }
       ) {
         nodes {
@@ -46,6 +69,7 @@ const APIStandard = () => {
           id
           newProduct
           featured
+          sae
           standardAPI {
             title
           }
@@ -58,6 +82,7 @@ const APIStandard = () => {
   `);
 
   const standardCD = CD.nodes;
+  const standardCF = CF.nodes;
   const standardGL4 = GL4.nodes;
   const standardSN = SN.nodes;
 
@@ -88,7 +113,82 @@ const APIStandard = () => {
                           {cd.produkt}{" "}
                           <span
                             className={
+                              cd.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              cd.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {cd.sae}
+                          </span>
+                          <span
+                            className={
                               cd.newProduct === true
+                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            NY!
+                          </span>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+            </Accordion>
+
+            {/* CF */}
+            <Accordion className="inner">
+              <Accordion.Item eventKey="0">
+                <Accordion.Header>CF</Accordion.Header>
+                <Accordion.Body>
+                  <div className="py-2">
+                    {standardCF.map((cf, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${cf.slug.current}`}>
+                          <span
+                            className={
+                              cf.featured === true
+                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
+                                : `hidden`
+                            }
+                          >
+                            <AiFillStar />
+                          </span>
+                          {cf.produkt}{" "}
+                          <span
+                            className={
+                              cf.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              cf.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {cf.sae}
+                          </span>
+                          <span
+                            className={
+                              cf.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -123,6 +223,25 @@ const APIStandard = () => {
                             <AiFillStar />
                           </span>
                           {gl4.produkt}{" "}
+                          <span
+                            className={
+                              gl4.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              gl4.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {gl4.sae}
+                          </span>
                           <span
                             className={
                               gl4.newProduct === true
@@ -160,6 +279,25 @@ const APIStandard = () => {
                             <AiFillStar />
                           </span>
                           {sn.produkt}{" "}
+                          <span
+                            className={
+                              sn.sae !== null
+                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                : `hidden`
+                            }
+                          >
+                            {" "}
+                            SAE
+                          </span>
+                          <span
+                            className={
+                              sn.sae !== null
+                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                : `hidden`
+                            }
+                          >
+                            {sn.sae}
+                          </span>
                           <span
                             className={
                               sn.newProduct === true

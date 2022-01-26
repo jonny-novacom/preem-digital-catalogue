@@ -27,6 +27,7 @@ const ACEAStandard = () => {
   } = useStaticQuery(graphql`
     query {
       A1: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "A1" } } } }
       ) {
         nodes {
@@ -44,6 +45,7 @@ const ACEAStandard = () => {
         }
       }
       A3: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "A3" } } } }
       ) {
         nodes {
@@ -61,6 +63,7 @@ const ACEAStandard = () => {
         }
       }
       A4: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "A4" } } } }
       ) {
         nodes {
@@ -78,6 +81,7 @@ const ACEAStandard = () => {
         }
       }
       A5: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "A5" } } } }
       ) {
         nodes {
@@ -95,6 +99,7 @@ const ACEAStandard = () => {
         }
       }
       B1: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "B1" } } } }
       ) {
         nodes {
@@ -112,6 +117,7 @@ const ACEAStandard = () => {
         }
       }
       B2: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "B2" } } } }
       ) {
         nodes {
@@ -129,6 +135,7 @@ const ACEAStandard = () => {
         }
       }
       B3: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "B3" } } } }
       ) {
         nodes {
@@ -146,6 +153,7 @@ const ACEAStandard = () => {
         }
       }
       B4: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "B4" } } } }
       ) {
         nodes {
@@ -163,6 +171,7 @@ const ACEAStandard = () => {
         }
       }
       B5: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "B5" } } } }
       ) {
         nodes {
@@ -180,6 +189,7 @@ const ACEAStandard = () => {
         }
       }
       C1: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "C1" } } } }
       ) {
         nodes {
@@ -197,6 +207,7 @@ const ACEAStandard = () => {
         }
       }
       C2: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "C2" } } } }
       ) {
         nodes {
@@ -214,6 +225,7 @@ const ACEAStandard = () => {
         }
       }
       C3: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "C3" } } } }
       ) {
         nodes {
@@ -231,6 +243,7 @@ const ACEAStandard = () => {
         }
       }
       C4: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "C4" } } } }
       ) {
         nodes {
@@ -248,6 +261,7 @@ const ACEAStandard = () => {
         }
       }
       C5: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "C5" } } } }
       ) {
         nodes {
@@ -265,6 +279,7 @@ const ACEAStandard = () => {
         }
       }
       E2: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "E2" } } } }
       ) {
         nodes {
@@ -282,6 +297,7 @@ const ACEAStandard = () => {
         }
       }
       E4: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "E4" } } } }
       ) {
         nodes {
@@ -299,6 +315,7 @@ const ACEAStandard = () => {
         }
       }
       E6: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "E6" } } } }
       ) {
         nodes {
@@ -316,6 +333,7 @@ const ACEAStandard = () => {
         }
       }
       E7: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "E7" } } } }
       ) {
         nodes {
@@ -333,6 +351,7 @@ const ACEAStandard = () => {
         }
       }
       E9: allSanityProduct(
+        sort: { fields: produkt, order: ASC }
         filter: { standardACEA: { elemMatch: { title: { eq: "E9" } } } }
       ) {
         nodes {
