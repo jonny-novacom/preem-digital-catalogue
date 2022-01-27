@@ -3,7 +3,10 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allSanityProduct(filter: { slug: { current: { ne: null } } }) {
+      allSanityProduct(
+        sort: { fields: produkt, order: ASC }
+        filter: { slug: { current: { ne: null } } }
+      ) {
         edges {
           node {
             produkt

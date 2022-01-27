@@ -61,17 +61,25 @@ module.exports = {
                       sae
                       farg
                       lagstaflyttemp
+                      flampunkt
                       vi
                       isovg
+                      densitet
+                      kokpunkt
+                      brytningsindex
                       viskositet100
                       viskositet40
+                      nlgi
+                      tval
+                      basolja40
+                      tempomrade
+                      tbnbastal
                       _rawApplikationer
                       applikationer {
                         children {
                           text
                         }
                       }
-                      flampunkt
                       slug {
                         current
                       }
@@ -95,6 +103,14 @@ module.exports = {
           "vi",
           "flampunkt",
           "lagstaflyttemp",
+          "nlgi",
+          "tval",
+          "basolja40",
+          "tempomrade",
+          "tbnbastal",
+          "densitet",
+          "kokpunkt",
+          "brytningsindex",
         ],
         normalizer: ({ data }) =>
           data.allSanityProduct.nodes.map((node) => ({
@@ -110,6 +126,14 @@ module.exports = {
             vi: node.vi,
             flampunkt: node.flampunkt,
             lagstaflyttemp: node.lagstaflyttemp,
+            nlgi: node.nlgi,
+            tval: node.tval,
+            basolja40: node.basolja40,
+            tempomrade: node.tempomrade,
+            tbnbastal: node.tbnbastal,
+            densitet: node.densitet,
+            kokpunkt: node.kokpunkt,
+            brytningsindex: node.brytningsindex,
           })),
       },
     },
