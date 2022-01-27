@@ -26,7 +26,7 @@ const LocalSearch = () => {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36">
+        <div className="mt-36 mb-20">
           <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
             Search
           </h1>
@@ -55,7 +55,28 @@ const LocalSearch = () => {
               {results.map((result) => (
                 <Accordion className="inner innersearch" key={result.id}>
                   <Accordion.Item eventKey={result.id}>
-                    <Accordion.Header>{result.produkt}</Accordion.Header>
+                    <Accordion.Header>
+                      {result.produkt}
+                      <span
+                        className={
+                          result.sae !== null
+                            ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1`
+                            : `hidden`
+                        }
+                      >
+                        {" "}
+                        SAE
+                      </span>
+                      <span
+                        className={
+                          result.sae !== null
+                            ? `text-left text-gray-700 text-md font-gothamNarrow font-normal inline-block ml-1`
+                            : `hidden`
+                        }
+                      >
+                        {result.sae}
+                      </span>
+                    </Accordion.Header>
                     <Accordion.Body>
                       <div className="pr-4 pt-2 pl-10">
                         <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
@@ -88,6 +109,7 @@ const LocalSearch = () => {
                             >
                               Färg
                             </div>
+
                             <div
                               className={
                                 result.farg !== null
@@ -97,6 +119,26 @@ const LocalSearch = () => {
                             >
                               {result.farg}
                             </div>
+
+                            <div
+                              className={
+                                result.kokpunkt !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Kokpunkt (koncentrat)
+                            </div>
+                            <div
+                              className={
+                                result.kokpunkt !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.kokpunkt}
+                            </div>
+
                             <div
                               className={
                                 result.isovg !== null
@@ -115,35 +157,233 @@ const LocalSearch = () => {
                             >
                               {result.isovg}
                             </div>
-                            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+
+                            <div
+                              className={
+                                result.densitet !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Densitet kg/m³
+                            </div>
+                            <div
+                              className={
+                                result.densitet !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.densitet}
+                            </div>
+
+                            <div
+                              className={
+                                result.viskositet40 !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
                               Viskositet cSt, mm2/s 40°C
                             </div>
-                            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                            <div
+                              className={
+                                result.viskositet40 !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
                               {result.viskositet40}
                             </div>
-                            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+
+                            <div
+                              className={
+                                result.viskositet100 !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
                               Viskositet cSt, mm2/s 100°C
                             </div>
-                            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                            <div
+                              className={
+                                result.viskositet100 !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
                               {result.viskositet100}
                             </div>
-                            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+
+                            <div
+                              className={
+                                result.vi !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
                               VI
                             </div>
-                            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                            <div
+                              className={
+                                result.vi !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
                               {result.vi}
                             </div>
-                            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+
+                            <div
+                              className={
+                                result.tbnbastal !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              TBN Bastal
+                            </div>
+                            <div
+                              className={
+                                result.tbnbastal !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.tbnbastal}
+                            </div>
+
+                            <div
+                              className={
+                                result.flampunkt !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
                               Flampunkt °C
                             </div>
-                            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                            <div
+                              className={
+                                result.flampunkt !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
                               {result.flampunkt}
                             </div>
-                            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2">
+
+                            <div
+                              className={
+                                result.brytningsindex !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Brytningsindex
+                            </div>
+                            <div
+                              className={
+                                result.brytningsindex !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.brytningsindex}
+                            </div>
+
+                            <div
+                              className={
+                                result.lagstaflyttemp !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
                               Lägstaflyttemp °C
                             </div>
-                            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3">
+                            <div
+                              className={
+                                result.lagstaflyttemp !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
                               {result.lagstaflyttemp}
+                            </div>
+
+                            <div
+                              className={
+                                result.nlgi !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              NLGI
+                            </div>
+                            <div
+                              className={
+                                result.nlgi !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.nlgi}
+                            </div>
+
+                            <div
+                              className={
+                                result.tval !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Tvål
+                            </div>
+                            <div
+                              className={
+                                result.tval !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.tval}
+                            </div>
+
+                            <div
+                              className={
+                                result.basolja40 !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Basolja cSt 40°C
+                            </div>
+                            <div
+                              className={
+                                result.basolja40 !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.basolja40}
+                            </div>
+
+                            <div
+                              className={
+                                result.tempomrade !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Tempområde °C
+                            </div>
+                            <div
+                              className={
+                                result.tempomrade !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.tempomrade}
                             </div>
                           </div>
                           <div className="grid grid-flow-col auto-cols-min mt-4">
