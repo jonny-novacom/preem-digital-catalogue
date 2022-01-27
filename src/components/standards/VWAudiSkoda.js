@@ -3,32 +3,28 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
-const ACEAStandard = () => {
+const VWStandard = () => {
   const {
-    A1,
-    A3,
-    A4,
-    A5,
-    B1,
-    B2,
-    B3,
-    B4,
-    B5,
-    C1,
-    C2,
-    C3,
-    C4,
-    C5,
-    E2,
-    E4,
-    E6,
-    E7,
-    E9,
+    G052990,
+    G055540,
+    TL774F,
+    VW50101,
+    VW50200,
+    VW50300,
+    VW50301,
+    VW50400,
+    VW50500,
+    VW50501,
+    VW50700,
+    VW50800,
+    VW50900,
   } = useStaticQuery(graphql`
     query {
-      A1: allSanityProduct(
+      G052990: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "A1" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "Part No. G 052 990^" } } }
+        }
       ) {
         nodes {
           produkt
@@ -36,7 +32,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -44,9 +40,13 @@ const ACEAStandard = () => {
           }
         }
       }
-      A3: allSanityProduct(
+      G055540: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "A3" } } } }
+        filter: {
+          standardVW: {
+            elemMatch: { title: { eq: "Part No. G 055 540 (A2)^" } }
+          }
+        }
       ) {
         nodes {
           produkt
@@ -54,7 +54,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -62,9 +62,9 @@ const ACEAStandard = () => {
           }
         }
       }
-      A4: allSanityProduct(
+      TL774F: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "A3/B3" } } } }
+        filter: { standardVW: { elemMatch: { title: { eq: "TL 774-F*" } } } }
       ) {
         nodes {
           produkt
@@ -72,7 +72,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -80,9 +80,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      A5: allSanityProduct(
+      VW50101: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "A5" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 501 01*" } } }
+        }
       ) {
         nodes {
           produkt
@@ -90,7 +92,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -98,9 +100,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      B1: allSanityProduct(
+      VW50200: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "B1" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 502 00" } } }
+        }
       ) {
         nodes {
           produkt
@@ -108,7 +112,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -116,9 +120,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      B2: allSanityProduct(
+      VW50300: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "A3/B4" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 503 00" } } }
+        }
       ) {
         nodes {
           produkt
@@ -126,7 +132,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -134,9 +140,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      B3: allSanityProduct(
+      VW50301: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "B3" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 503 01" } } }
+        }
       ) {
         nodes {
           produkt
@@ -144,7 +152,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -152,9 +160,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      B4: allSanityProduct(
+      VW50400: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "B4" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 504 00" } } }
+        }
       ) {
         nodes {
           produkt
@@ -162,7 +172,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -170,9 +180,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      B5: allSanityProduct(
+      VW50500: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "B5" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 505 00" } } }
+        }
       ) {
         nodes {
           produkt
@@ -180,7 +192,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -188,9 +200,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      C1: allSanityProduct(
+      VW50501: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "C1" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 505 01" } } }
+        }
       ) {
         nodes {
           produkt
@@ -198,7 +212,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -206,9 +220,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      C2: allSanityProduct(
+      VW50700: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "C2" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 507 00" } } }
+        }
       ) {
         nodes {
           produkt
@@ -216,7 +232,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -224,9 +240,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      C3: allSanityProduct(
+      VW50800: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "C3" } } } }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 508.00" } } }
+        }
       ) {
         nodes {
           produkt
@@ -234,7 +252,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -242,27 +260,11 @@ const ACEAStandard = () => {
           }
         }
       }
-      C4: allSanityProduct(
+      VW50900: allSanityProduct(
         sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "C4" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardACEA {
-            title
-          }
-          slug {
-            current
-          }
+        filter: {
+          standardVW: { elemMatch: { title: { eq: "VW Standard 509.00" } } }
         }
-      }
-      C5: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "C5" } } } }
       ) {
         nodes {
           produkt
@@ -270,97 +272,7 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      E2: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "E2" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardACEA {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      E4: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "E4" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardACEA {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      E6: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "E6" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardACEA {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      E7: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "E7" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardACEA {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      E9: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardACEA: { elemMatch: { title: { eq: "E9" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardACEA {
+          standardAPI {
             title
           }
           slug {
@@ -371,54 +283,49 @@ const ACEAStandard = () => {
     }
   `);
 
-  const standardA1 = A1.nodes;
-  const standardA3 = A3.nodes;
-  const standardA4 = A4.nodes;
-  const standardA5 = A5.nodes;
-  const standardB1 = B1.nodes;
-  const standardB2 = B2.nodes;
-  const standardB3 = B3.nodes;
-  const standardB4 = B4.nodes;
-  const standardB5 = B5.nodes;
-  const standardC1 = C1.nodes;
-  const standardC2 = C2.nodes;
-  const standardC3 = C3.nodes;
-  const standardC4 = C4.nodes;
-  const standardC5 = C5.nodes;
-  const standardE2 = E2.nodes;
-  const standardE4 = E4.nodes;
-  const standardE6 = E6.nodes;
-  const standardE7 = E7.nodes;
-  const standardE9 = E9.nodes;
+  const standardG052990 = G052990.nodes;
+  const standardG055540 = G055540.nodes;
+  const standardTL774F = TL774F.nodes;
+  const standardVW50101 = VW50101.nodes;
+  const standardVW50200 = VW50200.nodes;
+  const standardVW50300 = VW50300.nodes;
+  const standardVW50301 = VW50301.nodes;
+  const standardVW50400 = VW50400.nodes;
+  const standardVW50500 = VW50500.nodes;
+  const standardVW50501 = VW50501.nodes;
+  const standardVW50700 = VW50700.nodes;
+  const standardVW50800 = VW50800.nodes;
+  const standardVW50900 = VW50900.nodes;
 
   return (
     <>
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>ACEA</Accordion.Header>
+          <Accordion.Header>VW/Audi/Skoda</Accordion.Header>
+
           <Accordion.Body>
-            {/* A1*/}
+            {/* Part No. G 052 990^ */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>A1</Accordion.Header>
+                <Accordion.Header>Part No. G 052 990^</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardA1.map((A1, a) => (
+                    {standardG052990.map((g052990, a) => (
                       <div className="flex justify-start py-2 pl-10" key={a}>
-                        <Link to={`/products/${A1.slug.current}`}>
+                        <Link to={`/products/${g052990.slug.current}`}>
                           <span
                             className={
-                              A1.featured === true
+                              g052990.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {A1.produkt}{" "}
+                          {g052990.produkt}{" "}
                           <span
                             className={
-                              A1.sae !== null
+                              g052990.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -428,128 +335,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              A1.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {A1.sae}
-                          </span>
-                          <span
-                            className={
-                              A1.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* A3 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>A3</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardA3.map((A3, b) => (
-                      <div className="flex justify-start py-2 pl-10" key={b}>
-                        <Link to={`/products/${A3.slug.current}`}>
-                          <span
-                            className={
-                              A3.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {A3.produkt}{" "}
-                          <span
-                            className={
-                              A3.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              A3.sae !== null
+                              g052990.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {A3.sae}
+                            {g052990.sae}
                           </span>
                           <span
                             className={
-                              A3.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* A3/B3 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>A3/B3</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardA4.map((A4, c) => (
-                      <div className="flex justify-start py-2 pl-10" key={c}>
-                        <Link to={`/products/${A4.slug.current}`}>
-                          <span
-                            className={
-                              A4.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {A4.produkt}{" "}
-                          <span
-                            className={
-                              A4.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              A4.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {A4.sae}
-                          </span>
-                          <span
-                            className={
-                              A4.newProduct === true
+                              g052990.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -565,28 +360,28 @@ const ACEAStandard = () => {
               </Accordion.Item>
             </Accordion>
 
-            {/* A3/B4 */}
+            {/* Part No. G 055 540 (A2)^ */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>A3/B4</Accordion.Header>
+                <Accordion.Header>Part No. G 055 540 (A2)^</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardB2.map((B2, f) => (
-                      <div className="flex justify-start py-2 pl-10" key={f}>
-                        <Link to={`/products/${B2.slug.current}`}>
+                    {standardG055540.map((G055540, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${G055540.slug.current}`}>
                           <span
                             className={
-                              A5.featured === true
+                              G055540.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {B2.produkt}{" "}
+                          {G055540.produkt}{" "}
                           <span
                             className={
-                              B2.sae !== null
+                              G055540.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -596,16 +391,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              B2.sae !== null
+                              G055540.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {B2.sae}
+                            {G055540.sae}
                           </span>
                           <span
                             className={
-                              B2.newProduct === true
+                              G055540.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -621,28 +416,28 @@ const ACEAStandard = () => {
               </Accordion.Item>
             </Accordion>
 
-            {/* A5 */}
+            {/* TL 774-F* */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>A5</Accordion.Header>
+                <Accordion.Header>TL 774-F*</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardA5.map((A5, d) => (
-                      <div className="flex justify-start py-2 pl-10" key={d}>
-                        <Link to={`/products/${A5.slug.current}`}>
+                    {standardTL774F.map((TL774F, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${TL774F.slug.current}`}>
                           <span
                             className={
-                              A5.featured === true
+                              TL774F.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {A5.produkt}{" "}
+                          {TL774F.produkt}{" "}
                           <span
                             className={
-                              A5.sae !== null
+                              TL774F.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -652,16 +447,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              A5.sae !== null
+                              TL774F.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {A5.sae}
+                            {TL774F.sae}
                           </span>
                           <span
                             className={
-                              A5.newProduct === true
+                              TL774F.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -677,28 +472,28 @@ const ACEAStandard = () => {
               </Accordion.Item>
             </Accordion>
 
-            {/* B1 */}
+            {/* VW Standard 501 01* */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>B1</Accordion.Header>
+                <Accordion.Header>VW Standard 501 01*</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardB1.map((B1, e) => (
-                      <div className="flex justify-start py-2 pl-10" key={e}>
-                        <Link to={`/products/${B1.slug.current}`}>
+                    {standardVW50101.map((VW50101, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50101.slug.current}`}>
                           <span
                             className={
-                              A5.featured === true
+                              VW50101.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {B1.produkt}{" "}
+                          {VW50101.produkt}{" "}
                           <span
                             className={
-                              B1.sae !== null
+                              VW50101.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -708,16 +503,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              B1.sae !== null
+                              VW50101.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {B1.sae}
+                            {VW50101.sae}
                           </span>
                           <span
                             className={
-                              B1.newProduct === true
+                              VW50101.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -732,29 +527,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* B3 */}
+            {/* VW Standard 502 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>B3</Accordion.Header>
+                <Accordion.Header>VW Standard 502 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardB3.map((B3, g) => (
-                      <div className="flex justify-start py-2 pl-10" key={g}>
-                        <Link to={`/products/${B3.slug.current}`}>
+                    {standardVW50200.map((W50200, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${W50200.slug.current}`}>
                           <span
                             className={
-                              A5.featured === true
+                              W50200.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {B3.produkt}{" "}
+                          {W50200.produkt}{" "}
                           <span
                             className={
-                              B3.sae !== null
+                              W50200.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -764,16 +558,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              B3.sae !== null
+                              W50200.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {B3.sae}
+                            {W50200.sae}
                           </span>
                           <span
                             className={
-                              B3.newProduct === true
+                              W50200.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -788,29 +582,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* B4 */}
+            {/* VW Standard 503 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>B4</Accordion.Header>
+                <Accordion.Header>VW Standard 503 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardB4.map((B4, h) => (
-                      <div className="flex justify-start py-2 pl-10" key={h}>
-                        <Link to={`/products/${B4.slug.current}`}>
+                    {standardVW50300.map((W50300, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${W50300.slug.current}`}>
                           <span
                             className={
-                              B4.featured === true
+                              W50300.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {B4.produkt}{" "}
+                          {W50300.produkt}{" "}
                           <span
                             className={
-                              B4.sae !== null
+                              W50300.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -820,16 +613,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              B4.sae !== null
+                              W50300.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {B4.sae}
+                            {W50300.sae}
                           </span>
                           <span
                             className={
-                              B4.newProduct === true
+                              W50300.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -844,29 +637,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* B5 */}
+            {/* VW Standard 503 01 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>B5</Accordion.Header>
+                <Accordion.Header>VW Standard 503 01</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardB5.map((B5, i) => (
-                      <div className="flex justify-start py-2 pl-10" key={i}>
-                        <Link to={`/products/${B5.slug.current}`}>
+                    {standardVW50301.map((W50301, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${W50301.slug.current}`}>
                           <span
                             className={
-                              B5.featured === true
+                              W50301.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {B5.produkt}{" "}
+                          {W50301.produkt}{" "}
                           <span
                             className={
-                              B5.sae !== null
+                              W50301.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -876,16 +668,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              B5.sae !== null
+                              W50301.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {B5.sae}
+                            {W50301.sae}
                           </span>
                           <span
                             className={
-                              B5.newProduct === true
+                              W50301.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -900,29 +692,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* C1 */}
+            {/* VW Standard 504 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>C1</Accordion.Header>
+                <Accordion.Header>VW Standard 504 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardC1.map((C1, j) => (
-                      <div className="flex justify-start py-2 pl-10" key={j}>
-                        <Link to={`/products/${C1.slug.current}`}>
+                    {standardVW50400.map((VW50400, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50400.slug.current}`}>
                           <span
                             className={
-                              C1.featured === true
+                              VW50400.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {C1.produkt}{" "}
+                          {VW50400.produkt}{" "}
                           <span
                             className={
-                              C1.sae !== null
+                              VW50400.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -932,16 +723,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              C1.sae !== null
+                              VW50400.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {C1.sae}
+                            {VW50400.sae}
                           </span>
                           <span
                             className={
-                              C1.newProduct === true
+                              VW50400.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -956,29 +747,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* C2 */}
+            {/* VW Standard 505 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>C2</Accordion.Header>
+                <Accordion.Header>VW Standard 505 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardC2.map((C2, k) => (
-                      <div className="flex justify-start py-2 pl-10" key={k}>
-                        <Link to={`/products/${C2.slug.current}`}>
+                    {standardVW50500.map((VW50500, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50500.slug.current}`}>
                           <span
                             className={
-                              C2.featured === true
+                              VW50500.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {C2.produkt}{" "}
+                          {VW50500.produkt}{" "}
                           <span
                             className={
-                              C2.sae !== null
+                              VW50500.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -988,16 +778,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              C2.sae !== null
+                              VW50500.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {C2.sae}
+                            {VW50500.sae}
                           </span>
                           <span
                             className={
-                              C2.newProduct === true
+                              VW50500.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -1012,29 +802,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* C3 */}
+            {/* VW Standard 505 01 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>C3</Accordion.Header>
+                <Accordion.Header>VW Standard 505 01</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardC3.map((C3, l) => (
-                      <div className="flex justify-start py-2 pl-10" key={l}>
-                        <Link to={`/products/${C3.slug.current}`}>
+                    {standardVW50501.map((VW50501, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50501.slug.current}`}>
                           <span
                             className={
-                              C3.featured === true
+                              VW50501.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {C3.produkt}{" "}
+                          {VW50501.produkt}{" "}
                           <span
                             className={
-                              C3.sae !== null
+                              VW50501.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -1044,16 +833,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              C3.sae !== null
+                              VW50501.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {C3.sae}
+                            {VW50501.sae}
                           </span>
                           <span
                             className={
-                              C3.newProduct === true
+                              VW50501.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -1068,29 +857,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* C4 */}
+            {/* VW Standard 507 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>C4</Accordion.Header>
+                <Accordion.Header>VW Standard 507 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardC4.map((C4, m) => (
-                      <div className="flex justify-start py-2 pl-10" key={m}>
-                        <Link to={`/products/${C4.slug.current}`}>
+                    {standardVW50700.map((VW50700, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50700.slug.current}`}>
                           <span
                             className={
-                              C4.featured === true
+                              VW50700.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {C4.produkt}{" "}
+                          {VW50700.produkt}{" "}
                           <span
                             className={
-                              C4.sae !== null
+                              VW50700.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -1100,16 +888,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              C4.sae !== null
+                              VW50700.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {C4.sae}
+                            {VW50700.sae}
                           </span>
                           <span
                             className={
-                              C4.newProduct === true
+                              VW50700.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -1124,29 +912,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* C5 */}
+            {/* VW Standard 508 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>C5</Accordion.Header>
+                <Accordion.Header>VW Standard 508 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardC5.map((C5, n) => (
-                      <div className="flex justify-start py-2 pl-10" key={n}>
-                        <Link to={`/products/${C5.slug.current}`}>
+                    {standardVW50800.map((VW50800, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50800.slug.current}`}>
                           <span
                             className={
-                              C5.featured === true
+                              VW50800.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {C5.produkt}{" "}
+                          {VW50800.produkt}{" "}
                           <span
                             className={
-                              C5.sae !== null
+                              VW50800.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -1156,16 +943,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              C5.sae !== null
+                              VW50800.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {C5.sae}
+                            {VW50800.sae}
                           </span>
                           <span
                             className={
-                              C5.newProduct === true
+                              VW50800.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -1180,29 +967,28 @@ const ACEAStandard = () => {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-
-            {/* E2 */}
+            {/* VW Standard 509 00 */}
             <Accordion className="inner">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>E2</Accordion.Header>
+                <Accordion.Header>VW Standard 509 00</Accordion.Header>
                 <Accordion.Body>
                   <div className="py-2">
-                    {standardE2.map((E2, o) => (
-                      <div className="flex justify-start py-2 pl-10" key={o}>
-                        <Link to={`/products/${E2.slug.current}`}>
+                    {standardVW50900.map((VW50900, a) => (
+                      <div className="flex justify-start py-2 pl-10" key={a}>
+                        <Link to={`/products/${VW50900.slug.current}`}>
                           <span
                             className={
-                              E2.featured === true
+                              VW50900.featured === true
                                 ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
                                 : `hidden`
                             }
                           >
                             <AiFillStar />
                           </span>
-                          {E2.produkt}{" "}
+                          {VW50900.produkt}{" "}
                           <span
                             className={
-                              E2.sae !== null
+                              VW50900.sae !== null
                                 ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
                                 : `hidden`
                             }
@@ -1212,240 +998,16 @@ const ACEAStandard = () => {
                           </span>
                           <span
                             className={
-                              E2.sae !== null
+                              VW50900.sae !== null
                                 ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
                                 : `hidden`
                             }
                           >
-                            {E2.sae}
+                            {VW50900.sae}
                           </span>
                           <span
                             className={
-                              E2.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* E4 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>E4</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardE4.map((E4, p) => (
-                      <div className="flex justify-start py-2 pl-10" key={p}>
-                        <Link to={`/products/${E4.slug.current}`}>
-                          <span
-                            className={
-                              E4.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {E4.produkt}{" "}
-                          <span
-                            className={
-                              E4.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              E4.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {E4.sae}
-                          </span>
-                          <span
-                            className={
-                              E4.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* E6 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>E6</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardE6.map((E6, q) => (
-                      <div className="flex justify-start py-2 pl-10" key={q}>
-                        <Link to={`/products/${E6.slug.current}`}>
-                          <span
-                            className={
-                              E6.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {E6.produkt}{" "}
-                          <span
-                            className={
-                              E6.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              E6.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {E6.sae}
-                          </span>
-                          <span
-                            className={
-                              E6.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* E7 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>E7</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardE7.map((E7, r) => (
-                      <div className="flex justify-start py-2 pl-10" key={r}>
-                        <Link to={`/products/${E7.slug.current}`}>
-                          <span
-                            className={
-                              E7.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {E7.produkt}{" "}
-                          <span
-                            className={
-                              E7.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              E7.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {E7.sae}
-                          </span>
-                          <span
-                            className={
-                              E7.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* E9 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>E9</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardE9.map((E9, s) => (
-                      <div className="flex justify-start py-2 pl-10" key={s}>
-                        <Link to={`/products/${E9.slug.current}`}>
-                          <span
-                            className={
-                              E9.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {E9.produkt}{" "}
-                          <span
-                            className={
-                              E9.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              E9.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {E9.sae}
-                          </span>
-                          <span
-                            className={
-                              E9.newProduct === true
+                              VW50900.newProduct === true
                                 ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
                                 : `hidden`
                             }
@@ -1467,4 +1029,4 @@ const ACEAStandard = () => {
   );
 };
 
-export default ACEAStandard;
+export default VWStandard;

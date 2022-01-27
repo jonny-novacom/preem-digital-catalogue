@@ -12,6 +12,7 @@ export default function CommercialCategories() {
         nodes {
           title
           id
+          titleSwedish
           slug {
             current
           }
@@ -31,7 +32,7 @@ export default function CommercialCategories() {
               <Link to={`/category/${commercialCategories.slug.current}`}>
                 <div className="grid grid-rows-2 items-center justify-center h-32 bg-gray-50 px-2 py-4">
                   <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">
-                    {commercialCategories.title}
+                    {commercialCategories.titleSwedish}
                   </span>
                   <span className="bg-preemYellow w-6 h-6 rounded-full block mx-auto mt-2">
                     <GoChevronRight className="text-preemGreen text-xl text-center block mt-0.5 ml-0.5" />
