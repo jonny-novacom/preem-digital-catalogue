@@ -9,7 +9,7 @@ export default function SingleProductPage({ data: { categories } }) {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36">
+        <div className="mt-36 mb-20">
           <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
             {categories.titleSwedish}
           </h1>
