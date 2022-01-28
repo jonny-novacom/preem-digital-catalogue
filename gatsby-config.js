@@ -164,6 +164,9 @@ module.exports = {
           `/search/`,
           `/standards`,
         ],
+        workboxConfig: {
+          globPatterns: ["**/*.{js,jpg,png,html,css}"],
+        },
       },
     },
   ],
