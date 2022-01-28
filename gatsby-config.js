@@ -165,7 +165,7 @@ module.exports = {
           `/standards`,
         ],
         workboxConfig: {
-          globPatterns: ["**/*.{js,jpg,png,html,css}"],
+          globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css}"],
         },
       },
     },
