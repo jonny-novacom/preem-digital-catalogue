@@ -43,10 +43,10 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
               />
             </div>
           </div>
-          <div className="p-8 pt-16">
+          <div className="p-8 md:pt-16">
             <div className="grid grid-cols-8 gap-1 mt-12">
               <div className="md:col-span-6 col-span-8">
-                <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 mt-24 leading-none">
+                <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 md:mt-24 mt:8 leading-none t-center md:text-left">
                   Motoroljor
                   <br />
                   personbilar och
@@ -60,7 +60,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Havoline ProDS MG SAE 0W-20"
-                  className="object-contain w-56 p-4 mt-12 block mx-auto"
+                  className="object-contain w-56 p-4 md:mt-12 block mx-auto"
                 />
               </div>
             </div>

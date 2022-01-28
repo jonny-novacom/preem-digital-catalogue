@@ -15,6 +15,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: "Gotham Narrow", "Franklin Gothic Medium", "Tahoma", sans-serif;
 }
 
+.t-center{
+        text-align: center;
+}
+
 .gatsby-image-wrapper-constrained {
     display: block !important;
     vertical-align: top;
