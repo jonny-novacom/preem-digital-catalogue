@@ -10,7 +10,7 @@ import SearchEngineOptimisation from "./SearchEngineOptimisation";
 export default function Layout({ children }) {
   return (
     <>
-      <div className="debug-screens">
+      <div className="">
         <SiteProvider>
           <SearchEngineOptimisation />
           <GlobalStyles />
