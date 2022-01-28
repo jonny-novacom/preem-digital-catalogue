@@ -159,7 +159,6 @@ module.exports = {
           `/category/*`,
           `/product-category/*`,
           `/commercial/`,
-          `/index/`,
           `/marine/`,
           `/power-generation/`,
           `/search/`,
