@@ -9,6 +9,9 @@ module.exports = {
         "Tahoma",
         "sans-serif",
       ],
+      debugScreens: {
+        position: ["top", "left"],
+      },
     },
     extend: {
       colors: {
@@ -21,5 +24,8 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require("tailwindcss-textshadow")],
+  plugins: [
+    require("tailwindcss-debug-screens"),
+    require("tailwindcss-textshadow"),
+  ],
 };
