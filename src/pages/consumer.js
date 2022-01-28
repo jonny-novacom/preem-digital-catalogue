@@ -46,7 +46,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
           <div className="p-8 md:pt-16">
             <div className="grid grid-cols-8 gap-1 mt-12">
               <div className="md:col-span-6 col-span-8">
-                <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 md:mt-24 mt:8 leading-none t-center md:text-left">
+                <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 md:mt-24 mt:8 leading-none">
                   Motoroljor
                   <br />
                   personbilar och
