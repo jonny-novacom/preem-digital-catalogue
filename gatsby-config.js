@@ -155,7 +155,7 @@ module.exports = {
         precachePages: [
           `/consumer/`,
           `/industrial/`,
-          `/product/*`,
+          `/products/*`,
           `/category/*`,
           `/product-category/*`,
           `/commercial/`,
