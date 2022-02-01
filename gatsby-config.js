@@ -162,7 +162,19 @@ module.exports = {
           `/marine/`,
           `/power-generation/`,
           `/search/`,
-          `/standards`,
+          `/standards/`,
+        ],
+        runtimeCaching: [
+          {
+            urlPattern: /^https?:.*\/page-data\/.*\.json/,
+            handler: `staleWhileRevalidate`,
+            options: {
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+              cacheName: "sanity",
+            },
+          },
         ],
         workboxConfig: {
           globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css}"],

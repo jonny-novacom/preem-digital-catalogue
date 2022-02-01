@@ -63,4 +63,34 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { slug: edge.node.slug.current },
     });
   });
+
+  const glossaryCatsResult = await graphql(`
+    {
+      allSanityGlossaryCategory {
+        distinct(field: title)
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `);
+  if (glossaryCatsResult.errors) {
+    throw glossaryCatsResult.errors;
+  }
+
+  const glossCats = glossaryCatsResult.data.allSanityGlossaryCategory.edges;
+
+  glossCats.forEach((glossCat, id) => {
+    const path = `/glossary/${glossCat.node.slug.current}`;
+    console.log(path);
+    createPage({
+      path,
+      component: require.resolve("./src/templates/Glossary.js"),
+      context: { glossCat: glossCat.node.slug.current },
+    });
+  });
 };
