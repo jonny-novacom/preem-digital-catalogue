@@ -39,7 +39,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
                 transformOptions={"cover"}
-                className="mt-4"
+                className="mt-8 mr-8"
               />
             </div>
           </div>

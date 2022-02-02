@@ -1,47 +1,38 @@
 import * as React from "react";
+import ISO3448 from "../components/tables/ISO3448";
+import Jamforelse from "../components/tables/Jamforelse";
+import SAEViscMotor from "../components/tables/SAEViscMotor";
+import SAEViscTransmission from "../components/tables/SAEViscTransmission";
+import APIMotoroljor from "../components/tables/APIMotoroljor";
+import HR from "../utils/hr";
+import ACEAMotoroljor from "../components/tables/ACEAMotoroljor";
+import ACEAMotoroljorDiesel from "../components/tables/ACEAMotoroljorDiesel";
+import EUUtslappsgranser from "../components/tables/EUUtslappsgranser";
 
 export default function TechnicalInformationPage() {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
         <div className="mt-40 px-4">
-          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-2 text-preemGreen block">
+          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
             Teknisk information
           </h1>
-          <h3 className="text-center text-preemYellow text-2xl font-bold font-gothamNarrow">
-            SAE viskositetsklasser för motoroljor
-          </h3>
-          <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
-            Society of Automobile Engineers är en amerikansk organisation för
-            standardisering inom bilindustrin. Dynamisk viskositet 1 cP = 1
-            mPa*s Kinematisk viskositet 1 cSt = 1 mm<sup>2</sup>s
-          </p>
-          <table className="table-auto">
-            <thead>
-              <tr>
-                <th>Song</th>
-                <th>Artist</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                <td>Malcolm Lockyer</td>
-                <td>1961</td>
-              </tr>
-              <tr>
-                <td>Witchy Woman</td>
-                <td>The Eagles</td>
-                <td>1972</td>
-              </tr>
-              <tr>
-                <td>Shining Star</td>
-                <td>Earth, Wind, and Fire</td>
-                <td>1975</td>
-              </tr>
-            </tbody>
-          </table>
+          <SAEViscMotor />
+          <HR />
+          <SAEViscTransmission />
+          <HR />
+          <ISO3448 />
+          <HR />
+          <Jamforelse />
+          <HR />
+          <APIMotoroljor />
+          <HR />
+          <ACEAMotoroljor />
+          <HR />
+          <ACEAMotoroljorDiesel />
+          <HR />
+          <EUUtslappsgranser />
+          <HR />
         </div>
       </div>
     </>
