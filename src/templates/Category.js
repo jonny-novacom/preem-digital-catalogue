@@ -1,4 +1,4 @@
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import React from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import { Accordion } from "react-bootstrap";
@@ -104,6 +104,25 @@ export default function SingleProductPage({ data: { categories } }) {
                         }
                       >
                         {product.farg}
+                      </div>
+
+                      <div
+                        className={
+                          product.aromathalt !== null
+                            ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                            : `hidden`
+                        }
+                      >
+                        Aromathalt %
+                      </div>
+                      <div
+                        className={
+                          product.aromathalt !== null
+                            ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                            : `hidden`
+                        }
+                      >
+                        {product.aromathalt}
                       </div>
 
                       <div
@@ -389,7 +408,7 @@ export default function SingleProductPage({ data: { categories } }) {
                           </a>
                         </p>
                       </div>
-                      <div>
+                      <div className="mr-4">
                         <p className="items-center md:flex-initial md:w-max bg-preemGreen">
                           <a
                             href={product.sds}
@@ -402,6 +421,25 @@ export default function SingleProductPage({ data: { categories } }) {
                               <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
                             </span>
                           </a>
+                        </p>
+                      </div>
+                      <div>
+                        <p className="items-center md:flex-initial md:w-max bg-preemYellow">
+                          <Link
+                            to={`/products/${product.slug.current}`}
+                            className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                          >
+                            View Product
+                            <span className="bg-preemGreen w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
+                              <GoChevronRight
+                                className="text-white text-xl text-center block -mt-1 -ml-0.5"
+                                style={{
+                                  paddingTop: "4px",
+                                  paddingLeft: "2px",
+                                }}
+                              />
+                            </span>
+                          </Link>
                         </p>
                       </div>
                     </div>
@@ -448,6 +486,10 @@ export const query = graphql`
         basolja40
         tempomrade
         tbnbastal
+        aromathalt
+        slug {
+          current
+        }
       }
     }
   }

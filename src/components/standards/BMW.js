@@ -3,13 +3,13 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
-const ACEAStandard = () => {
+const BMWStandard = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityProduct(
-        filter: { standardACEA: { elemMatch: { title: { ne: "" } } } }
+        filter: { standardBMW: { elemMatch: { title: { ne: "" } } } }
         sort: {
-          fields: productCategory___product___standardACEA___title
+          fields: productCategory___product___standardBMW___title
           order: ASC
         }
       ) {
@@ -22,12 +22,12 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardBMW {
             title
             id
           }
         }
-        distinct(field: standardACEA___title)
+        distinct(field: standardBMW___title)
       }
     }
   `);
@@ -39,18 +39,18 @@ const ACEAStandard = () => {
     <>
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>ACEA</Accordion.Header>
+          <Accordion.Header>BMW</Accordion.Header>
 
           <Accordion.Body>
-            <Accordion className="inner">
+            <Accordion className="inner cats">
               {cats.map((cats, i) => (
                 <Accordion.Item eventKey={i} key={i}>
                   <Accordion.Header>{cats}</Accordion.Header>
                   {singleProd
-                    .filter((pub) => pub.standardACEA[0].title === cats)
+                    .filter((pub) => pub.standardBMW[0].title === cats)
                     .map((pub, j) => (
                       <Accordion.Body key={j}>
-                        <Accordion className="inner cats">
+                        <Accordion className="inner">
                           <Accordion.Item eventKey={j}>
                             <div className="flex justify-start py-2 pl-10">
                               <Link to={`/products/${pub.slug.current}`}>
@@ -110,4 +110,4 @@ const ACEAStandard = () => {
   );
 };
 
-export default ACEAStandard;
+export default BMWStandard;

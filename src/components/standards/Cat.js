@@ -1,15 +1,17 @@
+import SanityBlockContent from "@sanity/block-content-to-react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
+import { GoChevronRight } from "react-icons/go";
 
-const ACEAStandard = () => {
+const CatStandard = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityProduct(
-        filter: { standardACEA: { elemMatch: { title: { ne: "" } } } }
+        filter: { standardCat: { elemMatch: { title: { ne: "" } } } }
         sort: {
-          fields: productCategory___product___standardACEA___title
+          fields: productCategory___product___standardCat___title
           order: ASC
         }
       ) {
@@ -22,12 +24,12 @@ const ACEAStandard = () => {
           newProduct
           featured
           sae
-          standardACEA {
+          standardCat {
             title
             id
           }
         }
-        distinct(field: standardACEA___title)
+        distinct(field: standardCat___title)
       }
     }
   `);
@@ -39,18 +41,18 @@ const ACEAStandard = () => {
     <>
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>ACEA</Accordion.Header>
+          <Accordion.Header>Cat</Accordion.Header>
 
           <Accordion.Body>
-            <Accordion className="inner">
+            <Accordion className="inner cats">
               {cats.map((cats, i) => (
                 <Accordion.Item eventKey={i} key={i}>
                   <Accordion.Header>{cats}</Accordion.Header>
                   {singleProd
-                    .filter((pub) => pub.standardACEA[0].title === cats)
+                    .filter((pub) => pub.standardCat[0].title === cats)
                     .map((pub, j) => (
                       <Accordion.Body key={j}>
-                        <Accordion className="inner cats">
+                        <Accordion className="inner">
                           <Accordion.Item eventKey={j}>
                             <div className="flex justify-start py-2 pl-10">
                               <Link to={`/products/${pub.slug.current}`}>
@@ -110,4 +112,4 @@ const ACEAStandard = () => {
   );
 };
 
-export default ACEAStandard;
+export default CatStandard;

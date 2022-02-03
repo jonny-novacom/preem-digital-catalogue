@@ -10,7 +10,7 @@ export default function APIMotoroljor() {
         <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-0">
           American Petroleum Institute. Specifikationer för motoroljor.
         </p>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium">
+        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
           <tbody>
             <tr>
               <td colSpan={3}></td>

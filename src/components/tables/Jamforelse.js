@@ -8,13 +8,14 @@ export default function Jamforelse() {
         <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
           Jämförelse viskositetsklassificeringar (SAE – ISO VG)
         </h3>
-        <div className="my-4 max-w-2xl">
+        <div className="my-4 max-w-2xl container mx-auto ">
           <StaticImage
             src="../../images/jamforelse.png"
             quality={100}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Jämförelse viskositetsklassificeringar (SAE – ISO VG)"
             transformOptions={"cover"}
+            className="block mx-auto"
           />
         </div>
       </div>

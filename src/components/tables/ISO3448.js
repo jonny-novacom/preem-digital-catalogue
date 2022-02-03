@@ -12,7 +12,7 @@ export default function ISO3448() {
           för viskositeter, referens- temperaturen är +40°C. Det finns 18
           klasser, avvikelse från mittvärdet tillåts med +/- 10%.
         </p>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium">
+        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
           <tbody>
             <tr className="border-b-8 border-black">
               <td className="text-left">ISO 3448 viskositetsklass</td>

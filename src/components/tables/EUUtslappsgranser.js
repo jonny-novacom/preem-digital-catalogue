@@ -14,12 +14,14 @@ export default function EUUtslappsgranser() {
           I motor släpper ut lika mycket partiklar som 36 bilar med Euro
           VI-motorer.
         </p>
-        <div className="my-4 max-w-2xl">
+        <div className="my-4 max-w-2xl container mx-auto">
           <StaticImage
             src="../../images/eu-utslappsgranser.png"
             quality={100}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="EU utsläppsgränser tunga fordon"
+            transformOptions={"cover"}
+            className="block mx-auto"
           />
         </div>
       </div>

@@ -73,6 +73,45 @@ export default function SingleProductPage({ data: { produkt } }) {
             >
               {produkt.farg}
             </div>
+
+            <div
+              className={
+                produkt.aromathalt !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Aromathalt %
+            </div>
+            <div
+              className={
+                produkt.aromathalt !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.aromathalt}
+            </div>
+
+            <div
+              className={
+                produkt.kokpunkt !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Kokpunkt (koncentrat)
+            </div>
+            <div
+              className={
+                produkt.kokpunkt !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.kokpunkt}
+            </div>
+
             <div
               className={
                 produkt.isovg !== null
@@ -91,38 +130,235 @@ export default function SingleProductPage({ data: { produkt } }) {
             >
               {produkt.isovg}
             </div>
-            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
+
+            <div
+              className={
+                produkt.densitet !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Densitet kg/m³
+            </div>
+            <div
+              className={
+                produkt.densitet !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.densitet}
+            </div>
+            <div
+              className={
+                produkt.viskositet40 !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
               Viskositet cSt, mm2/s 40°C
             </div>
-            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
+            <div
+              className={
+                produkt.viskositet40 !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
               {produkt.viskositet40}
             </div>
-            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
+
+            <div
+              className={
+                produkt.viskositet100 !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
               Viskositet cSt, mm2/s 100°C
             </div>
-            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
+            <div
+              className={
+                produkt.viskositet100 !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
               {produkt.viskositet100}
             </div>
-            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
+
+            <div
+              className={
+                produkt.vi !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
               VI
             </div>
-            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
+            <div
+              className={
+                produkt.vi !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
               {produkt.vi}
             </div>
-            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
+
+            <div
+              className={
+                produkt.tbnbastal !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              TBN Bastal
+            </div>
+            <div
+              className={
+                produkt.tbnbastal !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.tbnbastal}
+            </div>
+
+            <div
+              className={
+                produkt.flampunkt !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
               Flampunkt °C
             </div>
-            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
+            <div
+              className={
+                produkt.flampunkt !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
               {produkt.flampunkt}
             </div>
-            <div className="font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3">
+
+            <div
+              className={
+                produkt.brytningsindex !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Brytningsindex
+            </div>
+            <div
+              className={
+                produkt.brytningsindex !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.brytningsindex}
+            </div>
+
+            <div
+              className={
+                produkt.lagstaflyttemp !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
               Lägstaflyttemp °C
             </div>
-            <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2">
+            <div
+              className={
+                produkt.lagstaflyttemp !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
               {produkt.lagstaflyttemp}
             </div>
+
+            <div
+              className={
+                produkt.nlgi !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              NLGI
+            </div>
+            <div
+              className={
+                produkt.nlgi !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.nlgi}
+            </div>
+
+            <div
+              className={
+                produkt.tval !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Tvål
+            </div>
+            <div
+              className={
+                produkt.tval !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.tval}
+            </div>
+
+            <div
+              className={
+                produkt.basolja40 !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Basolja cSt 40°C
+            </div>
+            <div
+              className={
+                produkt.basolja40 !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.basolja40}
+            </div>
+
+            <div
+              className={
+                produkt.tempomrade !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Tempområde °C
+            </div>
+            <div
+              className={
+                produkt.tempomrade !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.tempomrade}
+            </div>
           </div>
-          <div className="grid grid-flow-col auto-cols-max mt-4 px-6 mb-10">
+          <div className="grid grid-flow-col auto-cols-max mt-4 px-6 mb-10 print:hidden">
             <div className="mr-4">
               <p className="items-center md:flex-initial md:w-max bg-preemYellow">
                 <a
@@ -163,13 +399,15 @@ export default function SingleProductPage({ data: { produkt } }) {
 export const query = graphql`
   query produkts($slug: String!) {
     produkt: sanityProduct(slug: { current: { eq: $slug } }) {
-      produkt
-      shortDescription
       id
+      produkt
       _rawApplikationer
       sae
       farg
       isovg
+      densitet
+      kokpunkt
+      brytningsindex
       viskositet40
       viskositet100
       vi
@@ -177,6 +415,13 @@ export const query = graphql`
       lagstaflyttemp
       pds
       sds
+      newProduct
+      nlgi
+      tval
+      basolja40
+      tempomrade
+      tbnbastal
+      aromathalt
       slug {
         current
       }

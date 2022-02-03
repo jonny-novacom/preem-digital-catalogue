@@ -9,4 +9,7 @@
     tr {
         @apply even:bg-gray-200;
     }
+    p {
+      @apply font-gothamNarrow;
+    }
   }

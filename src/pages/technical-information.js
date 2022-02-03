@@ -8,6 +8,8 @@ import HR from "../utils/hr";
 import ACEAMotoroljor from "../components/tables/ACEAMotoroljor";
 import ACEAMotoroljorDiesel from "../components/tables/ACEAMotoroljorDiesel";
 import EUUtslappsgranser from "../components/tables/EUUtslappsgranser";
+import APIBasoljeklassificering from "../components/tables/APIBasoljeklassificering";
+import NLGI from "../components/tables/NLGI";
 
 export default function TechnicalInformationPage() {
   return (
@@ -32,6 +34,10 @@ export default function TechnicalInformationPage() {
           <ACEAMotoroljorDiesel />
           <HR />
           <EUUtslappsgranser />
+          <HR />
+          <APIBasoljeklassificering />
+          <HR />
+          <NLGI />
           <HR />
         </div>
       </div>

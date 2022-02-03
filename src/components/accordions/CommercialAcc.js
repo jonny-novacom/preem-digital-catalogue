@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 
 import Accordion from "react-bootstrap/Accordion";
@@ -32,6 +32,9 @@ const CommercialAccordion = () => {
           saps
           newProduct
           featured
+          slug {
+            current
+          }
         }
         distinct(field: saps)
       }
@@ -145,7 +148,7 @@ const CommercialAccordion = () => {
                                   </a>
                                 </p>
                               </div>
-                              <div>
+                              <div className="mr-4">
                                 <p className="items-center md:flex-initial md:w-max bg-preemGreen">
                                   <a
                                     href={pub.sds}
@@ -164,6 +167,25 @@ const CommercialAccordion = () => {
                                       />
                                     </span>
                                   </a>
+                                </p>
+                              </div>
+                              <div>
+                                <p className="items-center md:flex-initial md:w-max bg-preemYellow">
+                                  <Link
+                                    to={`/products/${pub.slug.current}`}
+                                    className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                                  >
+                                    View Product
+                                    <span className="bg-preemGreen w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
+                                      <GoChevronRight
+                                        className="text-white text-xl text-center block -mt-1 -ml-0.5"
+                                        style={{
+                                          paddingTop: "4px",
+                                          paddingLeft: "2px",
+                                        }}
+                                      />
+                                    </span>
+                                  </Link>
                                 </p>
                               </div>
                             </div>

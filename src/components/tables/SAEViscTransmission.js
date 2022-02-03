@@ -11,7 +11,7 @@ export default function SAEViscTransmission() {
           Dynamisk viskositet 1 cP = 1 mPa*s. Kinematisk viskositet 1 cSt = 1 mm
           <sup>2</sup>/s
         </p>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium">
+        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
           <tbody>
             <tr>
               <td>SAE J306</td>
