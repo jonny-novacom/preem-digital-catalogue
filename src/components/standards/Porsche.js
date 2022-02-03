@@ -4,87 +4,36 @@ import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
 const PorscheStandard = () => {
-  const { A40, A40s, C20, C30 } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
-      A40: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardPorsche: { elemMatch: { title: { eq: "A40" } } } }
+      allSanityProduct(
+        filter: { standardPorsche: { elemMatch: { title: { ne: "" } } } }
+        sort: {
+          fields: [produkt, productCategory___product___standardPorsche___title]
+          order: [ASC, ASC]
+        }
       ) {
         nodes {
+          slug {
+            current
+          }
           produkt
           id
           newProduct
           featured
           sae
-          standardAPI {
+          standardPorsche {
             title
-          }
-          slug {
-            current
+            id
           }
         }
-      }
-      A40s: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardPorsche: { elemMatch: { title: { eq: "A40*" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardAPI {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      C20: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardPorsche: { elemMatch: { title: { eq: "C20" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardAPI {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      C30: allSanityProduct(
-        sort: { fields: produkt, order: ASC }
-        filter: { standardPorsche: { elemMatch: { title: { eq: "C30" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          sae
-          standardAPI {
-            title
-          }
-          slug {
-            current
-          }
-        }
+        distinct(field: standardPorsche___title)
       }
     }
   `);
 
-  const standardA40 = A40.nodes;
-  const standardA40s = A40s.nodes;
-  const standardC20 = C20.nodes;
-  const standardC30 = C30.nodes;
+  const singleProd = data.allSanityProduct.nodes;
+  const cats = data.allSanityProduct.distinct;
 
   return (
     <>
@@ -93,228 +42,79 @@ const PorscheStandard = () => {
           <Accordion.Header>Porsche</Accordion.Header>
 
           <Accordion.Body>
-            {/* A40 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>A40</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardA40.map((A40, a) => (
-                      <div className="flex justify-start py-2 pl-10" key={a}>
-                        <Link to={`/products/${A40.slug.current}`}>
-                          <span
-                            className={
-                              A40.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {A40.produkt}{" "}
-                          <span
-                            className={
-                              A40.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              A40.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {A40.sae}
-                          </span>
-                          <span
-                            className={
-                              A40.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* A40* */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>A40*</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardA40s.map((A40s, a) => (
-                      <div className="flex justify-start py-2 pl-10" key={a}>
-                        <Link to={`/products/${A40s.slug.current}`}>
-                          <span
-                            className={
-                              A40s.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {A40s.produkt}{" "}
-                          <span
-                            className={
-                              A40s.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              A40s.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {A40s.sae}
-                          </span>
-                          <span
-                            className={
-                              A40s.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* C20 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>C20</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardC20.map((C20, a) => (
-                      <div className="flex justify-start py-2 pl-10" key={a}>
-                        <Link to={`/products/${C20.slug.current}`}>
-                          <span
-                            className={
-                              C20.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {C20.produkt}{" "}
-                          <span
-                            className={
-                              C20.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              C20.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {C20.sae}
-                          </span>
-                          <span
-                            className={
-                              C20.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* C30 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>C30</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardC30.map((C30, a) => (
-                      <div className="flex justify-start py-2 pl-10" key={a}>
-                        <Link to={`/products/${C30.slug.current}`}>
-                          <span
-                            className={
-                              C30.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {C30.produkt}{" "}
-                          <span
-                            className={
-                              C30.sae !== null
-                                ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            SAE
-                          </span>
-                          <span
-                            className={
-                              C30.sae !== null
-                                ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                : `hidden`
-                            }
-                          >
-                            {C30.sae}
-                          </span>
-                          <span
-                            className={
-                              C30.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
+            <Accordion className="inner cats">
+              {cats.map((cats, i) => (
+                <Accordion.Item eventKey={i} key={i}>
+                  <Accordion.Header>{cats}</Accordion.Header>
+                  <Accordion.Body>
+                    <div className="py-2">
+                      {singleProd
+                        .filter(
+                          (pub) =>
+                            pub.standardPorsche[0].title === cats ||
+                            pub.standardPorsche[1]?.title === cats ||
+                            pub.standardPorsche[2]?.title === cats ||
+                            pub.standardPorsche[3]?.title === cats ||
+                            pub.standardPorsche[4]?.title === cats ||
+                            pub.standardPorsche[5]?.title === cats ||
+                            pub.standardPorsche[6]?.title === cats ||
+                            pub.standardPorsche[7]?.title === cats ||
+                            pub.standardPorsche[8]?.title === cats ||
+                            pub.standardPorsche[9]?.title === cats ||
+                            pub.standardPorsche[10]?.title === cats
+                        )
+                        .sort((a, b) => (a < b ? -1 : 1))
+                        .map((pub, j) => (
+                          <div key={j}>
+                            <div className="flex justify-start py-2 pl-10">
+                              <Link to={`/products/${pub.slug.current}`}>
+                                <span
+                                  className={
+                                    pub.featured === true
+                                      ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
+                                      : `hidden`
+                                  }
+                                >
+                                  <AiFillStar />
+                                </span>
+                                {pub.produkt}{" "}
+                                <span
+                                  className={
+                                    pub.sae !== null
+                                      ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                      : `hidden`
+                                  }
+                                >
+                                  {" "}
+                                  SAE
+                                </span>
+                                <span
+                                  className={
+                                    pub.sae !== null
+                                      ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                      : `hidden`
+                                  }
+                                >
+                                  {pub.sae}
+                                </span>
+                                <span
+                                  className={
+                                    pub.newProduct === true
+                                      ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
+                                      : `hidden`
+                                  }
+                                >
+                                  {" "}
+                                  NY!
+                                </span>
+                              </Link>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+              ))}
             </Accordion>
           </Accordion.Body>
         </Accordion.Item>

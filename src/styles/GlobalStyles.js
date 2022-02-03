@@ -36,9 +36,9 @@ const GlobalStyles = createGlobalStyle`
     padding: 1rem 1.5rem !important;
 }
 
-.accordion-flush .accordion-collapse {
-    border-width: 1px !important;
-}
+// .accordion-flush .accordion-collapse {
+//     border-width: 1px !important;
+// }
 
 .accordion-item:last-of-type .accordion-collapse {
     border-bottom-right-radius: 0rem !important;
@@ -150,6 +150,15 @@ const GlobalStyles = createGlobalStyle`
     background: white;
     color: #4d4d4d;
     border-top: 1px solid #efefef;
+}
+
+.cats {
+    border-left: 1px solid;
+    border-right: 1px solid;
+}
+
+.cats .accordion-item:nth-child(odd) .accordion-header .accordion-button {
+    background: #efefef;
 }
 
 // .cats:nth-child(odd) .accordion-item .accordion-header .accordion-button{

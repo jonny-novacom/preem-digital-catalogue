@@ -3,13 +3,13 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
-const CatStandard = () => {
+const GMStandard = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityProduct(
-        filter: { standardCat: { elemMatch: { title: { ne: "" } } } }
+        filter: { standardGM: { elemMatch: { title: { ne: "" } } } }
         sort: {
-          fields: [produkt, productCategory___product___standardCat___title]
+          fields: [produkt, productCategory___product___standardGM___title]
           order: [ASC, ASC]
         }
       ) {
@@ -22,12 +22,12 @@ const CatStandard = () => {
           newProduct
           featured
           sae
-          standardCat {
+          standardGM {
             title
             id
           }
         }
-        distinct(field: standardCat___title)
+        distinct(field: standardGM___title)
       }
     }
   `);
@@ -39,7 +39,7 @@ const CatStandard = () => {
     <>
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Cat</Accordion.Header>
+          <Accordion.Header>GM/Opel/Vauxhall</Accordion.Header>
 
           <Accordion.Body>
             <Accordion className="inner cats">
@@ -51,17 +51,17 @@ const CatStandard = () => {
                       {singleProd
                         .filter(
                           (pub) =>
-                            pub.standardCat[0].title === cats ||
-                            pub.standardCat[1]?.title === cats ||
-                            pub.standardCat[2]?.title === cats ||
-                            pub.standardCat[3]?.title === cats ||
-                            pub.standardCat[4]?.title === cats ||
-                            pub.standardCat[5]?.title === cats ||
-                            pub.standardCat[6]?.title === cats ||
-                            pub.standardCat[7]?.title === cats ||
-                            pub.standardCat[8]?.title === cats ||
-                            pub.standardCat[9]?.title === cats ||
-                            pub.standardCat[10]?.title === cats
+                            pub.standardGM[0].title === cats ||
+                            pub.standardGM[1]?.title === cats ||
+                            pub.standardGM[2]?.title === cats ||
+                            pub.standardGM[3]?.title === cats ||
+                            pub.standardGM[4]?.title === cats ||
+                            pub.standardGM[5]?.title === cats ||
+                            pub.standardGM[6]?.title === cats ||
+                            pub.standardGM[7]?.title === cats ||
+                            pub.standardGM[8]?.title === cats ||
+                            pub.standardGM[9]?.title === cats ||
+                            pub.standardGM[10]?.title === cats
                         )
                         .sort((a, b) => (a < b ? -1 : 1))
                         .map((pub, j) => (
@@ -123,4 +123,4 @@ const CatStandard = () => {
   );
 };
 
-export default CatStandard;
+export default GMStandard;

@@ -20,7 +20,7 @@ export default function Nav() {
   return (
     <>
       <div className="bg-white">
-        <div className="max-w-screen-lg mx-auto">
+        <div className="max-w-screen-lg mx-auto bg-white">
           <nav className="font-sans flex text-center flex-row justify-between py-4 px-12 bg-white items-baseline fixed top-0 z-50 w-screen max-w-screen-lg">
             <div className="mb-2">
               <button

@@ -422,6 +422,7 @@ export const query = graphql`
       tempomrade
       tbnbastal
       aromathalt
+      shortDescription
       slug {
         current
       }

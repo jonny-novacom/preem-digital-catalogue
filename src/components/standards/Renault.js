@@ -4,232 +4,117 @@ import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
 const RenaultStandard = () => {
-  const { Axles, RGD, RLD2, RLD3 } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query {
-      Axles: allSanityProduct(
-        filter: { standardAPI: { elemMatch: { title: { eq: "Axles^" } } } }
+      allSanityProduct(
+        filter: { standardRenault: { elemMatch: { title: { ne: "" } } } }
+        sort: {
+          fields: [produkt, productCategory___product___standardRenault___title]
+          order: [ASC, ASC]
+        }
       ) {
         nodes {
+          slug {
+            current
+          }
           produkt
           id
           newProduct
           featured
-          standardAPI {
+          sae
+          standardRenault {
             title
-          }
-          slug {
-            current
+            id
           }
         }
-      }
-      RGD: allSanityProduct(
-        filter: { standardAPI: { elemMatch: { title: { eq: "RGD^" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          standardAPI {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      RLD2: allSanityProduct(
-        filter: { standardAPI: { elemMatch: { title: { eq: "RLD-2" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          standardAPI {
-            title
-          }
-          slug {
-            current
-          }
-        }
-      }
-      RLD3: allSanityProduct(
-        filter: { standardAPI: { elemMatch: { title: { eq: "RLD-3" } } } }
-      ) {
-        nodes {
-          produkt
-          id
-          newProduct
-          featured
-          standardAPI {
-            title
-          }
-          slug {
-            current
-          }
-        }
+        distinct(field: standardRenault___title)
       }
     }
   `);
 
-  const standardAxles = Axles.nodes;
-  const standardRGD = RGD.nodes;
-  const standardRLD2 = RLD2.nodes;
-  const standardRLD3 = RLD3.nodes;
+  const singleProd = data.allSanityProduct.nodes;
+  const cats = data.allSanityProduct.distinct;
 
   return (
     <>
       <Accordion flush>
         <Accordion.Item eventKey="0">
           <Accordion.Header>Renault</Accordion.Header>
+
           <Accordion.Body>
-            {/* Axles */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>Axles^</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardAxles.map((Axles, a) => (
-                      <div className="flex justify-start py-2 pl-10" key={a}>
-                        <Link to={`/products/${Axles.slug.current}`}>
-                          <span
-                            className={
-                              Axles.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {Axles.produkt}{" "}
-                          <span
-                            className={
-                              Axles.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* RGD */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>RGD^</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardRGD.map((RGD, b) => (
-                      <div className="flex justify-start py-2 pl-10" key={b}>
-                        <Link to={`/products/${RGD.slug.current}`}>
-                          <span
-                            className={
-                              RGD.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {RGD.produkt}{" "}
-                          <span
-                            className={
-                              RGD.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* RLD-2 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>RLD-2</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardRLD2.map((RLD2, c) => (
-                      <div className="flex justify-start py-2 pl-10" key={c}>
-                        <Link to={`/products/${RLD2.slug.current}`}>
-                          <span
-                            className={
-                              RLD2.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {RLD2.produkt}{" "}
-                          <span
-                            className={
-                              RLD2.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
-            </Accordion>
-
-            {/* RLD-3 */}
-            <Accordion className="inner">
-              <Accordion.Item eventKey="0">
-                <Accordion.Header>RLD-3</Accordion.Header>
-                <Accordion.Body>
-                  <div className="py-2">
-                    {standardRLD3.map((RLD3, d) => (
-                      <div className="flex justify-start py-2 pl-10" key={d}>
-                        <Link to={`/products/${RLD3.slug.current}`}>
-                          <span
-                            className={
-                              RLD3.featured === true
-                                ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            <AiFillStar />
-                          </span>
-                          {RLD3.produkt}{" "}
-                          <span
-                            className={
-                              RLD3.newProduct === true
-                                ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
-                                : `hidden`
-                            }
-                          >
-                            {" "}
-                            NY!
-                          </span>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                </Accordion.Body>
-              </Accordion.Item>
+            <Accordion className="inner cats">
+              {cats.map((cats, i) => (
+                <Accordion.Item eventKey={i} key={i}>
+                  <Accordion.Header>{cats}</Accordion.Header>
+                  <Accordion.Body>
+                    <div className="py-2">
+                      {singleProd
+                        .filter(
+                          (pub) =>
+                            pub.standardRenault[0].title === cats ||
+                            pub.standardRenault[1]?.title === cats ||
+                            pub.standardRenault[2]?.title === cats ||
+                            pub.standardRenault[3]?.title === cats ||
+                            pub.standardRenault[4]?.title === cats ||
+                            pub.standardRenault[5]?.title === cats ||
+                            pub.standardRenault[6]?.title === cats ||
+                            pub.standardRenault[7]?.title === cats ||
+                            pub.standardRenault[8]?.title === cats ||
+                            pub.standardRenault[9]?.title === cats ||
+                            pub.standardRenault[10]?.title === cats
+                        )
+                        .sort((a, b) => (a < b ? -1 : 1))
+                        .map((pub, j) => (
+                          <div key={j}>
+                            <div className="flex justify-start py-2 pl-10">
+                              <Link to={`/products/${pub.slug.current}`}>
+                                <span
+                                  className={
+                                    pub.featured === true
+                                      ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
+                                      : `hidden`
+                                  }
+                                >
+                                  <AiFillStar />
+                                </span>
+                                {pub.produkt}{" "}
+                                <span
+                                  className={
+                                    pub.sae !== null
+                                      ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
+                                      : `hidden`
+                                  }
+                                >
+                                  {" "}
+                                  SAE
+                                </span>
+                                <span
+                                  className={
+                                    pub.sae !== null
+                                      ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
+                                      : `hidden`
+                                  }
+                                >
+                                  {pub.sae}
+                                </span>
+                                <span
+                                  className={
+                                    pub.newProduct === true
+                                      ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5 inline-block`
+                                      : `hidden`
+                                  }
+                                >
+                                  {" "}
+                                  NY!
+                                </span>
+                              </Link>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+              ))}
             </Accordion>
           </Accordion.Body>
         </Accordion.Item>

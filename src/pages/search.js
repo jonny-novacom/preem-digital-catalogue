@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLunr } from "react-lunr";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { Accordion } from "react-bootstrap";
 import { GoChevronRight } from "react-icons/go";
 import { IoSearchOutline } from "react-icons/io5";
@@ -17,11 +17,14 @@ const LocalSearch = () => {
   const index = queryData.localSearchProducts.index;
   const store = queryData.localSearchProducts.store;
 
-  console.log(index);
-  console.log(store);
-
   const [query, setQuery] = useState("");
   const results = useLunr(query, index, store);
+
+  console.log(results);
+
+  results.sort((a, b) =>
+    a.produkt > b.produkt ? 1 : b.produkt > a.produkt ? -1 : 0
+  );
 
   return (
     <>
@@ -38,7 +41,7 @@ const LocalSearch = () => {
               </button>
               <input
                 type="text"
-                className="px-4 py-3 w-96 font-gothamNarrow focus:outline-none"
+                className="px-4 sm:w-72 md:w-96 py-3 font-gothamNarrow focus:outline-none"
                 placeholder="Search..."
                 name="query"
                 value={query}
@@ -402,7 +405,7 @@ const LocalSearch = () => {
                                 </a>
                               </p>
                             </div>
-                            <div>
+                            <div className="mr-4">
                               <p className="items-center md:flex-initial md:w-max bg-preemGreen">
                                 <a
                                   href={result.sds}
@@ -415,6 +418,19 @@ const LocalSearch = () => {
                                     <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
                                   </span>
                                 </a>
+                              </p>
+                            </div>
+                            <div>
+                              <p className="items-center md:flex-initial md:w-max bg-preemYellow">
+                                <Link
+                                  to={`/products/${result.path}`}
+                                  className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                                >
+                                  View Product
+                                  <span className="bg-preemGreen w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
+                                    <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
+                                  </span>
+                                </Link>
                               </p>
                             </div>
                           </div>

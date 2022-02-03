@@ -10,14 +10,12 @@ import SearchEngineOptimisation from "./SearchEngineOptimisation";
 export default function Layout({ children }) {
   return (
     <>
-      <div className="">
-        <SiteProvider>
-          <SearchEngineOptimisation />
-          <GlobalStyles />
-          <Nav />
-          {children}
-        </SiteProvider>
-      </div>
+      <SiteProvider>
+        <SearchEngineOptimisation />
+        <GlobalStyles />
+        <Nav />
+        {children}
+      </SiteProvider>
     </>
   );
 }

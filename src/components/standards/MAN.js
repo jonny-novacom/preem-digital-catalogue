@@ -3,13 +3,13 @@ import React from "react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 
-const CatStandard = () => {
+const MANStandard = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityProduct(
-        filter: { standardCat: { elemMatch: { title: { ne: "" } } } }
+        filter: { standardMAN: { elemMatch: { title: { ne: "" } } } }
         sort: {
-          fields: [produkt, productCategory___product___standardCat___title]
+          fields: [produkt, productCategory___product___standardMAN___title]
           order: [ASC, ASC]
         }
       ) {
@@ -22,12 +22,12 @@ const CatStandard = () => {
           newProduct
           featured
           sae
-          standardCat {
+          standardMAN {
             title
             id
           }
         }
-        distinct(field: standardCat___title)
+        distinct(field: standardMAN___title)
       }
     }
   `);
@@ -39,7 +39,7 @@ const CatStandard = () => {
     <>
       <Accordion flush>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>Cat</Accordion.Header>
+          <Accordion.Header>MAN</Accordion.Header>
 
           <Accordion.Body>
             <Accordion className="inner cats">
@@ -51,17 +51,17 @@ const CatStandard = () => {
                       {singleProd
                         .filter(
                           (pub) =>
-                            pub.standardCat[0].title === cats ||
-                            pub.standardCat[1]?.title === cats ||
-                            pub.standardCat[2]?.title === cats ||
-                            pub.standardCat[3]?.title === cats ||
-                            pub.standardCat[4]?.title === cats ||
-                            pub.standardCat[5]?.title === cats ||
-                            pub.standardCat[6]?.title === cats ||
-                            pub.standardCat[7]?.title === cats ||
-                            pub.standardCat[8]?.title === cats ||
-                            pub.standardCat[9]?.title === cats ||
-                            pub.standardCat[10]?.title === cats
+                            pub.standardMAN[0].title === cats ||
+                            pub.standardMAN[1]?.title === cats ||
+                            pub.standardMAN[2]?.title === cats ||
+                            pub.standardMAN[3]?.title === cats ||
+                            pub.standardMAN[4]?.title === cats ||
+                            pub.standardMAN[5]?.title === cats ||
+                            pub.standardMAN[6]?.title === cats ||
+                            pub.standardMAN[7]?.title === cats ||
+                            pub.standardMAN[8]?.title === cats ||
+                            pub.standardMAN[9]?.title === cats ||
+                            pub.standardMAN[10]?.title === cats
                         )
                         .sort((a, b) => (a < b ? -1 : 1))
                         .map((pub, j) => (
@@ -123,4 +123,4 @@ const CatStandard = () => {
   );
 };
 
-export default CatStandard;
+export default MANStandard;

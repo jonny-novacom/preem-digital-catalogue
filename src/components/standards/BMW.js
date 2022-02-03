@@ -9,8 +9,8 @@ const BMWStandard = () => {
       allSanityProduct(
         filter: { standardBMW: { elemMatch: { title: { ne: "" } } } }
         sort: {
-          fields: productCategory___product___standardBMW___title
-          order: ASC
+          fields: [produkt, productCategory___product___standardBMW___title]
+          order: [ASC, ASC]
         }
       ) {
         nodes {
@@ -46,12 +46,26 @@ const BMWStandard = () => {
               {cats.map((cats, i) => (
                 <Accordion.Item eventKey={i} key={i}>
                   <Accordion.Header>{cats}</Accordion.Header>
-                  {singleProd
-                    .filter((pub) => pub.standardBMW[0].title === cats)
-                    .map((pub, j) => (
-                      <Accordion.Body key={j}>
-                        <Accordion className="inner">
-                          <Accordion.Item eventKey={j}>
+                  <Accordion.Body>
+                    <div className="py-2">
+                      {singleProd
+                        .filter(
+                          (pub) =>
+                            pub.standardBMW[0].title === cats ||
+                            pub.standardBMW[1]?.title === cats ||
+                            pub.standardBMW[2]?.title === cats ||
+                            pub.standardBMW[3]?.title === cats ||
+                            pub.standardBMW[4]?.title === cats ||
+                            pub.standardBMW[5]?.title === cats ||
+                            pub.standardBMW[6]?.title === cats ||
+                            pub.standardBMW[7]?.title === cats ||
+                            pub.standardBMW[8]?.title === cats ||
+                            pub.standardBMW[9]?.title === cats ||
+                            pub.standardBMW[10]?.title === cats
+                        )
+                        .sort((a, b) => (a < b ? -1 : 1))
+                        .map((pub, j) => (
+                          <div key={j}>
                             <div className="flex justify-start py-2 pl-10">
                               <Link to={`/products/${pub.slug.current}`}>
                                 <span
@@ -95,11 +109,10 @@ const BMWStandard = () => {
                                 </span>
                               </Link>
                             </div>
-                            <div className="h-2"></div>
-                          </Accordion.Item>
-                        </Accordion>
-                      </Accordion.Body>
-                    ))}
+                          </div>
+                        ))}
+                    </div>
+                  </Accordion.Body>
                 </Accordion.Item>
               ))}
             </Accordion>
