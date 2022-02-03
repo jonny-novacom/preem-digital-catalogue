@@ -86,7 +86,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   glossCats.forEach((glossCat, id) => {
     const path = `/glossary/${glossCat.node.slug.current}`;
-    console.log(path);
     createPage({
       path,
       component: require.resolve("./src/templates/Glossary.js"),
