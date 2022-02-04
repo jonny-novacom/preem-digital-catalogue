@@ -32,19 +32,23 @@ export default function IndustrialCategories() {
       <div className="py-8 mx-auto mb-12 px-4">
         <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-2">
           {theIndustrialCategories.map((industrialCategories, i) => (
-            <Link to={`/category/${industrialCategories.slug.current}`} key={i}>
-              <div
-                key={i}
-                className="grid grid-rows-2 items-center justify-center h-32 bg-gray-50 px-2 py-4"
-              >
+            <div
+              key={i}
+              className="grid grid-rows-2 items-center justify-center h-40 bg-gray-50 px-2 pt-4 pb-2"
+            >
+              <Link to={`/category/${industrialCategories.slug.current}`}>
                 <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">
                   {industrialCategories.titleSwedish}
                 </span>
-                <span className="bg-preemYellow w-6 h-6 rounded-full block mx-auto mt-2">
-                  <GoChevronRight className="text-preemGreen text-xl text-center block mt-0.5 ml-0.5" />
-                </span>
+              </Link>
+              <div className="block mx-auto text-center">
+                <Link to={`/category/${industrialCategories.slug.current}`}>
+                  <span className="text-preemDarkGray text-center py-2 px-6 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
+                    Find out more
+                  </span>
+                </Link>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

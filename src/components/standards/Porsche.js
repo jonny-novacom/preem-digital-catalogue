@@ -37,7 +37,7 @@ const PorscheStandard = () => {
 
   return (
     <>
-      <Accordion flush>
+      <Accordion flush className="standards-acc">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Porsche</Accordion.Header>
 

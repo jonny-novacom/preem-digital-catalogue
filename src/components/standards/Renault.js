@@ -37,7 +37,7 @@ const RenaultStandard = () => {
 
   return (
     <>
-      <Accordion flush>
+      <Accordion flush className="standards-acc">
         <Accordion.Item eventKey="0">
           <Accordion.Header>Renault</Accordion.Header>
 

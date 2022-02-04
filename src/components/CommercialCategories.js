@@ -27,6 +27,17 @@ export default function CommercialCategories() {
     <>
       <div className="py-8 mx-auto mb-12 px-4">
         <div className="grid grid-cols-2 gap-2">
+          <Link to="/product-category/engine-oils-heavy-vehicles">
+            <div className="grid grid-rows-2 items-center justify-center h-32 bg-gray-50 px-2 py-4">
+              <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">
+                Motoroljor tunga fordon
+              </span>
+              <span className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
+                Find out more
+              </span>
+            </div>
+          </Link>
+
           {theCommercialCategories.map((commercialCategories, i) => (
             <div key={i}>
               <Link to={`/category/${commercialCategories.slug.current}`}>
@@ -34,24 +45,13 @@ export default function CommercialCategories() {
                   <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">
                     {commercialCategories.titleSwedish}
                   </span>
-                  <span className="bg-preemYellow w-6 h-6 rounded-full block mx-auto mt-2">
-                    <GoChevronRight className="text-preemGreen text-xl text-center block mt-0.5 ml-0.5" />
+                  <span className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
+                    Find out more
                   </span>
                 </div>
               </Link>
             </div>
           ))}
-
-          <Link to="/product-category/engine-oils-heavy-vehicles">
-            <div className="grid grid-rows-2 items-center justify-center h-32 bg-gray-50 px-2 py-4">
-              <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">
-                Motoroljor tunga fordon
-              </span>
-              <span className="bg-preemYellow w-6 h-6 rounded-full block mx-auto mt-2">
-                <GoChevronRight className="text-preemGreen text-xl text-center block mt-0.5 ml-0.5" />
-              </span>
-            </div>
-          </Link>
         </div>
       </div>
     </>

@@ -6,7 +6,11 @@ import consumer from "../images/icons/consumer.svg";
 import commercial from "../images/icons/commercial.svg";
 import marine from "../images/icons/marine.svg";
 import industrial from "../images/icons/industrial.svg";
+import packaging from "../images/icons/packaging.svg";
 import glossary from "../images/icons/glossary.svg";
+import powerGen from "../images/icons/power-gen.svg";
+import techInfo from "../images/icons/tech-info.svg";
+import standards from "../images/icons/standards.svg";
 
 import { useGlobalContext } from "../utils/context";
 
@@ -29,9 +33,9 @@ export default function Nav() {
               >
                 <span>
                   {!navBarIsToggled ? (
-                    <MdMenu className="text-4xl -mt-12 block text-preemGreen" />
+                    <MdMenu className="text-4xl -mt-12 block text-preemMediumGray" />
                   ) : (
-                    <MdClose className="text-4xl -mt-12 block text-preemGreen" />
+                    <MdClose className="text-4xl -mt-12 block text-preemDarkGray" />
                   )}
                 </span>
               </button>
@@ -45,7 +49,7 @@ export default function Nav() {
 
             <div className="mb-2">
               <Link to="/search">
-                <IoSearchOutline className="text-4xl -mt-12 block text-preemGreen" />
+                <IoSearchOutline className="text-4xl -mt-12 block text-preemMediumGray" />
               </Link>
             </div>
           </nav>
@@ -54,9 +58,9 @@ export default function Nav() {
             <Slide direction={-1} distance={1000} isActive={navBarIsToggled}>
               <div className="w-full md:w-2/3 h-screen bg-white p-8">
                 <ul>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
                     <Link to="/consumer" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
+                      <span className="w-20 inline-block pr-8">
                         <img
                           src={consumer}
                           alt="Consumer"
@@ -68,9 +72,9 @@ export default function Nav() {
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2  h-16">
                     <Link to="/commercial" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
+                      <span className="w-20 inline-block pr-8">
                         <img
                           src={commercial}
                           alt="Commercial"
@@ -82,19 +86,23 @@ export default function Nav() {
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
                     <Link to="/power-generation" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
-                        {/* <img src={consumer} alt="Consumer" className="w-16 block mx-auto" /> */}
+                      <span className="w-20 inline-block pr-8">
+                        <img
+                          src={powerGen}
+                          alt="Power Generation"
+                          className="w-20 block mx-auto max-h-10"
+                        />
                       </span>
                       <span className="inline-block align-top mt-2 font-bold">
                         Power generation
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
                     <Link to="/marine" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
+                      <span className="w-20 inline-block pr-8">
                         <img
                           src={marine}
                           alt="Marine"
@@ -106,9 +114,9 @@ export default function Nav() {
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
                     <Link to="/industrial" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
+                      <span className="w-20 inline-block pr-8">
                         <img
                           src={industrial}
                           alt="Industrial"
@@ -120,39 +128,51 @@ export default function Nav() {
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 ">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16 ">
                     <Link to="/standards" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
-                        {/* <img src={consumer} alt="Consumer" className="w-16 block mx-auto" /> */}
+                      <span className="w-20 inline-block pr-8">
+                        <img
+                          src={standards}
+                          alt="Industry/OEM Standards"
+                          className="w-20 block mx-auto max-h-10"
+                        />
                       </span>
                       <span className="inline-block align-top mt-2 font-bold">
                         Industry/OEM Standards
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 ">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16 ">
                     <Link to="/technical-information" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
-                        {/* <img src={consumer} alt="Consumer" className="w-16 block mx-auto" /> */}
+                      <span className="w-20 inline-block pr-8">
+                        <img
+                          src={techInfo}
+                          alt="Technical Information"
+                          className="w-20 block mx-auto max-h-10"
+                        />
                       </span>
                       <span className="inline-block align-top mt-2 font-bold">
                         Technical information
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
                     <Link to="/packaging" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
-                        {/* <img src={consumer} alt="Consumer" className="w-16 block mx-auto" />> */}
+                      <span className="w-20 inline-block pr-8">
+                        <img
+                          src={packaging}
+                          alt="Packaging"
+                          className="w-20 block mx-auto max-h-10"
+                        />
                       </span>
                       <span className="inline-block align-top mt-2 font-bold">
                         Packaging
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 align-middle">
+                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 align-middle  h-16">
                     <Link to="/glossary" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-6">
+                      <span className="w-20 inline-block pr-8">
                         <img
                           src={glossary}
                           alt="Glossary"

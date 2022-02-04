@@ -37,7 +37,7 @@ const MANStandard = () => {
 
   return (
     <>
-      <Accordion flush>
+      <Accordion flush className="standards-acc">
         <Accordion.Item eventKey="0">
           <Accordion.Header>MAN</Accordion.Header>
 

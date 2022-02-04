@@ -21,7 +21,7 @@ function SingleGlossaryItem({ glossary }) {
 export default function GlossaryList({ glossaryItems }) {
   return (
     <>
-      <div className="grid grid-cols-2 gap-x-4">
+      <div className="grid grid-cols-2 gap-x-4 mt-2">
         {glossaryItems.map((glossary) => (
           <SingleGlossaryItem glossary={glossary} key={glossary.id} />
         ))}

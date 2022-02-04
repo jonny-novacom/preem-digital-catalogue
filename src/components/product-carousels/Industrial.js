@@ -6,19 +6,18 @@ import "slick-carousel/slick/slick-theme.css";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { graphql, Link, useStaticQuery } from "gatsby";
 
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import { GoChevronRight } from "react-icons/go";
+import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
 export default function IndustrialCarousel() {
   function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <BsChevronRight
+      <GoChevronRight
         className={className}
         style={{
           ...style,
           display: "block",
-          color: "#006341",
+          color: "#333333",
           height: "1.5rem",
           width: "1.5rem",
         }}
@@ -30,12 +29,12 @@ export default function IndustrialCarousel() {
   function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <BsChevronLeft
+      <GoChevronLeft
         className={className}
         style={{
           ...style,
           display: "block",
-          color: "#006341",
+          color: "#333333",
           height: "1.5rem",
           width: "1.5rem",
         }}
@@ -145,14 +144,15 @@ export default function IndustrialCarousel() {
               <span className="text-center text-gray-400 text-sm font-gothamNarrow mt-2 mb-4 block leading-snug h-20 font-normal">
                 {industrialproductcarousel.shortDescription}
               </span>
-              <Link to={`/products/${industrialproductcarousel.slug.current}`}>
-                <span className="bg-preemYellow w-6 h-6 rounded-full block mx-auto mt-2">
-                  <GoChevronRight
-                    className="text-preemGreen text-xl text-center block mx-auto my-auto"
-                    style={{ paddingTop: "3px", paddingLeft: "2px" }}
-                  />
-                </span>
-              </Link>
+              <div className="block mx-auto text-center">
+                <Link
+                  to={`/products/${industrialproductcarousel.slug.current}`}
+                >
+                  <span className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
+                    Find out more
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
