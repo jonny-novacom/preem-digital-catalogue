@@ -17,6 +17,9 @@ module.exports = {
       colors: {
         preemGreen: "#006341",
         preemYellow: "#ffac3a",
+        preemLightGray: "#cccccc",
+        preemMediumGray: "#999999",
+        preemDarkGray: "#333333",
       },
       fontSize: {
         "55xl": "3.5rem",
