@@ -9,6 +9,7 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import CommercialCarousel from "../components/product-carousels/Commercial";
 import CommercialCategories from "../components/CommercialCategories";
 import { GoChevronRight } from "react-icons/go";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function CommercialPage({ data: { commercialPageBanner } }) {
@@ -39,7 +40,7 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
                 transformOptions={"cover"}
-                className="mt-4"
+                className="mt-12 mr-6"
               />
             </div>
           </div>
@@ -73,7 +74,7 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
           <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
             Min nis di ditinctate nusam quaepti ipsam que voluptum
           </h3>
-          <p className="text-center text-gray-500 text-md font-gothamNarrow font-medium mt-2">
+          <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2">
             Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
             volorem perupta audipis explibus
           </p>
@@ -83,19 +84,6 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
         </div>
         <div className="my-8">
           <CommercialCategories />
-        </div>
-        <div className="bg-preemYellow p-4">
-          <div className="block mx-auto text-center">
-            <span className="text-white font-gothamNarrow font-medium inline-block align-top">
-              View all products
-            </span>
-            <span className="bg-preemGreen w-5 h-5 rounded-full inline-block ml-4">
-              <GoChevronRight
-                className="text-white text-lg text-center block mx-auto"
-                style={{ paddingTop: "1px", paddingLeft: "1px" }}
-              />
-            </span>
-          </div>
         </div>
       </div>
     </>

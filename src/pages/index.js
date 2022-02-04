@@ -34,7 +34,7 @@ export default function IndexPage({ data: { homePageBanner } }) {
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="object-contain w-12 h-16 p-4 mt-32"
+                className="mt-36 mr-6"
               />
             </div>
 

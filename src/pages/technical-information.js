@@ -4,7 +4,7 @@ import Jamforelse from "../components/tables/Jamforelse";
 import SAEViscMotor from "../components/tables/SAEViscMotor";
 import SAEViscTransmission from "../components/tables/SAEViscTransmission";
 import APIMotoroljor from "../components/tables/APIMotoroljor";
-import HR from "../utils/hr";
+import Hr from "../utils/hr";
 import ACEAMotoroljor from "../components/tables/ACEAMotoroljor";
 import ACEAMotoroljorDiesel from "../components/tables/ACEAMotoroljorDiesel";
 import EUUtslappsgranser from "../components/tables/EUUtslappsgranser";
@@ -20,25 +20,25 @@ export default function TechnicalInformationPage() {
             Teknisk information
           </h1>
           <SAEViscMotor />
-          <HR />
+          <Hr />
           <SAEViscTransmission />
-          <HR />
+          <Hr />
           <ISO3448 />
-          <HR />
+          <Hr />
           <Jamforelse />
-          <HR />
+          <Hr />
           <APIMotoroljor />
-          <HR />
+          <Hr />
           <ACEAMotoroljor />
-          <HR />
+          <Hr />
           <ACEAMotoroljorDiesel />
-          <HR />
+          <Hr />
           <EUUtslappsgranser />
-          <HR />
+          <Hr />
           <APIBasoljeklassificering />
-          <HR />
+          <Hr />
           <NLGI />
-          <HR />
+          <Hr />
         </div>
       </div>
     </>

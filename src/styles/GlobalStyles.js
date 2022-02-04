@@ -1,7 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 import plus from "../images/icons/plus.svg";
+import plusG from "../images/icons/plus-g.svg";
 import dash from "../images/icons/dash.svg";
+import dashG from "../images/icons/dash-g.svg";
 
 const GlobalStyles = createGlobalStyle`
 :root {
@@ -36,9 +38,6 @@ const GlobalStyles = createGlobalStyle`
     padding: 1rem 1.5rem !important;
 }
 
-// .accordion-flush .accordion-collapse {
-//     border-width: 1px !important;
-// }
 
 .accordion-item:last-of-type .accordion-collapse {
     border-bottom-right-radius: 0rem !important;
@@ -86,6 +85,10 @@ const GlobalStyles = createGlobalStyle`
 .accordion-button::after {
     background-image: url(${plus}) !important;
     color: white;
+    background-size: 0.85rem !important;
+    border: 1px solid white;
+    background: #006341;
+    background-position: center;
 }
 
 .accordion-button:not(.collapsed)::after {
@@ -161,15 +164,27 @@ const GlobalStyles = createGlobalStyle`
     background: #efefef;
 }
 
-// .cats:nth-child(odd) .accordion-item .accordion-header .accordion-button{
-//     background: #efefef;
-//     color: #4d4d4d;
-//     border-top: 0px;
-// }
 
-// .innersearch .accordion-item:nth-child(odd) .accordion-button {
-//     background: #efefef;
-// }
+.standards-acc .accordion-item .accordion-button {
+    border-top: 1px solid #fff;
+}
+
+.cats .accordion-item .accordion-header .accordion-button {
+    border-top: 1px solid #bfbfbf;
+}
+
+.cats .accordion-button::after {
+    background-image: url(${plusG}) !important;
+    color: #154734;
+    background-size: 0.85rem !important;
+    border: 1px solid #154734;
+    background: transparent;
+    background-position: center;
+}
+
+.cats .accordion-button:not(.collapsed)::after {
+    background-image: url(${dashG}) !important;
+}
 
 `;
 

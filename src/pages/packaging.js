@@ -150,12 +150,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/packaging-8.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block mx-auto h-auto w-56"
                 />
               </div>
             </div>
@@ -180,7 +180,7 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/packaging-9.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter"
@@ -208,7 +208,7 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/packaging-6.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter"
@@ -238,7 +238,7 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/packaging-7.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter"
@@ -276,12 +276,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-1.png"
+                  src="../images/packaging/packaging-10.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Bulkleverans med tankbil"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block mx-auto h-auto w-36"
                 />
               </div>
             </div>
@@ -369,12 +369,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/18kg.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Hink 18 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block mx-auto h-auto w-28"
                 />
               </div>
             </div>
@@ -395,12 +395,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/grease.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Plåtburk 0,5 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block mx-auto h-auto w-24"
                 />
               </div>
             </div>
@@ -424,12 +424,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/patron-0-4.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Patron 0,4 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block mx-auto h-auto w-52"
                 />
               </div>
             </div>
@@ -454,12 +454,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/novatex.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="MLS-patron 0,4 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block mx-auto h-auto w-52"
                 />
               </div>
             </div>
@@ -487,12 +487,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-1.png"
+                  src="../images/packaging/packaging-2.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Bulkleverans med tankbil"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block mx-auto h-auto w-40"
                 />
               </div>
             </div>
@@ -517,12 +517,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-2.png"
+                  src="../images/packaging/200-litre.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Container (IBC/Cipax) 1 000 liter"
+                  alt="Helfat kem 200 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-36"
+                  className="block mx-auto h-auto w-60"
                 />
               </div>
             </div>
@@ -546,12 +546,12 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-3.png"
+                  src="../images/packaging/20-litre.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Helfat olja"
+                  alt="Dunk 20 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block mx-auto h-auto w-44"
                 />
               </div>
             </div>
@@ -568,10 +568,10 @@ export default function PackagingPage() {
             <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
               <div>
                 <StaticImage
-                  src="../images/packaging/packaging-4.png"
+                  src="../images/packaging/4-litre.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Dunk 4 liter, kem"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-60"
                 />

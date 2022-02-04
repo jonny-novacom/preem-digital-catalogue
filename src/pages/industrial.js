@@ -9,6 +9,8 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import { AiOutlineRight } from "react-icons/ai";
 import IndustrialCarousel from "../components/product-carousels/Industrial";
 import IndustrialCategories from "../components/IndustrialCategories";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
+import Hr from "../utils/hr";
 
 // markup
 export default function IndustrialPage({ data: { industrialPageBanner } }) {
@@ -30,23 +32,37 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
           // Spread bgImage into BackgroundImage:
           {...bgImage}
           preserveStackingContext
-          className="flex items-center justify-center bg-img-height h-2/3 bg-cover mt-24"
+          className="bg-img-height h-2/3 bg-cover mt-24"
         >
-          <div className="grid grid-cols-1 gap-4 w-screen p-8">
+          <div className="p-8">
             <div className="flex justify-end">
               <StaticImage
                 src="../images/texaco-logo.png"
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="object-contain w-12 h-16 p-4 mt-4"
+                transformOptions={"cover"}
+                className="mt-12 mr-6"
               />
             </div>
+          </div>
 
-            <div className="justify-start">
-              <h1 className="font-gothamNarrow text-4xl md:text-6xl font-bold text-white text-shadow-md block mb-4 mt-32">
-                Motoroljor personbilar och lätta transportfordon
-              </h1>
+          <div className="p-8 pt-16">
+            <div className="grid grid-cols-7 gap-2">
+              <div className="md:col-span-4 col-span-7">
+                <h1 className="font-gothamNarrow text-4xl md:text-6xl font-bold text-white text-shadow-md block mb-4 mt-14">
+                  Min nis di nusam quaepti ipsam que
+                </h1>
+              </div>
+              <div className="md:col-span-3 col-span-7">
+                <StaticImage
+                  src="../images/packaging/texaco-barrel.png"
+                  quality={95}
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  alt="Texaco"
+                  className="object-contain w-56 p-4 mt-4 block mx-auto"
+                />
+              </div>
             </div>
           </div>
         </BackgroundImage>
@@ -61,7 +77,7 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
           <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
             Min nis di ditinctate nusam quaepti ipsam que voluptum
           </h3>
-          <p className="text-center text-gray-500 text-md font-gothamNarrow font-medium mt-2">
+          <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2">
             Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
             volorem perupta audipis explibus
           </p>
@@ -69,21 +85,14 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
         <div className="my-8">
           <IndustrialCarousel />
         </div>
-        <div className="my-8">
+        <div className="mt-8">
           <IndustrialCategories />
         </div>
-
-        <div className="bg-preemYellow p-4">
-          <div className="block mx-auto text-center">
-            <Link to="/product-category/engine-oils-passenger-cars-and-light-transport-vehicles">
-              <span className="text-white font-gothamNarrow font-medium inline-block align-top">
-                View all products
-              </span>
-              <span className="bg-preemGreen w-5 h-5 rounded-full inline-block ml-4">
-                <AiOutlineRight className="text-white inline-block -mt-2" />
-              </span>
-            </Link>
-          </div>
+        <div className="px-8">
+          <Hr />
+        </div>
+        <div className="mb-8">
+          <AuthorisedDistributor />
         </div>
       </div>
     </>

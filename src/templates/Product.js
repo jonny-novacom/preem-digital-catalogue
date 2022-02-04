@@ -360,32 +360,26 @@ export default function SingleProductPage({ data: { produkt } }) {
           </div>
           <div className="grid grid-flow-col auto-cols-max mt-4 px-6 mb-10 print:hidden">
             <div className="mr-4">
-              <p className="items-center md:flex-initial md:w-max bg-preemYellow">
+              <p className="items-center md:flex-initial md:w-max">
                 <a
                   href={produkt.pds}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
                 >
-                  See PDS{" "}
-                  <span className="bg-preemGreen w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
-                    <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
-                  </span>
+                  See PDS
                 </a>
               </p>
             </div>
             <div>
-              <p className="items-center md:flex-initial md:w-max bg-preemGreen">
+              <p className="items-center md:flex-initial md:w-max">
                 <a
                   href={produkt.sds}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
                 >
-                  See SDS{" "}
-                  <span className="bg-preemYellow w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
-                    <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
-                  </span>
+                  See SDS
                 </a>
               </p>
             </div>

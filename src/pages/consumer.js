@@ -23,7 +23,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
         description=""
       />
 
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto mb-12">
         <BackgroundImage
           Tag="section"
           // Spread bgImage into BackgroundImage:
@@ -39,7 +39,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
                 transformOptions={"cover"}
-                className="mt-8 mr-8"
+                className="mt-12 mr-6"
               />
             </div>
           </div>
@@ -86,20 +86,12 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
         <div className="my-8">
           <ConsumerCarousel />
         </div>
-        <div className="bg-preemYellow p-4">
-          <div className="block mx-auto text-center">
-            <Link to="/product-category/engine-oils-passenger-cars-and-light-transport-vehicles">
-              <span className="text-white font-gothamNarrow font-medium inline-block align-top">
-                View all products
-              </span>
-              <span className="bg-preemGreen w-5 h-5 rounded-full inline-block ml-4">
-                <GoChevronRight
-                  className="text-white text-lg text-center block mx-auto"
-                  style={{ paddingTop: "1px", paddingLeft: "1px" }}
-                />
-              </span>
-            </Link>
-          </div>
+        <div className="block mx-auto text-center">
+          <Link to="/product-category/engine-oils-passenger-cars-and-light-transport-vehicles">
+            <span className="text-preemGreen py-2 px-16 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemYellow">
+              View all products
+            </span>
+          </Link>
         </div>
       </div>
     </>
