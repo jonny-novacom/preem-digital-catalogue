@@ -7,7 +7,6 @@ import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import ConsumerCarousel from "../components/product-carousels/Consumer";
-import { GoChevronRight } from "react-icons/go";
 
 // markup
 export default function ConsumerPage({ data: { consumerPageBanner } }) {

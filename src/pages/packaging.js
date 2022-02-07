@@ -153,7 +153,7 @@ export default function PackagingPage() {
                   src="../images/packaging/packaging-8.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Dunk 20 liter med hällpip"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-56"
                 />
@@ -183,7 +183,7 @@ export default function PackagingPage() {
                   src="../images/packaging/packaging-9.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Dunk 5 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-60"
                 />
@@ -211,7 +211,7 @@ export default function PackagingPage() {
                   src="../images/packaging/packaging-6.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Dunk 4 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-60"
                 />
@@ -241,7 +241,7 @@ export default function PackagingPage() {
                   src="../images/packaging/packaging-7.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Dunk 20 liter"
+                  alt="Flaska 1 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-60"
                 />
@@ -258,7 +258,11 @@ export default function PackagingPage() {
                   Fluid bag 850 kg
                   <span className="font-normal ">
                     <br />
-                    <a href="https://www.fluid-bag.com" target="_blank">
+                    <a
+                      href="https://www.fluid-bag.com"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       www.fluid-bag.com
                     </a>
                     <br />
@@ -279,7 +283,7 @@ export default function PackagingPage() {
                   src="../images/packaging/packaging-10.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Bulkleverans med tankbil"
+                  alt="Fluid bag 850 kg"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-36"
                 />
@@ -490,7 +494,7 @@ export default function PackagingPage() {
                   src="../images/packaging/packaging-2.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Bulkleverans med tankbil"
+                  alt="Container (IBC/Cipax) 1 000 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-40"
                 />
@@ -601,7 +605,7 @@ export default function PackagingPage() {
                   src="../images/packaging/brake-fluid-dot-4.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Brake Fluid DOT 4."
+                  alt="Flaska 0,25 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-44"
                 />
@@ -631,7 +635,7 @@ export default function PackagingPage() {
                   src="../images/packaging/techron-d-concentrate.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Techron D."
+                  alt="Flaska 0,30 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-40"
                 />
@@ -661,7 +665,7 @@ export default function PackagingPage() {
                   src="../images/packaging/techron-concentrate-plus.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Techron Plus (Gasoline)."
+                  alt="Flaska 0,30 liter"
                   layout={"constrained"}
                   className="block mx-auto h-auto w-40"
                 />

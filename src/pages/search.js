@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useLunr } from "react-lunr";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { Accordion } from "react-bootstrap";
-import { GoChevronRight } from "react-icons/go";
 import { IoSearchOutline } from "react-icons/io5";
 
 const LocalSearch = () => {

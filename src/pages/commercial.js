@@ -8,8 +8,6 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import CommercialCarousel from "../components/product-carousels/Commercial";
 import CommercialCategories from "../components/CommercialCategories";
-import { GoChevronRight } from "react-icons/go";
-import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function CommercialPage({ data: { commercialPageBanner } }) {
@@ -31,6 +29,9 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
           {...bgImage}
           preserveStackingContext
           className="bg-img-height h-2/3 bg-cover mt-24"
+          style={{
+            backgroundPosition: "",
+          }}
         >
           <div className="p-8">
             <div className="flex justify-end">

@@ -27,7 +27,7 @@ export default function IndexPage({ data: { homePageBanner } }) {
           preserveStackingContext
           className="bg-img-height h-screen"
         >
-          <div className="grid grid-cols-1 gap-4 w-screen md:p-12 p-4 max-w-screen-lg">
+          <div className="grid grid-cols-1 gap-4 w-screen content-between md:p-12 p-4 max-w-screen-lg h-screen">
             <div className="flex justify-end">
               <StaticImage
                 src="../images/texaco-logo.png"
@@ -37,9 +37,8 @@ export default function IndexPage({ data: { homePageBanner } }) {
                 className="mt-36 mr-6"
               />
             </div>
-
-            <div className="justify-start mt-4">
-              <h1 className="font-gothamNarrow text-6xl font-bold text-white text-shadow-md block mb-4 mt-4">
+            <div className="-mt-48">
+              <h1 className="font-gothamNarrow text-6xl font-bold text-white text-shadow-md block mb-4">
                 Smörjmedel
               </h1>
               <h2 className="font-gothamNarrow text-3xl font-bold text-white text-shadow-md block w-11/12">
@@ -47,9 +46,11 @@ export default function IndexPage({ data: { homePageBanner } }) {
                 och av Preems återförsäljare
               </h2>
             </div>
-            <div className="border-t-2 border-white md:mt-56 mt-24 font-gothamNarrow">
-              <span className="text-white text-xl font-medium block mt-4">
-                Kem drivemedel bränsle – {new Date().getFullYear()}
+            <div>
+              <span className="border-t-2 border-white font-gothamNarrow block">
+                <span className="text-white text-xl font-medium block mt-4">
+                  Kem drivemedel bränsle – {new Date().getFullYear()}
+                </span>
               </span>
             </div>
           </div>

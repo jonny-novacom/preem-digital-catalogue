@@ -2,7 +2,6 @@ import { graphql } from "gatsby";
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import SanityBlockContent from "@sanity/block-content-to-react";
-import { GoChevronRight } from "react-icons/go";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function SingleProductPage({ data: { produkt } }) {

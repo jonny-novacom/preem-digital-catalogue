@@ -1,7 +1,6 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import { GoChevronRight } from "react-icons/go";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function PowerGenerationPage() {
@@ -19,14 +18,14 @@ export default function PowerGenerationPage() {
               src="../images/icons/power-gen.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt="Marine"
+              alt="Power Generation"
               transformOptions={"cover"}
               className="block mx-auto w-20 mb-4"
             />
             <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
               Min nis di ditinctate nusam quaepti ipsam que voluptum
             </h3>
-            <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+            <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-12">
               Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
               volorem perupta audipis explibus
             </p>

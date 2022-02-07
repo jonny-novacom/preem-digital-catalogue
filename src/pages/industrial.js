@@ -1,12 +1,11 @@
 import * as React from "react";
 
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { getImage, StaticImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
-import { AiOutlineRight } from "react-icons/ai";
 import IndustrialCarousel from "../components/product-carousels/Industrial";
 import IndustrialCategories from "../components/IndustrialCategories";
 import AuthorisedDistributor from "../components/AuthorisedDistributor";

@@ -74,7 +74,7 @@ const GlobalStyles = createGlobalStyle`
 .inner .accordion-item .accordion-button {
     background: white;
     color: #4d4d4d;
-    border-top: 0px;
+    
 }
 
 .inner .accordion-flush .accordion-item .accordion-button {
@@ -164,7 +164,6 @@ const GlobalStyles = createGlobalStyle`
     background: #efefef;
 }
 
-
 .standards-acc .accordion-item .accordion-button {
     border-top: 1px solid #fff;
 }
@@ -173,7 +172,7 @@ const GlobalStyles = createGlobalStyle`
     border-top: 1px solid #bfbfbf;
 }
 
-.cats .accordion-button::after {
+.cats .accordion-button::after, .innersearch .accordion-button::after, .inner .accordion-button::after {
     background-image: url(${plusG}) !important;
     color: #154734;
     background-size: 0.85rem !important;
@@ -182,7 +181,7 @@ const GlobalStyles = createGlobalStyle`
     background-position: center;
 }
 
-.cats .accordion-button:not(.collapsed)::after {
+.cats .accordion-button:not(.collapsed)::after, .innersearch .accordion-button:not(.collapsed)::after,  .inner .accordion-button:not(.collapsed)::after  {
     background-image: url(${dashG}) !important;
 }
 
