@@ -167,6 +167,9 @@ module.exports = {
           `/technical-information/`,
           `/packaging/`,
         ],
+        workboxConfig: {
+          globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css}"],
+        },
       },
     },
   ],
