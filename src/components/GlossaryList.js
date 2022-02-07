@@ -7,7 +7,7 @@ function SingleGlossaryItem({ glossary }) {
       <span className="font-gothamNarrow font-bold text-preemGreen text-xl mb-0.5">
         {glossary.title}
       </span>
-      <span className="font-gothamNarrow font-normal text-gray-500">
+      <span className="font-gothamNarrow font-normal text-gray-500 block mb-4">
         <BlockContent
           blocks={glossary._rawDescription}
           projectId="1tbc9cjy"

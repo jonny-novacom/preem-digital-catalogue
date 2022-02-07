@@ -1,6 +1,5 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import { GoChevronRight } from "react-icons/go";
 
 export default function IndustrialCategories() {
   const { industrialCategories } = useStaticQuery(graphql`
