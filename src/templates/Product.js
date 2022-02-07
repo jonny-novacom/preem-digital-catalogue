@@ -421,7 +421,7 @@ export const query = graphql`
       }
       mainImage {
         asset {
-          gatsbyImageData(placeholder: BLURRED, width: 600, height: 600)
+          gatsbyImageData(placeholder: NONE, width: 600, height: 600)
           url
         }
       }
