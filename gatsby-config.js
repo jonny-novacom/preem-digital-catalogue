@@ -146,7 +146,7 @@ module.exports = {
         background_color: `#006341`,
         theme_color: `#006341`,
         display: `standalone`,
-        icon: `src/images/preem-icon.png`,
+        icon: `./src/images/preem-logo.png`,
       },
     },
     {
@@ -166,6 +166,18 @@ module.exports = {
           `/glossary/*`,
           `/technical-information/`,
           `/packaging/`,
+        ],
+        runtimeCaching: [
+          {
+            urlPattern: /^https?:.*\/page-data\/.*\.json/,
+            handler: `staleWhileRevalidate`,
+            options: {
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+              cacheName: "sanity",
+            },
+          },
         ],
         workboxConfig: {
           globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css}"],
