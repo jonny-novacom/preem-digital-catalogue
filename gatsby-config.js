@@ -168,8 +168,21 @@ module.exports = {
           `/packaging/`,
         ],
         workboxConfig: {
+          importWorkboxFrom: `cdn`,
           globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css}"],
         },
+        runtimeCaching: [
+          {
+            urlPattern: /^https?:.*\/page-data\/.*\.json/,
+            handler: "cacheFirst",
+            options: {
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+              cacheName: "sanity",
+            },
+          },
+        ],
       },
     },
   ],
