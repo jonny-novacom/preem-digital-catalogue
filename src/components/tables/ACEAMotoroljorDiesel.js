@@ -7,7 +7,7 @@ export default function ACEAMotoroljorDiesel() {
         <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
           ACEA motoroljor 2016
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
           Dieselmotorer i tunga fordon.
         </p>
         <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">

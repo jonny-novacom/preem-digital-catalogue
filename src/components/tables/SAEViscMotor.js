@@ -6,7 +6,7 @@ export default function SAEViscMotor() {
       <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
         SAE viskositetsklasser för motoroljor
       </h3>
-      <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+      <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
         Society of Automobile Engineers är en amerikansk organisation för
         standardisering inom bilindustrin. Dynamisk viskositet 1 cP = 1 mPa*s
         Kinematisk viskositet 1 cSt = 1 mm<sup>2</sup>s
@@ -155,7 +155,7 @@ export default function SAEViscMotor() {
           </tr>
         </tbody>
       </table>
-      <div className="pt-8">
+      <div className="pt-8 px-4">
         <ol className="list-decimal text-sm">
           <li className="text-left text-gray-800 text-md font-gothamNarrow font-normal italic">
             Mätt med Cold Cranking Simulator. Simulerar vev-/ramlager vid start

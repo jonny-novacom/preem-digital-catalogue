@@ -7,7 +7,7 @@ export default function IndustrialCategories() {
       industrialCategories: allSanityProductCategory(
         filter: {
           title: {
-            regex: "/(Transmission oils)|(Form oils)|(Hydraulic oils)|(Industrial gear oils)|(Compressor and air tool oils)|(Refrigeration compressor oils)|(Turbine and circulation oils)|(Guide oils, saw chain oils)|(Process, white, transformer and heat transfer oils)|(Metalworking, rust protection)|(Bearing greases)|(Synthetic greases)|(Sliding surfaces, chassis and teeth greases)|(Coolants and washer fluid)|(Brake fluid)|(Cold degreasers and solvents)|(Fuel additive)|(Fuel for petrol engines)|(Fuel for diesel engines)|(Food grade NSF H1 greases)/"
+            regex: "/(Transmission oils)|(Form oils)|(Hydraulic oils)|(Industrial gear oils)|(Compressor and air tool oils)|(Refrigeration compressor oils)|(Turbine and circulation oils)|(Guide oils, saw chain oils)|(Process, white, transformer and heat transfer oils)|(Metalworking, rust protection)|(Bearing greases)|(Synthetic greases)|(Sliding surfaces, chassis and teeth greases)|(Coolants and washer fluid)|(Brake fluid)|(Cold degreasers and solvents)|(Fuel additive)|(Fuel for petrol engines)|(Fuel for diesel engines)|(Food grade NSF H1 greases)|(AdBlue)/"
           }
         }
         sort: { fields: titleSwedish, order: ASC }
@@ -28,21 +28,21 @@ export default function IndustrialCategories() {
 
   return (
     <>
-      <div className="py-8 mx-auto mb-12 px-4">
-        <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-2">
+      <div className="px-4 py-8 mx-auto mb-12">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-3">
           {theIndustrialCategories.map((industrialCategories, i) => (
             <div
               key={i}
-              className="grid grid-rows-2 items-center justify-center h-40 bg-gray-50 px-2 pt-4 pb-2"
+              className="grid items-center justify-center h-40 grid-rows-2 px-2 pt-4 pb-2 bg-gray-50"
             >
               <Link to={`/category/${industrialCategories.slug.current}`}>
-                <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">
+                <span className="block font-bold leading-tight text-center font-gothamNarrow text-preemGreen">
                   {industrialCategories.titleSwedish}
                 </span>
               </Link>
               <div className="block mx-auto text-center">
                 <Link to={`/category/${industrialCategories.slug.current}`}>
-                  <span className="text-preemDarkGray text-center py-2 px-6 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
+                  <span className="inline-block px-6 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
                     Find out more
                   </span>
                 </Link>

@@ -25,7 +25,7 @@ export default function CommercialCategories() {
   return (
     <>
       <div className="py-8 mx-auto mb-12 px-4">
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           <Link to="/product-category/engine-oils-heavy-vehicles">
             <div className="grid grid-rows-2 items-center justify-center h-32 bg-gray-50 px-2 py-4">
               <span className="text-center font-gothamNarrow font-bold text-preemGreen leading-tight block">

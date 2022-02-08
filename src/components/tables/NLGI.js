@@ -8,7 +8,7 @@ export default function NLGI() {
           Konsistens smörjfett enligt NLGI, National Lubricating Grease
           Institute (USA)
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
           En kon släpps ned i fettprovet och inträngning mäts i tiondels
           millimeter. NLGI 2 är den vanligaste konsistensklassen. För att få
           bättre pumpbarhet i centralsmörjsystem kan ett mjukare fett användas.

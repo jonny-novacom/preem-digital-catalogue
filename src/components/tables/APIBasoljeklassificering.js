@@ -6,7 +6,7 @@ export default function APIBasoljeklassificering() {
       <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
         API basoljeklassificering
       </h3>
-      <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+      <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
         American Pertoleum Institute. Specifikationer för basoljor. För att
         klara de högt ställda kraven på moderna motoroljor med långa
         bytesintervaller och avgasreningsutrustning kan inte traditionellt

@@ -35,7 +35,7 @@ export default function GlossaryFilter() {
               : ""
           }
         >
-          <span className="font-gothamNarrow font-bold text-preemYellow text-2xl px-2 uppercase">
+          <span className="font-gothamNarrow font-bold text-preemYellow text-2xl px-2 uppercase inline-block">
             {cats.title}
           </span>
         </Link>

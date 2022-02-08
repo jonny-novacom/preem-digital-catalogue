@@ -5,14 +5,12 @@ import Accordion from "react-bootstrap/Accordion";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import { AiFillStar } from "react-icons/ai";
 
-const CommercialAccordion = () => {
+const TransmissionOilAccordion = () => {
   const data = useStaticQuery(graphql`
     query {
       allSanityProduct(
         filter: {
-          productCategory: {
-            elemMatch: { title: { eq: "Engine oils heavy vehicles" } }
-          }
+          productCategory: { elemMatch: { title: { eq: "Transmission oils" } } }
         }
         sort: { fields: produkt, order: ASC }
       ) {
@@ -176,4 +174,4 @@ const CommercialAccordion = () => {
   );
 };
 
-export default CommercialAccordion;
+export default TransmissionOilAccordion;

@@ -7,7 +7,7 @@ export default function ISO3448() {
         <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
           ISO 3448 viskositetsklasser för hydraul- och industrioljor
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
           International Organization for Standardization. Klassificeringssystem
           för viskositeter, referens- temperaturen är +40°C. Det finns 18
           klasser, avvikelse från mittvärdet tillåts med +/- 10%.

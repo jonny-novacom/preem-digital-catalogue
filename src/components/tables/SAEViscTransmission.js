@@ -7,7 +7,7 @@ export default function SAEViscTransmission() {
         <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
           SAE viskositetsklasser för transmissionsoljor
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
           Dynamisk viskositet 1 cP = 1 mPa*s. Kinematisk viskositet 1 cSt = 1 mm
           <sup>2</sup>/s
         </p>
