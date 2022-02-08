@@ -10,33 +10,41 @@ import ACEAMotoroljorDiesel from "../components/tables/ACEAMotoroljorDiesel";
 import EUUtslappsgranser from "../components/tables/EUUtslappsgranser";
 import APIBasoljeklassificering from "../components/tables/APIBasoljeklassificering";
 import NLGI from "../components/tables/NLGI";
+import TechInfoFilter from "../components/TechInfoFilter";
 
 export default function TechnicalInformationPage() {
   return (
     <>
+      <TechInfoFilter />
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-40 px-4">
-          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+        <div className="px-4 mt-40">
+          <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Teknisk information
           </h1>
+          <div id="sae" className="pb-32 -mt-32"></div>
           <SAEViscMotor />
           <Hr />
           <SAEViscTransmission />
           <Hr />
+          <div id="iso" className="pb-32 -mt-32"></div>
           <ISO3448 />
           <Hr />
           <Jamforelse />
           <Hr />
+          <div id="api" className="pb-32 -mt-32"></div>
           <APIMotoroljor />
           <Hr />
+          <div id="acea" className="pb-32 -mt-32"></div>
           <ACEAMotoroljor />
           <Hr />
           <ACEAMotoroljorDiesel />
           <Hr />
+          <div id="eu" className="pb-32 -mt-32"></div>
           <EUUtslappsgranser />
           <Hr />
           <APIBasoljeklassificering />
           <Hr />
+          <div id="nlgi" className="pb-32 -mt-32"></div>
           <NLGI />
           <Hr />
         </div>

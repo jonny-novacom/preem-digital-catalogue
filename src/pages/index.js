@@ -37,7 +37,7 @@ export default function IndexPage({ data: { homePageBanner } }) {
                 className="mt-36 mr-6"
               />
             </div>
-            <div className="-mt-48">
+            <div className="md:-mt-48">
               <h1 className="font-gothamNarrow text-6xl font-bold text-white text-shadow-md block mb-4">
                 Smörjmedel
               </h1>

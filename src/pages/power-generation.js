@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import PowerGenCarousel from "../components/product-carousels/PowerGen";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function PowerGenerationPage() {
@@ -11,7 +13,7 @@ export default function PowerGenerationPage() {
         image=""
         description=""
       />
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto mb-12">
         <div className="mt-40">
           <div className="container mx-auto pt-16">
             <StaticImage
@@ -30,6 +32,9 @@ export default function PowerGenerationPage() {
               volorem perupta audipis explibus
             </p>
           </div>
+          <div className="my-8">
+            <PowerGenCarousel />
+          </div>
           <div className="block mx-auto text-center">
             <Link to="/category/stationary-gas-engines">
               <span className="text-preemGreen py-2 px-16 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemYellow">
@@ -37,6 +42,9 @@ export default function PowerGenerationPage() {
               </span>
             </Link>
           </div>
+        </div>
+        <div>
+          <AuthorisedDistributor />
         </div>
       </div>
     </>

@@ -2,14 +2,14 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import { Accordion } from "react-bootstrap";
-import { GoChevronRight } from "react-icons/go";
 import { AiFillStar } from "react-icons/ai";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 export default function SingleProductPage({ data: { categories } }) {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36 mb-20">
+        <div className="mt-36 mb-20 px-4">
           <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
             {categories.titleSwedish}
           </h1>
@@ -392,14 +392,14 @@ export default function SingleProductPage({ data: { categories } }) {
                       </div>
                     </div>
 
-                    <div className="grid grid-flow-col auto-cols-max mt-4">
+                    <div className="grid sm:grid-flow-col sm:auto-cols-max mt-4">
                       <div className="mr-4">
                         <p className="items-center md:flex-initial md:w-max">
                           <a
                             href={product.pds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors text-center"
                           >
                             See PDS
                           </a>
@@ -412,7 +412,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             href={product.sds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors text-center"
                           >
                             See SDS
                           </a>
@@ -423,7 +423,7 @@ export default function SingleProductPage({ data: { categories } }) {
                         <p className="items-center md:flex-initial md:w-max">
                           <Link
                             to={`/products/${product.slug.current}`}
-                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors text-center"
                           >
                             View Product
                           </Link>
@@ -436,6 +436,9 @@ export default function SingleProductPage({ data: { categories } }) {
             </Accordion>
           ))}
         </div>
+      </div>
+      <div>
+        <AuthorisedDistributor />
       </div>
     </>
   );

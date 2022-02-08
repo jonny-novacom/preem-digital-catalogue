@@ -1,6 +1,8 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
+import MarineCarousel from "../components/product-carousels/Marine";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function MarinePage() {
@@ -30,6 +32,9 @@ export default function MarinePage() {
               volorem perupta audipis explibus
             </p>
           </div>
+          <div className="my-8">
+            <MarineCarousel />
+          </div>
           <div className="block mx-auto text-center">
             <Link to="/category/marine-engine-oils">
               <span className="text-preemGreen py-2 px-16 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemYellow">
@@ -37,6 +42,9 @@ export default function MarinePage() {
               </span>
             </Link>
           </div>
+        </div>
+        <div>
+          <AuthorisedDistributor />
         </div>
       </div>
     </>

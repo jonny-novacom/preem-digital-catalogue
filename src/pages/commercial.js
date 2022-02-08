@@ -8,6 +8,7 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import CommercialCarousel from "../components/product-carousels/Commercial";
 import CommercialCategories from "../components/CommercialCategories";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function CommercialPage({ data: { commercialPageBanner } }) {
@@ -85,6 +86,9 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
         </div>
         <div className="my-8">
           <CommercialCategories />
+        </div>
+        <div>
+          <AuthorisedDistributor />
         </div>
       </div>
     </>

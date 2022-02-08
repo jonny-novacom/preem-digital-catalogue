@@ -1,6 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import ConsumerAccordion from "../../components/accordions/ConsumerAcc";
+import AuthorisedDistributor from "../../components/AuthorisedDistributor";
 
 export default function EngineOilsHeavyVehicles() {
   return (
@@ -21,8 +22,11 @@ export default function EngineOilsHeavyVehicles() {
             Produkt, applikationer, specifikationer
           </h4>
         </div>
-        <div className="pt-4 mb-20">
+        <div className="p-4">
           <ConsumerAccordion />
+        </div>
+        <div>
+          <AuthorisedDistributor />
         </div>
       </div>
     </>

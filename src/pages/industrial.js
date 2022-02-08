@@ -9,7 +9,6 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import IndustrialCarousel from "../components/product-carousels/Industrial";
 import IndustrialCategories from "../components/IndustrialCategories";
 import AuthorisedDistributor from "../components/AuthorisedDistributor";
-import Hr from "../utils/hr";
 
 // markup
 export default function IndustrialPage({ data: { industrialPageBanner } }) {
@@ -31,7 +30,7 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
           // Spread bgImage into BackgroundImage:
           {...bgImage}
           preserveStackingContext
-          className="bg-img-height h-2/3 bg-cover mt-24"
+          className="mt-24 bg-cover bg-img-height h-2/3"
         >
           <div className="p-8">
             <div className="flex justify-end">
@@ -48,35 +47,35 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
 
           <div className="p-8 pt-16">
             <div className="grid grid-cols-7 gap-2">
-              <div className="md:col-span-4 col-span-7">
-                <h1 className="font-gothamNarrow text-4xl md:text-6xl font-bold text-white text-shadow-md block mb-4 mt-14">
+              <div className="col-span-7 md:col-span-4">
+                <h1 className="block mb-4 text-4xl font-bold text-white font-gothamNarrow md:text-6xl text-shadow-md mt-14">
                   Min nis di nusam quaepti ipsam que
                 </h1>
               </div>
-              <div className="md:col-span-3 col-span-7">
+              <div className="col-span-7 md:col-span-3">
                 <StaticImage
                   src="../images/packaging/texaco-barrel.png"
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Texaco"
-                  className="object-contain w-56 p-4 mt-4 block mx-auto"
+                  className="block object-contain w-56 p-4 mx-auto mt-4"
                 />
               </div>
             </div>
           </div>
         </BackgroundImage>
-        <div className="container mx-auto pt-16">
+        <div className="container pt-16 mx-auto">
           <StaticImage
             src="../images/icons/industrial.svg"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Services"
-            className="block mx-auto w-12 mb-4"
+            className="block w-12 mx-auto mb-4"
           />
-          <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
+          <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
             Min nis di ditinctate nusam quaepti ipsam que voluptum
           </h3>
-          <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+          <p className="mt-2 font-normal text-center text-gray-500 text-md font-gothamNarrow">
             Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
             volorem perupta audipis explibus
           </p>
@@ -86,9 +85,6 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
         </div>
         <div className="mt-8">
           <IndustrialCategories />
-        </div>
-        <div className="px-8">
-          <Hr />
         </div>
         <div className="mb-8">
           <AuthorisedDistributor />

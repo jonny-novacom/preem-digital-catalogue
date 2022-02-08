@@ -26,11 +26,10 @@ const LocalSearch = () => {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36 mb-20">
+        <div className="mt-36 mb-20 px-4">
           <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
             Search
           </h1>
-
           <div className="container flex justify-center mx-auto">
             <div className="flex border-1">
               <button className="flex items-center justify-center px-3 border-r bg-preemGreen">
@@ -46,11 +45,10 @@ const LocalSearch = () => {
               />
             </div>
           </div>
-
           <h2 className="mt-8 font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
             Results
           </h2>
-          {results.length > 0 ? (
+          {results.length > 0 && (
             <div>
               {results.map((result) => (
                 <Accordion className="inner innersearch" key={result.id}>
@@ -137,6 +135,25 @@ const LocalSearch = () => {
                               }
                             >
                               {result.kokpunkt}
+                            </div>
+
+                            <div
+                              className={
+                                result.fryspunkt !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Fryspunkt °C
+                            </div>
+                            <div
+                              className={
+                                result.fryspunkt !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.fryspunkt}
                             </div>
 
                             <div
@@ -429,7 +446,8 @@ const LocalSearch = () => {
                 </Accordion>
               ))}
             </div>
-          ) : (
+          )}{" "}
+          {query.length >= 1 && results.length === 0 && (
             <p className="mt-2 font-gothamNarrow font-bold text-center mb-4 block text-xl">
               No results!
             </p>

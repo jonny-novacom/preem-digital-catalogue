@@ -7,6 +7,7 @@ import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import ConsumerCarousel from "../components/product-carousels/Consumer";
+import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function ConsumerPage({ data: { consumerPageBanner } }) {
@@ -91,6 +92,9 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
               View all products
             </span>
           </Link>
+        </div>
+        <div>
+          <AuthorisedDistributor />
         </div>
       </div>
     </>

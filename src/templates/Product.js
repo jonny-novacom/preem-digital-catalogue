@@ -1,8 +1,9 @@
 import { graphql } from "gatsby";
 import React from "react";
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
+import PlaceholderImage from "../components/Placeholder";
 
 export default function SingleProductPage({ data: { produkt } }) {
   return (
@@ -15,34 +16,23 @@ export default function SingleProductPage({ data: { produkt } }) {
         />
         <div className="max-w-screen-md mx-auto">
           <div className="mt-36">
-            <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-2 text-preemGreen block">
+            <h1 className="block mb-2 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
               {produkt.produkt} {produkt.sae}
             </h1>
-            <h3 className="text-center text-gray-500 text-lg font-gothamNarrow font-medium mt-2 px-6">
+            <h3 className="px-6 mt-2 text-lg font-medium text-center text-gray-500 font-gothamNarrow">
               {produkt.shortDescription}
             </h3>
-
-            <div>
-              {produkt.mainImage.asset.gatsbyImageData === null && (
-                <StaticImage
-                  src="../images/barrel.png"
-                  quality={95}
-                  formats={["AUTO", "WEBP", "AVIF"]}
-                  alt="Barrel"
-                  className="block mx-auto h-60 w-max max-w-full p-4 mt-4"
-                />
-              )}
-              {produkt.mainImage.asset.gatsbyImageData !== null && (
-                <GatsbyImage
-                  image={produkt.mainImage.asset.gatsbyImageData}
-                  alt={produkt.produkt}
-                  objectFit="contain"
-                  className="block mx-auto h-60 w-max max-w-full p-4 mt-4"
-                />
-              )}
+            <div className="-mb-64">
+              <PlaceholderImage />
             </div>
+            <GatsbyImage
+              image={produkt.mainImage?.asset?.gatsbyImageData}
+              alt={produkt.produkt}
+              objectFit="contain"
+              className="block max-w-full p-4 mx-auto mt-4 bg-white h-60 w-max"
+            />
           </div>
-          <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-3 mb-4 px-6">
+          <div className="px-6 mt-3 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
             <SanityBlockContent
               blocks={produkt._rawApplikationer}
               projectId="1tbc9cjy"
@@ -123,6 +113,25 @@ export default function SingleProductPage({ data: { produkt } }) {
               }
             >
               {produkt.kokpunkt}
+            </div>
+
+            <div
+              className={
+                produkt.fryspunkt !== null
+                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                  : `hidden`
+              }
+            >
+              Fryspunkt °C
+            </div>
+            <div
+              className={
+                produkt.fryspunkt !== null
+                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                  : `hidden`
+              }
+            >
+              {produkt.fryspunkt}
             </div>
 
             <div
@@ -371,30 +380,38 @@ export default function SingleProductPage({ data: { produkt } }) {
               {produkt.tempomrade}
             </div>
           </div>
-          <div className="grid grid-flow-col auto-cols-max mt-4 px-6 mb-10 print:hidden">
+          <div className="grid grid-flow-col px-6 mt-4 mb-10 auto-cols-max print:hidden">
             <div className="mr-4">
               <p className="items-center md:flex-initial md:w-max">
                 <a
                   href={produkt.pds}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                 >
                   See PDS
                 </a>
               </p>
             </div>
-            <div>
+            <div className="mr-4">
               <p className="items-center md:flex-initial md:w-max">
                 <a
                   href={produkt.sds}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                 >
                   See SDS
                 </a>
               </p>
+            </div>
+            <div>
+              <button
+                onClick={() => window.print()}
+                className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+              >
+                Print
+              </button>
             </div>
           </div>
         </div>
@@ -429,6 +446,7 @@ export const query = graphql`
       tempomrade
       tbnbastal
       aromathalt
+      fryspunkt
       shortDescription
       slug {
         current
