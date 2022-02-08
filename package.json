@@ -41,6 +41,7 @@
     "gbimage-bridge": "^0.2.1",
     "js-search": "^2.0.0",
     "postcss": "^8.4.5",
+    "print-js": "^1.6.0",
     "react": "^17.0.1",
     "react-bootstrap": "^2.1.0",
     "react-dom": "^17.0.1",
@@ -49,6 +50,7 @@
     "react-instantsearch-dom": "^6.19.0",
     "react-lunr": "^1.1.0",
     "react-slick": "^0.28.1",
+    "react-to-print": "^2.14.4",
     "react-use-flexsearch": "^0.1.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"

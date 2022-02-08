@@ -36,7 +36,9 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const categoryResult = await graphql(`
     {
-      allSanityProductCategory(filter: { slug: { current: { ne: null } } }) {
+      allSanityProductCategory(
+        filter: { slug: { current: { ne: "transmission-oils" } } }
+      ) {
         edges {
           node {
             title
