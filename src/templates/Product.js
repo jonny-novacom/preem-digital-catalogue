@@ -1,6 +1,6 @@
 import { graphql } from "gatsby";
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
@@ -21,12 +21,26 @@ export default function SingleProductPage({ data: { produkt } }) {
             <h3 className="text-center text-gray-500 text-lg font-gothamNarrow font-medium mt-2 px-6">
               {produkt.shortDescription}
             </h3>
-            <GatsbyImage
-              image={produkt.mainImage.asset.gatsbyImageData}
-              alt={produkt.produkt}
-              objectFit="contain"
-              className="block mx-auto h-60 w-max max-w-full p-4 mt-4"
-            />
+
+            <div>
+              {produkt.mainImage.asset.gatsbyImageData === null && (
+                <StaticImage
+                  src="../images/barrel.png"
+                  quality={95}
+                  formats={["AUTO", "WEBP", "AVIF"]}
+                  alt="Barrel"
+                  className="block mx-auto h-60 w-max max-w-full p-4 mt-4"
+                />
+              )}
+              {produkt.mainImage.asset.gatsbyImageData !== null && (
+                <GatsbyImage
+                  image={produkt.mainImage.asset.gatsbyImageData}
+                  alt={produkt.produkt}
+                  objectFit="contain"
+                  className="block mx-auto h-60 w-max max-w-full p-4 mt-4"
+                />
+              )}
+            </div>
           </div>
           <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-3 mb-4 px-6">
             <SanityBlockContent
