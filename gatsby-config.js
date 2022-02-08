@@ -74,6 +74,7 @@ module.exports = {
                       basolja40
                       tempomrade
                       tbnbastal
+                      fryspunkt
                       _rawApplikationer
                       applikationer {
                         children {
@@ -111,6 +112,7 @@ module.exports = {
           "densitet",
           "kokpunkt",
           "brytningsindex",
+          "fryspunkt",
         ],
         normalizer: ({ data }) =>
           data.allSanityProduct.nodes.map((node) => ({
@@ -134,6 +136,7 @@ module.exports = {
             densitet: node.densitet,
             kokpunkt: node.kokpunkt,
             brytningsindex: node.brytningsindex,
+            fryspunkt: node.fryspunkt,
           })),
       },
     },
