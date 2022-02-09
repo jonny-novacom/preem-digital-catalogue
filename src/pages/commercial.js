@@ -11,9 +11,9 @@ import CommercialCategories from "../components/CommercialCategories";
 import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
-export default function CommercialPage({ data: { commercialPageBanner } }) {
-  const seoImage = commercialPageBanner.mainImage.asset.url;
-  const image = getImage(commercialPageBanner.mainImage.asset.gatsbyImageData);
+export default function CommercialPage({ data: { commercialBG } }) {
+  const seoImage = commercialBG.publicURL;
+  const image = getImage(commercialBG.childImageSharp.gatsbyImageData);
   const bgImage = convertToBgImage(image);
 
   return (
@@ -24,71 +24,69 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
         description=""
       />
       <div className="max-w-screen-lg mx-auto">
-        <BackgroundImage
-          Tag="section"
-          // Spread bgImage into BackgroundImage:
-          {...bgImage}
-          preserveStackingContext
-          className="bg-img-height h-2/3 bg-cover mt-24"
-          style={{
-            backgroundPosition: "",
-          }}
-        >
-          <div className="p-8">
-            <div className="flex justify-end">
-              <StaticImage
-                src="../images/texaco-logo.png"
-                quality={95}
-                formats={["AUTO", "WEBP", "AVIF"]}
-                alt="Texaco"
-                transformOptions={"cover"}
-                className="mt-12 mr-6"
-              />
-            </div>
-          </div>
-          <div className="p-8 pt-16">
-            <div className="grid grid-cols-7 gap-2">
-              <div className="md:col-span-4 col-span-7">
-                <h1 className="font-gothamNarrow text-4xl md:text-6xl font-bold text-white text-shadow-md block mb-4 mt-24">
-                  Motoroljor tunga fordon
-                </h1>
-              </div>
-              <div className="md:col-span-3 col-span-7">
+        <div className="mt-40">
+          <BackgroundImage
+            Tag="section"
+            // Spread bgImage into BackgroundImage:
+            {...bgImage}
+            preserveStackingContext
+            className="mt-6 bg-cover bg-img-height h-3/4"
+          >
+            <div className="p-8">
+              <div className="flex justify-end">
                 <StaticImage
-                  src="../images/commercial-packshot.png"
+                  src="../images/texaco-logo.png"
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Texaco"
-                  className="object-contain w-56 p-4 mt-4 block mx-auto"
+                  transformOptions={"cover"}
                 />
               </div>
             </div>
+            <div className="p-8 md:pt-32">
+              <div className="grid grid-cols-7 gap-2">
+                <div className="col-span-7 md:col-span-4">
+                  <h1 className="block mt-24 mb-4 text-4xl font-bold text-white font-gothamNarrow md:text-6xl text-shadow-md">
+                    Motoroljor tunga fordon
+                  </h1>
+                </div>
+                <div className="col-span-7 md:col-span-3">
+                  <StaticImage
+                    src="../images/commercial-packshot.png"
+                    quality={95}
+                    formats={["AUTO", "WEBP", "AVIF"]}
+                    alt="Texaco"
+                    className="block object-contain w-56 p-4 mx-auto mt-4"
+                  />
+                </div>
+              </div>
+            </div>
+          </BackgroundImage>
+          <div className="container pt-16 mx-auto">
+            <StaticImage
+              src="../images/icons/commercial.svg"
+              quality={95}
+              formats={["AUTO", "WEBP", "AVIF"]}
+              alt="Services"
+              className="block w-20 mx-auto mb-4"
+            />
+            <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
+              Min nis di ditinctate nusam quaepti ipsam que voluptum
+            </h3>
+            <p className="mt-2 font-normal text-center text-gray-500 text-md font-gothamNarrow">
+              Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
+              volorem perupta audipis explibus
+            </p>
           </div>
-        </BackgroundImage>
-        <div className="container mx-auto pt-16">
-          <StaticImage
-            src="../images/icons/commercial.svg"
-            quality={95}
-            formats={["AUTO", "WEBP", "AVIF"]}
-            alt="Services"
-            className="block mx-auto w-20 mb-4"
-          />
-          <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
-            Min nis di ditinctate nusam quaepti ipsam que voluptum
-          </h3>
-          <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2">
-            Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
-            volorem perupta audipis explibus
-          </p>
-        </div>
-        <div className="my-8">
-          <CommercialCarousel />
-        </div>
-        <div className="my-8">
-          <CommercialCategories />
-        </div>
-        <div>
-          <AuthorisedDistributor />
+          <div className="my-8">
+            <CommercialCarousel />
+          </div>
+          <div className="my-8">
+            <CommercialCategories />
+          </div>
+          <div>
+            <AuthorisedDistributor />
+          </div>
         </div>
       </div>
     </>
@@ -96,19 +94,15 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
 }
 
 export const query = graphql`
-  query commercialPageBanner {
-    commercialPageBanner: sanityBannerImages(
-      title: { eq: "Commercial Page Banner" }
-    ) {
-      title
-      slug {
-        current
-      }
-      mainImage {
-        asset {
-          gatsbyImageData(placeholder: BLURRED, width: 768, height: 600)
-          url
-        }
+  query commercialBG {
+    commercialBG: file(relativePath: { eq: "bg-images/commercial-bg.jpg" }) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(
+          width: 1200
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }

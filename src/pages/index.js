@@ -7,9 +7,9 @@ import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 // markup
-export default function IndexPage({ data: { homePageBanner } }) {
-  const seoImage = homePageBanner.mainImage.asset.url;
-  const image = getImage(homePageBanner.mainImage.asset.gatsbyImageData);
+export default function IndexPage({ data: { homeBG } }) {
+  const seoImage = homeBG.publicURL;
+  const image = getImage(homeBG.childImageSharp.gatsbyImageData);
   const bgImage = convertToBgImage(image);
 
   return (
@@ -61,17 +61,15 @@ export default function IndexPage({ data: { homePageBanner } }) {
 }
 
 export const query = graphql`
-  query homePageBanner {
-    homePageBanner: sanityBannerImages(title: { eq: "Home Page Banner" }) {
-      title
-      slug {
-        current
-      }
-      mainImage {
-        asset {
-          gatsbyImageData(placeholder: BLURRED, width: 768, height: 1024)
-          url
-        }
+  query homeBG {
+    homeBG: file(relativePath: { eq: "bg-images/home-bg.jpg" }) {
+      publicURL
+      childImageSharp {
+        gatsbyImageData(
+          width: 1200
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
