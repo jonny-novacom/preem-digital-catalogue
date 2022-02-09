@@ -25,17 +25,17 @@ export default function Nav() {
     <>
       <div className="bg-white">
         <div className="max-w-screen-lg mx-auto bg-white">
-          <nav className="font-sans flex text-center flex-row justify-between py-4 px-12 bg-white items-baseline fixed top-0 z-50 w-screen max-w-screen-lg">
-            <div className="mb-2">
+          <nav className="fixed top-0 z-50 flex flex-row items-baseline justify-between w-screen max-w-screen-lg px-12 py-4 font-sans text-center bg-white">
+            <div className="mb-2 ">
               <button
                 onClick={setNavBar}
-                className="items-center block hover:text-black hover:border-black"
+                className="items-center block hover:text-black hover:border-black no-print"
               >
                 <span>
                   {!navBarIsToggled ? (
-                    <MdMenu className="text-4xl -mt-12 block text-preemMediumGray" />
+                    <MdMenu className="block -mt-12 text-4xl text-preemMediumGray" />
                   ) : (
-                    <MdClose className="text-4xl -mt-12 block text-preemDarkGray" />
+                    <MdClose className="block -mt-12 text-4xl text-preemDarkGray" />
                   )}
                 </span>
               </button>
@@ -49,137 +49,137 @@ export default function Nav() {
 
             <div className="mb-2">
               <Link to="/search">
-                <IoSearchOutline className="text-4xl -mt-12 block text-preemMediumGray" />
+                <IoSearchOutline className="block -mt-12 text-4xl text-preemMediumGray no-print" />
               </Link>
             </div>
           </nav>
 
-          <div className="fixed z-40 block top-28 w-screen">
+          <div className="fixed z-40 block w-screen top-28">
             <Slide direction={-1} distance={1000} isActive={navBarIsToggled}>
-              <div className="w-full md:w-2/3 h-screen bg-white p-8">
+              <div className="w-full h-screen p-8 bg-white md:w-2/3">
                 <ul>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/consumer" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={consumer}
                           alt="Consumer"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top font-bold">
+                      <span className="inline-block font-bold align-top">
                         Consumer
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2  h-16">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/commercial" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={commercial}
                           alt="Commercial"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Commercial
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/power-generation" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={powerGen}
                           alt="Power Generation"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Power generation
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/marine" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={marine}
                           alt="Marine"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Marine
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/industrial" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={industrial}
                           alt="Industrial"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Industrial
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16 ">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen ">
                     <Link to="/standards" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={standards}
                           alt="Industry/OEM Standards"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Industry/OEM Standards
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16 ">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen ">
                     <Link to="/technical-information" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={techInfo}
                           alt="Technical Information"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Technical information
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 h-16">
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/packaging" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={packaging}
                           alt="Packaging"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Packaging
                       </span>
                     </Link>
                   </li>
-                  <li className="font-gothamNarrow text-xl text-preemGreen py-2 align-middle  h-16">
+                  <li className="h-16 py-2 text-xl align-middle font-gothamNarrow text-preemGreen">
                     <Link to="/glossary" onClick={closeNavBar}>
-                      <span className="w-20 inline-block pr-8">
+                      <span className="inline-block w-20 pr-8">
                         <img
                           src={glossary}
                           alt="Glossary"
-                          className="w-20 block mx-auto max-h-10"
+                          className="block w-20 mx-auto max-h-10"
                         />
                       </span>
-                      <span className="inline-block align-top mt-2 font-bold">
+                      <span className="inline-block mt-2 font-bold align-top">
                         Glossary
                       </span>
                     </Link>
