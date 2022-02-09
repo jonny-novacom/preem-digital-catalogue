@@ -9,7 +9,7 @@ import ACEAMotoroljor from "../components/tables/ACEAMotoroljor";
 import ACEAMotoroljorDiesel from "../components/tables/ACEAMotoroljorDiesel";
 import EUUtslappsgranser from "../components/tables/EUUtslappsgranser";
 import APIBasoljeklassificering from "../components/tables/APIBasoljeklassificering";
-import NLGI from "../components/tables/NLGI";
+import NLGITable from "../components/tables/NLGI";
 import TechInfoFilter from "../components/TechInfoFilter";
 
 export default function TechnicalInformationPage() {
@@ -45,7 +45,7 @@ export default function TechnicalInformationPage() {
           <APIBasoljeklassificering />
           <Hr />
           <div id="nlgi" className="pb-32 -mt-32"></div>
-          <NLGI />
+          <NLGITable />
           <Hr />
         </div>
       </div>

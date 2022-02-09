@@ -107,9 +107,15 @@ export default function IndustrialCarousel() {
           }
           mainImage {
             asset {
-              url
-              id
-              gatsbyImageData(fit: FILLMAX, placeholder: BLURRED)
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 400
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
             }
           }
           productCategory {
@@ -125,30 +131,31 @@ export default function IndustrialCarousel() {
     <div className="px-10">
       <Slider {...settings}>
         {theindustrialproductcarousel.map((industrialproductcarousel, i) => (
-          <div className="bg-white p-1" key={i}>
-            <div className="bg-gray-50 p-4">
+          <div className="p-1 bg-white" key={i}>
+            <div className="p-4 bg-gray-50">
               <Link to={`/products/${industrialproductcarousel.slug.current}`}>
                 <GatsbyImage
                   image={
-                    industrialproductcarousel.mainImage.asset.gatsbyImageData
+                    industrialproductcarousel.mainImage.asset.localFile
+                      .childImageSharp.gatsbyImageData
                   }
                   alt={industrialproductcarousel.produkt}
                   className="block mx-auto"
                   imgStyle={{ objectFit: "contain" }}
                 />
-                <h3 className="text-center text-preemGreen text-lg font-bold font-gothamNarrow mt-2 h-14 leading-snug">
+                <h3 className="mt-2 text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow h-14">
                   {industrialproductcarousel.produkt}{" "}
                   {industrialproductcarousel.sae}
                 </h3>
               </Link>
-              <span className="text-center text-gray-400 text-sm font-gothamNarrow mt-2 mb-4 block leading-snug h-20 font-normal">
+              <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-gray-400 font-gothamNarrow">
                 {industrialproductcarousel.shortDescription}
               </span>
               <div className="block mx-auto text-center">
                 <Link
                   to={`/products/${industrialproductcarousel.slug.current}`}
                 >
-                  <span className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
+                  <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
                     Find out more
                   </span>
                 </Link>

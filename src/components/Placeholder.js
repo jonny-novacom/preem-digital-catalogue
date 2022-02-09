@@ -6,7 +6,7 @@ const PlaceholderImage = () => {
       src="../images/barrel.png"
       quality={95}
       formats={["AUTO", "WEBP", "AVIF"]}
-      alt="Marine"
+      alt="Barrel"
       transformOptions={"contain"}
       className="block w-40 p-4 mx-auto mt-4 h-60"
     />

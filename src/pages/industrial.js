@@ -12,15 +12,17 @@ import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function IndustrialPage({ data: { industrialPageBanner } }) {
-  const seoImage = industrialPageBanner.mainImage.asset.url;
-  const image = getImage(industrialPageBanner.mainImage.asset.gatsbyImageData);
+  const image = getImage(
+    industrialPageBanner.mainImage.asset.localFile.childImageSharp
+      .gatsbyImageData
+  );
   const bgImage = convertToBgImage(image);
 
   return (
     <>
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
-        image={seoImage}
+        image=""
         description=""
       />
 
@@ -45,7 +47,7 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
             </div>
           </div>
 
-          <div className="p-8 pt-16">
+          <div className="p-8 md:pt-32">
             <div className="grid grid-cols-7 gap-2">
               <div className="col-span-7 md:col-span-4">
                 <h1 className="block mb-4 text-4xl font-bold text-white font-gothamNarrow md:text-6xl text-shadow-md mt-14">
@@ -105,8 +107,15 @@ export const query = graphql`
       }
       mainImage {
         asset {
-          gatsbyImageData(placeholder: BLURRED, width: 768, height: 600)
-          url
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
         }
       }
     }

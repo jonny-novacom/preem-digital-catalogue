@@ -11,16 +11,18 @@ import CommercialCategories from "../components/CommercialCategories";
 import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
-export default function CommercialPage({ data: { commercialBG } }) {
-  const seoImage = commercialBG.publicURL;
-  const image = getImage(commercialBG.childImageSharp.gatsbyImageData);
+export default function CommercialPage({ data: { commercialPageBanner } }) {
+  const image = getImage(
+    commercialPageBanner.mainImage.asset.localFile.childImageSharp
+      .gatsbyImageData
+  );
   const bgImage = convertToBgImage(image);
 
   return (
     <>
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
-        image={seoImage}
+        image=""
         description=""
       />
       <div className="max-w-screen-lg mx-auto">
@@ -94,15 +96,26 @@ export default function CommercialPage({ data: { commercialBG } }) {
 }
 
 export const query = graphql`
-  query commercialBG {
-    commercialBG: file(relativePath: { eq: "bg-images/commercial-bg.jpg" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
+  query commercialPageBanner {
+    commercialPageBanner: sanityBannerImages(
+      title: { eq: "Commercial Page Banner" }
+    ) {
+      title
+      slug {
+        current
+      }
+      mainImage {
+        asset {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
       }
     }
   }

@@ -7,8 +7,10 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import BackgroundImage from "gatsby-background-image";
 import { convertToBgImage } from "gbimage-bridge";
 
-export default function MarinePage({ data: { marineBG } }) {
-  const image = getImage(marineBG.childImageSharp.gatsbyImageData);
+export default function MarinePage({ data: { marinePageBanner } }) {
+  const image = getImage(
+    marinePageBanner.mainImage.asset.localFile.childImageSharp.gatsbyImageData
+  );
   const bgImage = convertToBgImage(image);
 
   return (
@@ -82,14 +84,24 @@ export default function MarinePage({ data: { marineBG } }) {
 }
 
 export const query = graphql`
-  query marineBG {
-    marineBG: file(relativePath: { eq: "bg-images/marine-bg.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
+  query marinePageBanner {
+    marinePageBanner: sanityBannerImages(title: { eq: "Marine Page Banner" }) {
+      title
+      slug {
+        current
+      }
+      mainImage {
+        asset {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
       }
     }
   }

@@ -29,7 +29,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
           // Spread bgImage into BackgroundImage:
           {...bgImage}
           preserveStackingContext
-          className="bg-img-height h-2/3 bg-cover mt-24"
+          className="mt-24 bg-cover bg-img-height h-2/3"
         >
           <div className="p-8">
             <div className="flex justify-end">
@@ -45,8 +45,8 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
           </div>
           <div className="p-8 md:pt-16">
             <div className="grid grid-cols-8 gap-1 mt-12">
-              <div className="md:col-span-6 col-span-8">
-                <h1 className="font-gothamNarrow text-4xl md:text-55xl font-bold text-white text-shadow-md block mb-4 md:mt-24 mt:8 leading-none">
+              <div className="col-span-8 md:col-span-6">
+                <h1 className="block mb-4 text-4xl font-bold leading-none text-white font-gothamNarrow md:text-55xl text-shadow-md md:mt-24 mt:8">
                   Motoroljor
                   <br />
                   personbilar och
@@ -54,31 +54,31 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
                   lätta transportfordon
                 </h1>
               </div>
-              <div className="md:col-span-2 col-span-8">
+              <div className="col-span-8 md:col-span-2">
                 <StaticImage
                   src="../images/havoline-prods-mg-sae-0w-20.png"
                   quality={95}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Havoline ProDS MG SAE 0W-20"
-                  className="object-contain w-56 p-4 md:mt-12 block mx-auto"
+                  className="block object-contain w-56 p-4 mx-auto md:mt-12"
                 />
               </div>
             </div>
           </div>
         </BackgroundImage>
-        <div className="container mx-auto pt-16">
+        <div className="container pt-16 mx-auto">
           <StaticImage
             src="../images/icons/consumer.svg"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Consumer"
             transformOptions={"cover"}
-            className="block mx-auto w-20 mb-4"
+            className="block w-20 mx-auto mb-4"
           />
-          <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow">
+          <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
             Min nis di ditinctate nusam quaepti ipsam que voluptum
           </h3>
-          <p className="text-center text-gray-500 text-md font-gothamNarrow font-normal mt-2">
+          <p className="mt-2 font-normal text-center text-gray-500 text-md font-gothamNarrow">
             Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
             volorem perupta audipis explibus
           </p>
@@ -86,9 +86,9 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
         <div className="my-8">
           <ConsumerCarousel />
         </div>
-        <div className="block mx-auto text-center">
+        <div className="block mx-auto mb-8 text-center">
           <Link to="/product-category/engine-oils-passenger-cars-and-light-transport-vehicles">
-            <span className="text-preemGreen py-2 px-16 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemYellow">
+            <span className="inline-block px-16 py-2 font-medium align-top rounded-full text-preemGreen hover:brightness-95 font-gothamNarrow bg-preemYellow">
               View all products
             </span>
           </Link>

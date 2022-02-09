@@ -12,9 +12,9 @@ export default function AuthorisedDistributor() {
           quality={95}
           formats={["AUTO", "WEBP", "AVIF"]}
           alt="Texaco"
-          className="block mx-auto w-10 object-contain "
+          className="block object-contain w-10 mx-auto "
         />
-        <p className="text-center mt-3 font-helvetica font-medium">
+        <p className="mt-3 mb-12 font-medium text-center font-helvetica">
           Authorised Texaco<sup>®</sup> Lubricants Distributor
         </p>
       </div>

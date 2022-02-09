@@ -7,16 +7,17 @@ import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 // markup
-export default function IndexPage({ data: { homeBG } }) {
-  const seoImage = homeBG.publicURL;
-  const image = getImage(homeBG.childImageSharp.gatsbyImageData);
+export default function IndexPage({ data: { homePageBanner } }) {
+  const image = getImage(
+    homePageBanner.mainImage.asset.localFile.childImageSharp.gatsbyImageData
+  );
   const bgImage = convertToBgImage(image);
 
   return (
     <>
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
-        image={seoImage}
+        image=""
         description=""
       />
       <div className="max-w-screen-lg mx-auto">
@@ -61,15 +62,24 @@ export default function IndexPage({ data: { homeBG } }) {
 }
 
 export const query = graphql`
-  query homeBG {
-    homeBG: file(relativePath: { eq: "bg-images/home-bg.jpg" }) {
-      publicURL
-      childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
+  query homePageBanner {
+    homePageBanner: sanityBannerImages(title: { eq: "Home Page Banner" }) {
+      title
+      slug {
+        current
+      }
+      mainImage {
+        asset {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
       }
     }
   }

@@ -7,9 +7,12 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 
-export default function PowerGenerationPage({ data: { powerGenBG } }) {
-  const image = getImage(powerGenBG.childImageSharp.gatsbyImageData);
+export default function PowerGenerationPage({ data: { powergenPageBanner } }) {
+  const image = getImage(
+    powergenPageBanner.mainImage.asset.localFile.childImageSharp.gatsbyImageData
+  );
   const bgImage = convertToBgImage(image);
+
   return (
     <>
       <SearchEngineOptimisation
@@ -80,14 +83,26 @@ export default function PowerGenerationPage({ data: { powerGenBG } }) {
 }
 
 export const query = graphql`
-  query powerGenBG {
-    powerGenBG: file(relativePath: { eq: "bg-images/power-gen-bg.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          placeholder: BLURRED
-          formats: [AUTO, WEBP, AVIF]
-        )
+  query powergenPageBanner {
+    powergenPageBanner: sanityBannerImages(
+      title: { eq: "PowerGen Page Banner" }
+    ) {
+      title
+      slug {
+        current
+      }
+      mainImage {
+        asset {
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
       }
     }
   }
