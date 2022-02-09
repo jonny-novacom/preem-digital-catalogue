@@ -379,7 +379,7 @@ export default function SingleProductPage({ data: { produkt } }) {
               {produkt.tempomrade}
             </div>
           </div>
-          <div className="grid grid-flow-col px-6 mt-4 mb-10 auto-cols-max print:hidden">
+          <div className="grid grid-flow-col px-6 mt-4 mb-10 auto-cols-max no-print">
             <div className="mr-4">
               <p className="items-center md:flex-initial md:w-max">
                 <a
