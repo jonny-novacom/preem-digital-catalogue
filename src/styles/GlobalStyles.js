@@ -11,6 +11,14 @@ const GlobalStyles = createGlobalStyle`
     --preemYellow: #ffac3a;
  }
 
+ @media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
  a {
     color: inherit !important;
     text-decoration: none !important;
