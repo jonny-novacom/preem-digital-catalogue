@@ -3,7 +3,6 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
-import PlaceholderImage from "../components/Placeholder";
 
 export default function SingleProductPage({ data: { produkt } }) {
   return (
@@ -11,7 +10,7 @@ export default function SingleProductPage({ data: { produkt } }) {
       <div key={produkt.id}>
         <SearchEngineOptimisation
           title={`${produkt.produkt} ${produkt.sae}`}
-          image={produkt.mainImage?.asset?.url}
+          image={produkt.mainImage.asset.url}
           description={produkt.shortDescription}
         />
         <div className="max-w-screen-md mx-auto">
@@ -22,14 +21,14 @@ export default function SingleProductPage({ data: { produkt } }) {
             <h3 className="px-6 mt-2 text-lg font-medium text-center text-gray-500 font-gothamNarrow">
               {produkt.shortDescription}
             </h3>
-            <div className="-mb-72">
-              <PlaceholderImage />
-            </div>
             <GatsbyImage
-              image={produkt.mainImage?.asset?.gatsbyImageData}
+              image={
+                produkt.mainImage.asset.localFile.childImageSharp
+                  .gatsbyImageData
+              }
               alt={produkt.produkt}
               objectFit="contain"
-              className="block w-64 h-64 p-4 mx-auto mt-4 bg-white"
+              className="block w-64 h-64 p-4 mx-auto mt-4"
             />
           </div>
           <div className="px-6 mt-3 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
@@ -453,8 +452,15 @@ export const query = graphql`
       }
       mainImage {
         asset {
-          gatsbyImageData(placeholder: NONE, width: 600, height: 600)
-          url
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 400
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
         }
       }
     }
