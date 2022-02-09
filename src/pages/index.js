@@ -8,18 +8,18 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 // markup
 export default function IndexPage({ data: { homePageBanner } }) {
-  const seoImage = homePageBanner.mainImage.asset.url;
-  const image = getImage(homePageBanner.mainImage.asset.gatsbyImageData);
-  const bgImage = convertToBgImage(image);
-
   const SERVICE_WORKER_SCOPE = "/";
   window.addEventListener("load", async () => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("./service-worker.js", {
+      navigator.serviceWorker.register("../service-worker.js", {
         scope: SERVICE_WORKER_SCOPE,
       });
     }
   });
+
+  const seoImage = homePageBanner.mainImage.asset.url;
+  const image = getImage(homePageBanner.mainImage.asset.gatsbyImageData);
+  const bgImage = convertToBgImage(image);
 
   return (
     <>
