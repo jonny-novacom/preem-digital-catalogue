@@ -6,7 +6,6 @@ import MarineCarousel from "../components/product-carousels/Marine";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import BackgroundImage from "gatsby-background-image";
 import { convertToBgImage } from "gbimage-bridge";
-import MarineBanner from "../components/banners/MarineBanner";
 
 export default function MarinePage({ data: { marineBG } }) {
   const image = getImage(marineBG.childImageSharp.gatsbyImageData);
