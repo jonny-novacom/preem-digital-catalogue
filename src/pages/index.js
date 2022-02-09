@@ -12,6 +12,15 @@ export default function IndexPage({ data: { homePageBanner } }) {
   const image = getImage(homePageBanner.mainImage.asset.gatsbyImageData);
   const bgImage = convertToBgImage(image);
 
+  const SERVICE_WORKER_SCOPE = "/";
+  window.addEventListener("load", async () => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./service-worker.js", {
+        scope: SERVICE_WORKER_SCOPE,
+      });
+    }
+  });
+
   return (
     <>
       <SearchEngineOptimisation
@@ -25,30 +34,30 @@ export default function IndexPage({ data: { homePageBanner } }) {
           // Spread bgImage into BackgroundImage:
           {...bgImage}
           preserveStackingContext
-          className="bg-img-height h-screen"
+          className="h-screen bg-img-height"
         >
-          <div className="grid grid-cols-1 gap-4 w-screen content-between md:p-12 p-4 max-w-screen-lg h-screen">
+          <div className="grid content-between w-screen h-screen max-w-screen-lg grid-cols-1 gap-4 p-4 md:p-12">
             <div className="flex justify-end">
               <StaticImage
                 src="../images/texaco-logo.png"
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="mt-36 mr-6"
+                className="mr-6 mt-36"
               />
             </div>
             <div className="md:-mt-48">
-              <h1 className="font-gothamNarrow text-6xl font-bold text-white text-shadow-md block mb-4">
+              <h1 className="block mb-4 text-6xl font-bold text-white font-gothamNarrow text-shadow-md">
                 Smörjmedel
               </h1>
-              <h2 className="font-gothamNarrow text-3xl font-bold text-white text-shadow-md block w-11/12">
+              <h2 className="block w-11/12 text-3xl font-bold text-white font-gothamNarrow text-shadow-md">
                 Texaco smörjmedel säljs i Sverige av Preem, på Preems stationer
                 och av Preems återförsäljare
               </h2>
             </div>
             <div>
-              <span className="border-t-2 border-white font-gothamNarrow block">
-                <span className="text-white text-xl font-medium block mt-4">
+              <span className="block border-t-2 border-white font-gothamNarrow">
+                <span className="block mt-4 text-xl font-medium text-white">
                   Kem drivemedel bränsle – {new Date().getFullYear()}
                 </span>
               </span>
