@@ -27,6 +27,7 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
       },
     },
+    "gatsby-source-sanity-transform-images",
     {
       resolve: "gatsby-source-filesystem",
       options: {
