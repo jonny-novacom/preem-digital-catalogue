@@ -9,15 +9,6 @@ import "../styles/typography.css";
 import SearchEngineOptimisation from "./SearchEngineOptimisation";
 
 export default function Layout({ children }) {
-  const SERVICE_WORKER_SCOPE = "/";
-  window.addEventListener("load", async () => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("../utils/service-worker.js", {
-        scope: SERVICE_WORKER_SCOPE,
-      });
-    }
-  });
-
   return (
     <>
       <SiteProvider>
