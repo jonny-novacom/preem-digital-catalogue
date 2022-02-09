@@ -22,14 +22,14 @@ export default function SingleProductPage({ data: { produkt } }) {
             <h3 className="px-6 mt-2 text-lg font-medium text-center text-gray-500 font-gothamNarrow">
               {produkt.shortDescription}
             </h3>
-            <div className="-mb-64">
+            <div className="-mb-72">
               <PlaceholderImage />
             </div>
             <GatsbyImage
               image={produkt.mainImage?.asset?.gatsbyImageData}
               alt={produkt.produkt}
               objectFit="contain"
-              className="block max-w-full p-4 mx-auto mt-4 bg-white h-60 w-max"
+              className="block w-64 h-64 p-4 mx-auto mt-4 bg-white"
             />
           </div>
           <div className="px-6 mt-3 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
