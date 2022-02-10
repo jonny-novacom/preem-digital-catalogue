@@ -172,7 +172,7 @@ module.exports = {
           `/packaging/`,
         ],
         workboxConfig: {
-          globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css}"],
+          globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
         },
       },
     },
