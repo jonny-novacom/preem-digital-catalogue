@@ -22,7 +22,7 @@ export default function SearchEngineOptimisation({
 
   return (
     <Helmet titleTemplate={`%s | ${site.siteMetadata.title}`}>
-      <html lang="sb" />
+      <html lang="sv" />
       <title>{title}</title>
       {/* Favicons */}
       <link
