@@ -1,7 +1,6 @@
 import { graphql, Link } from "gatsby";
 import { getImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import AuthorisedDistributor from "../components/AuthorisedDistributor";
 import MarineCarousel from "../components/product-carousels/Marine";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import BackgroundImage from "gatsby-background-image";
@@ -42,7 +41,7 @@ export default function MarinePage({ data: { marinePageBanner } }) {
               </div>
             </div>
             <div className="p-8 md:pt-48">
-              <h1 className="block mb-4 text-4xl font-bold leading-none text-white font-gothamNarrow md:text-55xl text-shadow-md md:mt-24 mt:8">
+              <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-6xl text-shadow-md mt:8 lg:w-3/4 md:w-10/12">
                 Min nis di nusam quaepti ipsam que
               </h1>
             </div>
@@ -74,9 +73,6 @@ export default function MarinePage({ data: { marinePageBanner } }) {
               </span>
             </Link>
           </div>
-        </div>
-        <div className="mb-8">
-          <AuthorisedDistributor />
         </div>
       </div>
     </>

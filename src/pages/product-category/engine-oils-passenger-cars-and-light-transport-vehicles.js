@@ -1,7 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import ConsumerAccordion from "../../components/accordions/ConsumerAcc";
-import AuthorisedDistributor from "../../components/AuthorisedDistributor";
 
 export default function EngineOilsHeavyVehicles() {
   return (
@@ -13,20 +12,17 @@ export default function EngineOilsHeavyVehicles() {
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Services"
-            className="block mx-auto w-20 mb-4"
+            className="block w-20 mx-auto mb-4"
           />
-          <h3 className="text-center text-preemYellow text-base font-bold font-gothamNarrow mb-0">
+          <h3 className="mb-0 text-base font-bold text-center text-preemYellow font-gothamNarrow">
             Motoroljor personbilar och lätta transportfordon
           </h3>
-          <h4 className="text-center text-preemGreen text-2xl font-gothamNarrow font-bold">
+          <h4 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
             Produkt, applikationer, specifikationer
           </h4>
         </div>
         <div className="p-4">
           <ConsumerAccordion />
-        </div>
-        <div>
-          <AuthorisedDistributor />
         </div>
       </div>
     </>

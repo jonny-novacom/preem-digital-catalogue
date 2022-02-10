@@ -3,14 +3,13 @@ import React from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
-import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 export default function SingleProductPage({ data: { categories } }) {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36 mb-20 px-4">
-          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+        <div className="px-4 mb-20 mt-36">
+          <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             {categories.titleSwedish}
           </h1>
 
@@ -59,8 +58,8 @@ export default function SingleProductPage({ data: { categories } }) {
                   </span>
                 </Accordion.Header>
                 <Accordion.Body>
-                  <div className="pr-4 pt-1 pb-4 pl-10">
-                    <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+                  <div className="pt-1 pb-4 pl-10 pr-4">
+                    <div className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
                       <SanityBlockContent
                         blocks={product._rawApplikationer}
                         projectId="1tbc9cjy"
@@ -392,14 +391,14 @@ export default function SingleProductPage({ data: { categories } }) {
                       </div>
                     </div>
 
-                    <div className="grid sm:grid-flow-col sm:auto-cols-max mt-4">
+                    <div className="grid mt-4 sm:grid-flow-col sm:auto-cols-max">
                       <div className="mr-4">
                         <p className="items-center md:flex-initial md:w-max">
                           <a
                             href={product.pds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors text-center"
+                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                           >
                             See PDS
                           </a>
@@ -412,7 +411,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             href={product.sds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors text-center"
+                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                           >
                             See SDS
                           </a>
@@ -423,7 +422,7 @@ export default function SingleProductPage({ data: { categories } }) {
                         <p className="items-center md:flex-initial md:w-max">
                           <Link
                             to={`/products/${product.slug.current}`}
-                            className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors text-center"
+                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                           >
                             View Product
                           </Link>
@@ -436,9 +435,6 @@ export default function SingleProductPage({ data: { categories } }) {
             </Accordion>
           ))}
         </div>
-      </div>
-      <div>
-        <AuthorisedDistributor />
       </div>
     </>
   );

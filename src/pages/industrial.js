@@ -8,7 +8,6 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import IndustrialCarousel from "../components/product-carousels/Industrial";
 import IndustrialCategories from "../components/IndustrialCategories";
-import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function IndustrialPage({ data: { industrialPageBanner } }) {
@@ -48,13 +47,13 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
           </div>
 
           <div className="p-8 md:pt-32">
-            <div className="grid grid-cols-7 gap-2">
-              <div className="col-span-7 md:col-span-4">
-                <h1 className="block mb-4 text-4xl font-bold text-white font-gothamNarrow md:text-6xl text-shadow-md mt-14">
+            <div className="grid grid-cols-8 gap-1 mt-12">
+              <div className="col-span-8 md:col-span-6">
+                <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-6xl text-shadow-md md:mt-24 lg:mt-20 mt:8 ">
                   Min nis di nusam quaepti ipsam que
                 </h1>
               </div>
-              <div className="col-span-7 md:col-span-3">
+              <div className="hidden col-span-8 md:col-span-2 md:block">
                 <StaticImage
                   src="../images/packaging/texaco-barrel.png"
                   quality={95}
@@ -87,9 +86,6 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
         </div>
         <div className="mt-8">
           <IndustrialCategories />
-        </div>
-        <div className="mb-8">
-          <AuthorisedDistributor />
         </div>
       </div>
     </>

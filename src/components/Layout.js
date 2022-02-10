@@ -7,8 +7,11 @@ import Nav from "./Nav";
 
 import "../styles/typography.css";
 import SearchEngineOptimisation from "./SearchEngineOptimisation";
+import AuthorisedDistributor from "./AuthorisedDistributor";
 
-export default function Layout({ children }) {
+export default function Layout({ children, location }) {
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <SiteProvider>
@@ -16,6 +19,7 @@ export default function Layout({ children }) {
         <GlobalStyles />
         <Nav />
         {children}
+        {isHome ? "" : <AuthorisedDistributor />}
       </SiteProvider>
     </>
   );

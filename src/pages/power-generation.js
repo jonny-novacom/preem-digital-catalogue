@@ -2,7 +2,6 @@ import { graphql, Link } from "gatsby";
 import { getImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import PowerGenCarousel from "../components/product-carousels/PowerGen";
-import AuthorisedDistributor from "../components/AuthorisedDistributor";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
@@ -41,7 +40,7 @@ export default function PowerGenerationPage({ data: { powergenPageBanner } }) {
               </div>
             </div>
             <div className="p-8 md:pt-48">
-              <h1 className="block mb-4 text-6xl font-bold leading-none text-white font-gothamNarrow md:text-55xl text-shadow-md md:mt-24 mt:8">
+              <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-6xl text-shadow-md mt:8 lg:w-3/4 md:w-10/12">
                 Min nis di nusam quaepti ipsam que
               </h1>
             </div>
@@ -66,16 +65,13 @@ export default function PowerGenerationPage({ data: { powergenPageBanner } }) {
           <div className="my-8">
             <PowerGenCarousel />
           </div>
-          <div className="block mx-auto text-center">
+          <div className="block mx-auto mb-8 text-center">
             <Link to="/category/stationary-gas-engines">
               <span className="inline-block px-16 py-2 font-medium align-top rounded-full text-preemGreen hover:brightness-95 font-gothamNarrow bg-preemYellow">
                 View all products
               </span>
             </Link>
           </div>
-        </div>
-        <div>
-          <AuthorisedDistributor />
         </div>
       </div>
     </>

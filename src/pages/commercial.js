@@ -8,7 +8,6 @@ import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import CommercialCarousel from "../components/product-carousels/Commercial";
 import CommercialCategories from "../components/CommercialCategories";
-import AuthorisedDistributor from "../components/AuthorisedDistributor";
 
 // markup
 export default function CommercialPage({ data: { commercialPageBanner } }) {
@@ -45,20 +44,20 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
                 />
               </div>
             </div>
-            <div className="p-8 md:pt-32">
-              <div className="grid grid-cols-7 gap-2">
-                <div className="col-span-7 md:col-span-4">
-                  <h1 className="block mt-24 mb-4 text-4xl font-bold text-white font-gothamNarrow md:text-6xl text-shadow-md">
+            <div className="p-8 md:pt-16">
+              <div className="grid grid-cols-8 gap-1 mt-12">
+                <div className="col-span-8 md:col-span-5">
+                  <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-6xl text-shadow-md md:mt-24 lg:mt-20 mt:8 ">
                     Motoroljor tunga fordon
                   </h1>
                 </div>
-                <div className="col-span-7 md:col-span-3">
+                <div className="hidden col-span-8 md:col-span-3 md:block">
                   <StaticImage
                     src="../images/commercial-packshot.png"
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt="Texaco"
-                    className="block object-contain w-56 p-4 mx-auto mt-4"
+                    className="block object-contain w-56 p-4 mx-auto lg:w-64 md:mt-12 lg:mt-2"
                   />
                 </div>
               </div>
@@ -85,9 +84,6 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
           </div>
           <div className="my-8">
             <CommercialCategories />
-          </div>
-          <div>
-            <AuthorisedDistributor />
           </div>
         </div>
       </div>

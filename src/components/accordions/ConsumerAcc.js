@@ -59,7 +59,7 @@ const ConsumerAccordion = () => {
                 {singleProd
                   .filter((pub) => pub.saps === cats)
                   .map((pub, j) => (
-                    <Accordion.Item eventKey={j}>
+                    <Accordion.Item eventKey={j} key={j}>
                       <Accordion.Header>
                         <span
                           className={
