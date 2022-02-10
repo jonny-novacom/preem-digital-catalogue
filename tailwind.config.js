@@ -9,7 +9,7 @@ module.exports = {
         "Tahoma",
         "sans-serif",
       ],
-      helvetica: ["Helvetica"],
+      helvetica: ['"Helvetica 65"'],
     },
     debugScreens: {
       position: ["top", "left"],
