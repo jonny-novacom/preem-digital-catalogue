@@ -139,8 +139,10 @@ export default function MarineCarousel() {
                   className="block mx-auto"
                   imgStyle={{ objectFit: "contain" }}
                 />
-                <h3 className="h-6 mt-2 overflow-hidden text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow text-clip">
+                <h3 className="h-12 mt-2 overflow-hidden text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow text-clip">
                   {marineproductcarousel.produkt}
+                  <br />
+                  {marineproductcarousel.sae}
                 </h3>
               </Link>
               <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-preemMediumGray font-gothamNarrow">
