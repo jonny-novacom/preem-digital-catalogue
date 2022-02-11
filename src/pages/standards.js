@@ -17,7 +17,7 @@ export default function StandardsPage() {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-40 mb-24">
+        <div className="px-4 mt-40 mb-24">
           <ACEAStandard />
           <APIStandard />
           <BMWStandard />
