@@ -150,7 +150,7 @@ module.exports = {
         background_color: `#006341`,
         theme_color: `#006341`,
         display: `standalone`,
-        icon: `./src/images/preem-logo.png`,
+        icon: `./src/images/logo.png`,
       },
     },
     {
