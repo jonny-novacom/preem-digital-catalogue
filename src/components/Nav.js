@@ -16,6 +16,8 @@ import { useGlobalContext } from "../utils/context";
 
 import { IoSearchOutline } from "react-icons/io5";
 import { FiMenu, FiX } from "react-icons/fi";
+import { CgClose } from "react-icons/cg";
+import { HiOutlineMenu } from "react-icons/hi";
 import Slide from "../utils/slide";
 
 export default function Nav() {
@@ -31,11 +33,13 @@ export default function Nav() {
                 onClick={setNavBar}
                 className="items-center block hover:text-black hover:border-black no-print"
               >
-                {!navBarIsToggled ? (
-                  <FiMenu className="block -mt-12 text-4xl text-preemMediumGray" />
-                ) : (
-                  <FiX className="block -mt-12 text-4xl text-preemDarkGray" />
-                )}
+                <span>
+                  {!navBarIsToggled ? (
+                    <HiOutlineMenu className="inline-block -mt-12 text-4xl text-preemMediumGray" />
+                  ) : (
+                    <CgClose className="inline-block -mt-12 text-4xl text-preemDarkGray" />
+                  )}
+                </span>
               </button>
             </div>
 
