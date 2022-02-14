@@ -398,7 +398,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             href={product.pds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
                           >
                             See PDS
                           </a>
@@ -411,7 +411,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             href={product.sds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
                           >
                             See SDS
                           </a>
@@ -422,7 +422,7 @@ export default function SingleProductPage({ data: { categories } }) {
                         <p className="items-center md:flex-initial md:w-max">
                           <Link
                             to={`/products/${product.slug.current}`}
-                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
                           >
                             View Product
                           </Link>

@@ -379,14 +379,14 @@ export default function SingleProductPage({ data: { produkt } }) {
               {produkt.tempomrade}
             </div>
           </div>
-          <div className="grid grid-flow-col px-6 mt-4 mb-10 auto-cols-max no-print">
+          <div className="grid px-4 mt-4 sm:grid-flow-col sm:auto-cols-max no-print">
             <div className="mr-4">
               <p className="items-center md:flex-initial md:w-max">
                 <a
                   href={produkt.pds}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                 >
                   See PDS
                 </a>
@@ -398,7 +398,7 @@ export default function SingleProductPage({ data: { produkt } }) {
                   href={produkt.sds}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                 >
                   See SDS
                 </a>
@@ -407,7 +407,7 @@ export default function SingleProductPage({ data: { produkt } }) {
             <div>
               <button
                 onClick={() => window.print()}
-                className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
               >
                 Print
               </button>

@@ -26,18 +26,18 @@ const LocalSearch = () => {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36 mb-20 px-4">
-          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+        <div className="px-4 mb-20 mt-36">
+          <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Search
           </h1>
           <div className="container flex justify-center mx-auto">
             <div className="flex border-1">
               <button className="flex items-center justify-center px-3 border-r bg-preemGreen">
-                <IoSearchOutline className="text-2xl block text-white" />
+                <IoSearchOutline className="block text-2xl text-white" />
               </button>
               <input
                 type="text"
-                className="px-4 sm:w-72 md:w-96 py-3 font-gothamNarrow focus:outline-none"
+                className="px-4 py-3 sm:w-72 md:w-96 font-gothamNarrow focus:outline-none"
                 placeholder="Search..."
                 name="query"
                 value={query}
@@ -45,7 +45,7 @@ const LocalSearch = () => {
               />
             </div>
           </div>
-          <h2 className="mt-8 font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+          <h2 className="block mt-8 mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Results
           </h2>
           {results.length > 0 && (
@@ -76,14 +76,14 @@ const LocalSearch = () => {
                       </span>
                     </Accordion.Header>
                     <Accordion.Body>
-                      <div className="pr-4 pt-2 pl-10">
-                        <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+                      <div className="pt-2 pl-10 pr-4">
+                        <div className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
                           <p className="mb-4">{result.body}</p>
                           <div className="grid grid-cols-5 gap-2">
                             <div
                               className={
                                 result.sae !== null
-                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                                   : `hidden`
                               }
                             >
@@ -92,7 +92,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.sae !== null
-                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                                   : `hidden`
                               }
                             >
@@ -101,7 +101,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.farg !== null
-                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                                   : `hidden`
                               }
                             >
@@ -111,7 +111,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.farg !== null
-                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                                   : `hidden`
                               }
                             >
@@ -159,7 +159,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.isovg !== null
-                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                                   : `hidden`
                               }
                             >
@@ -168,7 +168,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.isovg !== null
-                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                                   : `hidden`
                               }
                             >
@@ -403,14 +403,14 @@ const LocalSearch = () => {
                               {result.tempomrade}
                             </div>
                           </div>
-                          <div className="grid grid-flow-col auto-cols-min mt-4">
+                          <div className="grid mt-4 sm:grid-flow-col sm:auto-cols-max">
                             <div className="mr-4">
                               <p className="items-center md:flex-initial md:w-max">
                                 <a
                                   href={result.pds}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
                                   See PDS
                                 </a>
@@ -422,7 +422,7 @@ const LocalSearch = () => {
                                   href={result.sds}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
                                   See SDS
                                 </a>
@@ -432,7 +432,7 @@ const LocalSearch = () => {
                               <p className="items-center md:flex-initial md:w-max">
                                 <Link
                                   to={`/products/${result.path}`}
-                                  className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
                                   View Product
                                 </Link>
@@ -448,7 +448,7 @@ const LocalSearch = () => {
             </div>
           )}{" "}
           {query.length >= 1 && results.length === 0 && (
-            <p className="mt-2 font-gothamNarrow font-bold text-center mb-4 block text-xl">
+            <p className="block mt-2 mb-4 text-xl font-bold text-center font-gothamNarrow">
               No results!
             </p>
           )}
