@@ -91,52 +91,52 @@ const ConsumerAccordion = () => {
                               dataset="production"
                             />
                           </div>
-                          <div className="grid grid-cols-5 gap-2">
-                            <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
+                          <div className="grid grid-cols-2 gap-2 md:grid-cols-5">
+                            <div className="block col-span-1 font-bold text-left text-gray-700 md:col-span-2 font-gothamNarrow text-md">
                               SAE
                             </div>
-                            <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
+                            <div className="col-span-1 font-normal text-left text-gray-500 md:col-span-3 text-md font-gothamNarrow">
                               {pub.sae}
                             </div>
-                            <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
+                            <div className="block col-span-1 font-bold text-left text-gray-700 md:col-span-2 font-gothamNarrow text-md">
                               Viskositet cSt, mm2/s 40°C
                             </div>
-                            <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
+                            <div className="col-span-1 font-normal text-left text-gray-500 md:col-span-3 text-md font-gothamNarrow">
                               {pub.viskositet40}
                             </div>
-                            <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
+                            <div className="block col-span-1 font-bold text-left text-gray-700 md:col-span-2 font-gothamNarrow text-md">
                               Viskositet cSt, mm2/s 100°C
                             </div>
-                            <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
+                            <div className="col-span-1 font-normal text-left text-gray-500 md:col-span-3 text-md font-gothamNarrow">
                               {pub.viskositet100}
                             </div>
-                            <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
+                            <div className="block col-span-1 font-bold text-left text-gray-700 md:col-span-2 font-gothamNarrow text-md">
                               VI
                             </div>
-                            <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
+                            <div className="col-span-1 font-normal text-left text-gray-500 md:col-span-3 text-md font-gothamNarrow">
                               {pub.vi}
                             </div>
-                            <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
+                            <div className="block col-span-1 font-bold text-left text-gray-700 md:col-span-2 font-gothamNarrow text-md">
                               Flampunkt °C
                             </div>
-                            <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
+                            <div className="col-span-1 font-normal text-left text-gray-500 md:col-span-3 text-md font-gothamNarrow">
                               {pub.flampunkt}
                             </div>
-                            <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
+                            <div className="block col-span-1 font-bold text-left text-gray-700 md:col-span-2 font-gothamNarrow text-md">
                               Lägstaflyttemp °C
                             </div>
-                            <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
+                            <div className="col-span-1 font-normal text-left text-gray-500 md:col-span-3 text-md font-gothamNarrow">
                               {pub.lagstaflyttemp}
                             </div>
                           </div>
-                          <div className="grid grid-flow-col mt-4 auto-cols-max">
+                          <div className="grid mt-4 sm:grid-flow-col sm:auto-cols-max">
                             <div className="mr-4">
                               <p className="items-center md:flex-initial md:w-max">
                                 <a
                                   href={pub.pds}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
                                   See PDS
                                 </a>
@@ -148,7 +148,7 @@ const ConsumerAccordion = () => {
                                   href={pub.sds}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
                                   See SDS
                                 </a>
@@ -158,7 +158,7 @@ const ConsumerAccordion = () => {
                               <p className="items-center md:flex-initial md:w-max">
                                 <Link
                                   to={`/products/${pub.slug.current}`}
-                                  className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
                                   View Product
                                 </Link>
