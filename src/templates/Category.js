@@ -188,7 +188,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             : `hidden`
                         }
                       >
-                        Viskositet cSt, mm2/s 40°C
+                        Viskositet cSt, mm²/s 40°C
                       </div>
                       <div
                         className={
@@ -207,7 +207,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             : `hidden`
                         }
                       >
-                        Viskositet cSt, mm2/s 100°C
+                        Viskositet cSt, mm²/s 100°C
                       </div>
                       <div
                         className={
