@@ -54,13 +54,13 @@ export default function SingleProduct() {
                 {product.sae}
               </div>
               <div className="font-gothamNarrow text-bold text-left text-md text-gray-700 block">
-                Viskositet cSt, mm2/s 40°C
+                Viskositet cSt, mm²/s 40°C
               </div>
               <div className="text-left text-gray-500 text-md font-gothamNarrow font-medium">
                 {product.viskositet40}
               </div>
               <div className="font-gothamNarrow text-bold text-left text-md text-gray-700 block">
-                Viskositet cSt, mm2/s 100°C
+                Viskositet cSt, mm²/s 100°C
               </div>
               <div className="text-left text-gray-500 text-md font-gothamNarrow font-medium">
                 {product.viskositet100}

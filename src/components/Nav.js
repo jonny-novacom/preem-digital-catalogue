@@ -14,8 +14,8 @@ import standards from "../images/icons/standards.svg";
 
 import { useGlobalContext } from "../utils/context";
 
-import { MdMenu, MdClose } from "react-icons/md";
 import { IoSearchOutline } from "react-icons/io5";
+import { FiMenu, FiX } from "react-icons/fi";
 import Slide from "../utils/slide";
 
 export default function Nav() {
@@ -33,9 +33,9 @@ export default function Nav() {
               >
                 <span>
                   {!navBarIsToggled ? (
-                    <MdMenu className="block -mt-12 text-4xl text-preemMediumGray" />
+                    <FiMenu className="block -mt-12 text-4xl text-preemMediumGray" />
                   ) : (
-                    <MdClose className="block -mt-12 text-4xl text-preemDarkGray" />
+                    <FiX className="block -mt-12 text-4xl text-preemDarkGray" />
                   )}
                 </span>
               </button>

@@ -94,13 +94,13 @@ const TransmissionOilAccordion = () => {
                                 {pub.sae}
                               </div>
                               <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
-                                Viskositet cSt, mm2/s 40°C
+                                Viskositet cSt, mm²/s 40°C
                               </div>
                               <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
                                 {pub.viskositet40}
                               </div>
                               <div className="block col-span-2 font-bold text-left text-gray-700 font-gothamNarrow text-md">
-                                Viskositet cSt, mm2/s 100°C
+                                Viskositet cSt, mm²/s 100°C
                               </div>
                               <div className="col-span-3 font-normal text-left text-gray-500 text-md font-gothamNarrow">
                                 {pub.viskositet100}
