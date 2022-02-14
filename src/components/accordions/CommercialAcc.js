@@ -170,6 +170,10 @@ const CommercialAccordion = () => {
           </Accordion.Item>
         ))}
       </Accordion>
+      <p className="mt-4 text-sm italic font-light font-gothamNarrow">
+        * 60 % mindre mängd sulfataska jämfört med konventionella motoroljor med
+        1 % askinnehåll
+      </p>
     </>
   );
 };
