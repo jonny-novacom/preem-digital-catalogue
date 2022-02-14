@@ -31,7 +31,7 @@ export default function Nav() {
             <div className="mb-2">
               <button
                 onClick={setNavBar}
-                className="items-center block hover:text-black hover:border-black no-print"
+                className="items-center block h-16 pt-8 hover:text-black hover:border-black no-print"
               >
                 <span>
                   {!navBarIsToggled ? (
