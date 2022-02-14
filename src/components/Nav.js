@@ -26,18 +26,16 @@ export default function Nav() {
       <div className="bg-white">
         <div className="max-w-screen-lg mx-auto bg-white">
           <nav className="fixed top-0 z-50 flex flex-row items-baseline justify-between w-screen max-w-screen-lg px-12 py-4 font-sans text-center bg-white">
-            <div className="mb-2 ">
+            <div className="mb-2">
               <button
                 onClick={setNavBar}
                 className="items-center block hover:text-black hover:border-black no-print"
               >
-                <span>
-                  {!navBarIsToggled ? (
-                    <FiMenu className="block -mt-12 text-4xl text-preemMediumGray" />
-                  ) : (
-                    <FiX className="block -mt-12 text-4xl text-preemDarkGray" />
-                  )}
-                </span>
+                {!navBarIsToggled ? (
+                  <FiMenu className="block -mt-12 text-4xl text-preemMediumGray" />
+                ) : (
+                  <FiX className="block -mt-12 text-4xl text-preemDarkGray" />
+                )}
               </button>
             </div>
 
