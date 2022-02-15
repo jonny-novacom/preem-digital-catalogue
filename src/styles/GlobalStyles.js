@@ -17,7 +17,19 @@ const GlobalStyles = createGlobalStyle`
     {
         display: none !important;
     }
+    @page {
+        size: 1600px;
+    }
+
+    body,
+    html {
+        width: 1600px;
+    }
 }
+
+.printable {
+    display: block;
+ }
 
  a {
     color: inherit !important;
