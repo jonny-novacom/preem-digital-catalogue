@@ -5,12 +5,12 @@ export default function Jamforelse() {
   return (
     <>
       <div>
-        <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
+        <h3 className="text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
           Jämförelse viskositetsklassificeringar (SAE – ISO VG)
         </h3>
-        <div className="my-4 max-w-2xl container mx-auto ">
+        <div className="container max-w-2xl mx-auto my-4 ">
           <StaticImage
-            src="../../images/jamforelse.png"
+            src="../../images/jam.png"
             quality={100}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Jämförelse viskositetsklassificeringar (SAE – ISO VG)"
