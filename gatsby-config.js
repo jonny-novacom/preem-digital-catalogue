@@ -49,7 +49,7 @@ module.exports = {
       resolve: "gatsby-plugin-local-search",
       options: {
         name: "products",
-        engine: "lunr",
+        engine: "flexsearch",
         query: `
                 {
                   allSanityProduct(sort: {fields: produkt, order: ASC}) {
