@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLunr } from "react-lunr";
+import { useFlexSearch } from "react-use-flexsearch";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { Accordion } from "react-bootstrap";
 import { IoSearchOutline } from "react-icons/io5";
@@ -17,11 +17,13 @@ const LocalSearch = () => {
   const store = queryData.localSearchProducts.store;
 
   const [query, setQuery] = useState("");
-  const results = useLunr(query, index, store);
+  const results = useFlexSearch(query, index, store);
 
   results.sort((a, b) =>
     a.produkt > b.produkt ? 1 : b.produkt > a.produkt ? -1 : 0
   );
+
+  console.log(query);
 
   return (
     <>
@@ -58,7 +60,7 @@ const LocalSearch = () => {
                       <span
                         className={
                           result.sae !== null
-                            ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1`
+                            ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1 inline-block`
                             : `hidden`
                         }
                       >
@@ -452,6 +454,7 @@ const LocalSearch = () => {
               No results!
             </p>
           )}
+          {/* {query.QueryParseError === "QueryParseError"(<p>Poo</p>)} */}
         </div>
       </div>
     </>
