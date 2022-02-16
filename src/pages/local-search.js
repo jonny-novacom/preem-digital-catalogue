@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { useLunr } from "react-lunr";
-import { graphql, useStaticQuery } from "gatsby";
+import { useFlexSearch } from "react-use-flexsearch";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { Accordion } from "react-bootstrap";
-import { GoChevronRight } from "react-icons/go";
 import { IoSearchOutline } from "react-icons/io5";
 
 const LocalSearch = () => {
@@ -17,28 +16,30 @@ const LocalSearch = () => {
   const index = queryData.localSearchProducts.index;
   const store = queryData.localSearchProducts.store;
 
-  console.log(index);
-  console.log(store);
-
   const [query, setQuery] = useState("");
-  const results = useLunr(query, index, store);
+  const results = useFlexSearch(query, index, store);
+
+  results.sort((a, b) =>
+    a.produkt > b.produkt ? 1 : b.produkt > a.produkt ? -1 : 0
+  );
+
+  console.log(query);
 
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-36 mb-20">
-          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+        <div className="px-4 mb-20 mt-36">
+          <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Search
           </h1>
-
           <div className="container flex justify-center mx-auto">
             <div className="flex border-1">
               <button className="flex items-center justify-center px-3 border-r bg-preemGreen">
-                <IoSearchOutline className="text-2xl block text-white" />
+                <IoSearchOutline className="block text-2xl text-white" />
               </button>
               <input
                 type="text"
-                className="px-4 py-3 w-96 font-gothamNarrow focus:outline-none"
+                className="px-4 py-3 sm:w-72 md:w-96 font-gothamNarrow focus:outline-none"
                 placeholder="Search..."
                 name="query"
                 value={query}
@@ -46,11 +47,10 @@ const LocalSearch = () => {
               />
             </div>
           </div>
-
-          <h2 className="mt-8 font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+          <h2 className="block mt-8 mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Results
           </h2>
-          {results.length > 0 ? (
+          {results.length > 0 && (
             <div>
               {results.map((result) => (
                 <Accordion className="inner innersearch" key={result.id}>
@@ -60,7 +60,7 @@ const LocalSearch = () => {
                       <span
                         className={
                           result.sae !== null
-                            ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1`
+                            ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1 inline-block`
                             : `hidden`
                         }
                       >
@@ -78,14 +78,14 @@ const LocalSearch = () => {
                       </span>
                     </Accordion.Header>
                     <Accordion.Body>
-                      <div className="pr-4 pt-2 pl-10">
-                        <div className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+                      <div className="pt-2 pl-10 pr-4">
+                        <div className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
                           <p className="mb-4">{result.body}</p>
                           <div className="grid grid-cols-5 gap-2">
                             <div
                               className={
                                 result.sae !== null
-                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                                   : `hidden`
                               }
                             >
@@ -94,7 +94,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.sae !== null
-                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                                   : `hidden`
                               }
                             >
@@ -103,7 +103,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.farg !== null
-                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                                   : `hidden`
                               }
                             >
@@ -113,7 +113,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.farg !== null
-                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                                   : `hidden`
                               }
                             >
@@ -141,8 +141,27 @@ const LocalSearch = () => {
 
                             <div
                               className={
+                                result.fryspunkt !== null
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
+                                  : `hidden`
+                              }
+                            >
+                              Fryspunkt °C
+                            </div>
+                            <div
+                              className={
+                                result.fryspunkt !== null
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
+                                  : `hidden`
+                              }
+                            >
+                              {result.fryspunkt}
+                            </div>
+
+                            <div
+                              className={
                                 result.isovg !== null
-                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block col-span-2`
+                                  ? `font-gothamNarrow font-bold text-left text-md text-gray-700 block md:col-span-2 col-span-3`
                                   : `hidden`
                               }
                             >
@@ -151,7 +170,7 @@ const LocalSearch = () => {
                             <div
                               className={
                                 result.isovg !== null
-                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal col-span-3`
+                                  ? `text-left text-gray-500 text-md font-gothamNarrow font-normal md:col-span-3 col-span-2`
                                   : `hidden`
                               }
                             >
@@ -184,7 +203,7 @@ const LocalSearch = () => {
                                   : `hidden`
                               }
                             >
-                              Viskositet cSt, mm2/s 40°C
+                              Viskositet cSt, mm²/s 40°C
                             </div>
                             <div
                               className={
@@ -203,7 +222,7 @@ const LocalSearch = () => {
                                   : `hidden`
                               }
                             >
-                              Viskositet cSt, mm2/s 100°C
+                              Viskositet cSt, mm²/s 100°C
                             </div>
                             <div
                               className={
@@ -386,35 +405,39 @@ const LocalSearch = () => {
                               {result.tempomrade}
                             </div>
                           </div>
-                          <div className="grid grid-flow-col auto-cols-min mt-4">
+                          <div className="grid mt-4 sm:grid-flow-col sm:auto-cols-max">
                             <div className="mr-4">
-                              <p className="items-center md:flex-initial md:w-max bg-preemYellow">
+                              <p className="items-center md:flex-initial md:w-max">
                                 <a
                                   href={result.pds}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
-                                  See PDS{" "}
-                                  <span className="bg-preemGreen w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
-                                    <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
-                                  </span>
+                                  See PDS
                                 </a>
                               </p>
                             </div>
-                            <div>
-                              <p className="items-center md:flex-initial md:w-max bg-preemGreen">
+                            <div className="mr-4">
+                              <p className="items-center md:flex-initial md:w-max">
                                 <a
                                   href={result.sds}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="flex justify-center px-3 py-2 text-white transition md:justify-start bg-novaBlue hover:bg-opacity-80 font-gothamNarrow font-bold text-sm"
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
-                                  See SDS{" "}
-                                  <span className="bg-preemYellow w-4 h-4 rounded-full inline-block ml-3 mt-0.5">
-                                    <GoChevronRight className="text-white text-base text-center block mx-auto my-auto" />
-                                  </span>
+                                  See SDS
                                 </a>
+                              </p>
+                            </div>
+                            <div>
+                              <p className="items-center md:flex-initial md:w-max">
+                                <Link
+                                  to={`/products/${result.path}`}
+                                  className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+                                >
+                                  View Product
+                                </Link>
                               </p>
                             </div>
                           </div>
@@ -425,8 +448,9 @@ const LocalSearch = () => {
                 </Accordion>
               ))}
             </div>
-          ) : (
-            <p className="mt-2 font-gothamNarrow font-bold text-center mb-4 block text-xl">
+          )}{" "}
+          {query.length >= 1 && results.length === 0 && (
+            <p className="block mt-2 mb-4 text-xl font-bold text-center font-gothamNarrow">
               No results!
             </p>
           )}

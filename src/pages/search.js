@@ -4,7 +4,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import { Accordion } from "react-bootstrap";
 import { IoSearchOutline } from "react-icons/io5";
 
-const LocalSearch = () => {
+const SearchPage = () => {
   const queryData = useStaticQuery(graphql`
     query {
       localSearchProducts {
@@ -454,11 +454,10 @@ const LocalSearch = () => {
               No results!
             </p>
           )}
-          {/* {query.QueryParseError === "QueryParseError"(<p>Poo</p>)} */}
         </div>
       </div>
     </>
   );
 };
 
-export default LocalSearch;
+export default SearchPage;
