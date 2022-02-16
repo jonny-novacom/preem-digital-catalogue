@@ -10,7 +10,7 @@ export default function Jamforelse() {
         </h3>
         <div className="container max-w-2xl mx-auto my-4 ">
           <StaticImage
-            src="../../images/jam.png"
+            src="../../images/jamforelse.png"
             quality={100}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Jämförelse viskositetsklassificeringar (SAE – ISO VG)"
