@@ -15,7 +15,6 @@ import standards from "../images/icons/standards.svg";
 import { useGlobalContext } from "../utils/context";
 
 import { IoSearchOutline } from "react-icons/io5";
-import { FiMenu, FiX } from "react-icons/fi";
 import { CgClose } from "react-icons/cg";
 import { HiOutlineMenu } from "react-icons/hi";
 import Slide from "../utils/slide";
