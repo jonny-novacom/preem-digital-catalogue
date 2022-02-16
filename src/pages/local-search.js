@@ -23,8 +23,6 @@ const LocalSearch = () => {
     a.produkt > b.produkt ? 1 : b.produkt > a.produkt ? -1 : 0
   );
 
-  console.log(query);
-
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
