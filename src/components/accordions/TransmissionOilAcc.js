@@ -133,7 +133,7 @@ const TransmissionOilAccordion = () => {
                                     rel="noopener noreferrer"
                                     className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                   >
-                                    See PDS
+                                    Ladda ner PDS
                                   </a>
                                 </p>
                               </div>
@@ -145,7 +145,7 @@ const TransmissionOilAccordion = () => {
                                     rel="noopener noreferrer"
                                     className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                   >
-                                    See SDS
+                                    Ladda ner SDS
                                   </a>
                                 </p>
                               </div>

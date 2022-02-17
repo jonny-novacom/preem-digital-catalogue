@@ -388,7 +388,7 @@ export default function SingleProductPage({ data: { produkt } }) {
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                 >
-                  See PDS
+                  Ladda ner PDS
                 </a>
               </p>
             </div>
@@ -400,7 +400,7 @@ export default function SingleProductPage({ data: { produkt } }) {
                   rel="noopener noreferrer"
                   className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                 >
-                  See SDS
+                  Ladda ner SDS
                 </a>
               </p>
             </div>
@@ -409,7 +409,7 @@ export default function SingleProductPage({ data: { produkt } }) {
                 onClick={() => window.print()}
                 className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
               >
-                Print
+                Skriv ut den här sidan
               </button>
             </div>
           </div>

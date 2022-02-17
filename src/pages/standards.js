@@ -1,3 +1,4 @@
+import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import ACEAStandard from "../components/standards/ACEA";
 import APIStandard from "../components/standards/API";
@@ -17,7 +18,20 @@ export default function StandardsPage() {
   return (
     <>
       <div className="max-w-screen-lg mx-auto">
-        <div className="px-4 mt-40 mb-24">
+        <div className="container mx-auto mt-40">
+          <StaticImage
+            src="../images/icons/standards.svg"
+            quality={95}
+            formats={["AUTO", "WEBP", "AVIF"]}
+            alt="Marine"
+            transformOptions={"cover"}
+            className="block w-12 mx-auto mb-4"
+          />
+          <h3 className="mb-8 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
+            Industry/OEM Standards
+          </h3>
+        </div>
+        <div className="px-4 mb-12">
           <ACEAStandard />
           <APIStandard />
           <BMWStandard />

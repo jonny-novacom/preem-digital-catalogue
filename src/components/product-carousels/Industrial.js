@@ -156,7 +156,7 @@ export default function IndustrialCarousel() {
                   to={`/products/${industrialproductcarousel.slug.current}`}
                 >
                   <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
-                    Find out more
+                    För mer information
                   </span>
                 </Link>
               </div>

@@ -400,7 +400,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             rel="noopener noreferrer"
                             className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
                           >
-                            See PDS
+                            Ladda ner PDS
                           </a>
                         </p>
                       </div>
@@ -413,7 +413,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             rel="noopener noreferrer"
                             className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
                           >
-                            See SDS
+                            Ladda ner SDS
                           </a>
                         </p>
                       </div>

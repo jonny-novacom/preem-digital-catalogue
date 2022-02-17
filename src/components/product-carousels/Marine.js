@@ -151,7 +151,7 @@ export default function MarineCarousel() {
               <div className="block mx-auto text-center">
                 <Link to={`/products/${marineproductcarousel.slug.current}`}>
                   <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
-                    Find out more
+                    För mer information
                   </span>
                 </Link>
               </div>

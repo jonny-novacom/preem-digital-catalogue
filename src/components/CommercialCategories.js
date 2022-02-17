@@ -32,7 +32,7 @@ export default function CommercialCategories() {
                 Motoroljor tunga fordon
               </span>
               <span className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
-                Find out more
+                För mer information
               </span>
             </div>
           </Link>
@@ -45,7 +45,7 @@ export default function CommercialCategories() {
                     {commercialCategories.titleSwedish}
                   </span>
                   <span className="text-preemDarkGray py-2 px-10 hover:brightness-95 rounded-full font-gothamNarrow font-medium inline-block align-top bg-preemLightGray text-sm hover:text-preemGreen hover:bg-preemYellow transition-colors">
-                    Find out more
+                    För mer information
                   </span>
                 </div>
               </Link>

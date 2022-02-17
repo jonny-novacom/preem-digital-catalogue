@@ -92,12 +92,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={powerGen}
-                          alt="Power Generation"
+                          alt="Kraftgenerering"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Power generation
+                        Kraftgenerering
                       </span>
                     </Link>
                   </li>
@@ -106,12 +106,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={marine}
-                          alt="Marine"
+                          alt="Nationell sjöfart"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Marine
+                        Nationell sjöfart
                       </span>
                     </Link>
                   </li>
@@ -120,12 +120,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={industrial}
-                          alt="Industrial"
+                          alt="Industriutrustning"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Industrial
+                        Industriutrustning
                       </span>
                     </Link>
                   </li>

@@ -43,7 +43,7 @@ export default function IndustrialCategories() {
               <div className="block mx-auto text-center">
                 <Link to={`/category/${industrialCategories.slug.current}`}>
                   <span className="inline-block px-6 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
-                    Find out more
+                    För mer information
                   </span>
                 </Link>
               </div>
