@@ -89,7 +89,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
           <div className="block mx-auto mb-8 text-center">
             <Link to="/product-category/engine-oils-passenger-cars-and-light-transport-vehicles">
               <span className="inline-block px-16 py-2 font-medium align-top rounded-full text-preemGreen hover:brightness-95 font-gothamNarrow bg-preemYellow">
-                View all products
+                Visa alla produkter
               </span>
             </Link>
           </div>
