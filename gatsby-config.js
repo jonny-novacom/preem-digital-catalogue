@@ -11,6 +11,13 @@ module.exports = {
     description: "Preem - Digital Catalogue",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-221812238-1",
+      },
+    },
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-postcss",
@@ -166,6 +173,7 @@ module.exports = {
           `/marine/`,
           `/power-generation/`,
           `/search/`,
+          `/local-search/`,
           `/standards/`,
           `/glossary/*`,
           `/technical-information/`,
