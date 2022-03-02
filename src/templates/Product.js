@@ -10,7 +10,7 @@ export default function SingleProductPage({ data: { produkt } }) {
       <div key={produkt.id}>
         <SearchEngineOptimisation
           title={`${produkt.produkt} ${produkt.sae}`}
-          image={produkt.mainImage.asset.url}
+          image={produkt?.mainImage?.asset.url}
           description={produkt.shortDescription}
         />
         <div className="max-w-screen-md mx-auto">
@@ -438,7 +438,6 @@ export const query = graphql`
       lagstaflyttemp
       pds
       sds
-      newProduct
       nlgi
       tval
       basolja40
@@ -461,6 +460,7 @@ export const query = graphql`
               )
             }
           }
+          url
         }
       }
     }

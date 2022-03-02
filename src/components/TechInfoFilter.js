@@ -3,7 +3,7 @@ import React from "react";
 
 export default function TechInfoFilter() {
   return (
-    <div className="fixed z-50 w-screen px-4 py-4 mb-8 text-center bg-white top-32">
+    <div className="fixed z-40 w-screen px-4 py-4 mb-8 text-center bg-white top-32">
       <Link to="/technical-information#acea">
         <span className="inline-block px-2 text-2xl font-bold uppercase font-gothamNarrow text-preemYellow">
           ACEA
@@ -29,9 +29,9 @@ export default function TechInfoFilter() {
           ISO
         </span>
       </Link>
-      <Link to="/technical-information#eu">
+      <Link to="/technical-information#euro">
         <span className="inline-block px-2 text-2xl font-bold uppercase font-gothamNarrow text-preemYellow">
-          EU
+          Euro
         </span>
       </Link>
     </div>

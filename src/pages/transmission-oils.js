@@ -1,22 +1,26 @@
 import { graphql, Link } from "gatsby";
 import { getImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
-import MarineCarousel from "../components/product-carousels/Marine";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import BackgroundImage from "gatsby-background-image";
 import { convertToBgImage } from "gbimage-bridge";
+import TransmissionOilsCarousel from "../components/product-carousels/TransmissionOils";
 
-export default function MarinePage({ data: { marinePageBanner } }) {
+export default function TransmissionOilsPage({
+  data: { transmissionOilsPageBanner },
+}) {
   const image = getImage(
-    marinePageBanner.mainImage.asset.localFile.childImageSharp.gatsbyImageData
+    transmissionOilsPageBanner.mainImage.asset.localFile.childImageSharp
+      .gatsbyImageData
   );
   const bgImage = convertToBgImage(image);
+  const seoImage = transmissionOilsPageBanner.mainImage.asset.url;
 
   return (
     <>
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
-        image=""
+        image={seoImage}
         description=""
       />
 
@@ -49,26 +53,19 @@ export default function MarinePage({ data: { marinePageBanner } }) {
           </BackgroundImage>
           <div className="container pt-16 mx-auto">
             <StaticImage
-              src="../images/icons/marine.svg"
+              src="../images/icons/power-gen.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt="Marine"
+              alt="Chemicals"
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />
-            <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-              Min nis di ditinctate nusam quaepti ipsam que voluptum
-            </h3>
-            <p className="mt-2 mb-12 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-              Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
-              volorem perupta audipis explibus
-            </p>
           </div>
           <div className="my-8">
-            <MarineCarousel />
+            <TransmissionOilsCarousel />
           </div>
           <div className="block mx-auto mb-8 text-center">
-            <Link to="/category/marine-engine-oils">
+            <Link to="/category/transmission-oils">
               <span className="inline-block px-16 py-2 font-medium align-top rounded-full text-preemGreen hover:brightness-95 font-gothamNarrow bg-preemYellow">
                 Visa alla produkter
               </span>
@@ -81,8 +78,10 @@ export default function MarinePage({ data: { marinePageBanner } }) {
 }
 
 export const query = graphql`
-  query marinePageBanner {
-    marinePageBanner: sanityBannerImages(title: { eq: "Marine Page Banner" }) {
+  query transmissionOilsPageBanner {
+    transmissionOilsPageBanner: sanityBannerImages(
+      title: { eq: "Transmission Oils Page Banner" }
+    ) {
       title
       slug {
         current
@@ -98,6 +97,7 @@ export const query = graphql`
               )
             }
           }
+          url
         }
       }
     }

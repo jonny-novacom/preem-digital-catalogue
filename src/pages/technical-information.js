@@ -39,7 +39,7 @@ export default function TechnicalInformationPage() {
           <Hr />
           <ACEAMotoroljorDiesel />
           <Hr />
-          <div id="eu" className="pb-32 -mt-32"></div>
+          <div id="euro" className="pb-32 -mt-32"></div>
           <EUUtslappsgranser />
           <Hr />
           <APIBasoljeklassificering />

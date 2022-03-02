@@ -36,6 +36,7 @@ export default function PowerGenerationPage({ data: { powergenPageBanner } }) {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Texaco"
                   transformOptions={"cover"}
+                  className="w-12 h-16"
                 />
               </div>
             </div>

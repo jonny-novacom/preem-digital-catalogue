@@ -55,7 +55,7 @@ export default function Nav() {
             </div>
           </nav>
 
-          <div className="fixed z-40 block w-screen top-28">
+          <div className="fixed z-50 block w-screen top-28">
             <Slide direction={-1} distance={1000} isActive={navBarIsToggled}>
               <div className="w-full h-screen p-8 bg-white md:w-2/3">
                 <ul>
@@ -64,12 +64,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={consumer}
-                          alt="Consumer"
+                          alt="Motoroljor Personbilar och lätta transportfordon"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block font-bold align-top">
-                        Consumer
+                        Motoroljor Personbilar och lätta transportfordon
                       </span>
                     </Link>
                   </li>
@@ -78,26 +78,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={commercial}
-                          alt="Commercial"
+                          alt="Motoroljor Tunga fordon"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Commercial
-                      </span>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/power-generation" onClick={closeNavBar}>
-                      <span className="inline-block w-20 pr-8">
-                        <img
-                          src={powerGen}
-                          alt="Kraftgenerering"
-                          className="block w-20 mx-auto max-h-10"
-                        />
-                      </span>
-                      <span className="inline-block mt-2 font-bold align-top">
-                        Kraftgenerering
+                        Motoroljor Tunga fordon
                       </span>
                     </Link>
                   </li>
@@ -106,12 +92,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={marine}
-                          alt="Nationell sjöfart"
+                          alt="Marinmotoroljor"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Nationell sjöfart
+                        Marinmotoroljor
                       </span>
                     </Link>
                   </li>
@@ -120,12 +106,40 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={industrial}
-                          alt="Industriutrustning"
+                          alt="Industri"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Industriutrustning
+                        Industri
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                    <Link to="/transmission-oils" onClick={closeNavBar}>
+                      <span className="inline-block w-20 pr-8">
+                        {/* <img
+                          src={industrial}
+                          alt="Transmissionsoljor"
+                          className="block w-20 mx-auto max-h-10"
+                        /> */}
+                      </span>
+                      <span className="inline-block mt-2 font-bold align-top">
+                        Transmissionsoljor
+                      </span>
+                    </Link>
+                  </li>
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                    <Link to="/chemicals" onClick={closeNavBar}>
+                      <span className="inline-block w-20 pr-8">
+                        <img
+                          src={powerGen}
+                          alt="Kem"
+                          className="block w-20 mx-auto max-h-10"
+                        />
+                      </span>
+                      <span className="inline-block mt-2 font-bold align-top">
+                        Kem
                       </span>
                     </Link>
                   </li>
@@ -134,12 +148,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={standards}
-                          alt="Industry/OEM Standards"
+                          alt="Industri- och OEM-standarder Fordon"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Industry/OEM Standards
+                        Industri- och OEM-standarder Fordon
                       </span>
                     </Link>
                   </li>

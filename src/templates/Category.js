@@ -46,16 +46,6 @@ export default function SingleProductPage({ data: { categories } }) {
                   >
                     {product.sae}
                   </span>
-                  <span
-                    className={
-                      product.newProduct === true
-                        ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5`
-                        : `hidden`
-                    }
-                  >
-                    {" "}
-                    NY!
-                  </span>
                 </Accordion.Header>
                 <Accordion.Body>
                   <div className="pt-1 pb-4 pl-10 pr-4">
@@ -398,7 +388,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             href={product.pds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
+                            className="inline-block px-10 py-2 my-1 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                           >
                             Ladda ner PDS
                           </a>
@@ -411,7 +401,7 @@ export default function SingleProductPage({ data: { categories } }) {
                             href={product.sds}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
+                            className="inline-block px-10 py-2 my-1 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                           >
                             Ladda ner SDS
                           </a>
@@ -422,7 +412,7 @@ export default function SingleProductPage({ data: { categories } }) {
                         <p className="items-center md:flex-initial md:w-max">
                           <Link
                             to={`/products/${product.slug.current}`}
-                            className="inline-block px-10 py-2 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow my-1"
+                            className="inline-block px-10 py-2 my-1 text-sm font-medium text-center align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                           >
                             View Product
                           </Link>

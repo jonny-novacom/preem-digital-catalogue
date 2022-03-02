@@ -35,7 +35,7 @@ export default function IndexPage({ data: { homePageBanner } }) {
                 quality={95}
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
-                className="mr-6 mt-36"
+                className="w-12 h-16 mr-6 mt-36"
               />
             </div>
             <div className="md:-mt-48">
@@ -48,11 +48,11 @@ export default function IndexPage({ data: { homePageBanner } }) {
               </h2>
             </div>
             <div>
-              <span className="block border-t-2 border-white font-gothamNarrow">
+              {/* <span className="block border-t-2 border-white font-gothamNarrow">
                 <span className="block mt-4 text-xl font-medium text-white">
                   Kem drivemedel bränsle – {new Date().getFullYear()}
                 </span>
-              </span>
+              </span> */}
             </div>
           </div>
         </BackgroundImage>

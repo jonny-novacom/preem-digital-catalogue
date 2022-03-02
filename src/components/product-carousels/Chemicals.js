@@ -8,7 +8,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
-export default function IndustrialCarousel() {
+export default function ChemicalsCarousel() {
   function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -82,10 +82,10 @@ export default function IndustrialCarousel() {
     ],
   };
 
-  const { industrialproductcarousel } = useStaticQuery(graphql`
+  const { chemicalsproductcarousel } = useStaticQuery(graphql`
     query {
-      industrialproductcarousel: allSanityProductCarousel(
-        filter: { pageTitle: { eq: "Industrial" } }
+      chemicalsproductcarousel: allSanityProductCarousel(
+        filter: { pageTitle: { eq: "Chemicals" } }
       ) {
         nodes {
           title
@@ -117,44 +117,44 @@ export default function IndustrialCarousel() {
     }
   `);
 
-  const theindustrialproductcarousel =
-    industrialproductcarousel.nodes[0].product;
+  const thechemicalsproductcarousel = chemicalsproductcarousel.nodes[0].product;
+
   return (
     <>
       <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-        {industrialproductcarousel.nodes[0].title}
+        {chemicalsproductcarousel.nodes[0].title}
       </h3>
       <p className="mt-2 mb-8 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-        {industrialproductcarousel.nodes[0].subtitle}
+        {chemicalsproductcarousel.nodes[0].subtitle}
       </p>
+
       <div className="px-10">
         <Slider {...settings}>
-          {theindustrialproductcarousel.map((industrialproductcarousel, i) => (
+          {thechemicalsproductcarousel.map((chemicalsproductcarousel, i) => (
             <div className="p-1 bg-white" key={i}>
               <div className="p-4 bg-gray-50">
-                <Link
-                  to={`/products/${industrialproductcarousel.slug.current}`}
-                >
+                <Link to={`/products/${chemicalsproductcarousel.slug.current}`}>
                   <GatsbyImage
                     image={
-                      industrialproductcarousel.mainImage.asset.localFile
+                      chemicalsproductcarousel.mainImage.asset.localFile
                         .childImageSharp.gatsbyImageData
                     }
-                    alt={industrialproductcarousel.produkt}
+                    alt={chemicalsproductcarousel.produkt}
                     className="block mx-auto"
                     imgStyle={{ objectFit: "contain" }}
                   />
-                  <h3 className="mt-2 text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow h-14">
-                    {industrialproductcarousel.produkt}{" "}
-                    {industrialproductcarousel.sae}
+                  <h3 className="h-12 mt-2 overflow-hidden text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow text-clip">
+                    {chemicalsproductcarousel.produkt}
+                    <br />
+                    {chemicalsproductcarousel.sae}
                   </h3>
                 </Link>
-                <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-gray-400 font-gothamNarrow">
-                  {industrialproductcarousel.shortDescription}
+                <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-preemMediumGray font-gothamNarrow">
+                  {chemicalsproductcarousel.shortDescription}
                 </span>
                 <div className="block mx-auto text-center">
                   <Link
-                    to={`/products/${industrialproductcarousel.slug.current}`}
+                    to={`/products/${chemicalsproductcarousel.slug.current}`}
                   >
                     <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
                       För mer information

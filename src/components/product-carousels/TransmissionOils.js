@@ -8,7 +8,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
-export default function IndustrialCarousel() {
+export default function TransmissionOilsCarousel() {
   function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -82,10 +82,10 @@ export default function IndustrialCarousel() {
     ],
   };
 
-  const { industrialproductcarousel } = useStaticQuery(graphql`
+  const { transmissionoilsproductcarousel } = useStaticQuery(graphql`
     query {
-      industrialproductcarousel: allSanityProductCarousel(
-        filter: { pageTitle: { eq: "Industrial" } }
+      transmissionoilsproductcarousel: allSanityProductCarousel(
+        filter: { pageTitle: { eq: "Transmission Oils" } }
       ) {
         nodes {
           title
@@ -117,53 +117,58 @@ export default function IndustrialCarousel() {
     }
   `);
 
-  const theindustrialproductcarousel =
-    industrialproductcarousel.nodes[0].product;
+  const thetransmissionoilsproductcarousel =
+    transmissionoilsproductcarousel.nodes[0].product;
+
   return (
     <>
       <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-        {industrialproductcarousel.nodes[0].title}
+        {transmissionoilsproductcarousel.nodes[0].title}
       </h3>
       <p className="mt-2 mb-8 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-        {industrialproductcarousel.nodes[0].subtitle}
+        {transmissionoilsproductcarousel.nodes[0].subtitle}
       </p>
+
       <div className="px-10">
         <Slider {...settings}>
-          {theindustrialproductcarousel.map((industrialproductcarousel, i) => (
-            <div className="p-1 bg-white" key={i}>
-              <div className="p-4 bg-gray-50">
-                <Link
-                  to={`/products/${industrialproductcarousel.slug.current}`}
-                >
-                  <GatsbyImage
-                    image={
-                      industrialproductcarousel.mainImage.asset.localFile
-                        .childImageSharp.gatsbyImageData
-                    }
-                    alt={industrialproductcarousel.produkt}
-                    className="block mx-auto"
-                    imgStyle={{ objectFit: "contain" }}
-                  />
-                  <h3 className="mt-2 text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow h-14">
-                    {industrialproductcarousel.produkt}{" "}
-                    {industrialproductcarousel.sae}
-                  </h3>
-                </Link>
-                <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-gray-400 font-gothamNarrow">
-                  {industrialproductcarousel.shortDescription}
-                </span>
-                <div className="block mx-auto text-center">
+          {thetransmissionoilsproductcarousel.map(
+            (transmissionoilsproductcarousel, i) => (
+              <div className="p-1 bg-white" key={i}>
+                <div className="p-4 bg-gray-50">
                   <Link
-                    to={`/products/${industrialproductcarousel.slug.current}`}
+                    to={`/products/${transmissionoilsproductcarousel.slug.current}`}
                   >
-                    <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
-                      För mer information
-                    </span>
+                    <GatsbyImage
+                      image={
+                        transmissionoilsproductcarousel.mainImage.asset
+                          .localFile.childImageSharp.gatsbyImageData
+                      }
+                      alt={transmissionoilsproductcarousel.produkt}
+                      className="block mx-auto"
+                      imgStyle={{ objectFit: "contain" }}
+                    />
+                    <h3 className="h-12 mt-2 overflow-hidden text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow text-clip">
+                      {transmissionoilsproductcarousel.produkt}
+                      <br />
+                      {transmissionoilsproductcarousel.sae}
+                    </h3>
                   </Link>
+                  <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-preemMediumGray font-gothamNarrow">
+                    {transmissionoilsproductcarousel.shortDescription}
+                  </span>
+                  <div className="block mx-auto text-center">
+                    <Link
+                      to={`/products/${transmissionoilsproductcarousel.slug.current}`}
+                    >
+                      <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
+                        För mer information
+                      </span>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </Slider>
       </div>
     </>

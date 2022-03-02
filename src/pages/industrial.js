@@ -41,7 +41,7 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
                 formats={["AUTO", "WEBP", "AVIF"]}
                 alt="Texaco"
                 transformOptions={"cover"}
-                className="mt-12 mr-6"
+                className="w-12 h-16 mt-12 mr-6"
               />
             </div>
           </div>
@@ -73,13 +73,6 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
             alt="Services"
             className="block w-12 mx-auto mb-4"
           />
-          <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-            Min nis di ditinctate nusam quaepti ipsam que voluptum
-          </h3>
-          <p className="mt-2 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-            Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
-            volorem perupta audipis explibus
-          </p>
         </div>
         <div className="my-8">
           <IndustrialCarousel />

@@ -29,7 +29,6 @@ const CommercialAccordion = () => {
           pds
           sds
           saps
-          newProduct
           featured
           slug {
             current
@@ -66,17 +65,7 @@ const CommercialAccordion = () => {
                         >
                           <AiFillStar />
                         </span>
-                        {pub.produkt} SAE {pub.sae}{" "}
-                        <span
-                          className={
-                            pub.newProduct === true
-                              ? `text-left text-red-700 text-sm font-gothamNarrow font-bold italic ml-1.5`
-                              : `hidden`
-                          }
-                        >
-                          {" "}
-                          NY!
-                        </span>
+                        {pub.produkt} SAE {pub.sae}
                       </Accordion.Header>
                       <Accordion.Body>
                         <div className="pt-1 pb-4 pl-10 pr-4 -mt-2 odd:bg-white">
