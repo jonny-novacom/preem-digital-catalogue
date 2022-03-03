@@ -94,4 +94,47 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { glossCat: glossCat.node.slug.current },
     });
   });
+
+  const pagination = await graphql(`
+    {
+      allSanityProduct(filter: { slug: { current: { ne: null } } }) {
+        edges {
+          node {
+            produkt
+            id
+            slug {
+              current
+            }
+          }
+        }
+        totalCount
+      }
+    }
+  `);
+
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  const pageSize = 32;
+  const pageCount = Math.ceil(
+    pagination.data.allSanityProduct.totalCount / pageSize
+  );
+  console.log(
+    `There are ${pagination.data.allSanityProduct.totalCount} products and we have ${pageCount} pages with ${pageSize} per page.`
+  );
+
+  Array.from({ length: pageCount }).forEach((_, i) => {
+    console.log(`Creating page ${i}`);
+
+    createPage({
+      path: `/all-products/${i + 1}`,
+      component: require.resolve("./src/pages/all-products.js"),
+      context: {
+        skip: i * pageSize,
+        currentPage: i + 1,
+        pageSize,
+      },
+    });
+  });
 };

@@ -25,11 +25,18 @@ module.exports = {
       fontSize: {
         "55xl": "3.5rem",
       },
+      height: {
+        18: "72px",
+      },
     },
   },
-  variants: {},
+  variants: {
+    textColor: ["current"],
+  },
   plugins: [
     require("tailwindcss-debug-screens"),
     require("tailwindcss-textshadow"),
+    require("@tailwindcss/line-clamp"),
+    require("@alexcarpenter/tailwindcss-aria"),
   ],
 };
