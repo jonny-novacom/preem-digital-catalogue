@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import SpecSheet from "../components/SpecSheet";
 import ACEAStandard from "../components/standards/ACEA";
 import APIStandard from "../components/standards/API";
 import BMWStandard from "../components/standards/BMW";
@@ -31,7 +32,7 @@ export default function StandardsPage() {
             Industry/OEM Standards
           </h3>
         </div>
-        <div className="px-4 mb-12">
+        <div className="px-4 mb-12 lg:hidden">
           <ACEAStandard />
           <APIStandard />
           <BMWStandard />
@@ -45,6 +46,9 @@ export default function StandardsPage() {
           <VolvoStandard />
           <VWStandard />
           <ProprietaryStandard />
+        </div>
+        <div className="hidden px-4 mb-12 lg:block">
+          <SpecSheet />
         </div>
       </div>
     </>

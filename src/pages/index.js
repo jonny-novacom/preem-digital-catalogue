@@ -65,9 +65,6 @@ export const query = graphql`
   query homePageBanner {
     homePageBanner: sanityBannerImages(title: { eq: "Home Page Banner" }) {
       title
-      slug {
-        current
-      }
       mainImage {
         asset {
           localFile {

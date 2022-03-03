@@ -95,6 +95,7 @@ export default function ChemicalsCarousel() {
             id
             shortDescription
             sae
+            newProduct
             slug {
               current
             }
@@ -134,6 +135,15 @@ export default function ChemicalsCarousel() {
             <div className="p-1 bg-white" key={i}>
               <div className="p-4 bg-gray-50">
                 <Link to={`/products/${chemicalsproductcarousel.slug.current}`}>
+                  {chemicalsproductcarousel.newProduct ? (
+                    <div className="flex justify-end">
+                      <div className="w-12 h-12 -mb-12 italic font-bold text-center rounded-full text-preemGreen bg-preemYellow">
+                        <span className="block pt-1 mt-2">NY!</span>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <GatsbyImage
                     image={
                       chemicalsproductcarousel.mainImage.asset.localFile

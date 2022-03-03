@@ -197,6 +197,21 @@ const GlobalStyles = createGlobalStyle`
     background-image: url(${dashG}) !important;
 }
 
+.neg-outline-offset {
+    outline-offset: -3px;
+}
+
+.outline-white {
+    outline: 4px solid white !important;
+    outline-offset: -2px !important;
+}
+
+a[disabled] {
+    pointer-events: none !important;
+    background: gray;
+    opacity: 0.5;
+  }
+
 `;
 
 export default GlobalStyles;

@@ -1,5 +1,5 @@
 import { graphql, Link } from "gatsby";
-import { getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import BackgroundImage from "gatsby-background-image";
@@ -45,10 +45,26 @@ export default function TransmissionOilsPage({
                 />
               </div>
             </div>
-            <div className="p-8 md:pt-48">
-              <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-6xl text-shadow-md mt:8 lg:w-3/4 md:w-10/12">
-                Min nis di nusam quaepti ipsam que
-              </h1>
+            <div className="p-8 md:pt-16">
+              <div className="grid items-end grid-cols-8 gap-1 mt-12">
+                <div className="col-span-8 md:col-span-6">
+                  <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-55xl text-shadow-md">
+                    {transmissionOilsPageBanner.headerText}
+                  </h1>
+                </div>
+                <div className="hidden col-span-8 md:col-span-2 md:block">
+                  <GatsbyImage
+                    image={
+                      transmissionOilsPageBanner.featuredImageHeader?.asset
+                        .localFile.childImageSharp.gatsbyImageData
+                    }
+                    quality={95}
+                    formats={["AUTO", "WEBP", "AVIF"]}
+                    alt={transmissionOilsPageBanner.originalFilename}
+                    className="block object-contain w-56 p-4 mx-auto lg:w-72 md:mt-12 lg:mt-2"
+                  />
+                </div>
+              </div>
             </div>
           </BackgroundImage>
           <div className="container pt-16 mx-auto">
@@ -83,8 +99,20 @@ export const query = graphql`
       title: { eq: "Transmission Oils Page Banner" }
     ) {
       title
-      slug {
-        current
+      headerText
+      featuredImageHeader {
+        asset {
+          originalFilename
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
       }
       mainImage {
         asset {
@@ -97,7 +125,6 @@ export const query = graphql`
               )
             }
           }
-          url
         }
       }
     }

@@ -95,6 +95,7 @@ export default function IndustrialCarousel() {
             id
             shortDescription
             sae
+            newProduct
             slug {
               current
             }
@@ -135,6 +136,15 @@ export default function IndustrialCarousel() {
                 <Link
                   to={`/products/${industrialproductcarousel.slug.current}`}
                 >
+                  {industrialproductcarousel.newProduct ? (
+                    <div className="flex justify-end">
+                      <div className="w-12 h-12 -mb-12 italic font-bold text-center rounded-full text-preemGreen bg-preemYellow">
+                        <span className="block pt-1 mt-2">NY!</span>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <GatsbyImage
                     image={
                       industrialproductcarousel.mainImage.asset.localFile

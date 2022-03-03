@@ -60,6 +60,21 @@ export default function Nav() {
               <div className="w-full h-screen p-8 bg-white md:w-2/3">
                 <ul>
                   <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                    <Link to="/all-products" onClick={closeNavBar}>
+                      <span className="inline-block w-20 pr-8">
+                        {/* <img
+                          src={consumer}
+                          alt="Motoroljor Personbilar och lätta transportfordon"
+                          className="block w-20 mx-auto max-h-10"
+                        /> */}
+                      </span>
+                      <span className="inline-block font-bold align-top">
+                        All products
+                      </span>
+                    </Link>
+                  </li>
+
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/consumer" onClick={closeNavBar}>
                       <span className="inline-block w-20 pr-8">
                         <img
@@ -134,12 +149,12 @@ export default function Nav() {
                       <span className="inline-block w-20 pr-8">
                         <img
                           src={powerGen}
-                          alt="Kem"
+                          alt=" Kemprodukter och Bromsvätska"
                           className="block w-20 mx-auto max-h-10"
                         />
                       </span>
                       <span className="inline-block mt-2 font-bold align-top">
-                        Kem
+                        Kemprodukter och Bromsvätska
                       </span>
                     </Link>
                   </li>

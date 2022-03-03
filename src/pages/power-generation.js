@@ -85,9 +85,6 @@ export const query = graphql`
       title: { eq: "PowerGen Page Banner" }
     ) {
       title
-      slug {
-        current
-      }
       mainImage {
         asset {
           localFile {

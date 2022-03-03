@@ -7,7 +7,7 @@ export default function ChemicalsCategories() {
       chemicalsCategories: allSanityProductCategory(
         filter: {
           title: {
-            regex: "/(Fuel additive)|(Fuel for petrol engines)|(Fuel for diesel engines)|(AdBlue)|(Coolants and washer fluid)/"
+            regex: "/(Fuel additive)|(Fuel for petrol engines)|(Fuel for diesel engines)|(AdBlue)|(Coolants and washer fluid)|(Brake Fluid)/"
           }
         }
         sort: { fields: titleSwedish, order: ASC }

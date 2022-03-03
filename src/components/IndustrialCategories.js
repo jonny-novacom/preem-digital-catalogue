@@ -7,7 +7,7 @@ export default function IndustrialCategories() {
       industrialCategories: allSanityProductCategory(
         filter: {
           title: {
-            regex: "/(Form oils)|(Hydraulic oils)|(Industrial gear oils)|(Compressor and air tool oils)|(Refrigeration compressor oils)|(Turbine and circulation oils)|(Guide oils, saw chain oils)|(Process, white, transformer and heat transfer oils)|(Metalworking, rust protection)|(Bearing greases)|(Synthetic greases)|(Sliding surfaces, chassis and teeth greases)|(Brake fluid)|(Cold degreasers and solvents)|(Food grade NSF H1 greases)|(Stationary gas engines)/"
+            regex: "/(Form oils)|(Hydraulic oils)|(Industrial gear oils)|(Compressor and air tool oils)|(Refrigeration compressor oils)|(Turbine and circulation oils)|(Guide oils, saw chain oils)|(Process, white, transformer and heat transfer oils)|(Metalworking, rust protection)|(Bearing greases)|(Synthetic greases)|(Sliding surfaces, chassis and teeth greases)|(Cold degreasers and solvents)|(Food grade NSF H1 greases)|(Stationary gas engines)/"
           }
         }
         sort: { fields: titleSwedish, order: ASC }

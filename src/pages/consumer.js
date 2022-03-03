@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { graphql, Link } from "gatsby";
-import { getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
@@ -45,22 +45,21 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
               </div>
             </div>
             <div className="p-8 md:pt-16">
-              <div className="grid grid-cols-8 gap-1 mt-12">
+              <div className="grid items-end grid-cols-8 gap-1 mt-12">
                 <div className="col-span-8 md:col-span-6">
-                  <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-55xl text-shadow-md md:mt-24 lg:mt-20 mt:8 ">
-                    Motoroljor
-                    <br />
-                    Personbilar och
-                    <br />
-                    lätta transportfordon
+                  <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-55xl text-shadow-md">
+                    {consumerPageBanner.headerText}
                   </h1>
                 </div>
                 <div className="hidden col-span-8 md:col-span-2 md:block">
-                  <StaticImage
-                    src="../images/havoline-prods-mg-sae-0w-20.png"
+                  <GatsbyImage
+                    image={
+                      consumerPageBanner.featuredImageHeader.asset.localFile
+                        .childImageSharp.gatsbyImageData
+                    }
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
-                    alt="Havoline ProDS MG SAE 0W-20"
+                    alt={consumerPageBanner.originalFilename}
                     className="block object-contain w-56 p-4 mx-auto lg:w-72 md:mt-12 lg:mt-2"
                   />
                 </div>
@@ -99,8 +98,20 @@ export const query = graphql`
       title: { eq: "Consumer Page Banner" }
     ) {
       title
-      slug {
-        current
+      headerText
+      featuredImageHeader {
+        asset {
+          originalFilename
+          localFile {
+            childImageSharp {
+              gatsbyImageData(
+                width: 1200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
+            }
+          }
+        }
       }
       mainImage {
         asset {
