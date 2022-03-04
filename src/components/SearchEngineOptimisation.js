@@ -48,7 +48,7 @@ export default function SearchEngineOptimisation({
       <meta name="description" content={site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || "/logo.png"} />
+      <meta property="og:image" content={image || "/static/logo.png"} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         property="og:site_name"
