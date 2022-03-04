@@ -9,7 +9,9 @@ export default function SingleProductPage({ data: { produkt } }) {
     <>
       <div key={produkt.id}>
         <SearchEngineOptimisation
-          title={`${produkt.produkt} ${produkt.sae}`}
+          title={`${produkt.produkt} ${
+            produkt.sae !== null ? produkt.sae : ""
+          }`}
           image={produkt?.mainImage?.asset.url}
           description={produkt.shortDescription}
         />
