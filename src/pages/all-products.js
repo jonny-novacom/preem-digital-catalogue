@@ -16,7 +16,7 @@ export default function allProducts({
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
         image=""
-        description=""
+        description="Min nis di ditinctate nusam quaepti ipsam que voluptum"
       />
       <div className="max-w-screen-lg mx-auto">
         <div className="mt-40">

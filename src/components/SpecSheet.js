@@ -88,8 +88,8 @@ export default function SpecSheet() {
 
   return (
     <>
-      <div className="p-4 overflow-x-scroll">
-        <div className="pb-2 w-max">
+      <div className="pb-2 overflow-x-scroll">
+        <div className="pb-2 font-medium border-b-8 border-black w-max font-gothamNarrow">
           <div className="inline-block px-2 text-left w-52">Produkt</div>
           <div className="inline-block w-32 px-2 text-center">SAE-klass</div>
           <div className="inline-block w-32 px-2 text-center">ACEA</div>
@@ -111,56 +111,80 @@ export default function SpecSheet() {
             VW/Audi/Skoda
           </div>
         </div>
-        {singleProd
-          .filter((thesaps) => thesaps.saps === "High SAPS")
-          .map((product) => (
-            <div key={product.id}>
-              <div className="w-max">
-                <div className="inline-block px-2 py-1 text-left w-52">
-                  {product.produkt}
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  {product.sae}
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  {product.standardACEA.map((acea) => acea.title).join(", ")}
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  {product.standardAPI.map((api) => api.title).join(", ")}
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  {product.standardBMW.map((bmw) => bmw.title).join(", ")}
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  Cat
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  Ford
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  GM/Opel/Vauxhall
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  MAN
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  Mercedes Benz
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  Renault
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  Porsche
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  Volvo
-                </div>
-                <div className="inline-block w-32 px-2 py-1 text-center">
-                  VW/Audi/Skoda
-                </div>
-              </div>
+        <div className="grid grid-cols-16">
+          <div className="col-span-1 bg-preemGreen">
+            <div className="text-white transform -rotate-90 bg-black">
+              LOW SAPS
             </div>
-          ))}
+          </div>
+          <div className="col-span-15">
+            {singleProd
+              .filter((thesaps) => thesaps.saps === "High SAPS")
+              .map((product) => (
+                <div
+                  key={product.id}
+                  className="odd:bg-gray-100 even:bg-white w-max font-gothamNarrow"
+                >
+                  <div className="text-sm w-max ">
+                    <div className="inline-block p-2 font-medium text-left align-top w-52">
+                      {product.produkt}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.sae}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardACEA
+                        .map((acea) => acea.title)
+                        .join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardAPI.map((api) => api.title).join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardBMW.map((bmw) => bmw.title).join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardCat.map((cat) => cat.title).join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardFord
+                        .map((ford) => ford.title)
+                        .join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardGM.map((gm) => gm.title).join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardMAN.map((man) => man.title).join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardMercedesBenz
+                        .map((merc) => merc.title)
+                        .join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardRenault
+                        .map((renault) => renault.title)
+                        .join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardPorsche
+                        .map((man) => man.porshce)
+                        .join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardVolvo
+                        .map((volvo) => volvo.title)
+                        .join(", ")}
+                    </div>
+                    <div className="inline-block w-32 p-2 text-center align-top">
+                      {product.standardVW.map((vw) => vw.title).join(", ")}
+                    </div>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
       </div>
     </>
   );

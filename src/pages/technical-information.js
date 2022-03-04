@@ -11,10 +11,16 @@ import EUUtslappsgranser from "../components/tables/EUUtslappsgranser";
 import APIBasoljeklassificering from "../components/tables/APIBasoljeklassificering";
 import NLGITable from "../components/tables/NLGI";
 import TechInfoFilter from "../components/TechInfoFilter";
+import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function TechnicalInformationPage() {
   return (
     <>
+      <SearchEngineOptimisation
+        title="Teknisk information"
+        image=""
+        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+      />
       <TechInfoFilter />
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mt-40">

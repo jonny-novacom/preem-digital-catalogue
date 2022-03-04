@@ -1,5 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 import SpecSheet from "../components/SpecSheet";
 import ACEAStandard from "../components/standards/ACEA";
 import APIStandard from "../components/standards/API";
@@ -18,6 +19,11 @@ import VWStandard from "../components/standards/VWAudiSkoda";
 export default function StandardsPage() {
   return (
     <>
+      <SearchEngineOptimisation
+        title="Industri- och OEM-standarder Fordon"
+        image=""
+        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+      />
       <div className="max-w-screen-lg mx-auto">
         <div className="container mx-auto mt-40">
           <StaticImage
@@ -29,10 +35,10 @@ export default function StandardsPage() {
             className="block w-12 mx-auto mb-4"
           />
           <h3 className="mb-8 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-            Industry/OEM Standards
+            Industri- och OEM-standarder Fordon
           </h3>
         </div>
-        <div className="px-4 mb-12 lg:hidden">
+        <div className="px-4 mb-12">
           <ACEAStandard />
           <APIStandard />
           <BMWStandard />
@@ -47,9 +53,9 @@ export default function StandardsPage() {
           <VWStandard />
           <ProprietaryStandard />
         </div>
-        <div className="hidden px-4 mb-12 lg:block">
+        {/* <div className="hidden px-4 mb-12 lg:block">
           <SpecSheet />
-        </div>
+        </div> */}
       </div>
     </>
   );

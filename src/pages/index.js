@@ -12,13 +12,16 @@ export default function IndexPage({ data: { homePageBanner } }) {
     homePageBanner.mainImage.asset.localFile.childImageSharp.gatsbyImageData
   );
   const bgImage = convertToBgImage(image);
+  const seoImage =
+    homePageBanner.mainImage.asset.localFile.childImageSharp.resize.src;
 
   return (
     <>
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
-        image=""
-        description=""
+        image={seoImage}
+        description="Texaco smörjmedel säljs i Sverige av Preem, på Preems stationer
+        och av Preems återförsäljare"
       />
       <div className="max-w-screen-lg mx-auto">
         <BackgroundImage
@@ -74,6 +77,9 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
+              resize {
+                src
+              }
             }
           }
         }

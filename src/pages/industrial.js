@@ -16,13 +16,16 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
       .gatsbyImageData
   );
   const bgImage = convertToBgImage(image);
+  const seoImage =
+    industrialPageBanner.featuredImageHeader.asset.localFile.childImageSharp
+      .resize.src;
 
   return (
     <>
       <SearchEngineOptimisation
-        title="Preem Digital Catalogue"
-        image=""
-        description=""
+        title={industrialPageBanner.headerText}
+        image={seoImage}
+        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
       />
 
       <div className="max-w-screen-lg mx-auto">
@@ -105,6 +108,9 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
+              resize {
+                src
+              }
             }
           }
         }

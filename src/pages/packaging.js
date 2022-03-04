@@ -1,29 +1,35 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
+import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function PackagingPage() {
   return (
     <>
+      <SearchEngineOptimisation
+        title="Emballage smörjmedel och kemtekniska produkter"
+        image=""
+        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+      />
       <div className="max-w-screen-md mx-auto">
-        <div className="mt-40 px-4 mb-12">
-          <h1 className="font-gothamNarrow font-bold text-center text-3xl mb-4 text-preemGreen block">
+        <div className="px-4 mt-40 mb-12">
+          <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Emballage smörjmedel och kemtekniska produkter
           </h1>
-          <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow mb-4">
+          <h3 className="mb-4 text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
             Smörjolja
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-5 border-t-8 border-black">
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+          <div className="grid grid-cols-1 border-t-8 border-black md:grid-cols-5">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">Bulkleverans med tankbil</p>
+                <p className="mb-0 font-medium">Bulkleverans med tankbil</p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 000
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-1.png"
@@ -31,14 +37,14 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Bulkleverans med tankbil"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block h-auto mx-auto w-52"
                 />
               </div>
             </div>
 
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Container (IBC/Cipax) 1 000 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -47,12 +53,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 110
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-2.png"
@@ -60,14 +66,14 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Container (IBC/Cipax) 1 000 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-36"
+                  className="block h-auto mx-auto w-36"
                 />
               </div>
             </div>
 
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Helfat olja
                   <br />{" "}
                   <span className="font-normal ">
@@ -77,12 +83,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 200
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-3.png"
@@ -90,13 +96,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Helfat olja"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block h-auto mx-auto w-52"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Dunk 20 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -109,12 +115,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 440
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-4.png"
@@ -122,13 +128,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block h-auto mx-auto w-60"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Dunk 20 liter med hällpip
                   <br />{" "}
                   <span className="font-normal ">
@@ -142,12 +148,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 441
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-8.png"
@@ -155,13 +161,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter med hällpip"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-56"
+                  className="block w-56 h-auto mx-auto"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Dunk 5 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -172,12 +178,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 625
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-9.png"
@@ -185,13 +191,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 5 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block h-auto mx-auto w-60"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Dunk 4 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -200,12 +206,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 735
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-6.png"
@@ -213,13 +219,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 4 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block h-auto mx-auto w-60"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Flaska 1 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -230,12 +236,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 720
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-7.png"
@@ -243,18 +249,18 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Flaska 1 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block h-auto mx-auto w-60"
                 />
               </div>
             </div>
           </div>
-          <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow mb-4 mt-12">
+          <h3 className="mt-12 mb-4 text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
             Smörjfett
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-5 border-t-8 border-black">
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+          <div className="grid grid-cols-1 border-t-8 border-black md:grid-cols-5">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Fluid bag 850 kg
                   <span className="font-normal ">
                     <br />
@@ -272,12 +278,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 110
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-10.png"
@@ -285,14 +291,14 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Fluid bag 850 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-36"
+                  className="block h-auto mx-auto w-36"
                 />
               </div>
             </div>
 
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Helfat 180 kg
                   <br />{" "}
                   <span className="font-normal ">
@@ -301,14 +307,14 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 225{" "}
                   <span className="font-normal ">(med påse),</span> 226{" "}
                   <span className="font-normal "> (utan påse).</span>
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/texaco-barrel.png"
@@ -316,14 +322,14 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Helfat 180 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-44"
+                  className="block h-auto mx-auto w-44"
                 />
               </div>
             </div>
 
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   ¼-fat 50 kg
                   <br />{" "}
                   <span className="font-normal ">
@@ -333,12 +339,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 670
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/texaco-barrel.png"
@@ -346,13 +352,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="¼-fat 50 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-44"
+                  className="block h-auto mx-auto w-44"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Hink 18 kg
                   <br />{" "}
                   <span className="font-normal ">
@@ -365,12 +371,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 650
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/18kg.png"
@@ -378,25 +384,25 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Hink 18 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-28"
+                  className="block h-auto mx-auto w-28"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Plåtburk 0,5 kg
                   <br />{" "}
                   <span className="font-normal ">Copper Grease 9143.</span>
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 680
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/grease.png"
@@ -404,13 +410,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Plåtburk 0,5 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-24"
+                  className="block w-24 h-auto mx-auto"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Patron 0,4 kg
                   <br />{" "}
                   <span className="font-normal ">
@@ -420,12 +426,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 850
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/patron-0-4.png"
@@ -433,13 +439,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Patron 0,4 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block h-auto mx-auto w-52"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   MLS-patron 0,4 kg
                   <br />{" "}
                   <span className="font-normal ">
@@ -450,12 +456,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 855
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/novatex.png"
@@ -463,18 +469,18 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="MLS-patron 0,4 kg"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-52"
+                  className="block h-auto mx-auto w-52"
                 />
               </div>
             </div>
           </div>
-          <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow mb-4 mt-12">
+          <h3 className="mt-12 mb-4 text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
             Kemtekniskt emballage
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-5 border-t-8 border-black">
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+          <div className="grid grid-cols-1 border-t-8 border-black md:grid-cols-5">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Container (IBC/Cipax) 1 000 liter
                   <span className="font-normal ">
                     <br />
@@ -483,12 +489,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 110
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/packaging-2.png"
@@ -496,14 +502,14 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Container (IBC/Cipax) 1 000 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-40"
+                  className="block w-40 h-auto mx-auto"
                 />
               </div>
             </div>
 
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Helfat kem 200 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -513,12 +519,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 200
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/200-litre.png"
@@ -526,14 +532,14 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Helfat kem 200 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block h-auto mx-auto w-60"
                 />
               </div>
             </div>
 
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Dunk 20 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -542,12 +548,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 440
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/20-litre.png"
@@ -555,21 +561,21 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 20 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-44"
+                  className="block h-auto mx-auto w-44"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">Dunk 4 liter, kem</p>
+                <p className="mb-0 font-medium">Dunk 4 liter, kem</p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 735
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/4-litre.png"
@@ -577,13 +583,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Dunk 4 liter, kem"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-60"
+                  className="block h-auto mx-auto w-60"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Flaska 0,25 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -594,12 +600,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 710
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/brake-fluid-dot-4.png"
@@ -607,13 +613,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Flaska 0,25 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-44"
+                  className="block h-auto mx-auto w-44"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Flaska 0,30 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -624,12 +630,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 930
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/techron-d-concentrate.png"
@@ -637,13 +643,13 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Flaska 0,30 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-40"
+                  className="block w-40 h-auto mx-auto"
                 />
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-between p-4 bg-gray-50 md:col-span-3 border-b-2 border-white">
+            <div className="grid content-between grid-cols-1 gap-4 p-4 border-b-2 border-white md:h-52 bg-gray-50 md:col-span-3">
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   Flaska 0,30 liter
                   <br />{" "}
                   <span className="font-normal ">
@@ -654,12 +660,12 @@ export default function PackagingPage() {
                 </p>
               </div>
               <div>
-                <p className="font-medium mb-0">
+                <p className="mb-0 font-medium">
                   <span className="font-normal ">Emballagekod:</span> 930
                 </p>
               </div>
             </div>
-            <div className="md:h-52 grid grid-cols-1 gap-4 content-center p-4 bg-gray-200 md:col-span-2 border-b-2 border-white">
+            <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
                   src="../images/packaging/techron-concentrate-plus.png"
@@ -667,7 +673,7 @@ export default function PackagingPage() {
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Flaska 0,30 liter"
                   layout={"constrained"}
-                  className="block mx-auto h-auto w-40"
+                  className="block w-40 h-auto mx-auto"
                 />
               </div>
             </div>

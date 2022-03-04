@@ -14,14 +14,16 @@ export default function TransmissionOilsPage({
       .gatsbyImageData
   );
   const bgImage = convertToBgImage(image);
-  const seoImage = transmissionOilsPageBanner.mainImage.asset.url;
+  const seoImage =
+    transmissionOilsPageBanner.featuredImageHeader.asset.localFile
+      .childImageSharp.resize.src;
 
   return (
     <>
       <SearchEngineOptimisation
         title="Preem Digital Catalogue"
         image={seoImage}
-        description=""
+        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
       />
 
       <div className="max-w-screen-lg mx-auto">
@@ -110,6 +112,9 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
+              resize {
+                src
+              }
             }
           }
         }
