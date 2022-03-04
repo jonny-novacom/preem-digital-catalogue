@@ -212,6 +212,12 @@ a[disabled] {
     opacity: 0.5;
   }
 
+[aria-current] span {
+    color: #154734;
+    background: #ffac3a;
+    pointer-events: none !important;
+}
+
 `;
 
 export default GlobalStyles;
