@@ -74,13 +74,6 @@ export default function MarinePage({ data: { marinePageBanner } }) {
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />
-            <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-              Min nis di ditinctate nusam quaepti ipsam que voluptum
-            </h3>
-            <p className="mt-2 mb-12 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-              Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
-              volorem perupta audipis explibus
-            </p>
           </div>
           <div className="my-8">
             <MarineCarousel />

@@ -29,7 +29,7 @@ export default function ChemicalsCategories() {
   return (
     <>
       <div className="px-4 py-8 mx-auto mb-12">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-2 sm:grid-cols-1">
           {thechemicalsCategories.map((chemicalsCategories, i) => (
             <div
               key={i}

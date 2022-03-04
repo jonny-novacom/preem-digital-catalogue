@@ -21,13 +21,13 @@ export default function allProducts({
         description="Min nis di ditinctate nusam quaepti ipsam que voluptum"
       />
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-40">
-          <div className="container mx-auto">
+        <div className="mt-40 ">
+          <div className="container px-4 mx-auto">
             <StaticImage
-              src="../images/icons/marine.svg"
+              src="../images/icons/all-products.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt="Marine"
+              alt="All products"
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />

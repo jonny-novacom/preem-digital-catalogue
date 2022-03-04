@@ -122,10 +122,10 @@ export default function ChemicalsCarousel() {
 
   return (
     <>
-      <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
+      <h3 className="px-4 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
         {chemicalsproductcarousel.nodes[0].title}
       </h3>
-      <p className="mt-2 mb-8 font-normal text-center text-gray-500 text-md font-gothamNarrow">
+      <p className="px-4 mt-2 mb-8 font-normal text-center text-gray-500 text-md font-gothamNarrow">
         {chemicalsproductcarousel.nodes[0].subtitle}
       </p>
 

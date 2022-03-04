@@ -27,16 +27,14 @@ export default function Pagination({
             <BsArrowLeft className="mr-2 mt-0.5 text-lg" /> Previous Page
           </Link>
         </p>
-        <div className="flex flex-wrap content-center justify-center">
+        <div className="flex flex-wrap content-center justify-center current:text-white">
           {Array.from({ length: totalPages }).map((_, i) => (
             <Link
-              className={
-                currentPage === 1 && i === 0 ? "current:text-green-900 h-8" : ""
-              }
+              className={currentPage === 1 && i === 0 ? `h-8 current` : ""}
               to={`${base}/${i > 0 ? i + 1 : ""}`}
               key={`page${i}`}
             >
-              <span className="inline-block w-8 h-8 pt-1 m-1 font-medium text-center transition rounded-full bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow text-preemDarkGray">
+              <span className="inline-block w-8 h-8 pt-1 m-1 font-medium text-center transition rounded-full bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow text-preemDarkGray current">
                 {i + 1}
               </span>
             </Link>

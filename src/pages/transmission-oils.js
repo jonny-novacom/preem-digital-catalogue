@@ -71,10 +71,10 @@ export default function TransmissionOilsPage({
           </BackgroundImage>
           <div className="container pt-16 mx-auto">
             <StaticImage
-              src="../images/icons/power-gen.svg"
+              src="../images/icons/trans-oil.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt="Chemicals"
+              alt="Transmissionsoljor"
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />

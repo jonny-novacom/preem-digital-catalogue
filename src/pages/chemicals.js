@@ -70,7 +70,7 @@ export default function ChemicalsPage({ data: { chemicalsPageBanner } }) {
           </BackgroundImage>
           <div className="container pt-16 mx-auto">
             <StaticImage
-              src="../images/icons/power-gen.svg"
+              src="../images/icons/chemicals.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="Chemicals"

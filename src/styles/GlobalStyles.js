@@ -212,7 +212,7 @@ a[disabled] {
     opacity: 0.5;
   }
 
-[aria-current] span {
+[aria-current] .current {
     color: #154734;
     background: #ffac3a;
     pointer-events: none !important;
