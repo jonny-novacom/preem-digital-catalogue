@@ -3,10 +3,16 @@ import React from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import { Accordion } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
+import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function SingleProductPage({ data: { categories } }) {
   return (
     <>
+      <SearchEngineOptimisation
+        title={categories.titleSwedish}
+        image=""
+        description=""
+      />
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mb-20 mt-36">
           <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">

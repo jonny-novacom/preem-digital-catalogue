@@ -3,12 +3,18 @@ import { graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import GlossaryFilter from "../components/GlossaryFilter";
+import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 function GlossaryPageTemplate({ data: { glossaryCategories } }) {
   return (
     <>
+      <SearchEngineOptimisation
+        title="Ord och förkortningar"
+        image=""
+        description=""
+      />
       <div className="max-w-screen-lg mx-auto">
-        <div className="mt-40 px-4">
+        <div className="px-4 mt-40">
           <div className="container mx-auto">
             <StaticImage
               src="../images/icons/glossary.svg"
@@ -16,9 +22,9 @@ function GlossaryPageTemplate({ data: { glossaryCategories } }) {
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="Glossary"
               transformOptions={"cover"}
-              className="block mx-auto w-12 mb-4"
+              className="block w-12 mx-auto mb-4"
             />
-            <h3 className="text-center text-preemGreen text-2xl font-bold font-gothamNarrow mb-8">
+            <h3 className="mb-8 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
               Ord och förkortningar
             </h3>
           </div>
@@ -29,7 +35,7 @@ function GlossaryPageTemplate({ data: { glossaryCategories } }) {
                 <span className="font-gothamNarrow font-bold text-preemGreen text-xl mb-0.5">
                   {glossary.title}
                 </span>
-                <span className="font-gothamNarrow font-normal text-gray-500">
+                <span className="font-normal text-gray-500 font-gothamNarrow">
                   <SanityBlockContent
                     blocks={glossary._rawDescription}
                     projectId="1tbc9cjy"

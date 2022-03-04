@@ -11,10 +11,12 @@ export default function allProducts({
   const theproducts = allProductsPage.nodes;
   const productCount = allProductsPage.totalCount;
 
+  console.log(pageContext);
+
   return (
     <>
       <SearchEngineOptimisation
-        title="Preem Digital Catalogue"
+        title={`All products - Page ${pageContext.currentPage || 1} of 8`}
         image=""
         description="Min nis di ditinctate nusam quaepti ipsam que voluptum"
       />

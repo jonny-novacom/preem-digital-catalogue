@@ -21,7 +21,7 @@ export default function TransmissionOilsPage({
   return (
     <>
       <SearchEngineOptimisation
-        title="Preem Digital Catalogue"
+        title={transmissionOilsPageBanner.headerText}
         image={seoImage}
         description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
       />
