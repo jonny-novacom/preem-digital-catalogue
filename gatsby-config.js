@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Preem - Digital Catalogue",
     description: "Preem - Digital Catalogue",
+    image: "/logo.png",
   },
   plugins: [
     {
