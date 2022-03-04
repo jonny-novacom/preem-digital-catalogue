@@ -14,8 +14,7 @@ export default function ChemicalsPage({ data: { chemicalsPageBanner } }) {
   );
   const bgImage = convertToBgImage(image);
   const seoImage =
-    chemicalsPageBanner.featuredImageHeader.asset.localFile.childImageSharp
-      .resize.src;
+    chemicalsPageBanner.mainImage.asset.localFile.childImageSharp.resize.src;
 
   return (
     <>
@@ -104,13 +103,10 @@ export const query = graphql`
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 300
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
-              resize {
-                src
-              }
             }
           }
         }
@@ -124,6 +120,9 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
+              resize {
+                src
+              }
             }
           }
         }

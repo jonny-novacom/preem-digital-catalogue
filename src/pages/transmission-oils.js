@@ -15,8 +15,8 @@ export default function TransmissionOilsPage({
   );
   const bgImage = convertToBgImage(image);
   const seoImage =
-    transmissionOilsPageBanner.featuredImageHeader.asset.localFile
-      .childImageSharp.resize.src;
+    transmissionOilsPageBanner.mainImage.asset.localFile.childImageSharp.resize
+      .src;
 
   return (
     <>
@@ -108,13 +108,10 @@ export const query = graphql`
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 300
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
-              resize {
-                src
-              }
             }
           }
         }
@@ -128,6 +125,9 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
+              resize {
+                src
+              }
             }
           }
         }

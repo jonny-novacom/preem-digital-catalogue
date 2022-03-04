@@ -12,8 +12,7 @@ export default function MarinePage({ data: { marinePageBanner } }) {
   );
   const bgImage = convertToBgImage(image);
   const seoImage =
-    marinePageBanner.featuredImageHeader.asset.localFile.childImageSharp.resize
-      .src;
+    marinePageBanner.mainImage.asset.localFile.childImageSharp.resize.src;
 
   return (
     <>
@@ -110,7 +109,7 @@ export const query = graphql`
           localFile {
             childImageSharp {
               gatsbyImageData(
-                width: 1200
+                width: 300
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
@@ -130,6 +129,9 @@ export const query = graphql`
                 placeholder: BLURRED
                 formats: [AUTO, WEBP, AVIF]
               )
+              resize {
+                src
+              }
             }
           }
         }
