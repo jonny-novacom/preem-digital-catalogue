@@ -4,13 +4,13 @@ export default function APIMotoroljor() {
   return (
     <>
       <div>
-        <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
+        <h3 className="text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
           API motoroljor
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+        <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
           American Petroleum Institute. Specifikationer för motoroljor.
         </p>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
+        <table className="w-full overflow-x-scroll font-medium shadow-none table-auto font-gothamNarrow">
           <tbody>
             <tr>
               <td colSpan={3}></td>
@@ -20,13 +20,13 @@ export default function APIMotoroljor() {
                 Bensinmotorer
               </td>
             </tr>
-            <tr className="border-b-8 border-black bg-white">
-              <td className="font-medium text-left pl-4">Kategori</td>
+            <tr className="bg-white border-b-8 border-black">
+              <td className="pl-4 font-medium text-left">Kategori</td>
               <td className="px-6">Status</td>
               <td className="text-left">Beskrivning</td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">API SP</td>
+              <td className="pl-4 font-medium text-left">API SP</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Introducerades i maj 2020 och är utformad för att ge skydd mot
@@ -40,76 +40,82 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SN</td>
+              <td className="pl-4 font-medium text-left">API SN</td>
               <td>Aktuell</td>
-              <td className="text-left">För 2020 och äldre motorer</td>
+              <td className="text-left">
+                Introducerades maj 2018, API SN Plus är en API-klassificering
+                som kan användas tillsammans med API SN d.v.s API SN med
+                förbättrad bränsleekonomi som även kan användas tillsammans med
+                ILSAC GF-5. API SN är även utformad för att skydda mot
+                förtändning (LSPI).
+              </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SM</td>
+              <td className="pl-4 font-medium text-left">SM</td>
               <td>Aktuell</td>
               <td className="text-left">För 2010 och äldre motorer</td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SL</td>
+              <td className="pl-4 font-medium text-left">SL</td>
               <td>Aktuell</td>
               <td className="text-left">För 2004 och äldre motorer</td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SJ</td>
+              <td className="pl-4 font-medium text-left">SJ</td>
               <td>Aktuell</td>
               <td className="text-left">För 2001 och äldre motorer</td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SH</td>
+              <td className="pl-4 font-medium text-left">SH</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1996.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SG</td>
+              <td className="pl-4 font-medium text-left">SG</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1993.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SF</td>
+              <td className="pl-4 font-medium text-left">SF</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1988.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SE</td>
+              <td className="pl-4 font-medium text-left">SE</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1979.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SD</td>
+              <td className="pl-4 font-medium text-left">SD</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1971.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SC</td>
+              <td className="pl-4 font-medium text-left">SC</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1967.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SB</td>
+              <td className="pl-4 font-medium text-left">SB</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för motorer tillverkade efter 1951.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">SA</td>
+              <td className="pl-4 font-medium text-left">SA</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: innehåller ej additiv. Olämplig för motorer tillverkade
@@ -119,7 +125,7 @@ export default function APIMotoroljor() {
           </tbody>
         </table>
         <div className="my-6"></div>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium">
+        <table className="w-full font-medium shadow-none table-auto font-gothamNarrow">
           <tbody>
             <tr>
               <td colSpan={3}></td>
@@ -129,13 +135,13 @@ export default function APIMotoroljor() {
                 Dieselmotorer
               </td>
             </tr>
-            <tr className="border-b-8 border-black bg-white">
-              <td className="font-medium text-left pl-4">Kategori</td>
+            <tr className="bg-white border-b-8 border-black">
+              <td className="pl-4 font-medium text-left">Kategori</td>
               <td className="px-6">Status</td>
               <td className="text-left">Beskrivning</td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">FA-4</td>
+              <td className="pl-4 font-medium text-left">FA-4</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Motoroljor med viskositet XW-30, speciellt formulerad för att
@@ -154,7 +160,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CK-4</td>
+              <td className="pl-4 font-medium text-left">CK-4</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Oljor för snabbgående 4-takts dieselmotorer konstruerade för att
@@ -171,7 +177,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CJ-4</td>
+              <td className="pl-4 font-medium text-left">CJ-4</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Olja för snabbgående 4-takts dieselmotorer konstruerade för att
@@ -190,7 +196,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CI-4</td>
+              <td className="pl-4 font-medium text-left">CI-4</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Introducerad 2002. Olja för snabbgående 4-takts dieselmotorer
@@ -201,7 +207,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CH-4</td>
+              <td className="pl-4 font-medium text-left">CH-4</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Svavelhalt bränsle {"<"}0,5%. Olja för snabbgående 4-takts
@@ -211,7 +217,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CG-4</td>
+              <td className="pl-4 font-medium text-left">CG-4</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1995. Olja för snabbgående 4-takts dieselmotorer
@@ -221,7 +227,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CF-4</td>
+              <td className="pl-4 font-medium text-left">CF-4</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1990. För snabbgående 4-takts dieselmotorer med
@@ -229,7 +235,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CF-2</td>
+              <td className="pl-4 font-medium text-left">CF-2</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1994. För 2-takts dieselmotorer. Kan ersätta CD-II
@@ -237,7 +243,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CF</td>
+              <td className="pl-4 font-medium text-left">CF</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1994. För off-road, indirekt insprutning och andra
@@ -245,7 +251,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CE</td>
+              <td className="pl-4 font-medium text-left">CE</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1985. För snabbgående 4-takts dieselmotorer med
@@ -253,35 +259,35 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CD-II</td>
+              <td className="pl-4 font-medium text-left">CD-II</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1995. För 2-takts motorer.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CD</td>
+              <td className="pl-4 font-medium text-left">CD</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Introducerad 1955. För vissa motorer med och utan turbo.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CC</td>
+              <td className="pl-4 font-medium text-left">CC</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för dieselmotorer tillverkade efter 1990.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CB</td>
+              <td className="pl-4 font-medium text-left">CB</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för dieselmotorer tillverkade efter 1961.
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">CA</td>
+              <td className="pl-4 font-medium text-left">CA</td>
               <td>Inaktuell</td>
               <td className="text-left">
                 Varning: olämplig för dieselmotorer tillverkade efter 1959.
