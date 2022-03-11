@@ -11,6 +11,7 @@ import AuthorisedDistributor from "./AuthorisedDistributor";
 
 export default function Layout({ children, location }) {
   const isHome = location.pathname === "/";
+  const is404 = location.pathname === "/404";
 
   return (
     <>
@@ -19,7 +20,7 @@ export default function Layout({ children, location }) {
         <GlobalStyles />
         <Nav />
         {children}
-        {isHome ? "" : <AuthorisedDistributor />}
+        {isHome || is404 ? "" : <AuthorisedDistributor />}
       </SiteProvider>
     </>
   );
