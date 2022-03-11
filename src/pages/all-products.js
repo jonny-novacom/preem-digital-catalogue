@@ -18,7 +18,7 @@ export default function allProducts({
       <SearchEngineOptimisation
         title={`Alla produkter - Sida ${pageContext.currentPage || 1} av 8`}
         image=""
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum"
+        description=""
       />
       <div className="max-w-screen-lg mx-auto">
         <div className="mt-40 ">
@@ -31,13 +31,6 @@ export default function allProducts({
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />
-            <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-              Min nis di ditinctate nusam quaepti ipsam que voluptum
-            </h3>
-            <p className="mt-2 mb-12 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-              Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt
-              volorem perupta audipis explibus
-            </p>
           </div>
           <div className="px-4 mb-4">
             <Pagination
