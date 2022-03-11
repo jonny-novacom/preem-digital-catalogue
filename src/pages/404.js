@@ -1,54 +1,34 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import React from "react";
+import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
+    <>
+      <SearchEngineOptimisation
+        title="sidan hittas inte"
+        image=""
+        description="404 – the page you were looking for does not exist"
+      />
+      <div className="mt-44">
+        <h1 className="block mb-2 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
+          404 – sidan du letade efter finns inte
+        </h1>
+      </div>
+      <div className="container mx-auto">
+        <div className="grid px-3 pb-24 place-items-center">
+          <div className="w-full lg:w-auto">
+            <p className="my-4 lg:items-center lg:flex-initial lg:w-max sm:w-full">
+              <Link
+                to="/"
+                className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
+              >
+                tillbaka till startsidan
+              </Link>
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
-
-export default NotFoundPage
