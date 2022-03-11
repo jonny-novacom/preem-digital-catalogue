@@ -59,8 +59,8 @@ export default function Nav() {
 
           <div className="fixed z-50 block w-screen top-28">
             <Slide direction={-1} distance={1000} isActive={navBarIsToggled}>
-              <div className="w-full h-screen p-8 bg-white md:w-2/3 xl:w-1/2">
-                <ul>
+              <div className="w-full h-screen p-8 overflow-y-auto bg-white md:w-2/3 xl:w-1/2">
+                <ul className="pb-24">
                   <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/all-products" onClick={closeNavBar}>
                       <div className="flex">
