@@ -17,7 +17,7 @@ export default function NotFoundPage() {
       </div>
       <div className="container mx-auto">
         <div className="grid px-3 pb-24 place-items-center">
-          <div className="w-full lg:w-auto">
+          <div className="w-auto">
             <p className="my-4 lg:items-center lg:flex-initial lg:w-max sm:w-full">
               <Link
                 to="/"
