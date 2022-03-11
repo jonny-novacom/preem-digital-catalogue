@@ -19,7 +19,7 @@ export default function TechnicalInformationPage() {
       <SearchEngineOptimisation
         title="Teknisk information"
         image=""
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description=""
       />
       <TechInfoFilter />
       <div className="max-w-screen-lg mx-auto">

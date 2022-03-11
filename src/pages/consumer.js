@@ -22,7 +22,7 @@ export default function ConsumerPage({ data: { consumerPageBanner } }) {
       <SearchEngineOptimisation
         title={consumerPageBanner.headerText}
         image={seoImage}
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description="Oavsett resa, oavsett väder -  Brett utbud av OEM-godkända smörjmedel till personbilar och lätta transportfordon"
       />
 
       <div className="max-w-screen-lg mx-auto">

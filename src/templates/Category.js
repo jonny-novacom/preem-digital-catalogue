@@ -11,7 +11,7 @@ export default function SingleProductPage({ data: { categories } }) {
       <SearchEngineOptimisation
         title={categories.titleSwedish}
         image=""
-        description=""
+        description="Produkt, applikationer, specifikationer"
       />
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mb-20 mt-36">

@@ -8,7 +8,7 @@ export default function PackagingPage() {
       <SearchEngineOptimisation
         title="Emballage smörjmedel och kemtekniska produkter"
         image=""
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description=""
       />
       <div className="max-w-screen-md mx-auto">
         <div className="px-4 mt-40 mb-12">

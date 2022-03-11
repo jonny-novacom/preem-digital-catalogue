@@ -24,7 +24,7 @@ export default function IndustrialPage({ data: { industrialPageBanner } }) {
       <SearchEngineOptimisation
         title={industrialPageBanner.headerText}
         image={seoImage}
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description="För bättre operativ prestanda - Ser till att din utrustning fungerar på bästa sätt - Våra högpresterande industrismörjmedel ger utrustningen lång livslängd och hög produktivitet"
       />
 
       <div className="max-w-screen-lg mx-auto">

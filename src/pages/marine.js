@@ -19,7 +19,7 @@ export default function MarinePage({ data: { marinePageBanner } }) {
       <SearchEngineOptimisation
         title={marinePageBanner.headerText}
         image={seoImage}
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description="Optimerad tillförlitlighet och skydd -  Vårt breda utbud av marina produkter erbjuder optimal tillförlitlighet, skydd och prestanda."
       />
 
       <div className="max-w-screen-lg mx-auto">

@@ -18,10 +18,9 @@ export default function IndexPage({ data: { homePageBanner } }) {
   return (
     <>
       <SearchEngineOptimisation
-        title="Preem Digital Catalogue"
+        title="Preem"
         image={seoImage}
-        description="Texaco smörjmedel säljs i Sverige av Preem, på Preems stationer
-        och av Preems återförsäljare"
+        description="Texaco smörjmedel säljs i Sverige av Preem, på Preems stationer och av Preems återförsäljare"
       />
       <div className="max-w-screen-lg mx-auto">
         <BackgroundImage

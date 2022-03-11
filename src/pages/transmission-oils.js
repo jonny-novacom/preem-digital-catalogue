@@ -23,7 +23,7 @@ export default function TransmissionOilsPage({
       <SearchEngineOptimisation
         title={transmissionOilsPageBanner.headerText}
         image={seoImage}
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description="Förlängda bytesintervall -  Vårt utbud av transmissionsoljor håller din utrustning och dina fordon i drift under en längre tid."
       />
 
       <div className="max-w-screen-lg mx-auto">

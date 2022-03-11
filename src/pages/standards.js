@@ -20,9 +20,9 @@ export default function StandardsPage() {
   return (
     <>
       <SearchEngineOptimisation
-        title="Industri- och OEM-standarder Fordon"
+        title="Industri- och OEM-standarder för fordon"
         image=""
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description=""
       />
       <div className="max-w-screen-lg mx-auto">
         <div className="container mx-auto mt-40">
@@ -35,7 +35,7 @@ export default function StandardsPage() {
             className="block w-12 mx-auto mb-4"
           />
           <h3 className="mb-8 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-            Industri- och OEM-standarder Fordon
+            Industri- och OEM-standarder för fordon
           </h3>
         </div>
         <div className="px-4 mb-12">

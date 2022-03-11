@@ -12,7 +12,7 @@ export default function GlossaryPage({ data }) {
       <SearchEngineOptimisation
         title="Ord och förkortningar"
         image=""
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description=""
       />
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mt-40">

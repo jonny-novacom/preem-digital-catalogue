@@ -26,11 +26,7 @@ const SearchPage = () => {
 
   return (
     <>
-      <SearchEngineOptimisation
-        title="Search"
-        image=""
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
-      />
+      <SearchEngineOptimisation title="Sök" image="" description="" />
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mb-20 mt-36">
           <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">

@@ -24,7 +24,7 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
       <SearchEngineOptimisation
         title={commercialPageBanner.headerText}
         image={seoImage}
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description="Komplett utbud för hela fordonsflottan - Vårt kompletta utbud av motorolja, kylarvätska och tillhörande produkter för att hålla igång ditt företag"
       />
       <div className="max-w-screen-lg mx-auto">
         <div className="mt-40">

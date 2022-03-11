@@ -8,7 +8,7 @@ export default function NotFoundPage() {
       <SearchEngineOptimisation
         title="Sidan hittas inte"
         image=""
-        description="404 – the page you were looking for does not exist"
+        description="404 – sidan du letade efter finns inte"
       />
       <div className="mt-44">
         <h1 className="block mb-2 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">

@@ -21,7 +21,7 @@ export default function ChemicalsPage({ data: { chemicalsPageBanner } }) {
       <SearchEngineOptimisation
         title={chemicalsPageBanner.headerText}
         image={seoImage}
-        description="Min nis di ditinctate nusam quaepti ipsam que voluptum, quossunt volorem perupta audipis explibus"
+        description="Ser till att din utrustning fungerar på bästa sätt - Vårt utbud av kemikalier, tillsatser och vätskor hjälper till att hålla din utrustning och dina fordon i drift längre."
       />
 
       <div className="max-w-screen-lg mx-auto">
