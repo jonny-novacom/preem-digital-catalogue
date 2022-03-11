@@ -88,6 +88,8 @@ module.exports = {
                       tempomrade
                       tbnbastal
                       fryspunkt
+                      sds
+                      pds
                       _rawApplikationer
                       applikationer {
                         children {
@@ -126,6 +128,8 @@ module.exports = {
           "kokpunkt",
           "brytningsindex",
           "fryspunkt",
+          "sds",
+          "pds",
         ],
         normalizer: ({ data }) =>
           data.allSanityProduct.nodes.map((node) => ({
@@ -150,6 +154,8 @@ module.exports = {
             kokpunkt: node.kokpunkt,
             brytningsindex: node.brytningsindex,
             fryspunkt: node.fryspunkt,
+            sds: node.sds,
+            pds: node.pds,
           })),
       },
     },
