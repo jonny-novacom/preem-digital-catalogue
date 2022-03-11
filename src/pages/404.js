@@ -6,7 +6,7 @@ export default function NotFoundPage() {
   return (
     <>
       <SearchEngineOptimisation
-        title="sidan hittas inte"
+        title="Sidan hittas inte"
         image=""
         description="404 – the page you were looking for does not exist"
       />
