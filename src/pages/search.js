@@ -34,7 +34,7 @@ const SearchPage = () => {
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mb-20 mt-36">
           <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
-            Search
+            Sök
           </h1>
           <div className="container flex justify-center mx-auto">
             <div className="flex border-1">
@@ -44,7 +44,7 @@ const SearchPage = () => {
               <input
                 type="text"
                 className="px-4 py-3 sm:w-72 md:w-96 font-gothamNarrow focus:outline-none"
-                placeholder="Search..."
+                placeholder="Sök..."
                 name="query"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
@@ -52,7 +52,7 @@ const SearchPage = () => {
             </div>
           </div>
           <h2 className="block mt-8 mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
-            Results
+            Resultat
           </h2>
           {results.length > 0 && (
             <div>
@@ -440,7 +440,7 @@ const SearchPage = () => {
                                   to={`/products/${result.path}`}
                                   className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
-                                  View Product
+                                  Se produkt
                                 </Link>
                               </p>
                             </div>
@@ -455,7 +455,7 @@ const SearchPage = () => {
           )}{" "}
           {query.length >= 1 && results.length === 0 && (
             <p className="block mt-2 mb-4 text-xl font-bold text-center font-gothamNarrow">
-              No results!
+              Inga resultat
             </p>
           )}
         </div>

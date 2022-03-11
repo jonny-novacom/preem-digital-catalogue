@@ -15,7 +15,7 @@ export default function AuthorisedDistributor() {
           className="block object-contain w-10 mx-auto "
         />
         <p className="mt-3 mb-12 font-medium text-center font-helvetica">
-          Authorised Texaco<sup>®</sup> Lubricants Distributor
+          Auktoriserad Texaco<sup>®</sup> Smörjmedelsdistributör
         </p>
       </div>
     </>

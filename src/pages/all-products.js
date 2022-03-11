@@ -16,7 +16,7 @@ export default function allProducts({
   return (
     <>
       <SearchEngineOptimisation
-        title={`All products - Page ${pageContext.currentPage || 1} of 8`}
+        title={`Alla produkter - Sida ${pageContext.currentPage || 1} av 8`}
         image=""
         description="Min nis di ditinctate nusam quaepti ipsam que voluptum"
       />

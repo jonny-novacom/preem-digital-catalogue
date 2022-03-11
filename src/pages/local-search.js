@@ -440,7 +440,7 @@ const LocalSearch = () => {
                                   to={`/products/${result.path}`}
                                   className="inline-block px-10 py-2 my-1 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow"
                                 >
-                                  View Product
+                                  Se produkt
                                 </Link>
                               </p>
                             </div>

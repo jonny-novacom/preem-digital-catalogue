@@ -24,7 +24,7 @@ export default function Pagination({
             to={`${base}/${prevPage}`}
             disabled={!hasPrevPage}
           >
-            <BsArrowLeft className="mr-2 mt-0.5 text-lg" /> Previous Page
+            <BsArrowLeft className="mr-2 mt-0.5 text-lg" /> Föregående sida
           </Link>
         </p>
         <div className="flex flex-wrap content-center justify-center current:text-white">
@@ -46,7 +46,7 @@ export default function Pagination({
             to={`${base}/${nextPage}`}
             disabled={!hasNextPage}
           >
-            Next Page <BsArrowRight className="ml-2 mt-0.5 text-lg" />
+            Nästa sida <BsArrowRight className="ml-2 mt-0.5 text-lg" />
           </Link>
         </p>
       </div>

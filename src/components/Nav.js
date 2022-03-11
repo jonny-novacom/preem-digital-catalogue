@@ -28,7 +28,7 @@ export default function Nav() {
     <>
       <div className="bg-white">
         <div className="max-w-screen-lg mx-auto bg-white">
-          <nav className="fixed top-0 z-50 flex flex-row items-baseline justify-between w-screen max-w-screen-lg px-12 py-4 font-sans text-center bg-white">
+          <nav className="fixed top-0 z-50 flex flex-row items-baseline justify-between w-screen max-w-screen-lg px-12 py-4 font-sans text-center bg-white ">
             <div className="mb-2">
               <button
                 onClick={setNavBar}
@@ -59,7 +59,7 @@ export default function Nav() {
 
           <div className="fixed z-50 block w-screen top-28">
             <Slide direction={-1} distance={1000} isActive={navBarIsToggled}>
-              <div className="w-full h-screen p-8 bg-white md:w-2/3">
+              <div className="w-full h-screen p-8 bg-white md:w-2/3 xl:w-1/2">
                 <ul>
                   <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/all-products" onClick={closeNavBar}>
@@ -68,14 +68,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={allProducts}
-                              alt="All products"
+                              alt="Alla produkter"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 font-bold align-middle">
-                            All products
+                            Alla produkter
                           </span>
                         </div>
                       </div>
@@ -89,14 +89,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={consumer}
-                              alt="Motoroljor Personbilar och lätta transportfordon"
+                              alt="Motoroljor för personbil och lätta transportfordon"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline mt-2 font-bold align-top">
-                            Motoroljor Personbilar och lätta transportfordon
+                            Motoroljor för personbil och lätta transportfordon
                           </span>
                         </div>
                       </div>
@@ -109,14 +109,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={commercial}
-                              alt="Motoroljor Tunga fordon"
+                              alt="Motoroljor för tunga fordon"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
-                            Motoroljor Tunga fordon
+                            Motoroljor för tunga fordon
                           </span>
                         </div>
                       </div>
@@ -129,14 +129,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={marine}
-                              alt="Marinmotoroljor"
+                              alt="Marinoljor"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
-                            Marinmotoroljor
+                            Marinoljor
                           </span>
                         </div>
                       </div>
@@ -183,7 +183,11 @@ export default function Nav() {
                     </Link>
                   </li>
                   <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/chemicals" onClick={closeNavBar}>
+                    <Link
+                      to="/chemicals"
+                      onClick={closeNavBar}
+                      className="hover:brightness-75 "
+                    >
                       <div className="flex">
                         <div className="flex-none">
                           <span className="inline-block w-20 pr-8">
@@ -209,14 +213,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={standards}
-                              alt="Industri- och OEM-standarder Fordon"
+                              alt="Industri- och OEM-standarder för fordon"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
-                            Industri- och OEM-standarder Fordon
+                            Industri- och OEM-standarder för fordon
                           </span>
                         </div>
                       </div>
@@ -229,14 +233,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={techInfo}
-                              alt="Technical Information"
+                              alt="Teknisk information"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
-                            Technical information
+                            Teknisk information
                           </span>
                         </div>
                       </div>
@@ -249,14 +253,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={packaging}
-                              alt="Packaging"
+                              alt="Emballage"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
-                            Packaging
+                            Emballage
                           </span>
                         </div>
                       </div>
@@ -269,14 +273,14 @@ export default function Nav() {
                           <span className="inline-block w-20 pr-8">
                             <img
                               src={glossary}
-                              alt="Glossary"
+                              alt="Ordlista"
                               className="block w-20 mx-auto max-h-10"
                             />
                           </span>
                         </div>
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
-                            Glossary
+                            Ordlista
                           </span>
                         </div>
                       </div>
