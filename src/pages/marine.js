@@ -79,7 +79,7 @@ export default function MarinePage({ data: { marinePageBanner } }) {
             <MarineCarousel />
           </div>
           <div className="block mx-auto mb-8 text-center">
-            <a href="https://www.chevronmarineproducts.com/" target="_blank">
+            <a href="/category/marine-engine-oils">
               <span className="inline-block px-16 py-2 font-medium align-top rounded-full text-preemGreen hover:brightness-95 font-gothamNarrow bg-preemYellow">
                 Visa alla produkter
               </span>
