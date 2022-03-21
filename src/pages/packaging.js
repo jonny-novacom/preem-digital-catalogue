@@ -405,7 +405,7 @@ export default function PackagingPage() {
             <div className="grid content-center grid-cols-1 gap-4 p-4 bg-gray-200 border-b-2 border-white md:h-52 md:col-span-2">
               <div>
                 <StaticImage
-                  src="../images/packaging/grease.png"
+                  src="../images/packaging/grease-2.png"
                   quality={100}
                   formats={["AUTO", "WEBP", "AVIF"]}
                   alt="Plåtburk 0,5 kg"
