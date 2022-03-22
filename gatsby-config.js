@@ -189,7 +189,7 @@ module.exports = {
           `/glossary/*`,
           `/technical-information/`,
           `/packaging/`,
-          `/all-products/`,
+          `/all-products/*`,
         ],
         workboxConfig: {
           globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
