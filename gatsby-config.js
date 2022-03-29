@@ -194,9 +194,29 @@ module.exports = {
           `/packaging/`,
           `/chemicals/`,
         ],
-        workboxConfig: {
-          globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
-        },
+        runtimeCaching: [
+          {
+            // Use cacheFirst since these don't need to be revalidated (same RegExp
+            // and same reason as above)
+            urlPattern: /(\.js$|\.css$|static\/)/,
+            handler: `NetworkFirst`,
+          },
+          {
+            // page-data.json files, static query results and app-data.json
+            // are not content hashed
+            urlPattern: /^https?:.*\/page-data\/.*\.json/,
+            handler: `NetworkFirst`,
+          },
+          {
+            // Add runtime caching of various other page resources
+            urlPattern:
+              /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+            handler: `NetworkFirst`,
+          },
+        ],
+        // workboxConfig: {
+        //   globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
+        // },
       },
     },
   ],
