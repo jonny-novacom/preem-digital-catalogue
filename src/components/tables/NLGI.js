@@ -4,7 +4,7 @@ export default function NLGITable() {
   return (
     <>
       <div>
-        <h3 className="text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+        <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
           Konsistens smörjfett enligt NLGI, National Lubricating Grease
           Institute (USA)
         </h3>

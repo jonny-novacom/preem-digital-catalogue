@@ -3,17 +3,17 @@ import React from "react";
 export default function APIBasoljeklassificering() {
   return (
     <>
-      <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
+      <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
         API basoljeklassificering
       </h3>
-      <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+      <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
         American Pertoleum Institute. Specifikationer för basoljor. För att
         klara de högt ställda kraven på moderna motoroljor med långa
         bytesintervaller och avgasreningsutrustning kan inte traditionellt
         solventraffinerade basoljor användas (API Grupp I). För att tillverka en
         s.k. Low SAPS olja måste Grupp II, III eller IV användas.
       </p>
-      <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
+      <table className="w-full overflow-x-scroll font-medium shadow-none table-auto font-gothamNarrow">
         <tbody>
           <tr className="border-b-8 border-black">
             <td>Grupp</td>

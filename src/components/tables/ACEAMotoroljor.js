@@ -4,7 +4,7 @@ export default function ACEAMotoroljor() {
   return (
     <>
       <div>
-        <h3 className="text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+        <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
           ACEA motoroljor 2021
         </h3>
         <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">

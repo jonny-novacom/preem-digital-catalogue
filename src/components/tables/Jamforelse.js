@@ -5,7 +5,7 @@ export default function Jamforelse() {
   return (
     <>
       <div>
-        <h3 className="text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+        <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
           Jämförelse viskositetsklassificeringar (SAE – ISO VG)
         </h3>
         <div className="container max-w-2xl mx-auto my-4 ">

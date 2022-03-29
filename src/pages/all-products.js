@@ -50,6 +50,15 @@ export default function allProducts({
                       {product.produkt}
                     </div>
                   </div>
+                  {product.newProduct ? (
+                    <div className="flex justify-end">
+                      <div className="w-12 h-12 -mb-12 font-bold text-center rounded-full text-preemGreen bg-preemYellow">
+                        <span className="block pt-1 mt-2">NY!</span>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <GatsbyImage
                     image={
                       product.mainImage.asset.localFile.childImageSharp
@@ -100,6 +109,7 @@ export const query = graphql`
         id
         sae
         shortDescription
+        newProduct
         slug {
           current
         }

@@ -3,15 +3,15 @@ import React from "react";
 export default function SAEViscMotor() {
   return (
     <>
-      <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
+      <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
         SAE viskositetsklasser för motoroljor
       </h3>
-      <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+      <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
         Society of Automobile Engineers är en amerikansk organisation för
         standardisering inom bilindustrin. Dynamisk viskositet 1 cP = 1 mPa*s
         Kinematisk viskositet 1 cSt = 1 mm<sup>2</sup>s
       </p>
-      <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
+      <table className="w-full overflow-x-scroll font-medium shadow-none table-auto font-gothamNarrow">
         <tbody>
           <tr>
             <td>SAE J300</td>
@@ -155,19 +155,19 @@ export default function SAEViscMotor() {
           </tr>
         </tbody>
       </table>
-      <div className="pt-8 px-4">
-        <ol className="list-decimal text-sm">
-          <li className="text-left text-gray-800 text-md font-gothamNarrow font-normal italic">
+      <div className="px-4 pt-8">
+        <ol className="text-sm list-decimal">
+          <li className="italic font-normal text-left text-gray-800 text-md font-gothamNarrow">
             Mätt med Cold Cranking Simulator. Simulerar vev-/ramlager vid start
             i kyla.
           </li>
-          <li className="text-left text-gray-800 text-md font-gothamNarrow font-normal italic">
+          <li className="italic font-normal text-left text-gray-800 text-md font-gothamNarrow">
             Simulerar vev-/ramlager vid högt varvtal och hög drifttemperatur.
           </li>
-          <li className="text-left text-gray-800 text-md font-gothamNarrow font-normal italic">
+          <li className="italic font-normal text-left text-gray-800 text-md font-gothamNarrow">
             0W-40, 5W-40 och 10W-40.
           </li>
-          <li className="text-left text-gray-800 text-md font-gothamNarrow font-normal italic">
+          <li className="italic font-normal text-left text-gray-800 text-md font-gothamNarrow">
             15W-40, 20W-40, 25W-40 och 40.
           </li>
         </ol>

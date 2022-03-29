@@ -4,13 +4,13 @@ export default function ACEAMotoroljorDiesel() {
   return (
     <>
       <div>
-        <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
+        <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
           ACEA motoroljor 2016
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+        <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
           Dieselmotorer i tunga fordon.
         </p>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
+        <table className="w-full overflow-x-scroll font-medium shadow-none table-auto font-gothamNarrow">
           <tbody>
             <tr className="border-b-8 border-black">
               <td className="text-left">Beteckning</td>
@@ -21,7 +21,7 @@ export default function ACEAMotoroljorDiesel() {
               <td>Beskrivning</td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">E4</td>
+              <td className="pl-4 font-medium text-left">E4</td>
               <td>≥3,5</td>
               <td>≤2,0</td>
               <td>High</td>
@@ -37,7 +37,7 @@ export default function ACEAMotoroljorDiesel() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">E6</td>
+              <td className="pl-4 font-medium text-left">E6</td>
               <td>≥3,5</td>
               <td>≤1,0</td>
               <td>Low</td>
@@ -57,7 +57,7 @@ export default function ACEAMotoroljorDiesel() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">E7</td>
+              <td className="pl-4 font-medium text-left">E7</td>
               <td>≥3,5</td>
               <td>≤2,0</td>
               <td>High</td>
@@ -73,7 +73,7 @@ export default function ACEAMotoroljorDiesel() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="font-medium text-left pl-4">E9</td>
+              <td className="pl-4 font-medium text-left">E9</td>
               <td>≥3,5</td>
               <td>≤1,0</td>
               <td>Low</td>

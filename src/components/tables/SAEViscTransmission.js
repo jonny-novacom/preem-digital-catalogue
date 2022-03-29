@@ -4,14 +4,14 @@ export default function SAEViscTransmission() {
   return (
     <>
       <div>
-        <h3 className="text-center text-preemYellow text-2xl font-medium font-gothamNarrow">
+        <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
           SAE viskositetsklasser för transmissionsoljor
         </h3>
-        <p className="text-left text-gray-500 text-md font-gothamNarrow font-normal mt-2 mb-4">
+        <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
           Dynamisk viskositet 1 cP = 1 mPa*s. Kinematisk viskositet 1 cSt = 1 mm
           <sup>2</sup>/s
         </p>
-        <table className="table-auto w-full shadow-none font-gothamNarrow font-medium overflow-x-scroll">
+        <table className="w-full overflow-x-scroll font-medium shadow-none table-auto font-gothamNarrow">
           <tbody>
             <tr>
               <td>SAE J306</td>

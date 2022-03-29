@@ -4,7 +4,7 @@ export default function APIMotoroljor() {
   return (
     <>
       <div>
-        <h3 className="text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+        <h3 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
           API motoroljor
         </h3>
         <p className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
@@ -40,7 +40,7 @@ export default function APIMotoroljor() {
               </td>
             </tr>
             <tr className="font-normal">
-              <td className="pl-4 font-medium text-left">API SN</td>
+              <td className="pl-4 font-medium text-left">API SN Plus</td>
               <td>Aktuell</td>
               <td className="text-left">
                 Introducerades maj 2018, API SN Plus är en API-klassificering
