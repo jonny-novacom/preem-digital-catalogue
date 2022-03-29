@@ -7,7 +7,6 @@ import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 import CommercialCarousel from "../components/product-carousels/Commercial";
-import CommercialCategories from "../components/CommercialCategories";
 
 // markup
 export default function CommercialPage({ data: { commercialPageBanner } }) {
@@ -81,8 +80,12 @@ export default function CommercialPage({ data: { commercialPageBanner } }) {
           <div className="my-8">
             <CommercialCarousel />
           </div>
-          <div className="my-8">
-            <CommercialCategories />
+          <div className="block mx-auto mb-8 text-center">
+            <a href="/product-category/engine-oils-heavy-vehicles">
+              <span className="inline-block px-16 py-2 font-medium align-top rounded-full text-preemGreen hover:brightness-95 font-gothamNarrow bg-preemYellow">
+                Visa alla produkter
+              </span>
+            </a>
           </div>
         </div>
       </div>
