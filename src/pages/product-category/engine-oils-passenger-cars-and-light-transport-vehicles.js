@@ -8,7 +8,7 @@ export default function EngineOilsHeavyVehicles() {
       <div className="max-w-screen-lg mx-auto">
         <div className="container mx-auto mt-40">
           <StaticImage
-            src="../../images/icons/consumer-g.svg"
+            src="../../images/icons/consumer.svg"
             quality={95}
             formats={["AUTO", "WEBP", "AVIF"]}
             alt="Services"
