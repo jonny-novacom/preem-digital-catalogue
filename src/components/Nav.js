@@ -13,6 +13,7 @@ import techInfo from "../images/icons/tech-info.svg";
 import standards from "../images/icons/standards.svg";
 import allProducts from "../images/icons/all-products.svg";
 import chemicals from "../images/icons/chemicals.svg";
+import motorcycle from "../images/icons/motorcycle.svg";
 
 import { useGlobalContext } from "../utils/context";
 
@@ -122,6 +123,31 @@ export default function Nav() {
                       </div>
                     </Link>
                   </li>
+
+                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                    <Link
+                      to="/motorcycle-and-2-stroke-oils"
+                      onClick={closeNavBar}
+                    >
+                      <div className="flex">
+                        <div className="flex-none">
+                          <span className="inline-block w-20 pr-8">
+                            <img
+                              src={motorcycle}
+                              alt="MC- och 2-taktsoljor"
+                              className="block w-20 mx-auto max-h-10"
+                            />
+                          </span>
+                        </div>
+                        <div className="flex-auto">
+                          <span className="inline h-10 mt-2 font-bold align-middle">
+                            MC- och 2-taktsoljor
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+
                   <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
                     <Link to="/marine" onClick={closeNavBar}>
                       <div className="flex">
