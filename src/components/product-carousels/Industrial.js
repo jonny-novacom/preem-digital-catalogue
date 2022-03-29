@@ -155,8 +155,7 @@ export default function IndustrialCarousel() {
                     imgStyle={{ objectFit: "contain" }}
                   />
                   <h3 className="mt-2 text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow h-14">
-                    {industrialproductcarousel.produkt}{" "}
-                    {industrialproductcarousel.sae}
+                    {industrialproductcarousel.produkt}
                   </h3>
                 </Link>
                 <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-gray-400 font-gothamNarrow">

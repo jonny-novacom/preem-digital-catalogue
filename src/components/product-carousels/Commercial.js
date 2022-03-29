@@ -156,8 +156,6 @@ export default function CommercialCarousel() {
                   />
                   <h3 className="h-12 mt-2 overflow-hidden text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow text-clip">
                     {commercialproductcarousel.produkt}
-                    <br />
-                    {commercialproductcarousel.sae}
                   </h3>
                 </Link>
                 <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-preemMediumGray font-gothamNarrow">

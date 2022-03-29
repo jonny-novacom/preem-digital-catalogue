@@ -1,7 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import { AiFillStar } from "react-icons/ai";
 
 const MANStandard = () => {
   const data = useStaticQuery(graphql`
@@ -68,35 +67,7 @@ const MANStandard = () => {
                           <div key={j}>
                             <div className="flex justify-start py-2 pl-10">
                               <Link to={`/products/${pub.slug.current}`}>
-                                <span
-                                  className={
-                                    pub.featured === true
-                                      ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2 inline-block`
-                                      : `hidden`
-                                  }
-                                >
-                                  <AiFillStar />
-                                </span>
-                                {pub.produkt}{" "}
-                                <span
-                                  className={
-                                    pub.sae !== null
-                                      ? `font-gothamNarrow font-normal text-left text-md text-gray-700`
-                                      : `hidden`
-                                  }
-                                >
-                                  {" "}
-                                  SAE
-                                </span>
-                                <span
-                                  className={
-                                    pub.sae !== null
-                                      ? `text-left text-gray-700 text-md font-gothamNarrow font-normal  ml-1`
-                                      : `hidden`
-                                  }
-                                >
-                                  {pub.sae}
-                                </span>
+                                {pub.produkt}
                                 <span
                                   className={
                                     pub.newProduct === true

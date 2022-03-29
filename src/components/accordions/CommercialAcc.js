@@ -3,7 +3,6 @@ import React from "react";
 
 import Accordion from "react-bootstrap/Accordion";
 import SanityBlockContent from "@sanity/block-content-to-react";
-import { AiFillStar } from "react-icons/ai";
 
 const CommercialAccordion = () => {
   const data = useStaticQuery(graphql`
@@ -56,7 +55,7 @@ const CommercialAccordion = () => {
                   .map((pub, j) => (
                     <Accordion.Item eventKey={j} key={j}>
                       <Accordion.Header>
-                        <span
+                        {/* <span
                           className={
                             pub.featured === true
                               ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2`
@@ -64,8 +63,8 @@ const CommercialAccordion = () => {
                           }
                         >
                           <AiFillStar />
-                        </span>
-                        {pub.produkt} SAE {pub.sae}
+                        </span> */}
+                        {pub.produkt}
                       </Accordion.Header>
                       <Accordion.Body>
                         <div className="pt-1 pb-4 pl-10 pr-4 -mt-2 odd:bg-white">
