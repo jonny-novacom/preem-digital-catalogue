@@ -135,7 +135,7 @@ export default function MarineCarousel() {
                 <Link to={`/products/${marineproductcarousel.slug.current}`}>
                   {marineproductcarousel.newProduct ? (
                     <div className="flex justify-end">
-                      <div className="w-12 h-12 -mb-12 italic font-bold text-center rounded-full text-preemGreen bg-preemYellow">
+                      <div className="w-12 h-12 -mb-12 font-bold text-center rounded-full text-preemGreen bg-preemYellow">
                         <span className="block pt-1 mt-2">NY!</span>
                       </div>
                     </div>

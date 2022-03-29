@@ -134,6 +134,15 @@ export default function PowerGenCarousel() {
           <div className="p-1 bg-white" key={i}>
             <div className="p-4 bg-gray-50">
               <Link to={`/products/${powergenproductcarousel.slug.current}`}>
+                {powergenproductcarousel.newProduct ? (
+                  <div className="flex justify-end">
+                    <div className="w-12 h-12 -mb-12 font-bold text-center rounded-full text-preemGreen bg-preemYellow">
+                      <span className="block pt-1 mt-2">NY!</span>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
                 <GatsbyImage
                   image={
                     powergenproductcarousel.mainImage.asset.localFile

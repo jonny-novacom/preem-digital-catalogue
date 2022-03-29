@@ -8,7 +8,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 
 import { GoChevronRight, GoChevronLeft } from "react-icons/go";
 
-export default function IndustrialCarousel() {
+export default function MotorcyclesCarousel() {
   function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -82,10 +82,10 @@ export default function IndustrialCarousel() {
     ],
   };
 
-  const { industrialproductcarousel } = useStaticQuery(graphql`
+  const { motorcycleproductcarousel } = useStaticQuery(graphql`
     query {
-      industrialproductcarousel: allSanityProductCarousel(
-        filter: { pageTitle: { eq: "Industrial" } }
+      motorcycleproductcarousel: allSanityProductCarousel(
+        filter: { pageTitle: { eq: "Motorbikes" } }
       ) {
         nodes {
           title
@@ -118,25 +118,25 @@ export default function IndustrialCarousel() {
     }
   `);
 
-  const theindustrialproductcarousel =
-    industrialproductcarousel.nodes[0].product;
+  const themotorcycleproductcarousel =
+    motorcycleproductcarousel.nodes[0].product;
   return (
     <>
       <h3 className="px-4 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
-        {industrialproductcarousel.nodes[0].title}
+        {motorcycleproductcarousel.nodes[0].title}
       </h3>
       <p className="px-4 mt-2 mb-8 font-normal text-center text-gray-500 text-md font-gothamNarrow">
-        {industrialproductcarousel.nodes[0].subtitle}
+        {motorcycleproductcarousel.nodes[0].subtitle}
       </p>
       <div className="px-10">
         <Slider {...settings}>
-          {theindustrialproductcarousel.map((industrialproductcarousel, i) => (
+          {themotorcycleproductcarousel.map((motorcycleproductcarousel, i) => (
             <div className="p-1 bg-white" key={i}>
               <div className="p-4 bg-gray-50">
                 <Link
-                  to={`/products/${industrialproductcarousel.slug.current}`}
+                  to={`/products/${motorcycleproductcarousel.slug.current}`}
                 >
-                  {industrialproductcarousel.newProduct ? (
+                  {motorcycleproductcarousel.newProduct ? (
                     <div className="flex justify-end">
                       <div className="w-12 h-12 -mb-12 font-bold text-center rounded-full text-preemGreen bg-preemYellow">
                         <span className="block pt-1 mt-2">NY!</span>
@@ -147,24 +147,25 @@ export default function IndustrialCarousel() {
                   )}
                   <GatsbyImage
                     image={
-                      industrialproductcarousel.mainImage.asset.localFile
+                      motorcycleproductcarousel.mainImage.asset.localFile
                         .childImageSharp.gatsbyImageData
                     }
-                    alt={industrialproductcarousel.produkt}
+                    alt={motorcycleproductcarousel.produkt}
                     className="block mx-auto"
                     imgStyle={{ objectFit: "contain" }}
                   />
-                  <h3 className="mt-2 text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow h-14">
-                    {industrialproductcarousel.produkt}{" "}
-                    {industrialproductcarousel.sae}
+                  <h3 className="h-12 mt-2 overflow-hidden text-lg font-bold leading-snug text-center text-preemGreen font-gothamNarrow text-clip">
+                    {motorcycleproductcarousel.produkt}
+                    <br />
+                    {motorcycleproductcarousel.sae}
                   </h3>
                 </Link>
-                <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-gray-400 font-gothamNarrow">
-                  {industrialproductcarousel.shortDescription}
+                <span className="block h-20 mt-2 mb-4 text-sm font-normal leading-snug text-center text-preemMediumGray font-gothamNarrow">
+                  {motorcycleproductcarousel.shortDescription}
                 </span>
                 <div className="block mx-auto text-center">
                   <Link
-                    to={`/products/${industrialproductcarousel.slug.current}`}
+                    to={`/products/${motorcycleproductcarousel.slug.current}`}
                   >
                     <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
                       För mer information
