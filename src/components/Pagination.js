@@ -15,6 +15,8 @@ export default function Pagination({
   const hasNextPage = nextPage <= totalPages;
   const hasPrevPage = prevPage >= 1;
 
+  console.log(String.fromCharCode(totalPages));
+
   return (
     <>
       <div className="flex items-center content-center justify-between place-items-center">
@@ -35,7 +37,7 @@ export default function Pagination({
               key={`page${i}`}
             >
               <span className="inline-block w-8 h-8 pt-1 m-1 font-medium text-center transition rounded-full bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow text-preemDarkGray current">
-                {i + 1}
+                {String.fromCharCode(i + 65)}
               </span>
             </Link>
           ))}
