@@ -190,6 +190,9 @@ module.exports = {
           `/technical-information/`,
           `/packaging/`,
           `/all-products/*`,
+          `/motorcycle-and-2-stroke-oils/`,
+          `/packaging/`,
+          `/chemicals/`,
         ],
         workboxConfig: {
           globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
