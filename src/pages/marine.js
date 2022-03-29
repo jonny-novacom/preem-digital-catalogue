@@ -59,7 +59,7 @@ export default function MarinePage({ data: { marinePageBanner } }) {
                     quality={95}
                     formats={["AUTO", "WEBP", "AVIF"]}
                     alt={marinePageBanner?.originalFilename}
-                    className="block object-contain w-56 p-4 mx-auto lg:w-72 md:mt-12 lg:mt-2"
+                    className="block object-contain w-56 p-4 mx-auto lg:w-64 md:mt-12 lg:mt-2"
                   />
                 </div>
               </div>

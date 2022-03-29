@@ -47,7 +47,7 @@ export default function allProducts({
                 <Link to={`/products/${product.slug.current}`}>
                   <div className="relative h-18">
                     <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-2">
-                      {product.produkt} {product.sae}
+                      {product.produkt}
                     </div>
                   </div>
                   <GatsbyImage

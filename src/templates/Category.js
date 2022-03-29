@@ -2,7 +2,6 @@ import { graphql, Link } from "gatsby";
 import React from "react";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import { Accordion } from "react-bootstrap";
-import { AiFillStar } from "react-icons/ai";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 export default function SingleProductPage({ data: { categories } }) {
@@ -22,37 +21,7 @@ export default function SingleProductPage({ data: { categories } }) {
           {categories.product.map((product, i) => (
             <Accordion className="inner" key={i}>
               <Accordion.Item eventKey={product.id}>
-                <Accordion.Header>
-                  <span
-                    className={
-                      product.featured === true
-                        ? `text-left text-yellow-400 text-sm font-gothamNarrow font-bold italic -ml-6 pr-2`
-                        : `hidden`
-                    }
-                  >
-                    <AiFillStar />
-                  </span>
-                  {product.produkt}
-                  <span
-                    className={
-                      product.sae !== null
-                        ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1`
-                        : `hidden`
-                    }
-                  >
-                    {" "}
-                    SAE
-                  </span>
-                  <span
-                    className={
-                      product.sae !== null
-                        ? `text-left text-gray-700 text-md font-gothamNarrow font-normal inline-block ml-1`
-                        : `hidden`
-                    }
-                  >
-                    {product.sae}
-                  </span>
-                </Accordion.Header>
+                <Accordion.Header>{product.produkt}</Accordion.Header>
                 <Accordion.Body>
                   <div className="pt-1 pb-4 pl-10 pr-4">
                     <div className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">

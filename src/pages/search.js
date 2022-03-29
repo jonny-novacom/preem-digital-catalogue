@@ -55,28 +55,7 @@ const SearchPage = () => {
               {results.map((result) => (
                 <Accordion className="inner innersearch" key={result.id}>
                   <Accordion.Item eventKey={result.id}>
-                    <Accordion.Header>
-                      {result.produkt}
-                      <span
-                        className={
-                          result.sae !== null
-                            ? `font-gothamNarrow font-normal text-left text-md text-gray-700 ml-1 inline-block`
-                            : `hidden`
-                        }
-                      >
-                        {" "}
-                        SAE
-                      </span>
-                      <span
-                        className={
-                          result.sae !== null
-                            ? `text-left text-gray-700 text-md font-gothamNarrow font-normal inline-block ml-1`
-                            : `hidden`
-                        }
-                      >
-                        {result.sae}
-                      </span>
-                    </Accordion.Header>
+                    <Accordion.Header>{result.produkt}</Accordion.Header>
                     <Accordion.Body>
                       <div className="pt-2 pl-10 pr-4">
                         <div className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">

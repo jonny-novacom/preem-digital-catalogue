@@ -18,11 +18,21 @@ export default function SingleProductPage({ data: { produkt } }) {
         <div className="max-w-screen-md mx-auto">
           <div className="mt-36">
             <h1 className="block mb-2 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
-              {produkt.produkt} {produkt.sae}
+              {produkt.produkt}{" "}
+              {/* {produkt.sae ? <span>SAE {produkt.sae}</span> : ""} */}
             </h1>
             <h3 className="px-6 mt-2 text-lg font-medium text-center text-gray-500 font-gothamNarrow">
               {produkt.shortDescription}
             </h3>
+            {produkt.newProduct ? (
+              <div className="flex justify-end">
+                <div className="w-12 h-12 -mb-16 font-bold text-center rounded-full text-preemGreen bg-preemYellow ml-auto mr-[33%] mt-2">
+                  <span className="block pt-1 mt-2">NY!</span>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
             <GatsbyImage
               image={
                 produkt.mainImage.asset.localFile.childImageSharp
@@ -448,6 +458,7 @@ export const query = graphql`
       aromathalt
       fryspunkt
       shortDescription
+      newProduct
       slug {
         current
       }
