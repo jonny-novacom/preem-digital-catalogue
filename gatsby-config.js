@@ -180,6 +180,8 @@ module.exports = {
           `/products/*`,
           `/category/*`,
           `/product-category/*`,
+          `/product-category/engine-oils-heavy-vehicles`,
+          `/product-category/engine-oils-passenger-cars-and-light-transport-vehicles`,
           `/commercial/`,
           `/marine/`,
           `/power-generation/`,

@@ -28,15 +28,15 @@ export function wrapPageElement({ element, props }) {
 
 // export const registerServiceWorker = () => true;
 
-// // trigger an immediate page refresh when an update is found
-// export const onServiceWorkerUpdateReady = () => window.location.reload();
+// trigger an immediate page refresh when an update is found
+export const onServiceWorkerUpdateReady = () => window.location.reload();
 
-exports.onServiceWorkerUpdateFound = () => {
-  if (
-    window.confirm(
-      "This site has been updated with new data. Do you wish to reload the site to get the new data?"
-    )
-  ) {
-    window.location.reload(true);
-  }
-};
+// exports.onServiceWorkerUpdateFound = () => {
+//   if (
+//     window.confirm(
+//       "This site has been updated with new data. Do you wish to reload the site to get the new data?"
+//     )
+//   ) {
+//     window.location.reload(true);
+//   }
+// };
