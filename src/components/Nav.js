@@ -14,6 +14,7 @@ import standards from "../images/icons/standards.svg";
 import allProducts from "../images/icons/all-products.svg";
 import chemicals from "../images/icons/chemicals.svg";
 import motorcycle from "../images/icons/motorcycle.svg";
+import contact from "../images/icons/mail.svg";
 
 import { useGlobalContext } from "../utils/context";
 
@@ -307,6 +308,26 @@ export default function Nav() {
                         <div className="flex-auto">
                           <span className="inline h-10 mt-2 font-bold align-middle">
                             Ordlista
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li className="h-16 py-2 text-xl align-middle font-gothamNarrow text-preemGreen">
+                    <Link to="/contact-us" onClick={closeNavBar}>
+                      <div className="flex">
+                        <div className="flex-none">
+                          <span className="inline-block w-20 pr-8">
+                            <img
+                              src={glossary}
+                              alt="Kontakta oss"
+                              className="block w-20 mx-auto max-h-10"
+                            />
+                          </span>
+                        </div>
+                        <div className="flex-auto">
+                          <span className="inline h-10 mt-2 font-bold align-middle">
+                            Kontakta oss
                           </span>
                         </div>
                       </div>
