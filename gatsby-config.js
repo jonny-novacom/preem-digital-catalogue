@@ -171,55 +171,56 @@ module.exports = {
         icon: `./src/images/logo.png`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        precachePages: [
-          `/consumer/`,
-          `/industrial/`,
-          `/products/*`,
-          `/category/*`,
-          `/product-category/*`,
-          `/product-category/engine-oils-heavy-vehicles`,
-          `/product-category/engine-oils-passenger-cars-and-light-transport-vehicles`,
-          `/commercial/`,
-          `/marine/`,
-          `/power-generation/`,
-          `/search/`,
-          `/local-search/`,
-          `/standards/`,
-          `/glossary/*`,
-          `/technical-information/`,
-          `/packaging/`,
-          `/all-products/*`,
-          `/motorcycle-and-2-stroke-oils/`,
-          `/packaging/`,
-          `/chemicals/`,
-        ],
-        runtimeCaching: [
-          {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
-            urlPattern: /(\.js$|\.css$|static\/)/,
-            handler: `CacheFirst`,
-          },
-          {
-            // page-data.json files, static query results and app-data.json
-            // are not content hashed
-            urlPattern: /^https?:.*\/page-data\/.*\.json/,
-            handler: `CacheFirst`,
-          },
-          {
-            // Add runtime caching of various other page resources
-            urlPattern:
-              /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
-            handler: `CacheFirst`,
-          },
-        ],
-        // workboxConfig: {
-        //   globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
-        // },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-offline`,
+    //   options: {
+    //     precachePages: [
+    //       `/consumer/`,
+    //       `/industrial/`,
+    //       `/products/*`,
+    //       `/category/*`,
+    //       `/product-category/*`,
+    //       `/product-category/engine-oils-heavy-vehicles`,
+    //       `/product-category/engine-oils-passenger-cars-and-light-transport-vehicles`,
+    //       `/commercial/`,
+    //       `/marine/`,
+    //       `/power-generation/`,
+    //       `/search/`,
+    //       `/local-search/`,
+    //       `/standards/`,
+    //       `/glossary/*`,
+    //       `/technical-information/`,
+    //       `/packaging/`,
+    //       `/all-products/*`,
+    //       `/motorcycle-and-2-stroke-oils/`,
+    //       `/packaging/`,
+    //       `/chemicals/`,
+    //     ],
+    //     runtimeCaching: [
+    //       {
+    //         // Use cacheFirst since these don't need to be revalidated (same RegExp
+    //         // and same reason as above)
+    //         urlPattern: /(\.js$|\.css$|static\/)/,
+    //         handler: `CacheFirst`,
+    //       },
+    //       {
+    //         // page-data.json files, static query results and app-data.json
+    //         // are not content hashed
+    //         urlPattern: /^https?:.*\/page-data\/.*\.json/,
+    //         handler: `CacheFirst`,
+    //       },
+    //       {
+    //         // Add runtime caching of various other page resources
+    //         urlPattern:
+    //           /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+    //         handler: `CacheFirst`,
+    //       },
+    //     ],
+    //     // workboxConfig: {
+    //     //   globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
+    //     // },
+    //   },
+    // },
+    `gatsby-plugin-remove-serviceworker`,
   ],
 };
