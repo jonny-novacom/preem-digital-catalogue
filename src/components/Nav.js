@@ -14,7 +14,6 @@ import standards from "../images/icons/standards.svg";
 import allProducts from "../images/icons/all-products.svg";
 import chemicals from "../images/icons/chemicals.svg";
 import motorcycle from "../images/icons/motorcycle.svg";
-import contact from "../images/icons/mail.svg";
 
 import { useGlobalContext } from "../utils/context";
 
