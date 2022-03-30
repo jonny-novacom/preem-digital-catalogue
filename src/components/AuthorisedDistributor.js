@@ -14,8 +14,14 @@ export default function AuthorisedDistributor() {
           alt="Texaco"
           className="block object-contain w-10 mx-auto "
         />
-        <p className="mt-3 mb-12 font-medium text-center font-helvetica">
+        <p className="mt-3 mb-8 font-medium text-center font-helvetica">
           Auktoriserad Texaco<sup>®</sup> Smörjmedelsdistributör
+        </p>
+        <p className="mt-3 mb-12 font-medium text-center font-gothamNarrow">
+          Visit{" "}
+          <a href="https://www.preem.se/privat/" target="_blank">
+            preem.se
+          </a>
         </p>
       </div>
     </>
