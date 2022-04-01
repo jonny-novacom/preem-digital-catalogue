@@ -95,6 +95,36 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  const allProductsCatsResult = await graphql(`
+    {
+      allSanityAllProductsCategory {
+        distinct(field: title)
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `);
+  if (allProductsCatsResult.errors) {
+    throw allProductsCatsResult.errors;
+  }
+
+  const allProductsCats =
+    allProductsCatsResult.data.allSanityAllProductsCategory.edges;
+
+  allProductsCats.forEach((allProductsCat, id) => {
+    const path = `/all-products/${allProductsCat.node.slug.current}`;
+    createPage({
+      path,
+      component: require.resolve("./src/templates/AllProducts.js"),
+      context: { allProductsCat: allProductsCat.node.slug.current },
+    });
+  });
+
   const pagination = await graphql(`
     {
       allSanityProduct(filter: { slug: { current: { ne: null } } }) {
