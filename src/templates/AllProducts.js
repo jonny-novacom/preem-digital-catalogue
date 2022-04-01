@@ -23,8 +23,11 @@ function AllProductsPageTemplate({ data: { allProductsCategories } }) {
               formats={["AUTO", "WEBP", "AVIF"]}
               alt="All products"
               transformOptions={"cover"}
-              className="block w-20 mx-auto mb-4"
+              className="block w-20 mx-auto mb-2"
             />
+            <h2 className="mb-2 text-5xl font-bold text-center uppercase text-preemGreen font-gothamNarrow">
+              {allProductsCategories.nodes[0].allProductsCategory[0].title}
+            </h2>
           </div>
           <AllProductsFilter />
 
