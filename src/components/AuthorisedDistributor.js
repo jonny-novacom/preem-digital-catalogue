@@ -18,9 +18,9 @@ export default function AuthorisedDistributor() {
           Auktoriserad Texaco<sup>®</sup> Smörjmedelsdistributör
         </p>
         <p className="mt-3 mb-12 font-medium text-center font-gothamNarrow">
-          Visit{" "}
+          Copyright © {new Date().getFullYear()} Preem AB. Med ensamrätt. |{" "}
           <a href="https://www.preem.se/privat/" target="_blank">
-            preem.se
+            Visit <span className="hover:text-preemYellow">preem.se</span>
           </a>
         </p>
       </div>

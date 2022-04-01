@@ -37,7 +37,7 @@ export default function Pagination({
               key={`page${i}`}
             >
               <span className="inline-block w-8 h-8 pt-1 m-1 font-medium text-center transition rounded-full bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow text-preemDarkGray current">
-                {String.fromCharCode(i + 65)}
+                {i + 1}
               </span>
             </Link>
           ))}
