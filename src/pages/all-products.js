@@ -1,6 +1,7 @@
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import AllProductsFilter from "../components/AllProductsFilter";
 import Pagination from "../components/Pagination";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
@@ -31,6 +32,9 @@ export default function allProducts({
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />
+          </div>
+          <div>
+            <AllProductsFilter />
           </div>
           <div className="px-4 mb-4">
             <Pagination

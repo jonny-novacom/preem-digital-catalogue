@@ -47,7 +47,7 @@ export default function ContactPage({ data: { contactPageBanner } }) {
             <div className="p-8 md:pt-16">
               <div className="grid items-end grid-cols-8 gap-1 mt-12">
                 <div className="col-span-8 md:col-span-6">
-                  <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-55xl text-shadow-md">
+                  <h1 className="block mb-4 text-5xl font-bold leading-none text-white lg:text-7xl font-gothamNarrow md:text-55xl text-shadow-md md:mt-56">
                     {contactPageBanner.headerText}
                   </h1>
                 </div>
@@ -68,18 +68,20 @@ export default function ContactPage({ data: { contactPageBanner } }) {
           </BackgroundImage>
           <div className="container pt-16 mx-auto">
             <StaticImage
-              src="../images/icons/motorcycle.svg"
+              src="../images/icons/contact.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt="Motorcycle"
+              alt="Mer information om smörjmedel Kundservice"
               transformOptions={"cover"}
               className="block w-20 mx-auto mb-4"
             />
-            <p className="px-4 mt-2 mb-4 font-normal text-center text-gray-500 text-md font-gothamNarrow">
+
+            <h3 className="px-4 mb-4 text-2xl font-bold text-center text-preemGreen font-gothamNarrow">
               I Sverige ansvarar Preem för tillverkningen av Texaco smörjmedel
               från Chevron. Det innebär att vi har kontroll på hela kedjan, från
               produktion till leverans till våra kunder.
-            </p>
+            </h3>
+
             <p className="px-4 mt-2 mb-12 font-normal text-center text-gray-500 text-md font-gothamNarrow">
               Tillverkningen sker i Scanlube, Preems smörjmedelsfabrik i
               Göteborg, där spårbarhet av råvaror och produkter finns i alla
@@ -88,20 +90,27 @@ export default function ContactPage({ data: { contactPageBanner } }) {
               Chevronkoncernen. Det gör att vi kan erbjuda den svenska marknaden
               ett av världens bästa och beprövade smörjmedel.
             </p>
-            <div className="grid justify-center">
-              <div>
-                <p className="px-4 mt-2 mb-4 font-normal leading-9 text-left text-gray-500 text-md font-gothamNarrow">
-                  <span className="block font-bold">
-                    Mer information om smörjmedel Kundservice
-                  </span>
-                  <FiPhone className="inline-block ml-16 mr-2 -mt-2 text-2xl text-preemYellow" />
-                  010-450 19 00
-                  <br />
-                  <FiMail className="inline-block ml-16 mr-2 -mt-2 text-2xl text-preemYellow" />
-                  <span className="inline-block">
+            <p className="px-4 mt-2 mb-3 text-2xl font-bold leading-9 text-center text-md text-preemGreen font-gothamNarrow">
+              <span className="block font-bold">
+                Mer information om smörjmedel Kundservice
+              </span>
+            </p>
+            <div className="grid grid-cols-6 gap-2 mb-8">
+              <div className="col-span-6 sm:col-span-3 md:col-span-2 md:col-start-2">
+                <div className="p-4 bg-gray-100 rounded-2xl">
+                  <FiPhone className="block mx-auto text-3xl text-preemYellow" />
+                  <p className="mt-2 text-xl font-bold text-center font-gothamNarrow text-preemDarkGray">
+                    010-450 19 00
+                  </p>
+                </div>
+              </div>
+              <div className="col-span-6 sm:col-span-3 md:col-span-2">
+                <div className="p-4 bg-gray-100 rounded-2xl">
+                  <FiMail className="block mx-auto text-3xl text-preemYellow" />
+                  <p className="mt-2 text-xl font-bold text-center font-gothamNarrow text-preemDarkGray">
                     <a href="mailto:smosupport@preem.se">smosupport@preem.se</a>
-                  </span>
-                </p>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
