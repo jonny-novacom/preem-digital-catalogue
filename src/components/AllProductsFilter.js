@@ -45,7 +45,7 @@ export default function AllProductsFilter() {
               : ""
           }
         >
-          <span className="inline-block px-2 text-2xl font-bold uppercase rounded-full font-gothamNarrow text-preemYellow current">
+          <span className="inline-block px-2 text-2xl font-bold uppercase rounded-full font-gothamNarrow text-preemYellow">
             {cats.title}
           </span>
         </Link>
