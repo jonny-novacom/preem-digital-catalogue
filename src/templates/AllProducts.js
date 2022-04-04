@@ -10,7 +10,7 @@ function AllProductsPageTemplate({ data: { allProductsCategories } }) {
   return (
     <>
       <SearchEngineOptimisation
-        title={`Alla produkter - Sida ${allProductsCategories.nodes[0].allProductsCategory[0].title.toUpperCase()}`}
+        title={`Alla produkter - Sida ${allProductsCategories.nodes[0]?.allProductsCategory[0].title.toUpperCase()}`}
         image=""
         description=""
       />
@@ -26,7 +26,7 @@ function AllProductsPageTemplate({ data: { allProductsCategories } }) {
               className="block w-20 mx-auto mb-2"
             />
             <h2 className="mb-2 text-5xl font-bold text-center uppercase text-preemGreen font-gothamNarrow">
-              {allProductsCategories.nodes[0].allProductsCategory[0].title}
+              {allProductsCategories.nodes[0]?.allProductsCategory[0].title}
             </h2>
           </div>
           <AllProductsFilter />
