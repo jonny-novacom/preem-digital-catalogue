@@ -10,7 +10,7 @@ function AllProductsPageTemplate({ data: { allProductsCategories } }) {
   return (
     <>
       <SearchEngineOptimisation
-        title="Alla produkter"
+        title={`Alla produkter - Sida ${allProductsCategories.nodes[0].allProductsCategory[0].title.toUpperCase()}`}
         image=""
         description=""
       />
@@ -35,8 +35,8 @@ function AllProductsPageTemplate({ data: { allProductsCategories } }) {
             {allTheProductsCategories.map((product) => (
               <div key={product.id} className="p-4 border border-gray-300">
                 <Link to={`/products/${product.slug.current}`}>
-                  <div className="relative h-18">
-                    <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-2">
+                  <div className="relative h-10">
+                    <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-1">
                       {product.produkt}
                     </div>
                   </div>
