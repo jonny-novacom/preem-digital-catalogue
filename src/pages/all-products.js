@@ -28,10 +28,13 @@ export default function allProducts({
               src="../images/icons/all-products.svg"
               quality={95}
               formats={["AUTO", "WEBP", "AVIF"]}
-              alt="All products"
+              alt="Alla produkter"
               transformOptions={"cover"}
-              className="block w-20 mx-auto mb-4"
+              className="block w-20 mx-auto mb-2"
             />
+            <h2 className="pt-1 pb-1 mb-3 text-3xl font-bold text-center uppercase text-preemGreen font-gothamNarrow">
+              Alla produkter
+            </h2>
           </div>
           <div>
             <AllProductsFilter />
@@ -49,8 +52,8 @@ export default function allProducts({
             {theproducts.map((product) => (
               <div key={product.id} className="p-4 border border-gray-300">
                 <Link to={`/products/${product.slug.current}`}>
-                  <div className="relative h-18">
-                    <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-2">
+                  <div className="relative h-10">
+                    <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-1">
                       {product.produkt}
                     </div>
                   </div>
