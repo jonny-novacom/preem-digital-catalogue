@@ -20,7 +20,6 @@ export default function AuthorisedDistributor() {
         <p className="mt-3 mb-12 font-medium text-center font-gothamNarrow">
           Copyright © {new Date().getFullYear()} Preem AB. Med ensamrätt. |{" "}
           <a href="https://texaco.preem.se/texaco/" target="_blank">
-            Visit{" "}
             <span className="hover:text-preemYellow">texaco.preem.se</span>
           </a>
         </p>
