@@ -221,6 +221,39 @@ a[disabled] {
     pointer-events: none !important;
 }
 
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #154734; #efefef;
+}
+
+body::-webkit-scrollbar-track {
+  background: #efefef;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #154734;
+  border-radius: 0px;
+  border: 3px solid #efefef;
+}
+
+::-webkit-scrollbar {
+    height: 15px;              /* height of horizontal scrollbar */
+    width: 4px;               /* width of vertical scrollbar */
+    background: rgb(243, 244, 246);
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal{
+    background-color: #154734;
+    border-radius: 0px;
+    border-top: 3px solid rgb(243, 244, 246);
+    border-bottom: 3px solid rgb(243, 244, 246);
+}
+
 `;
 
 export default GlobalStyles;

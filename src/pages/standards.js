@@ -1,7 +1,9 @@
 import { StaticImage } from "gatsby-plugin-image";
 import * as React from "react";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
-import SpecSheet from "../components/SpecSheet";
+import SpecSheetDelo from "../components/SpecSheetDelo";
+import SpecSheetHavoline from "../components/SpecSheetHavoline";
+import SpecSheetTransmission from "../components/SpecSheetTransmission";
 import ACEAStandard from "../components/standards/ACEA";
 import APIStandard from "../components/standards/API";
 import BMWStandard from "../components/standards/BMW";
@@ -38,7 +40,7 @@ export default function StandardsPage() {
             Industri- och OEM-standarder för fordon
           </h3>
         </div>
-        <div className="px-4 mb-12">
+        <div className="px-4 mb-12 lg:hidden">
           <ACEAStandard />
           <APIStandard />
           <BMWStandard />
@@ -53,9 +55,11 @@ export default function StandardsPage() {
           <VWStandard />
           <ProprietaryStandard />
         </div>
-        {/* <div className="hidden px-4 mb-12 lg:block">
-          <SpecSheet />
-        </div> */}
+        <div className="hidden px-4 mb-12 lg:block">
+          <SpecSheetHavoline />
+          <SpecSheetDelo />
+          <SpecSheetTransmission />
+        </div>
       </div>
     </>
   );
