@@ -61,279 +61,281 @@ export default function Nav() {
 
           <div className="fixed z-50 block w-screen top-28">
             <Slide direction={-1} distance={1000} isActive={navBarIsToggled}>
-              <div className="w-full h-screen p-8 overflow-y-auto bg-white md:w-2/3 xl:w-1/2">
-                <ul className="pb-24">
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/all-products" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={allProducts}
-                              alt="Alla produkter"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+              <div className="w-full h-screen p-8 pr-2 bg-white md:w-2/3 xl:w-1/2">
+                <div className="h-screen md:overflow-y-auto">
+                  <ul className="pb-24">
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/all-products" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={allProducts}
+                                alt="Alla produkter"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 font-bold align-middle">
+                              Alla produkter
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 font-bold align-middle">
-                            Alla produkter
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
+                      </Link>
+                    </li>
 
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/consumer" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={consumer}
-                              alt="Motoroljor för personbil och lätta transportfordon"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/consumer" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={consumer}
+                                alt="Motoroljor för personbil och lätta transportfordon"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline mt-2 font-bold align-top">
+                              Motoroljor för personbil och lätta transportfordon
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline mt-2 font-bold align-top">
-                            Motoroljor för personbil och lätta transportfordon
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/commercial" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={commercial}
+                                alt="Motoroljor för tunga fordon"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Motoroljor för tunga fordon
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/commercial" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={commercial}
-                              alt="Motoroljor för tunga fordon"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
-                        </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Motoroljor för tunga fordon
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
+                      </Link>
+                    </li>
 
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link
-                      to="/motorcycle-and-2-stroke-oils"
-                      onClick={closeNavBar}
-                    >
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={motorcycle}
-                              alt="MC- och 2-taktsoljor"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link
+                        to="/motorcycle-and-2-stroke-oils"
+                        onClick={closeNavBar}
+                      >
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={motorcycle}
+                                alt="MC- och 2-taktsoljor"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              MC- och 2-taktsoljor
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            MC- och 2-taktsoljor
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
+                      </Link>
+                    </li>
 
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/marine" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={marine}
-                              alt="Marinoljor"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/marine" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={marine}
+                                alt="Marinoljor"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Marinoljor
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Marinoljor
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/industrial" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={industrial}
+                                alt="Industri"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Industri
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/industrial" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={industrial}
-                              alt="Industri"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/transmission-oils" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={transOil}
+                                alt="Transmissionsoljor"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Transmissionsoljor
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Industri
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link
+                        to="/chemicals"
+                        onClick={closeNavBar}
+                        className="hover:brightness-75 "
+                      >
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={chemicals}
+                                alt=" Kemprodukter och Bromsvätska"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Kemprodukter och Bromsvätska
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/transmission-oils" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={transOil}
-                              alt="Transmissionsoljor"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen ">
+                      <Link to="/standards" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={standards}
+                                alt="Industri- och OEM-standarder för fordon"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Industri- och OEM-standarder för fordon
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Transmissionsoljor
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen ">
+                      <Link to="/technical-information" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={techInfo}
+                                alt="Teknisk information"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Teknisk information
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link
-                      to="/chemicals"
-                      onClick={closeNavBar}
-                      className="hover:brightness-75 "
-                    >
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={chemicals}
-                              alt=" Kemprodukter och Bromsvätska"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
+                      <Link to="/packaging" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={packaging}
+                                alt="Emballage"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Emballage
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Kemprodukter och Bromsvätska
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl align-middle font-gothamNarrow text-preemGreen">
+                      <Link to="/glossary" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={glossary}
+                                alt="Ordlista"
+                                className="block w-20 mx-auto max-h-10"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Ordlista
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen ">
-                    <Link to="/standards" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={standards}
-                              alt="Industri- och OEM-standarder för fordon"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
+                      </Link>
+                    </li>
+                    <li className="h-16 py-2 text-xl align-middle font-gothamNarrow text-preemGreen">
+                      <Link to="/contact-us" onClick={closeNavBar}>
+                        <div className="flex">
+                          <div className="flex-none">
+                            <span className="inline-block w-20 pr-8">
+                              <img
+                                src={contact}
+                                alt="Kontakta oss"
+                                className="block w-20 mx-auto max-h-12"
+                              />
+                            </span>
+                          </div>
+                          <div className="flex-auto">
+                            <span className="inline h-10 mt-2 font-bold align-middle">
+                              Kontakta oss
+                            </span>
+                          </div>
                         </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Industri- och OEM-standarder för fordon
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen ">
-                    <Link to="/technical-information" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={techInfo}
-                              alt="Teknisk information"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
-                        </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Teknisk information
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl font-gothamNarrow text-preemGreen">
-                    <Link to="/packaging" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={packaging}
-                              alt="Emballage"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
-                        </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Emballage
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl align-middle font-gothamNarrow text-preemGreen">
-                    <Link to="/glossary" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={glossary}
-                              alt="Ordlista"
-                              className="block w-20 mx-auto max-h-10"
-                            />
-                          </span>
-                        </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Ordlista
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                  <li className="h-16 py-2 text-xl align-middle font-gothamNarrow text-preemGreen">
-                    <Link to="/contact-us" onClick={closeNavBar}>
-                      <div className="flex">
-                        <div className="flex-none">
-                          <span className="inline-block w-20 pr-8">
-                            <img
-                              src={contact}
-                              alt="Kontakta oss"
-                              className="block w-20 mx-auto max-h-12"
-                            />
-                          </span>
-                        </div>
-                        <div className="flex-auto">
-                          <span className="inline h-10 mt-2 font-bold align-middle">
-                            Kontakta oss
-                          </span>
-                        </div>
-                      </div>
-                    </Link>
-                  </li>
-                </ul>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </Slide>
           </div>

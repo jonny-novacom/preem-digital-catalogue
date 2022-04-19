@@ -243,11 +243,18 @@ body::-webkit-scrollbar-thumb {
 
 ::-webkit-scrollbar {
     height: 15px;              /* height of horizontal scrollbar */
-    width: 4px;               /* width of vertical scrollbar */
+    width: 6px;               /* width of vertical scrollbar */
     background: rgb(243, 244, 246);
   }
 
   ::-webkit-scrollbar-thumb:horizontal{
+    background-color: #154734;
+    border-radius: 0px;
+    border-top: 3px solid rgb(243, 244, 246);
+    border-bottom: 3px solid rgb(243, 244, 246);
+}
+
+::-webkit-scrollbar-thumb:vertical{
     background-color: #154734;
     border-radius: 0px;
     border-top: 3px solid rgb(243, 244, 246);

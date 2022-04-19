@@ -39,15 +39,7 @@ export default function allProducts({
           <div>
             <AllProductsFilter />
           </div>
-          <div className="px-4 mb-4">
-            <Pagination
-              pageSize="32"
-              totalCount={productCount}
-              currentPage={pageContext.currentPage || 1}
-              skip={pageContext.skip}
-              base="/all-products"
-            />
-          </div>
+
           <div className="grid items-center grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 outline outline-4 outline-white neg-outline-offset">
             {theproducts.map((product) => (
               <div key={product.id} className="p-4 border border-gray-300">
