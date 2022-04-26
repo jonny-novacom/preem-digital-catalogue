@@ -221,14 +221,14 @@ export default function Nav() {
                             <span className="inline-block w-20 pr-8">
                               <img
                                 src={chemicals}
-                                alt=" Kemprodukter och Bromsvätska"
+                                alt=" Kemprodukter och bromsvätska"
                                 className="block w-20 mx-auto max-h-10"
                               />
                             </span>
                           </div>
                           <div className="flex-auto">
                             <span className="inline h-10 mt-2 font-bold align-middle">
-                              Kemprodukter och Bromsvätska
+                              Kemprodukter och bromsvätska
                             </span>
                           </div>
                         </div>

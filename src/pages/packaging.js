@@ -15,7 +15,7 @@ export default function PackagingPage() {
           <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Emballage smörjmedel och kemtekniska produkter
           </h1>
-          <h3 className="mb-4 text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+          <h3 className="mb-4 text-2xl font-medium text-center text-preemGreen font-gothamNarrow">
             Smörjolja
           </h3>
           <div className="grid grid-cols-1 border-t-8 border-black md:grid-cols-5">
@@ -254,7 +254,7 @@ export default function PackagingPage() {
               </div>
             </div>
           </div>
-          <h3 className="mt-12 mb-4 text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+          <h3 className="mt-12 mb-4 text-2xl font-medium text-center text-preemGreen font-gothamNarrow">
             Smörjfett
           </h3>
           <div className="grid grid-cols-1 border-t-8 border-black md:grid-cols-5">
@@ -474,7 +474,7 @@ export default function PackagingPage() {
               </div>
             </div>
           </div>
-          <h3 className="mt-12 mb-4 text-2xl font-medium text-center text-preemYellow font-gothamNarrow">
+          <h3 className="mt-12 mb-4 text-2xl font-medium text-center text-preemGreen font-gothamNarrow">
             Kemtekniskt emballage
           </h3>
           <div className="grid grid-cols-1 border-t-8 border-black md:grid-cols-5">
