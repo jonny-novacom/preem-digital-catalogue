@@ -31,6 +31,15 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-gatsby-cloud",
+      options: {
+        headers: {
+          "/*": ["X-Frame-Options: ALLOW-FROM https://texaco.preem.se/"],
+        },
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+      },
+    },
+    {
       resolve: `gatsby-source-sanity`,
       options: {
         projectId: `1tbc9cjy`,
