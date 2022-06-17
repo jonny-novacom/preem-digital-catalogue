@@ -304,6 +304,10 @@ body::-webkit-scrollbar-thumb {
     border-top: none !important;
 }
 
+.modal-backdrop.show {
+    opacity: 0 !important;
+}
+
 `;
 
 export default GlobalStyles;
