@@ -3,6 +3,7 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
+import { RiArchiveLine } from "react-icons/ri";
 
 export default function SingleProductPage({ data: { produkt } }) {
   return (
@@ -28,6 +29,17 @@ export default function SingleProductPage({ data: { produkt } }) {
               <div className="flex justify-end">
                 <div className="w-12 h-12 -mb-16 font-bold text-center rounded-full text-preemGreen bg-preemYellow ml-auto mr-[33%] mt-2">
                   <span className="block pt-1 mt-2">NY!</span>
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+            {produkt.archived ? (
+              <div className="flex justify-end">
+                <div className="w-12 h-12 -mb-16 font-bold text-center rounded-full text-preemGreen bg-preemYellow ml-auto mr-[33%] mt-2">
+                  <span className="block mt-2">
+                    <RiArchiveLine className="mt-1 ml-[9px] text-3xl" />
+                  </span>
                 </div>
               </div>
             ) : (
@@ -459,6 +471,7 @@ export const query = graphql`
       fryspunkt
       shortDescription
       newProduct
+      archived
       slug {
         current
       }

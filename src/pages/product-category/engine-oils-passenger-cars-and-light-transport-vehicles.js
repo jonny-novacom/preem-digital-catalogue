@@ -14,7 +14,7 @@ export default function EngineOilsHeavyVehicles() {
             alt="Services"
             className="block w-20 mx-auto mb-4"
           />
-          <h3 className="mb-0 text-base font-bold text-center text-preemYellow font-gothamNarrow">
+          <h3 className="mb-0 text-base font-bold text-center text-preemGreen font-gothamNarrow">
             Motoroljor personbilar och lätta transportfordon
           </h3>
           <h4 className="text-2xl font-bold text-center text-preemGreen font-gothamNarrow">

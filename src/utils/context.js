@@ -6,6 +6,7 @@ const SiteProvider = ({ children }) => {
   const [searchIsToggled, setSearchIsToggled] = useState(false);
   const [navBarIsToggled, setNavBarIsToggled] = useState(false);
   const [sapsIsToggled, setSapsIsToggled] = useState(false);
+  const [standardsTableIsTogged, setStandardsTableIsToggled] = useState(false);
 
   const setSearch = () => {
     setSearchIsToggled(!searchIsToggled);
@@ -30,10 +31,22 @@ const SiteProvider = ({ children }) => {
   const setSaps = () => {
     setSapsIsToggled(!sapsIsToggled);
   };
-  
+
   const closeSaps = () => {
     setSapsIsToggled(false);
   };
+
+  const setStandardsTable = () => {
+    setStandardsTableIsToggled(!standardsTableIsTogged);
+  };
+
+  // const openStandardsTable = () => {
+  //   setStandardsTableIsToggled(true);
+  // };
+
+  // const closeStandardsTable = () => {
+  //   setStandardsTableIsToggled(false);
+  // };
 
   return (
     <SiteContext.Provider
@@ -41,6 +54,7 @@ const SiteProvider = ({ children }) => {
         searchIsToggled,
         navBarIsToggled,
         sapsIsToggled,
+        standardsTableIsTogged,
         setSearch,
         closeSearch,
         setNavBar,
@@ -48,6 +62,7 @@ const SiteProvider = ({ children }) => {
         openNavBar,
         setSaps,
         closeSaps,
+        setStandardsTable,
       }}
     >
       {children}

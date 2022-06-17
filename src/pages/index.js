@@ -5,6 +5,7 @@ import { getImage, StaticImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
+import DownloadModal from "../components/DownloadModal";
 
 // markup
 export default function IndexPage({ data: { homePageBanner } }) {
@@ -14,6 +15,17 @@ export default function IndexPage({ data: { homePageBanner } }) {
   const bgImage = convertToBgImage(image);
   const seoImage =
     homePageBanner.mainImage.asset.localFile.childImageSharp.resize.src;
+  // const isIos = () => {
+  //   const userAgent = window.navigator.userAgent.toLowerCase();
+  //   return /iphone|ipad|ipod/.test(userAgent);
+  // };
+
+  // const isInStandaloneMode = () =>
+  //   "standalone" in window.navigator && window.navigator.standalone;
+
+  // if (isIos() && !isInStandaloneMode()) {
+  //   this.setState({ showInstallMessage: true });
+  // }
 
   return (
     <>
@@ -58,6 +70,7 @@ export default function IndexPage({ data: { homePageBanner } }) {
             </div>
           </div>
         </BackgroundImage>
+        <DownloadModal />
       </div>
     </>
   );

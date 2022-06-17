@@ -32,44 +32,46 @@ function AllProductsPageTemplate({ data: { allProductsCategories } }) {
           <AllProductsFilter />
 
           <div className="grid items-center grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 outline outline-4 outline-white neg-outline-offset">
-            {allTheProductsCategories.map((product) => (
-              <div key={product.id} className="p-4 border border-gray-300">
-                <Link to={`/products/${product.slug.current}`}>
-                  <div className="relative h-10">
-                    <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-1">
-                      {product.produkt}
-                    </div>
-                  </div>
-                  {product.newProduct ? (
-                    <div className="flex justify-end">
-                      <div className="w-12 h-12 -mb-12 font-bold text-center rounded-full text-preemGreen bg-preemYellow">
-                        <span className="block pt-1 mt-2">NY!</span>
+            {allTheProductsCategories
+              .filter((product) => product.archived === null)
+              .map((product) => (
+                <div key={product.id} className="p-4 border border-gray-300">
+                  <Link to={`/products/${product.slug.current}`}>
+                    <div className="relative h-10">
+                      <div className="absolute inset-0 flex items-center justify-center mb-2 text-lg font-bold text-center font-gothamNarrow text-preemGreen line-clamp-1">
+                        {product.produkt}
                       </div>
                     </div>
-                  ) : (
-                    ""
-                  )}
-                  <GatsbyImage
-                    image={
-                      product.mainImage.asset.localFile.childImageSharp
-                        .gatsbyImageData
-                    }
-                    alt={product.produkt}
-                    className="block mx-auto"
-                    style={{ height: "180px" }}
-                    imgStyle={{ objectFit: "contain" }}
-                  />
-                  <span className="block mt-1 mb-2 text-center h-18 font-gothamNarrow line-clamp-3">
-                    {product.shortDescription}
-                  </span>
-                  <div className="block mx-auto text-center">
-                    <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
-                      För mer information
+                    {product.newProduct ? (
+                      <div className="flex justify-end">
+                        <div className="w-12 h-12 -mb-12 font-bold text-center rounded-full text-preemGreen bg-preemYellow">
+                          <span className="block pt-1 mt-2">NY!</span>
+                        </div>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+                    <GatsbyImage
+                      image={
+                        product.mainImage.asset.localFile.childImageSharp
+                          .gatsbyImageData
+                      }
+                      alt={product.produkt}
+                      className="block mx-auto"
+                      style={{ height: "180px" }}
+                      imgStyle={{ objectFit: "contain" }}
+                    />
+                    <span className="block mt-1 mb-2 text-center h-18 font-gothamNarrow line-clamp-3">
+                      {product.shortDescription}
                     </span>
-                  </div>
-                </Link>
-              </div>
-            ))}
+                    <div className="block mx-auto text-center">
+                      <span className="inline-block px-10 py-2 text-sm font-medium align-top transition-colors rounded-full text-preemDarkGray hover:brightness-95 font-gothamNarrow bg-preemLightGray hover:text-preemGreen hover:bg-preemYellow">
+                        För mer information
+                      </span>
+                    </div>
+                  </Link>
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -92,6 +94,7 @@ export const query = graphql`
         id
         shortDescription
         newProduct
+        archived
         slug {
           current
         }

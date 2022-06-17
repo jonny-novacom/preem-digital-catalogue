@@ -3,6 +3,7 @@ import { useFlexSearch } from "react-use-flexsearch";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { Accordion } from "react-bootstrap";
 import { IoSearchOutline } from "react-icons/io5";
+import { RiArchiveLine } from "react-icons/ri";
 import SearchEngineOptimisation from "../components/SearchEngineOptimisation";
 
 const SearchPage = () => {
@@ -29,9 +30,12 @@ const SearchPage = () => {
       <SearchEngineOptimisation title="Sök" image="" description="" />
       <div className="max-w-screen-lg mx-auto">
         <div className="px-4 mb-20 mt-36">
-          <h1 className="block mb-4 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
+          <h1 className="block mb-2 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
             Sök
           </h1>
+          <p className="px-4 mb-4 font-normal text-center text-gray-500 text-md font-gothamNarrow">
+          Här hittar du alla produkter inkl utgångna produkter
+      </p>
           <div className="container flex justify-center mx-auto">
             <div className="flex border-1">
               <button className="flex items-center justify-center px-3 border-r bg-preemGreen">
@@ -55,7 +59,19 @@ const SearchPage = () => {
               {results.map((result) => (
                 <Accordion className="inner innersearch" key={result.id}>
                   <Accordion.Item eventKey={result.id}>
-                    <Accordion.Header>{result.produkt}</Accordion.Header>
+                    <Accordion.Header>
+                      <span
+                        className={
+                          result.archived === true
+                            ? `text-left text-preemGreen text-lg -ml-6 pr-2 mb-0.5`
+                            : `hidden`
+                        }
+                      >
+                        <RiArchiveLine />
+                      </span>
+
+                      {result.produkt}
+                    </Accordion.Header>
                     <Accordion.Body>
                       <div className="pt-2 pl-10 pr-4">
                         <div className="mt-2 mb-4 font-normal text-left text-gray-500 text-md font-gothamNarrow">
