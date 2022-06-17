@@ -99,6 +99,7 @@ module.exports = {
                       fryspunkt
                       sds
                       pds
+                      archived
                       _rawApplikationer
                       applikationer {
                         children {
@@ -139,6 +140,7 @@ module.exports = {
           "fryspunkt",
           "sds",
           "pds",
+          "archived",
         ],
         normalizer: ({ data }) =>
           data.allSanityProduct.nodes.map((node) => ({
@@ -165,6 +167,7 @@ module.exports = {
             fryspunkt: node.fryspunkt,
             sds: node.sds,
             pds: node.pds,
+            archived: node.archived,
           })),
       },
     },
@@ -204,6 +207,8 @@ module.exports = {
     //       `/motorcycle-and-2-stroke-oils/`,
     //       `/packaging/`,
     //       `/chemicals/`,
+    //       `/contact-us/`,
+    //       `/transmission-oils/`,
     //     ],
     //     runtimeCaching: [
     //       {
@@ -221,15 +226,15 @@ module.exports = {
     //       {
     //         // Add runtime caching of various other page resources
     //         urlPattern:
-    //           /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+    //           /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css|avif)$/,
     //         handler: `CacheFirst`,
     //       },
     //     ],
-    //     // workboxConfig: {
-    //     //   globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
-    //     // },
+    //     workboxConfig: {
+    //       globPatterns: ["**/*.{js,jpg,png,svg,webp,avif,html,css,woff,woff2}"],
+    //     },
     //   },
     // },
-    `gatsby-plugin-remove-serviceworker`,
+    // `gatsby-plugin-remove-serviceworker`,
   ],
 };
