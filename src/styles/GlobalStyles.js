@@ -308,6 +308,11 @@ body::-webkit-scrollbar-thumb {
     opacity: 0 !important;
 }
 
+.modal-backdrop {
+    height: 0px !important;
+    width: 0px !important;
+}
+
 `;
 
 export default GlobalStyles;
