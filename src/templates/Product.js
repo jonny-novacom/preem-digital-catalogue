@@ -17,6 +17,9 @@ export default function SingleProductPage({ data: { produkt } }) {
           description={produkt.shortDescription}
         />
         <div className="max-w-screen-md mx-auto">
+          <style type="text/css" media="print">
+            {" @page { size: portrait; } "}
+          </style>
           <div className="mt-36">
             <h1 className="block mb-2 text-3xl font-bold text-center font-gothamNarrow text-preemGreen">
               {produkt.produkt}{" "}
