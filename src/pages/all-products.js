@@ -103,7 +103,7 @@ export const query = graphql`
       sort: { fields: produkt, order: ASC }
       limit: $pageSize
       skip: $skip
-      filter: { archived: { eq: null } }
+      filter: { archived: { ne: true } }
     ) {
       totalCount
       nodes {
