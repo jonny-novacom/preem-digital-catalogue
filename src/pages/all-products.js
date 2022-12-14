@@ -42,7 +42,10 @@ export default function allProducts({
 
           <div className="grid items-center grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 outline outline-4 outline-white neg-outline-offset">
             {theproducts
-              .filter((product) => product.archived === null)
+              .filter(
+                (product) =>
+                  product.archived === null || product.archived === false
+              )
               .map((product) => (
                 <div key={product.id} className="p-4 border border-gray-300">
                   <Link to={`/products/${product.slug.current}`}>
